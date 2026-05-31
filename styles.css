@@ -716,3 +716,26 @@ details.more p {
   details.more[open] summary { display: none; }
   details.more .more-content { padding: 0; border: none; }
 }
+
+/* ===== GROWTH'HIGH 플로팅 버튼 ===== */
+.gh-fab { position: fixed; right: 24px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.gh-fab-menu { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; opacity: 0; transform: translateY(12px) scale(0.96); pointer-events: none; transition: opacity .22s ease, transform .22s ease; }
+.gh-fab.open .gh-fab-menu { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.gh-fab-item { display: inline-flex; align-items: center; gap: 9px; padding: 11px 16px; background: #FFFFFF; border: 1px solid var(--line-strong); border-radius: 999px; box-shadow: 0 4px 16px rgba(10,24,40,0.13); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: -0.01em; color: var(--brand); white-space: nowrap; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+.gh-fab-item:hover { transform: translateX(-3px); box-shadow: 0 6px 20px rgba(10,24,40,0.2); }
+.gh-fab-ico { font-size: 16px; line-height: 1; }
+.gh-fab-cta { background: var(--urgent); color: #FFFFFF; border-color: var(--urgent); }
+.gh-fab-cta:hover { background: #B33523; }
+.gh-fab-toggle { position: relative; width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer; background: var(--brand); color: #FFFFFF; box-shadow: 0 6px 22px rgba(10,24,40,0.32); font-family: inherit; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; transition: transform .18s ease, background .18s ease; }
+.gh-fab-toggle:hover { transform: scale(1.06); }
+.gh-fab.open .gh-fab-toggle { background: var(--ink); }
+.gh-fab-toggle-text { display: inline; }
+.gh-fab-toggle-close { display: none; font-size: 18px; }
+.gh-fab.open .gh-fab-toggle-text { display: none; }
+.gh-fab.open .gh-fab-toggle-close { display: inline; }
+@media print { .gh-fab { display: none !important; } }
+@media (max-width: 480px) {
+  .gh-fab { right: 16px; bottom: 16px; }
+  .gh-fab-toggle { width: 54px; height: 54px; font-size: 13px; }
+  .gh-fab-item { padding: 10px 14px; font-size: 13px; }
+}

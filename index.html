@@ -470,13 +470,15 @@
   }
 
   function applyLockedUI(ind) {
-    // 업종 전용(뉴스레터) 모드: 필터 UI 숨기고 헤더를 해당 업종으로 고정
-    const controls = document.querySelector('.controls');
-    if (controls) controls.style.display = 'none';
+    // 업종 전용(뉴스레터) 모드: 검색·업종 필터는 숨기고, 유형 필터는 유지
+    const searchWrap = document.querySelector('.controls .search-wrap');
+    if (searchWrap) searchWrap.style.display = 'none';
+    const indChips = document.getElementById('industry-chips');
+    if (indChips) { const g = indChips.closest('.filter-group'); if (g) g.style.display = 'none'; }
     const titleEl = document.querySelector('.hero-title');
     if (titleEl) titleEl.innerHTML = '2026 <span class="accent">' + ind + '</span> 정부지원사업';
     const descEl = document.querySelector('.hero-desc');
-    if (descEl) descEl.textContent = ind + ' 분야 최신 공고문을 한 곳에 모아 핵심 정보로 정리했습니다.';
+    if (descEl) descEl.textContent = ind + ' 분야 최신 공고문을 한 곳에 모아 핵심 정보로 정리했습니다. 유형 필터로 더 추려볼 수 있습니다.';
     document.title = '2026 ' + ind + ' 정부지원사업 \u2014 GROWTH\'HIGH';
   }
 

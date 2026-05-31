@@ -192,6 +192,40 @@
     <div class="footer-brand">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</div>
   </footer>
 </div>
+<!-- ===== GROWTH'HIGH 플로팅 버튼 ===== -->
+<div class="gh-fab" id="ghFab">
+  <div class="gh-fab-menu" id="ghFabMenu">
+    <a class="gh-fab-item" href="https://growthhigh.co.kr/" target="_blank" rel="noopener">
+      <span class="gh-fab-ico">🏠</span><span class="gh-fab-label">홈페이지</span>
+    </a>
+    <a class="gh-fab-item" href="https://blog.naver.com/growthhigh/223409780907" target="_blank" rel="noopener">
+      <span class="gh-fab-ico">✍️</span><span class="gh-fab-label">블로그</span>
+    </a>
+    <a class="gh-fab-item gh-fab-cta" href="https://yuncommon.notion.site/351815d712b980abaaace37e5eb0354c" target="_blank" rel="noopener">
+      <span class="gh-fab-ico">💬</span><span class="gh-fab-label">무료 상담 신청</span>
+    </a>
+  </div>
+  <button class="gh-fab-toggle" id="ghFabToggle" aria-label="그로스하이 메뉴 열기" aria-expanded="false">
+    <span class="gh-fab-toggle-text">상담</span>
+    <span class="gh-fab-toggle-close">✕</span>
+  </button>
+</div>
+<script>
+(function(){
+  var fab=document.getElementById('ghFab'),btn=document.getElementById('ghFabToggle');
+  if(!fab||!btn)return;
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=fab.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.addEventListener('click',function(e){
+    if(fab.classList.contains('open')&&!fab.contains(e.target)){
+      fab.classList.remove('open');btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
