@@ -329,11 +329,11 @@
 .gh-fab-toggle { position: relative; width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer; background: var(--brand); color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 22px rgba(10,24,40,0.32); font-family: inherit; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; transition: transform .18s ease, background .18s ease; }
 .gh-fab-toggle:hover { transform: scale(1.06); }
 .gh-fab.open .gh-fab-toggle { background: var(--ink); }
-.gh-fab-toggle svg { display: block; margin: 0 auto; }
-.gh-fab-toggle-open { display: block; }
-.gh-fab-toggle-close { display: none; }
-.gh-fab.open .gh-fab-toggle-open { display: none; }
-.gh-fab.open .gh-fab-toggle-close { display: block; }
+.gh-fab-toggle svg { margin: 0 auto; }
+.gh-fab-toggle .gh-fab-toggle-open { display: block; }
+.gh-fab-toggle .gh-fab-toggle-close { display: none; }
+.gh-fab.open .gh-fab-toggle .gh-fab-toggle-open { display: none; }
+.gh-fab.open .gh-fab-toggle .gh-fab-toggle-close { display: block; }
 @media print { .gh-fab { display: none !important; } }
 @media (max-width: 480px) {
   .gh-fab { right: 16px; bottom: 16px; }
@@ -356,7 +356,7 @@
   <div class="hero">
     <div class="hero-badge"><span class="dot"></span>매일 업데이트</div>
     <h1 class="hero-title">Growth<span class="accent">'</span>High Weekly Curation</h1>
-    <p class="hero-desc">최신 공고문을 한 곳에 모아 핵심 정보로 정리.<br>업종·유형 필터로 상황에 맞는 사업을 빠르게 추립니다.</p>
+    <p class="hero-desc">최신 공고문을 한 곳에 모아 핵심만 요약했습니다.</p>
   </div>
 
   <div class="controls">
@@ -537,7 +537,7 @@
     <a class="gh-fab-item" href="https://growthhigh.co.kr/" target="_blank" rel="noopener">
       <span class="gh-fab-ico">🏠</span><span class="gh-fab-label">홈페이지</span>
     </a>
-    <a class="gh-fab-item" href="https://blog.naver.com/growthhigh/223409780907" target="_blank" rel="noopener">
+    <a class="gh-fab-item" href="https://blog.naver.com/growthhigh" target="_blank" rel="noopener">
       <span class="gh-fab-ico">✍️</span><span class="gh-fab-label">블로그</span>
     </a>
     <a class="gh-fab-item gh-fab-cta" href="https://yuncommon.notion.site/351815d712b980abaaace37e5eb0354c" target="_blank" rel="noopener">
