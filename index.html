@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 정부지원사업 큐레이션 — GROWTH'HIGH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ─── Index – pure white, white cards with elevation, no gray containers ─── */
+  :root {
+    --accent: #2563EB;
+    --accent-soft: #EEF4FF;
+    --line: #EEF0F2;
+    --line-card: #E8EAEE;
+    --ink-900: #0A0A0A;
+    --ink-700: #1F2937;
+    --ink-500: #4B5563;
+    --ink-400: #6B7280;
+    --ink-300: #9CA3AF;
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 2px 8px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+  }
+  body { background: #FFFFFF; color: var(--ink-700); }
+  .doc { max-width: 1040px; padding: 32px 32px 96px; }
+
+  /* Brand header */
+  .brand-header {
+    display: flex; align-items: center;
+    padding: 0 0 20px;
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .brand-mark { display: flex; align-items: center; gap: 10px; }
+  .brand-mark .brand-logo { display: block; width: 32px; height: 32px; object-fit: contain; }
+  .brand-mark svg { display: block; width: 26px; height: 26px; }
+  .brand-mark .wordmark {
+    font-family: 'Pretendard Variable', Pretendard, sans-serif;
+    font-size: 17px; font-weight: 800;
+    letter-spacing: -0.04em; color: var(--ink-900); line-height: 1;
+  }
+  .brand-mark .apostrophe { color: var(--urgent); font-weight: 800; }
+  .brand-mark .tagline {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: -0.005em; color: var(--ink-300);
+    padding-left: 12px; margin-left: 4px;
+    border-left: 1px solid #E5E7EB; line-height: 1;
+  }
+
+  /* Hero */
+  .hero { text-align: center; padding: 24px 0 64px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12.5px; font-weight: 600;
+    border-radius: 999px;
+    letter-spacing: -0.005em;
+    margin-bottom: 20px;
+  }
+  .hero-badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+    animation: pulse-dot 2s infinite;
+  }
+  @keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18); }
+    50% { box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.08); }
+  }
+  .hero-title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+    margin-bottom: 20px;
+    color: var(--ink-900);
+  }
+  .hero-title .accent { color: var(--accent); }
+  .hero-desc {
+    font-size: 16px;
+    color: var(--ink-500);
+    line-height: 1.65;
+    max-width: 600px;
+    margin: 0 auto;
+    letter-spacing: -0.005em;
+  }
+  .hero-stats {
+    display: flex; gap: 8px; justify-content: center;
+    margin-top: 32px; flex-wrap: wrap;
+  }
+  .stat-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 18px;
+    background: #FFFFFF;
+    border: 1px solid var(--line-card);
+    border-radius: 999px;
+    font-size: 13px; font-weight: 500;
+    color: var(--ink-500);
+    box-shadow: var(--shadow-sm);
+  }
+  .stat-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; font-weight: 700;
+    color: var(--ink-900); letter-spacing: -0.02em;
+  }
+
+  /* Controls — clean white card */
+  .controls {
+    margin-bottom: 40px;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid var(--line-card);
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+  }
+  .search-wrap { position: relative; margin-bottom: 18px; }
+  .search-input {
+    width: 100%;
+    padding: 14px 44px 14px 18px;
+    font-family: inherit;
+    font-size: 14.5px;
+    background: #FAFBFC;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    color: var(--ink-700);
+    transition: all 0.18s;
+    letter-spacing: -0.005em;
+  }
+  .search-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+  .search-input::placeholder { color: var(--ink-300); }
+  .search-clear {
+    position: absolute; right: 14px; top: 50%;
+    transform: translateY(-50%);
+    background: none; border: none; color: var(--ink-300);
+    cursor: pointer; padding: 4px 8px; font-size: 14px; line-height: 1;
+    display: none; border-radius: 6px;
+  }
+  .search-clear.visible { display: block; }
+  .search-clear:hover { color: var(--ink-700); }
+
+  .filter-group { margin-bottom: 14px; }
+  .filter-group:last-of-type { margin-bottom: 0; }
+  .filter-label {
+    font-size: 12px; font-weight: 600;
+    color: var(--ink-400);
+    margin-bottom: 10px; display: block;
+    letter-spacing: -0.005em;
+  }
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip {
+    font-family: inherit;
+    font-size: 13px; font-weight: 500;
+    padding: 7px 14px;
+    background: #FAFBFC;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    color: var(--ink-500);
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: -0.005em;
+    user-select: none;
+  }
+  .chip:hover { border-color: var(--ink-400); color: var(--ink-700); }
+  .chip.active {
+    background: var(--ink-900); border-color: var(--ink-900); color: #FFFFFF;
+  }
+
+  .controls-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 18px; padding-top: 16px;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap; gap: 12px;
+  }
+  .result-count { font-size: 13px; color: var(--ink-500); letter-spacing: -0.005em; }
+  .result-count strong { color: var(--ink-900); font-weight: 700; }
+  .reset-btn {
+    font-size: 12.5px; font-weight: 600;
+    color: var(--ink-400); background: none; border: none;
+    cursor: pointer; padding: 6px 10px; border-radius: 8px;
+    transition: all 0.15s; letter-spacing: -0.005em;
+  }
+  .reset-btn:hover { color: var(--urgent); background: var(--urgent-soft); }
+  .reset-btn:disabled { opacity: 0.3; cursor: not-allowed; background: none; color: var(--ink-300); }
+
+  /* Sections — no gray container, just header + spacing */
+  .program-section { margin-bottom: 40px; }
+  .section-header-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 16px; padding: 0 4px;
+  }
+  .section-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+  }
+  .closed-wrap .section-dot { background: var(--ink-300); }
+  .section-title { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink-900); }
+  .closed-wrap .section-title { color: var(--ink-500); }
+  .section-count {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px; font-weight: 600;
+    color: var(--ink-400); margin-left: auto;
+    letter-spacing: -0.005em;
+  }
+
+  /* Program cards — clean white with elevation */
+  .program-list { display: grid; gap: 12px; }
+  .program-card {
+    display: block; text-decoration: none; color: inherit;
+    background: #FFFFFF;
+    border: 1px solid var(--line-card);
+    border-radius: 16px;
+    padding: 22px 26px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+  }
+  .program-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    border-color: #D1D5DB;
+  }
+  .closed-wrap .program-card { background: #FAFBFC; opacity: 0.85; }
+  .closed-wrap .program-card:hover { opacity: 1; background: #FFFFFF; }
+
+  .card-row { display: flex; gap: 22px; align-items: flex-start; }
+  .card-status {
+    flex-shrink: 0; width: 78px; text-align: center;
+    padding: 12px 8px;
+    border-radius: 12px;
+    background: #F4F5F7;
+  }
+  .card-status.urgent { background: var(--urgent-soft); }
+  .card-status.warning { background: var(--warning-soft); }
+  .card-status.closed { background: #ECEDEF; }
+  .card-dday {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px; font-weight: 700;
+    letter-spacing: -0.02em; line-height: 1.1;
+  }
+  .card-status.urgent .card-dday { color: var(--urgent); }
+  .card-status.warning .card-dday { color: var(--warning); }
+  .card-status.closed .card-dday { color: var(--closed); font-size: 13px; font-weight: 700; line-height: 1.2; padding-top: 4px; }
+  .card-status-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .card-status.urgent .card-status-label { color: var(--urgent); }
+  .card-status.warning .card-status-label { color: var(--warning); }
+  .card-status.closed .card-status-label { color: var(--closed); }
+  .card-body-wrap { flex: 1; min-width: 0; }
+  .card-tags { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .card-tag {
+    font-size: 11px; font-weight: 600;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 3px 9px; border-radius: 8px;
+    letter-spacing: -0.005em;
+  }
+  .card-tag.alt { background: #F3F4F6; color: var(--ink-500); }
+  .card-title {
+    font-size: 18px; font-weight: 700;
+    letter-spacing: -0.03em; line-height: 1.32;
+    margin-bottom: 8px; color: var(--ink-900);
+  }
+  .card-summary {
+    font-size: 13.5px; color: var(--ink-500);
+    line-height: 1.6; margin-bottom: 12px;
+    letter-spacing: -0.005em;
+  }
+  .card-meta-list {
+    display: flex; gap: 18px;
+    font-size: 12px; color: var(--ink-400);
+    letter-spacing: -0.005em; flex-wrap: wrap;
+  }
+  .card-meta-list strong { color: var(--ink-500); font-weight: 600; margin-right: 6px; }
+  .card-arrow {
+    flex-shrink: 0; align-self: center;
+    font-size: 18px; color: var(--ink-300);
+    transition: all 0.2s;
+  }
+  .program-card:hover .card-arrow { color: var(--accent); transform: translateX(3px); }
+
+  .empty-state {
+    padding: 56px 24px;
+    background: #FFFFFF; border: 1px dashed #D1D5DB;
+    border-radius: 16px;
+    text-align: center; color: var(--ink-500); font-size: 14px;
+  }
+  .empty-state strong {
+    display: block; color: var(--ink-900);
+    font-size: 16px; margin-bottom: 6px;
+    font-weight: 700; letter-spacing: -0.015em;
+  }
+  .empty-state .hint {
+    font-size: 12px; color: var(--ink-400);
+    margin-top: 12px; letter-spacing: -0.005em;
+  }
+  .program-section.hidden { display: none; }
+
+  /* Today's curation — accent-highlighted top section */
+  .today-wrap .section-dot { background: var(--accent); }
+  .today-wrap .section-title { color: var(--accent); }
+  .today-wrap .program-card { border-color: #DCE7FE; box-shadow: var(--shadow-md); }
+  .today-wrap .program-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+  .today-wrap .section-count { color: var(--accent); background: var(--accent-soft); border-color: #DCE7FE; }
+  .today-empty {
+    padding: 18px 20px; border: 1px dashed var(--line-card);
+    border-radius: 12px; background: #FAFBFC;
+    font-size: 13px; color: var(--ink-400); letter-spacing: -0.01em;
+  }
+
+  /* Footer */
+  .doc-footer {
+    margin-top: 56px; padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-brand { font-size: 12px; font-weight: 700; color: var(--ink-500); letter-spacing: -0.01em; }
+  .footer-brand .apostrophe { color: var(--urgent); }
+  .footer-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; font-weight: 500;
+    color: var(--ink-400); letter-spacing: 0.04em;
+    text-align: right; line-height: 1.6;
+  }
+
+  @media (max-width: 720px) {
+    .doc { padding: 24px 16px 60px; }
+    .hero-title { font-size: 32px; }
+    .controls { padding: 20px; }
+    .program-card { padding: 18px; }
+    .card-row { flex-direction: column; gap: 14px; }
+    .card-status {
+      width: 100%;
+      display: flex; gap: 12px; align-items: center; justify-content: flex-start;
+      padding: 10px 14px;
+    }
+    .card-status-label { margin-top: 0; }
+    .card-arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <header class="brand-header">
+    <div class="brand-mark">
+      <img src="logo.png" alt="GROWTH'HIGH" class="brand-logo">
+      <span class="wordmark">GROWTH<span class="apostrophe">'</span>HIGH</span>
+      <span class="tagline">Scale-up Studio</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-badge"><span class="dot"></span>매일 업데이트</div>
+    <h1 class="hero-title">2026 <span class="accent">정부지원사업</span> 큐레이션</h1>
+    <p class="hero-desc">최신 공고문을 한 곳에 모아 핵심 정보로 정리.<br>업종·유형 필터로 상황에 맞는 사업을 빠르게 추립니다.</p>
+    <div class="hero-stats">
+      <div class="stat-pill">검토 사업 <span class="stat-num" id="total-count">23</span></div>
+      <div class="stat-pill">진행 중 <span class="stat-num" id="active-count">16</span></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="search-input" class="search-input" placeholder="사업명, 키워드, 운영기관 검색..." autocomplete="off">
+      <button id="search-clear" class="search-clear" title="검색어 지우기">✕</button>
+    </div>
+    <div class="filter-group">
+      <label class="filter-label">업종</label>
+      <div class="filter-chips" id="industry-chips"></div>
+    </div>
+    <div class="filter-group">
+      <label class="filter-label">유형</label>
+      <div class="filter-chips" id="type-chips"></div>
+    </div>
+    <div class="controls-footer">
+      <div class="result-count" id="result-count">전체 <strong>23</strong>개 표시</div>
+      <button id="reset-btn" class="reset-btn" disabled>↺ 전체 해제</button>
+    </div>
+  </div>
+
+  <section class="program-section today-wrap" id="today-section">
+    <div class="section-header-row">
+      <span class="section-dot"></span>
+      <div class="section-title">오늘의 큐레이션</div>
+      <div class="section-count" id="today-en">0</div>
+    </div>
+    <div class="program-list" id="today-list"></div>
+    <div class="today-empty" id="today-empty" style="display:none;">큐레이션 사업이 없습니다.</div>
+  </section>
+
+  <section class="program-section" id="active-section">
+    <div class="section-header-row">
+      <span class="section-dot"></span>
+      <div class="section-title">진행 중인 사업</div>
+      <div class="section-count" id="active-en">0</div>
+    </div>
+    <div class="program-list" id="active-list"></div>
+  </section>
+
+  <section class="program-section closed-wrap" id="closed-section">
+    <div class="section-header-row">
+      <span class="section-dot"></span>
+      <div class="section-title">마감 완료 사업</div>
+      <div class="section-count" id="closed-en">0</div>
+    </div>
+    <div class="program-list" id="closed-list"></div>
+  </section>
+
+  <div class="empty-state" id="empty-state" style="display:none;">
+    <strong>검색 결과가 없습니다</strong>
+    검색어를 변경하거나 필터를 해제해 보세요.
+    <div class="hint">필터 칩을 다시 클릭하거나 우측 "전체 해제" 사용</div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="footer-brand">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</div>
+    <div class="footer-meta">Curated by GROWTH'HIGH<br><span id="footer-updated">2026.04.30</span></div>
+  </footer>
+
+</div>
+
+<script>
+(() => {
+  'use strict';
+  let state = { programs: [], filters: { industries: [], types: [] }, selected: { industries: new Set(), types: new Set() }, search: '', updated_at: '' };
+
+  function calcDday(isoStr) {
+    const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
+    const toUTC = (s) => { const [y, m, d] = s.split('-').map(Number); return Date.UTC(y, m - 1, d); };
+    const dlMs = toUTC(fmt.format(new Date(isoStr)));
+    const nowMs = toUTC(fmt.format(new Date()));
+    return Math.round((dlMs - nowMs) / 86400000);
+  }
+  function getStatus(dday) { if (dday < 0) return 'closed'; if (dday <= 3) return 'urgent'; return 'warning'; }
+  function getStatusLabel(dday, status) { if (status === 'closed') return 'REF'; if (status === 'urgent') return 'URGENT'; if (dday <= 7) return 'WARNING'; return 'ACTIVE'; }
+  function formatDday(dday, status) { if (status === 'closed') return 'CLOSED'; if (dday === 0) return 'D−0'; return 'D−' + dday; }
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  function renderCard(p) {
+    const dday = calcDday(p.deadline_iso);
+    const status = getStatus(dday);
+    const statusLabel = getStatusLabel(dday, status);
+    const ddayText = formatDday(dday, status);
+    const tagsHtml = p.tags.map((t, i) => '<span class="card-tag' + (i === 0 ? '' : ' alt') + '">' + esc(t) + '</span>').join('');
+    const metaHtml = Object.entries(p.meta).map(([k, v]) => '<span><strong>' + esc(k) + '</strong>' + esc(v) + '</span>').join('');
+    return '<a href="' + esc(p.file) + '" class="program-card"><div class="card-row"><div class="card-status ' + status + '"><div class="card-dday">' + ddayText + '</div><div class="card-status-label">' + statusLabel + '</div></div><div class="card-body-wrap"><div class="card-tags">' + tagsHtml + '</div><h3 class="card-title">' + esc(p.title) + '</h3><p class="card-summary">' + esc(p.summary) + '</p><div class="card-meta-list">' + metaHtml + '</div></div><div class="card-arrow">→</div></div></a>';
+  }
+
+  function matchesSearch(p, q) {
+    if (!q) return true;
+    const haystack = [p.title, p.summary, ...(p.tags || []), ...(p.industries || []), ...(p.types || [])].join(' ').toLowerCase();
+    return q.toLowerCase().split(/\s+/).every(term => haystack.includes(term));
+  }
+  function matchesIndustry(p, selected) { if (selected.size === 0) return true; return p.industries.some(i => selected.has(i)); }
+  function matchesType(p, selected) { if (selected.size === 0) return true; return p.types.some(t => selected.has(t)); }
+
+  function renderChips() {
+    const industryEl = document.getElementById('industry-chips');
+    const typeEl = document.getElementById('type-chips');
+    industryEl.innerHTML = state.filters.industries.map(i => '<button class="chip" data-group="industries" data-value="' + esc(i) + '">' + esc(i) + '</button>').join('');
+    typeEl.innerHTML = state.filters.types.map(t => '<button class="chip" data-group="types" data-value="' + esc(t) + '">' + esc(t) + '</button>').join('');
+    document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => toggleChip(chip)));
+  }
+
+  function toggleChip(chip) {
+    const group = chip.dataset.group;
+    const value = chip.dataset.value;
+    const set = state.selected[group];
+    if (set.has(value)) { set.delete(value); chip.classList.remove('active'); }
+    else { set.add(value); chip.classList.add('active'); }
+    render();
+  }
+
+  function render() {
+    const filtered = state.programs.filter(p => matchesSearch(p, state.search) && matchesIndustry(p, state.selected.industries) && matchesType(p, state.selected.types));
+    const isCurated = p => typeof p.curated === 'number' && getStatus(calcDday(p.deadline_iso)) !== 'closed';
+    const today = filtered.filter(isCurated);
+    const active = filtered.filter(p => getStatus(calcDday(p.deadline_iso)) !== 'closed' && !isCurated(p));
+    const closed = filtered.filter(p => getStatus(calcDday(p.deadline_iso)) === 'closed');
+    today.sort((a, b) => (a.curated || 99) - (b.curated || 99));
+    active.sort((a, b) => calcDday(a.deadline_iso) - calcDday(b.deadline_iso));
+    closed.sort((a, b) => calcDday(b.deadline_iso) - calcDday(a.deadline_iso));
+    document.getElementById('today-list').innerHTML = today.map(renderCard).join('');
+    document.getElementById('active-list').innerHTML = active.map(renderCard).join('');
+    document.getElementById('closed-list').innerHTML = closed.map(renderCard).join('');
+    document.getElementById('today-en').textContent = today.length;
+    document.getElementById('active-en').textContent = active.length;
+    document.getElementById('closed-en').textContent = closed.length;
+    const hasFilter = state.search || state.selected.industries.size || state.selected.types.size;
+    // 오늘 섹션: 필터 없을 때만 노출. 필터 사용 중이면 숨김.
+    const showToday = !hasFilter;
+    document.getElementById('today-section').classList.toggle('hidden', !showToday);
+    document.getElementById('today-list').style.display = today.length > 0 ? '' : 'none';
+    document.getElementById('today-empty').style.display = today.length === 0 ? 'block' : 'none';
+    document.getElementById('active-section').classList.toggle('hidden', active.length === 0);
+    document.getElementById('closed-section').classList.toggle('hidden', closed.length === 0);
+    document.getElementById('empty-state').style.display = filtered.length === 0 ? 'block' : 'none';
+    const total = state.programs.length;
+    const filteredCount = filtered.length;
+    const activeAll = state.programs.filter(p => getStatus(calcDday(p.deadline_iso)) !== 'closed').length;
+    document.getElementById('active-count').textContent = activeAll;
+    document.getElementById('total-count').textContent = total;
+    const counterEl = document.getElementById('result-count');
+    if (filteredCount === total) counterEl.innerHTML = '전체 <strong>' + total + '</strong>개 표시';
+    else counterEl.innerHTML = '<strong>' + total + '</strong>개 中 <strong>' + filteredCount + '</strong>개 표시';
+    document.getElementById('reset-btn').disabled = !hasFilter;
+  }
+
+  function bindEvents() {
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    let timer;
+    searchInput.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        state.search = searchInput.value.trim();
+        searchClear.classList.toggle('visible', !!state.search);
+        render();
+      }, 200);
+    });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { searchInput.value = ''; state.search = ''; searchClear.classList.remove('visible'); render(); }
+    });
+    searchClear.addEventListener('click', () => { searchInput.value = ''; state.search = ''; searchClear.classList.remove('visible'); searchInput.focus(); render(); });
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      searchInput.value = ''; state.search = ''; searchClear.classList.remove('visible');
+      state.selected.industries.clear(); state.selected.types.clear();
+      document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+      render();
+    });
+  }
+
+  async function init() {
+    try {
+      const res = await fetch('data.json?v=' + Date.now());
+      const data = await res.json();
+      state.programs = data.programs;
+      state.filters = data.filters;
+      state.updated_at = data.updated_at || '';
+      const footerEl = document.getElementById('footer-updated');
+      if (footerEl) footerEl.textContent = data.updated_at.replace(/-/g, '.');
+      renderChips();
+      bindEvents();
+      render();
+    } catch (err) {
+      console.error('Failed to load data:', err);
+      document.getElementById('active-list').innerHTML = '<div class="empty-state"><strong>데이터를 불러올 수 없습니다</strong>잠시 후 다시 시도해 주세요.</div>';
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+
+</body>
+</html>
