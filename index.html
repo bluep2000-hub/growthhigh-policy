@@ -469,11 +469,28 @@
     });
   }
 
+  function applyLockedUI(ind) {
+    // 업종 전용(뉴스레터) 모드: 필터 UI 숨기고 헤더를 해당 업종으로 고정
+    const controls = document.querySelector('.controls');
+    if (controls) controls.style.display = 'none';
+    const titleEl = document.querySelector('.hero-title');
+    if (titleEl) titleEl.innerHTML = '2026 <span class="accent">' + ind + '</span> 정부지원사업';
+    const descEl = document.querySelector('.hero-desc');
+    if (descEl) descEl.textContent = ind + ' 분야 최신 공고문을 한 곳에 모아 핵심 정보로 정리했습니다.';
+    document.title = '2026 ' + ind + ' 정부지원사업 \u2014 GROWTH\'HIGH';
+  }
+
   async function init() {
     try {
       const res = await fetch('data.json?v=' + Date.now());
       const data = await res.json();
       state.programs = data.programs.filter(p => getStatus(calcDday(p.deadline_iso)) !== 'closed');
+      const ALLOWED_IND = ['제조업', '지식서비스업', '게임개발업'];
+      const lockIndustry = new URLSearchParams(location.search).get('industry');
+      if (lockIndustry && ALLOWED_IND.includes(lockIndustry)) {
+        state.programs = state.programs.filter(p => (p.industries || []).includes(lockIndustry));
+        applyLockedUI(lockIndustry);
+      }
       state.filters = data.filters;
       state.updated_at = data.updated_at || '';
       const footerEl = document.getElementById('footer-updated');
