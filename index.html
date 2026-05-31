@@ -90,26 +90,6 @@
     margin: 0 auto;
     letter-spacing: -0.005em;
   }
-  .hero-stats {
-    display: flex; gap: 8px; justify-content: center;
-    margin-top: 32px; flex-wrap: wrap;
-  }
-  .stat-pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 9px 18px;
-    background: #FFFFFF;
-    border: 1px solid var(--line-card);
-    border-radius: 999px;
-    font-size: 13px; font-weight: 500;
-    color: var(--ink-500);
-    box-shadow: var(--shadow-sm);
-  }
-  .stat-num {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px; font-weight: 700;
-    color: var(--ink-900); letter-spacing: -0.02em;
-  }
-
   /* Controls — clean white card */
   .controls {
     margin-bottom: 40px;
@@ -353,10 +333,6 @@
     <div class="hero-badge"><span class="dot"></span>매일 업데이트</div>
     <h1 class="hero-title">2026 <span class="accent">정부지원사업</span> 큐레이션</h1>
     <p class="hero-desc">최신 공고문을 한 곳에 모아 핵심 정보로 정리.<br>업종·유형 필터로 상황에 맞는 사업을 빠르게 추립니다.</p>
-    <div class="hero-stats">
-      <div class="stat-pill">검토 사업 <span class="stat-num" id="total-count">23</span></div>
-      <div class="stat-pill">진행 중 <span class="stat-num" id="active-count">16</span></div>
-    </div>
   </div>
 
   <div class="controls">
@@ -463,8 +439,6 @@
     document.getElementById('empty-state').style.display = filtered.length === 0 ? 'block' : 'none';
     const total = state.programs.length;
     const filteredCount = filtered.length;
-    document.getElementById('active-count').textContent = total;
-    document.getElementById('total-count').textContent = total;
     const counterEl = document.getElementById('result-count');
     if (filteredCount === total) counterEl.innerHTML = '전체 <strong>' + total + '</strong>개 표시';
     else counterEl.innerHTML = '<strong>' + total + '</strong>개 中 <strong>' + filteredCount + '</strong>개 표시';
