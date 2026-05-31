@@ -203,9 +203,7 @@
     width: 8px; height: 8px; border-radius: 50%;
     background: var(--accent);
   }
-  .closed-wrap .section-dot { background: var(--ink-300); }
   .section-title { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink-900); }
-  .closed-wrap .section-title { color: var(--ink-500); }
   .section-count {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px; font-weight: 600;
@@ -229,8 +227,6 @@
     box-shadow: var(--shadow-lg);
     border-color: #D1D5DB;
   }
-  .closed-wrap .program-card { background: #FAFBFC; opacity: 0.85; }
-  .closed-wrap .program-card:hover { opacity: 1; background: #FFFFFF; }
 
   .card-row { display: flex; gap: 22px; align-items: flex-start; }
   .card-status {
@@ -309,16 +305,6 @@
   .program-section.hidden { display: none; }
 
   /* Today's curation — accent-highlighted top section */
-  .today-wrap .section-dot { background: var(--accent); }
-  .today-wrap .section-title { color: var(--accent); }
-  .today-wrap .program-card { border-color: #DCE7FE; box-shadow: var(--shadow-md); }
-  .today-wrap .program-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
-  .today-wrap .section-count { color: var(--accent); background: var(--accent-soft); border-color: #DCE7FE; }
-  .today-empty {
-    padding: 18px 20px; border: 1px dashed var(--line-card);
-    border-radius: 12px; background: #FAFBFC;
-    font-size: 13px; color: var(--ink-400); letter-spacing: -0.01em;
-  }
 
   /* Footer */
   .doc-footer {
@@ -392,16 +378,6 @@
     </div>
   </div>
 
-  <section class="program-section today-wrap" id="today-section">
-    <div class="section-header-row">
-      <span class="section-dot"></span>
-      <div class="section-title">오늘의 큐레이션</div>
-      <div class="section-count" id="today-en">0</div>
-    </div>
-    <div class="program-list" id="today-list"></div>
-    <div class="today-empty" id="today-empty" style="display:none;">큐레이션 사업이 없습니다.</div>
-  </section>
-
   <section class="program-section" id="active-section">
     <div class="section-header-row">
       <span class="section-dot"></span>
@@ -409,15 +385,6 @@
       <div class="section-count" id="active-en">0</div>
     </div>
     <div class="program-list" id="active-list"></div>
-  </section>
-
-  <section class="program-section closed-wrap" id="closed-section">
-    <div class="section-header-row">
-      <span class="section-dot"></span>
-      <div class="section-title">마감 완료 사업</div>
-      <div class="section-count" id="closed-en">0</div>
-    </div>
-    <div class="program-list" id="closed-list"></div>
   </section>
 
   <div class="empty-state" id="empty-state" style="display:none;">
@@ -487,32 +454,16 @@
 
   function render() {
     const filtered = state.programs.filter(p => matchesSearch(p, state.search) && matchesIndustry(p, state.selected.industries) && matchesType(p, state.selected.types));
-    const isCurated = p => typeof p.curated === 'number' && getStatus(calcDday(p.deadline_iso)) !== 'closed';
-    const today = filtered.filter(isCurated);
-    const active = filtered.filter(p => getStatus(calcDday(p.deadline_iso)) !== 'closed' && !isCurated(p));
-    const closed = filtered.filter(p => getStatus(calcDday(p.deadline_iso)) === 'closed');
-    today.sort((a, b) => (a.curated || 99) - (b.curated || 99));
+    const active = filtered.slice();
     active.sort((a, b) => calcDday(a.deadline_iso) - calcDday(b.deadline_iso));
-    closed.sort((a, b) => calcDday(b.deadline_iso) - calcDday(a.deadline_iso));
-    document.getElementById('today-list').innerHTML = today.map(renderCard).join('');
     document.getElementById('active-list').innerHTML = active.map(renderCard).join('');
-    document.getElementById('closed-list').innerHTML = closed.map(renderCard).join('');
-    document.getElementById('today-en').textContent = today.length;
     document.getElementById('active-en').textContent = active.length;
-    document.getElementById('closed-en').textContent = closed.length;
     const hasFilter = state.search || state.selected.industries.size || state.selected.types.size;
-    // 오늘 섹션: 필터 없을 때만 노출. 필터 사용 중이면 숨김.
-    const showToday = !hasFilter;
-    document.getElementById('today-section').classList.toggle('hidden', !showToday);
-    document.getElementById('today-list').style.display = today.length > 0 ? '' : 'none';
-    document.getElementById('today-empty').style.display = today.length === 0 ? 'block' : 'none';
     document.getElementById('active-section').classList.toggle('hidden', active.length === 0);
-    document.getElementById('closed-section').classList.toggle('hidden', closed.length === 0);
     document.getElementById('empty-state').style.display = filtered.length === 0 ? 'block' : 'none';
     const total = state.programs.length;
     const filteredCount = filtered.length;
-    const activeAll = state.programs.filter(p => getStatus(calcDday(p.deadline_iso)) !== 'closed').length;
-    document.getElementById('active-count').textContent = activeAll;
+    document.getElementById('active-count').textContent = total;
     document.getElementById('total-count').textContent = total;
     const counterEl = document.getElementById('result-count');
     if (filteredCount === total) counterEl.innerHTML = '전체 <strong>' + total + '</strong>개 표시';
@@ -548,7 +499,7 @@
     try {
       const res = await fetch('data.json?v=' + Date.now());
       const data = await res.json();
-      state.programs = data.programs;
+      state.programs = data.programs.filter(p => getStatus(calcDday(p.deadline_iso)) !== 'closed');
       state.filters = data.filters;
       state.updated_at = data.updated_at || '';
       const footerEl = document.getElementById('footer-updated');
