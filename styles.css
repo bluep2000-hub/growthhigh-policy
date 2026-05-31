@@ -54,12 +54,23 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--ink);
   line-height: 1;
 }
+.logo-symbol {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.logo-text { display: inline-block; }
 
 .logo .apostrophe { color: var(--urgent); font-weight: 800; }
 
