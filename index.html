@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2026 정부지원사업 큐레이션 — GROWTH'HIGH</title>
+<title>Growth'High Weekly Curation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
@@ -316,6 +316,30 @@
     .card-status-label { margin-top: 0; }
     .card-arrow { display: none; }
   }
+
+/* ===== GROWTH'HIGH 플로팅 버튼 ===== */
+.gh-fab { position: fixed; right: 24px; bottom: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+.gh-fab-menu { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; opacity: 0; transform: translateY(12px) scale(0.96); pointer-events: none; transition: opacity .22s ease, transform .22s ease; }
+.gh-fab.open .gh-fab-menu { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.gh-fab-item { display: inline-flex; align-items: center; gap: 9px; padding: 11px 16px; background: #FFFFFF; border: 1px solid var(--line-strong); border-radius: 999px; box-shadow: 0 4px 16px rgba(10,24,40,0.13); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: -0.01em; color: var(--brand); white-space: nowrap; transition: transform .15s ease, box-shadow .15s ease, background .15s ease; }
+.gh-fab-item:hover { transform: translateX(-3px); box-shadow: 0 6px 20px rgba(10,24,40,0.2); }
+.gh-fab-ico { font-size: 16px; line-height: 1; }
+.gh-fab-cta { background: var(--urgent); color: #FFFFFF; border-color: var(--urgent); }
+.gh-fab-cta:hover { background: #B33523; }
+.gh-fab-toggle { position: relative; width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer; background: var(--brand); color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 22px rgba(10,24,40,0.32); font-family: inherit; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; transition: transform .18s ease, background .18s ease; }
+.gh-fab-toggle:hover { transform: scale(1.06); }
+.gh-fab.open .gh-fab-toggle { background: var(--ink); }
+.gh-fab-toggle svg { display: block; margin: 0 auto; }
+.gh-fab-toggle-open { display: block; }
+.gh-fab-toggle-close { display: none; }
+.gh-fab.open .gh-fab-toggle-open { display: none; }
+.gh-fab.open .gh-fab-toggle-close { display: block; }
+@media print { .gh-fab { display: none !important; } }
+@media (max-width: 480px) {
+  .gh-fab { right: 16px; bottom: 16px; }
+  .gh-fab-toggle { width: 54px; height: 54px; font-size: 13px; }
+  .gh-fab-item { padding: 10px 14px; font-size: 13px; }
+}
 </style>
 </head>
 <body>
@@ -331,7 +355,7 @@
 
   <div class="hero">
     <div class="hero-badge"><span class="dot"></span>매일 업데이트</div>
-    <h1 class="hero-title">2026 <span class="accent">정부지원사업</span> 큐레이션</h1>
+    <h1 class="hero-title">Growth<span class="accent">'</span>High Weekly Curation</h1>
     <p class="hero-desc">최신 공고문을 한 곳에 모아 핵심 정보로 정리.<br>업종·유형 필터로 상황에 맞는 사업을 빠르게 추립니다.</p>
   </div>
 
@@ -475,11 +499,7 @@
     if (searchWrap) searchWrap.style.display = 'none';
     const indChips = document.getElementById('industry-chips');
     if (indChips) { const g = indChips.closest('.filter-group'); if (g) g.style.display = 'none'; }
-    const titleEl = document.querySelector('.hero-title');
-    if (titleEl) titleEl.innerHTML = '2026 <span class="accent">' + ind + '</span> 정부지원사업';
-    const descEl = document.querySelector('.hero-desc');
-    if (descEl) descEl.textContent = ind + ' 분야 최신 공고문을 한 곳에 모아 핵심 정보로 정리했습니다. 유형 필터로 더 추려볼 수 있습니다.';
-    document.title = '2026 ' + ind + ' 정부지원사업 \u2014 GROWTH\'HIGH';
+    // 헤더는 모든 화면 공통 'Growth\'High Weekly Curation'으로 고정 (업종별 변환 없음)
   }
 
   async function init() {
@@ -511,5 +531,39 @@
 })();
 </script>
 
+<!-- ===== GROWTH'HIGH 플로팅 버튼 ===== -->
+<div class="gh-fab" id="ghFab">
+  <div class="gh-fab-menu" id="ghFabMenu">
+    <a class="gh-fab-item" href="https://growthhigh.co.kr/" target="_blank" rel="noopener">
+      <span class="gh-fab-ico">🏠</span><span class="gh-fab-label">홈페이지</span>
+    </a>
+    <a class="gh-fab-item" href="https://blog.naver.com/growthhigh/223409780907" target="_blank" rel="noopener">
+      <span class="gh-fab-ico">✍️</span><span class="gh-fab-label">블로그</span>
+    </a>
+    <a class="gh-fab-item gh-fab-cta" href="https://yuncommon.notion.site/351815d712b980abaaace37e5eb0354c" target="_blank" rel="noopener">
+      <span class="gh-fab-ico">💬</span><span class="gh-fab-label">무료 상담 신청</span>
+    </a>
+  </div>
+  <button class="gh-fab-toggle" id="ghFabToggle" aria-label="그로스하이 메뉴 열기" aria-expanded="false">
+    <svg class="gh-fab-toggle-open" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <svg class="gh-fab-toggle-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var fab=document.getElementById('ghFab'),btn=document.getElementById('ghFabToggle');
+  if(!fab||!btn)return;
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=fab.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.addEventListener('click',function(e){
+    if(fab.classList.contains('open')&&!fab.contains(e.target)){
+      fab.classList.remove('open');btn.setAttribute('aria-expanded','false');
+    }
+  });
+})();
+</script>
 </body>
 </html>

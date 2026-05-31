@@ -726,13 +726,14 @@ details.more p {
 .gh-fab-ico { font-size: 16px; line-height: 1; }
 .gh-fab-cta { background: var(--urgent); color: #FFFFFF; border-color: var(--urgent); }
 .gh-fab-cta:hover { background: #B33523; }
-.gh-fab-toggle { position: relative; width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer; background: var(--brand); color: #FFFFFF; box-shadow: 0 6px 22px rgba(10,24,40,0.32); font-family: inherit; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; transition: transform .18s ease, background .18s ease; }
+.gh-fab-toggle { position: relative; width: 60px; height: 60px; border-radius: 50%; border: none; cursor: pointer; background: var(--brand); color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 22px rgba(10,24,40,0.32); font-family: inherit; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; transition: transform .18s ease, background .18s ease; }
 .gh-fab-toggle:hover { transform: scale(1.06); }
 .gh-fab.open .gh-fab-toggle { background: var(--ink); }
-.gh-fab-toggle-text { display: inline; }
-.gh-fab-toggle-close { display: none; font-size: 18px; }
-.gh-fab.open .gh-fab-toggle-text { display: none; }
-.gh-fab.open .gh-fab-toggle-close { display: inline; }
+.gh-fab-toggle svg { display: block; margin: 0 auto; }
+.gh-fab-toggle-open { display: block; }
+.gh-fab-toggle-close { display: none; }
+.gh-fab.open .gh-fab-toggle-open { display: none; }
+.gh-fab.open .gh-fab-toggle-close { display: block; }
 @media print { .gh-fab { display: none !important; } }
 @media (max-width: 480px) {
   .gh-fab { right: 16px; bottom: 16px; }
