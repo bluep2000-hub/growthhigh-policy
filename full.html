@@ -149,6 +149,32 @@
     .card-status-label { margin-top: 0; }
     .card-arrow { display: none; }
   }
+
+  /* ── 재생목록 담기 (Firebase) ── */
+  .program-card { position: relative; }
+  .card-check { position: absolute; top: 14px; right: 14px; width: 26px; height: 26px; border-radius: 8px; border: 2px solid var(--line-card); background: #fff; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; transition: all .15s; }
+  .card-check:hover { border-color: var(--accent); }
+  .card-check.checked { background: var(--accent); border-color: var(--accent); }
+  .card-check.checked::after { content: '✓'; color: #fff; font-size: 15px; font-weight: 800; }
+  .picker-bar { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(120%); width: min(680px, calc(100% - 32px)); background: var(--ink-900); color: #fff; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,.28); padding: 16px 20px; display: flex; align-items: center; gap: 14px; z-index: 100; transition: transform .26s cubic-bezier(.2,.8,.2,1); flex-wrap: wrap; }
+  .picker-bar.show { transform: translateX(-50%) translateY(0); }
+  .picker-count { font-size: 14px; font-weight: 700; letter-spacing: -.01em; white-space: nowrap; }
+  .picker-count .n { font-family: 'JetBrains Mono', monospace; color: #7DA9FF; }
+  .picker-select { flex: 1; min-width: 160px; padding: 10px 12px; font-family: inherit; font-size: 13.5px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; color: #fff; }
+  .picker-select option { color: #111; }
+  .picker-input { flex: 1; min-width: 160px; padding: 10px 12px; font-family: inherit; font-size: 13.5px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; color: #fff; display: none; }
+  .picker-input::placeholder { color: rgba(255,255,255,.5); }
+  .picker-btn { padding: 10px 18px; font-family: inherit; font-size: 13.5px; font-weight: 700; background: var(--accent); color: #fff; border: none; border-radius: 10px; cursor: pointer; white-space: nowrap; transition: all .15s; letter-spacing: -.01em; }
+  .picker-btn:hover { background: #1D4ED8; }
+  .picker-btn.ghost { background: rgba(255,255,255,.12); }
+  .picker-btn:disabled { opacity: .4; cursor: not-allowed; }
+  .picker-clear { background: none; border: none; color: rgba(255,255,255,.6); cursor: pointer; font-size: 13px; padding: 6px; }
+  .picker-clear:hover { color: #fff; }
+  .picker-msg { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); background: #047857; color: #fff; padding: 11px 20px; border-radius: 10px; font-size: 13.5px; font-weight: 600; z-index: 101; opacity: 0; transition: opacity .25s; pointer-events: none; box-shadow: 0 6px 20px rgba(0,0,0,.2); }
+  .picker-msg.show { opacity: 1; }
+  .picker-msg.err { background: var(--urgent); }
+  .edit-toggle { display: inline-flex; align-items: center; gap: 6px; margin-left: 12px; padding: 6px 12px; font-size: 12px; font-weight: 600; background: var(--accent-soft); color: var(--accent); border: none; border-radius: 8px; cursor: pointer; }
+  .edit-toggle.on { background: var(--accent); color: #fff; }
 </style>
 </head>
 <body>
@@ -189,7 +215,7 @@
     </div>
     <div class="controls-footer">
       <div class="result-count" id="result-count"></div>
-      <button id="reset-btn" class="reset-btn" disabled>↺ 전체 해제</button>
+      <button id="reset-btn" class="reset-btn" disabled>↺ 전체 해제</button><button class="edit-toggle" id="edit-toggle">+ 재생목록 담기 모드</button>
     </div>
   </div>
 
@@ -256,7 +282,9 @@
     const typeTags = (p.types || []).map(t => '<span class="card-tag type">' + esc(t) + '</span>').join('');
     const tagsHtml = typeTags + subTags + (p.tags || []).map((t, i) => '<span class="card-tag' + (i === 0 ? '' : ' alt') + '">' + esc(t) + '</span>').join('');
     const metaHtml = Object.entries(p.meta || {}).map(([k, v]) => '<span><strong>' + esc(k) + '</strong>' + esc(v) + '</span>').join('');
-    return '<a href="' + esc(p.file) + '" target="_blank" rel="noopener" class="program-card' + (st === 'closed' ? ' is-closed' : '') + '"><div class="card-row"><div class="card-status ' + st + '"><div class="card-dday">' + ddayText(dday, st) + '</div><div class="card-status-label">' + statusLabel(dday, st) + '</div></div><div class="card-body-wrap"><div class="card-tags">' + tagsHtml + '</div><h3 class="card-title">' + esc(p.title) + '</h3><p class="card-summary">' + esc(p.summary || '') + '</p><div class="card-meta-list">' + metaHtml + '</div></div><div class="card-arrow">→</div></div></a>';
+    const slug = p.file.replace(/\.html$/, '');
+    const chk = window.EDIT_MODE ? '<div class="card-check' + (window.PICKED && window.PICKED.has(slug) ? ' checked' : '') + '" data-slug="' + esc(slug) + '" onclick="window.togglePick(event, this)"></div>' : '';
+    return '<a href="' + esc(p.file) + '" target="_blank" rel="noopener" class="program-card' + (st === 'closed' ? ' is-closed' : '') + '">' + chk + '<div class="card-row"><div class="card-status ' + st + '"><div class="card-dday">' + ddayText(dday, st) + '</div><div class="card-status-label">' + statusLabel(dday, st) + '</div></div><div class="card-body-wrap"><div class="card-tags">' + tagsHtml + '</div><h3 class="card-title">' + esc(p.title) + '</h3><p class="card-summary">' + esc(p.summary || '') + '</p><div class="card-meta-list">' + metaHtml + '</div></div><div class="card-arrow">→</div></div></a>';
   }
 
   function matchesSearch(p, q) {
@@ -424,6 +452,7 @@
       applyView();
       renderTypeChips();
       bindSearch();
+      window.renderRef = render;
       render();
     } catch (err) {
       console.error('load fail', err);
@@ -434,5 +463,112 @@
   else init();
 })();
 </script>
+
+<!-- 재생목록 담기 바 (편집 모드) -->
+<div class="picker-bar" id="picker-bar">
+  <span class="picker-count"><span class="n" id="pick-n">0</span>개 선택됨</span>
+  <select class="picker-select" id="pick-select"></select>
+  <input class="picker-input" id="pick-input" placeholder="새 재생목록 이름 입력">
+  <button class="picker-btn" id="pick-save" disabled>담기</button>
+  <button class="picker-clear" id="pick-cancel">선택 해제</button>
+</div>
+<div class="picker-msg" id="picker-msg"></div>
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { firebaseConfig, EDIT_PASSCODE } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+window.PICKED = new Set();
+window.EDIT_MODE = false;
+let authed = false;
+
+const $ = id => document.getElementById(id);
+function showMsg(text, isErr) {
+  const m = $('picker-msg'); m.textContent = text; m.className = 'picker-msg show' + (isErr ? ' err' : '');
+  setTimeout(() => m.classList.remove('show'), 2600);
+}
+
+// 재생목록 목록 로드
+async function loadPlaylists() {
+  const sel = $('pick-select');
+  sel.innerHTML = '<option value="">재생목록 선택...</option>';
+  try {
+    const snap = await getDocs(collection(db, 'playlists'));
+    snap.forEach(d => {
+      const o = document.createElement('option'); o.value = d.id; o.textContent = d.id; sel.appendChild(o);
+    });
+  } catch(e) { console.error(e); }
+  const o = document.createElement('option'); o.value = '__new__'; o.textContent = '+ 새 재생목록 만들기'; sel.appendChild(o);
+}
+
+window.togglePick = function(ev, el) {
+  ev.preventDefault(); ev.stopPropagation();
+  const slug = el.dataset.slug;
+  if (window.PICKED.has(slug)) { window.PICKED.delete(slug); el.classList.remove('checked'); }
+  else { window.PICKED.add(slug); el.classList.add('checked'); }
+  updateBar();
+};
+
+function updateBar() {
+  const n = window.PICKED.size;
+  $('pick-n').textContent = n;
+  $('picker-bar').classList.toggle('show', window.EDIT_MODE && n > 0);
+  $('pick-save').disabled = n === 0 || !$('pick-select').value;
+}
+
+$('edit-toggle').addEventListener('click', () => {
+  window.EDIT_MODE = !window.EDIT_MODE;
+  $('edit-toggle').classList.toggle('on', window.EDIT_MODE);
+  $('edit-toggle').textContent = window.EDIT_MODE ? '✓ 담기 모드 ON' : '+ 재생목록 담기 모드';
+  if (window.EDIT_MODE && !authed) {
+    const p = prompt('편집 암호를 입력하세요');
+    if (p === EDIT_PASSCODE) { authed = true; loadPlaylists(); }
+    else { showMsg('암호가 틀렸습니다', true); window.EDIT_MODE = false; $('edit-toggle').classList.remove('on'); $('edit-toggle').textContent = '+ 재생목록 담기 모드'; return; }
+  }
+  if (window.renderRef) window.renderRef();
+  $('picker-bar').classList.toggle('show', window.EDIT_MODE && window.PICKED.size > 0);
+});
+
+$('pick-select').addEventListener('change', () => {
+  const v = $('pick-select').value;
+  $('pick-input').style.display = v === '__new__' ? 'block' : 'none';
+  $('pick-save').disabled = window.PICKED.size === 0 || !v;
+});
+
+$('pick-cancel').addEventListener('click', () => {
+  window.PICKED.clear();
+  document.querySelectorAll('.card-check.checked').forEach(c => c.classList.remove('checked'));
+  updateBar();
+});
+
+$('pick-save').addEventListener('click', async () => {
+  let name = $('pick-select').value;
+  if (name === '__new__') { name = $('pick-input').value.trim(); if (!name) { showMsg('재생목록 이름을 입력하세요', true); return; } }
+  if (!name) return;
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });
+  try {
+    const ref = doc(db, 'playlists', name);
+    const snap = await getDoc(ref);
+    let items = snap.exists() ? (snap.data().items || []) : [];
+    const existing = new Set(items.map(i => i.slug));
+    let added = 0;
+    window.PICKED.forEach(slug => { if (!existing.has(slug)) { items.push({ slug, added_at: today }); added++; } });
+    await setDoc(ref, { items, updated_at: today }, { merge: true });
+    showMsg('"' + name + '"에 ' + added + '개 담김 (중복 ' + (window.PICKED.size - added) + ')');
+    window.PICKED.clear();
+    document.querySelectorAll('.card-check.checked').forEach(c => c.classList.remove('checked'));
+    updateBar();
+    loadPlaylists();
+  } catch(e) { console.error(e); showMsg('저장 실패: ' + e.message, true); }
+});
+
+window.updatePickerBar = updateBar;
+</script>
+
 </body>
 </html>
