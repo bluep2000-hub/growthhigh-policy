@@ -51,6 +51,10 @@
   .hero-title .accent { color: var(--accent); }
   .hero-desc { font-size: 15px; color: var(--ink-500); line-height: 1.6; letter-spacing: -0.005em; }
 
+  /* 세부업종 화면 안내문 */
+  .cat-note { margin-bottom: 24px; padding: 14px 18px; background: var(--accent-soft); border: 1px solid #DBE6FF; border-radius: 12px; font-size: 13px; color: var(--ink-500); line-height: 1.55; letter-spacing: -0.005em; }
+  .cat-note strong { color: var(--accent); font-weight: 700; }
+
   /* Subcategory nav (when in a 상위 업종) */
   .subnav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
   .subnav a { font-size: 13.5px; font-weight: 600; padding: 9px 16px; background: #FAFBFC; border: 1px solid var(--line-card); border-radius: 10px; color: var(--ink-500); text-decoration: none; transition: all .15s; letter-spacing: -0.01em; }
@@ -170,6 +174,9 @@
   <!-- 상위 업종 화면: 세부업종 네비 -->
   <nav class="subnav" id="subnav" style="display:none;"></nav>
 
+  <!-- 세부업종 화면 안내문 -->
+  <div class="cat-note" id="cat-note" style="display:none;"></div>
+
   <div class="controls" id="controls">
     <div class="search-wrap">
       <input type="text" id="search-input" class="search-input" placeholder="사업명, 키워드, 운영기관 검색..." autocomplete="off">
@@ -260,7 +267,15 @@
   function inCat(p) {
     if (!state.cat) return true;                       // 전체
     if (TOP_INDUSTRIES.includes(state.cat)) return (p.industries||[]).includes(state.cat);
-    // 세부업종
+    // 세부업종 화면: 해당 세부업종 + (그 상위 업종이면서 세부 미지정 = 일반/공통) 모두 포함
+    const top = topOfSub(state.cat);
+    if ((p.sub_industries||[]).includes(state.cat)) return true;
+    if (top && (p.industries||[]).includes(top) && !(p.sub_industries||[]).length) return true;
+    return false;
+  }
+  // 이 사업이 현재 cat의 "특화"인지(세부 태그 보유) 여부
+  function isSpecific(p) {
+    if (!state.cat || TOP_INDUSTRIES.includes(state.cat)) return true;
     return (p.sub_industries||[]).includes(state.cat);
   }
   function matchesType(p) { if (state.selType.size === 0) return true; return (p.types||[]).some(t => state.selType.has(t)); }
@@ -322,8 +337,20 @@
     const pool = state.programs.filter(p => inCat(p) && matchesSearch(p, state.search) && matchesType(p));
     const active = [], closed = [];
     pool.forEach(p => { (getStatus(calcDday(p.deadline_iso)) === 'closed' ? closed : active).push(p); });
-    active.sort((a, b) => calcDday(a.deadline_iso) - calcDday(b.deadline_iso));
-    closed.sort((a, b) => calcDday(b.deadline_iso) - calcDday(a.deadline_iso));
+    // 세부업종 화면이면: 특화(세부태그 보유)를 위로, 그 안에서 마감 임박순
+    const subView = state.cat && !TOP_INDUSTRIES.includes(state.cat);
+    const sortFn = (a, b) => {
+      if (subView) {
+        const sa = isSpecific(a) ? 0 : 1, sb = isSpecific(b) ? 0 : 1;
+        if (sa !== sb) return sa - sb;
+      }
+      return calcDday(a.deadline_iso) - calcDday(b.deadline_iso);
+    };
+    active.sort(sortFn);
+    closed.sort((a, b) => {
+      if (subView) { const sa = isSpecific(a)?0:1, sb = isSpecific(b)?0:1; if (sa!==sb) return sa-sb; }
+      return calcDday(b.deadline_iso) - calcDday(a.deadline_iso);
+    });
 
     document.getElementById('active-list').innerHTML = active.map(renderCard).join('');
     document.getElementById('closed-list').innerHTML = closed.map(renderCard).join('');
@@ -332,6 +359,16 @@
     document.getElementById('active-section').classList.toggle('hidden', active.length === 0);
     document.getElementById('closed-section').classList.toggle('hidden', closed.length === 0);
     document.getElementById('empty-state').style.display = pool.length === 0 ? 'block' : 'none';
+
+    // 세부업종 화면 안내문
+    const note = document.getElementById('cat-note');
+    if (subView) {
+      const spec = pool.filter(isSpecific).length;
+      note.style.display = 'block';
+      note.innerHTML = '<strong>' + esc(state.cat) + '</strong> 특화 ' + spec + '개 + 전 업종·일반 제조 공통 ' + (pool.length - spec) + '개를 함께 표시합니다. (공통 사업도 ' + esc(state.cat) + ' 기업이 지원 가능)';
+    } else {
+      note.style.display = 'none';
+    }
 
     const total = state.programs.filter(inCat).length;
     const rc = document.getElementById('result-count');
