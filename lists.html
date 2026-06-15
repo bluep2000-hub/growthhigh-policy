@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth'High 재생목록</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--accent:#2563EB;--accent-soft:#EEF4FF;--line:#EEF0F2;--line-card:#E8EAEE;--ink-900:#0A0A0A;--ink-700:#1F2937;--ink-500:#4B5563;--ink-400:#6B7280;--ink-300:#9CA3AF;--urgent:#C73E2C;--shadow-sm:0 1px 2px rgba(15,23,42,.04);--shadow-lg:0 8px 24px rgba(15,23,42,.08),0 2px 6px rgba(15,23,42,.04);}
+  *{box-sizing:border-box;}
+  body{font-family:'Pretendard Variable',Pretendard,sans-serif;background:#fff;color:var(--ink-700);margin:0;}
+  .doc{max-width:880px;margin:0 auto;padding:32px 32px 96px;}
+  .brand-header{display:flex;align-items:center;padding:0 0 20px;margin-bottom:28px;border-bottom:1px solid var(--line);}
+  .brand-mark{display:flex;align-items:center;gap:10px;}
+  .wordmark{font-size:17px;font-weight:800;letter-spacing:-.04em;color:var(--ink-900);}
+  .apostrophe{color:var(--urgent);font-weight:800;}
+  .tagline{font-size:11px;font-weight:500;color:var(--ink-300);padding-left:12px;margin-left:4px;border-left:1px solid #E5E7EB;}
+  .hero{padding:8px 0 28px;}
+  .hero-title{font-size:34px;font-weight:800;letter-spacing:-.045em;color:var(--ink-900);margin:0 0 12px;line-height:1.15;}
+  .hero-title .accent{color:var(--accent);}
+  .hero-desc{font-size:15px;color:var(--ink-500);line-height:1.6;margin:0;}
+  .toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;}
+  .count-badge{font-size:13px;color:var(--ink-500);}
+  .count-badge strong{color:var(--ink-900);font-weight:700;}
+  .full-link{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;padding:8px 14px;background:var(--accent-soft);border-radius:10px;}
+  .list-grid{display:grid;gap:12px;}
+  .list-card{display:flex;align-items:center;gap:18px;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line-card);border-radius:16px;padding:22px 24px;transition:all .2s;box-shadow:var(--shadow-sm);}
+  .list-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:#D1D5DB;}
+  .list-icon{flex-shrink:0;width:48px;height:48px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:22px;}
+  .list-body{flex:1;min-width:0;}
+  .list-name{font-size:18px;font-weight:700;letter-spacing:-.03em;color:var(--ink-900);margin-bottom:4px;}
+  .list-meta{font-size:12.5px;color:var(--ink-400);display:flex;gap:14px;flex-wrap:wrap;}
+  .list-meta .mono{font-family:'JetBrains Mono',monospace;}
+  .list-count{flex-shrink:0;text-align:right;}
+  .list-count .num{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;color:var(--accent);line-height:1;}
+  .list-count .lbl{font-size:11px;color:var(--ink-400);margin-top:3px;}
+  .list-arrow{flex-shrink:0;font-size:18px;color:var(--ink-300);transition:all .2s;}
+  .list-card:hover .list-arrow{color:var(--accent);transform:translateX(3px);}
+  .empty-state{padding:56px 24px;background:#fff;border:1px dashed #D1D5DB;border-radius:16px;text-align:center;color:var(--ink-500);font-size:14px;}
+  .empty-state strong{display:block;color:var(--ink-900);font-size:16px;margin-bottom:6px;font-weight:700;}
+  .loading{padding:56px;text-align:center;color:var(--ink-400);font-size:14px;}
+  .doc-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;font-weight:700;color:var(--ink-500);}
+  .doc-footer .apostrophe{color:var(--urgent);}
+  @media(max-width:720px){.doc{padding:24px 16px 60px;}.hero-title{font-size:26px;}.list-card{padding:18px;gap:14px;}.list-icon{width:40px;height:40px;font-size:18px;}}
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="brand-header">
+    <div class="brand-mark">
+      <span class="wordmark">GROWTH<span class="apostrophe">'</span>HIGH</span>
+      <span class="tagline">Scale-up Studio</span>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1 class="hero-title">재생목록 <span class="accent">전체</span></h1>
+    <p class="hero-desc">담당 컨설턴트가 만든 큐레이션 재생목록입니다. 클릭하면 해당 목록으로 이동합니다.</p>
+  </div>
+
+  <div class="toolbar">
+    <div class="count-badge" id="count-badge"></div>
+    <a class="full-link" href="full.html">+ 전체 큐레이션에서 담기</a>
+  </div>
+
+  <div class="loading" id="loading">재생목록을 불러오는 중...</div>
+  <div class="list-grid" id="list-grid"></div>
+  <div class="empty-state" id="empty-state" style="display:none;">
+    <strong>아직 만든 재생목록이 없습니다</strong>
+    전체 큐레이션에서 사업을 체크하고 "담기"로 재생목록을 만들어 보세요.
+  </div>
+
+  <footer class="doc-footer">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</footer>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { firebaseConfig } from "./firebase-config.js";
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+async function init(){
+  try{
+    const snap = await getDocs(collection(db, 'playlists'));
+    const lists = [];
+    snap.forEach(d => {
+      const data = d.data();
+      lists.push({ name: d.id, count: (data.items||[]).length, updated: data.updated_at || '' });
+    });
+    lists.sort((a,b) => (b.updated||'').localeCompare(a.updated||''));
+    document.getElementById('loading').style.display = 'none';
+    if (lists.length === 0){
+      document.getElementById('empty-state').style.display = 'block';
+      document.getElementById('count-badge').innerHTML = '재생목록 <strong>0</strong>개';
+      return;
+    }
+    document.getElementById('count-badge').innerHTML = '재생목록 <strong>' + lists.length + '</strong>개';
+    document.getElementById('list-grid').innerHTML = lists.map(l =>
+      '<a class="list-card" href="playlist.html?list=' + encodeURIComponent(l.name) + '">' +
+        '<div class="list-icon">📁</div>' +
+        '<div class="list-body"><div class="list-name">' + esc(l.name) + '</div>' +
+        '<div class="list-meta">' + (l.updated ? '<span class="mono">' + esc(l.updated.replace(/-/g,'.')) + ' 수정</span>' : '') + '</div></div>' +
+        '<div class="list-count"><div class="num">' + l.count + '</div><div class="lbl">사업</div></div>' +
+        '<div class="list-arrow">→</div>' +
+      '</a>'
+    ).join('');
+  }catch(e){
+    console.error(e);
+    document.getElementById('loading').innerHTML = '데이터를 불러올 수 없습니다: ' + esc(e.message);
+  }
+}
+init();
+</script>
+</body>
+</html>
