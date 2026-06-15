@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth'High 전체 지원사업</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root {
+    --accent: #2563EB;
+    --accent-soft: #EEF4FF;
+    --line: #EEF0F2;
+    --line-card: #E8EAEE;
+    --ink-900: #0A0A0A;
+    --ink-700: #1F2937;
+    --ink-500: #4B5563;
+    --ink-400: #6B7280;
+    --ink-300: #9CA3AF;
+    --urgent: #C73E2C;
+    --urgent-soft: #FBEEEC;
+    --warning: #B45309;
+    --warning-soft: #FEF3E2;
+    --closed: #9CA3AF;
+    --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 2px 8px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 8px 24px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+  }
+  body { background: #FFFFFF; color: var(--ink-700); }
+  .doc { max-width: 1040px; margin: 0 auto; padding: 32px 32px 96px; }
+
+  .brand-header { display: flex; align-items: center; padding: 0 0 20px; margin-bottom: 32px; border-bottom: 1px solid var(--line); }
+  .brand-mark { display: flex; align-items: center; gap: 10px; }
+  .brand-mark .brand-logo { display: block; width: 32px; height: 32px; object-fit: contain; }
+  .brand-mark .wordmark { font-family: 'Pretendard Variable', Pretendard, sans-serif; font-size: 17px; font-weight: 800; letter-spacing: -0.04em; color: var(--ink-900); line-height: 1; }
+  .brand-mark .apostrophe { color: var(--urgent); font-weight: 800; }
+  .brand-mark .tagline { font-size: 11px; font-weight: 500; letter-spacing: -0.005em; color: var(--ink-300); padding-left: 12px; margin-left: 4px; border-left: 1px solid #E5E7EB; line-height: 1; }
+
+  /* Breadcrumb */
+  .crumb { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; margin-bottom: 20px; }
+  .crumb a { color: var(--ink-400); text-decoration: none; padding: 4px 10px; border-radius: 8px; transition: all .15s; letter-spacing: -0.01em; }
+  .crumb a:hover { color: var(--accent); background: var(--accent-soft); }
+  .crumb .sep { color: var(--ink-300); }
+  .crumb .current { color: var(--ink-900); font-weight: 700; padding: 4px 10px; }
+
+  .hero { padding: 8px 0 36px; }
+  .hero-title { font-size: 38px; font-weight: 800; line-height: 1.12; letter-spacing: -0.045em; margin-bottom: 14px; color: var(--ink-900); }
+  .hero-title .accent { color: var(--accent); }
+  .hero-desc { font-size: 15px; color: var(--ink-500); line-height: 1.6; letter-spacing: -0.005em; }
+
+  /* Subcategory nav (when in a 상위 업종) */
+  .subnav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .subnav a { font-size: 13.5px; font-weight: 600; padding: 9px 16px; background: #FAFBFC; border: 1px solid var(--line-card); border-radius: 10px; color: var(--ink-500); text-decoration: none; transition: all .15s; letter-spacing: -0.01em; }
+  .subnav a:hover { border-color: var(--ink-400); color: var(--ink-900); }
+  .subnav a.active { background: var(--ink-900); border-color: var(--ink-900); color: #FFF; }
+  .subnav a .cnt { font-family: 'JetBrains Mono', monospace; font-size: 11px; opacity: .7; margin-left: 6px; }
+
+  /* Top category cards (전체 화면) */
+  .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 36px; }
+  .cat-card { display: block; text-decoration: none; padding: 24px; background: #FFF; border: 1px solid var(--line-card); border-radius: 16px; box-shadow: var(--shadow-sm); transition: all .2s; }
+  .cat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: #D1D5DB; }
+  .cat-card .cat-name { font-size: 19px; font-weight: 800; color: var(--ink-900); letter-spacing: -0.03em; margin-bottom: 6px; }
+  .cat-card .cat-cnt { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); font-weight: 600; }
+  .cat-card .cat-subs { margin-top: 12px; font-size: 12px; color: var(--ink-400); line-height: 1.5; letter-spacing: -0.005em; }
+  @media (max-width: 720px) { .cat-grid { grid-template-columns: 1fr; } }
+
+  .controls { margin-bottom: 32px; padding: 20px; background: #FFF; border: 1px solid var(--line-card); border-radius: 16px; box-shadow: var(--shadow-sm); }
+  .search-wrap { position: relative; margin-bottom: 14px; }
+  .search-input { width: 100%; padding: 13px 44px 13px 18px; font-family: inherit; font-size: 14.5px; background: #FAFBFC; border: 1px solid var(--line); border-radius: 12px; color: var(--ink-700); transition: all .18s; letter-spacing: -0.005em; }
+  .search-input:focus { outline: none; border-color: var(--accent); background: #FFF; box-shadow: 0 0 0 3px var(--accent-soft); }
+  .search-input::placeholder { color: var(--ink-300); }
+  .search-clear { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--ink-300); cursor: pointer; padding: 4px 8px; font-size: 14px; line-height: 1; display: none; border-radius: 6px; }
+  .search-clear.visible { display: block; }
+  .filter-group { margin-bottom: 12px; }
+  .filter-group:last-of-type { margin-bottom: 0; }
+  .filter-label { font-size: 12px; font-weight: 600; color: var(--ink-400); margin-bottom: 9px; display: block; letter-spacing: -0.005em; }
+  .filter-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-family: inherit; font-size: 13px; font-weight: 500; padding: 7px 14px; background: #FAFBFC; border: 1px solid var(--line); border-radius: 10px; color: var(--ink-500); cursor: pointer; transition: all .15s; letter-spacing: -0.005em; user-select: none; }
+  .chip:hover { border-color: var(--ink-400); color: var(--ink-700); }
+  .chip.active { background: var(--ink-900); border-color: var(--ink-900); color: #FFF; }
+  .controls-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); flex-wrap: wrap; gap: 12px; }
+  .result-count { font-size: 13px; color: var(--ink-500); letter-spacing: -0.005em; }
+  .result-count strong { color: var(--ink-900); font-weight: 700; }
+  .reset-btn { font-size: 12.5px; font-weight: 600; color: var(--ink-400); background: none; border: none; cursor: pointer; padding: 6px 10px; border-radius: 8px; transition: all .15s; letter-spacing: -0.005em; }
+  .reset-btn:hover { color: var(--urgent); background: var(--urgent-soft); }
+  .reset-btn:disabled { opacity: .3; cursor: not-allowed; background: none; color: var(--ink-300); }
+
+  .program-section { margin-bottom: 40px; }
+  .section-header-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding: 0 4px; }
+  .section-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .section-dot.closed { background: var(--closed); }
+  .section-title { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink-900); }
+  .section-count { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; color: var(--ink-400); margin-left: auto; letter-spacing: -0.005em; }
+
+  .program-list { display: grid; gap: 12px; }
+  .program-card { display: block; text-decoration: none; color: inherit; background: #FFF; border: 1px solid var(--line-card); border-radius: 16px; padding: 22px 26px; transition: all .2s ease; box-shadow: var(--shadow-sm); }
+  .program-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: #D1D5DB; }
+  .program-card.is-closed { opacity: .72; }
+  .program-card.is-closed:hover { opacity: 1; }
+  .card-row { display: flex; gap: 22px; align-items: flex-start; }
+  .card-status { flex-shrink: 0; width: 78px; text-align: center; padding: 12px 8px; border-radius: 12px; background: #F4F5F7; }
+  .card-status.urgent { background: var(--urgent-soft); }
+  .card-status.warning { background: var(--warning-soft); }
+  .card-status.closed { background: #ECEDEF; }
+  .card-dday { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  .card-status.urgent .card-dday { color: var(--urgent); }
+  .card-status.warning .card-dday { color: var(--warning); }
+  .card-status.closed .card-dday { color: var(--closed); font-size: 13px; font-weight: 700; line-height: 1.2; padding-top: 4px; }
+  .card-status-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 4px; }
+  .card-status.urgent .card-status-label { color: var(--urgent); }
+  .card-status.warning .card-status-label { color: var(--warning); }
+  .card-status.closed .card-status-label { color: var(--closed); }
+  .card-body-wrap { flex: 1; min-width: 0; }
+  .card-tags { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .card-tag { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 3px 9px; border-radius: 8px; letter-spacing: -0.005em; }
+  .card-tag.sub { background: #ECFDF5; color: #047857; }
+  .card-tag.alt { background: #F3F4F6; color: var(--ink-500); }
+  .card-title { font-size: 18px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.32; margin-bottom: 8px; color: var(--ink-900); }
+  .card-summary { font-size: 13.5px; color: var(--ink-500); line-height: 1.6; margin-bottom: 12px; letter-spacing: -0.005em; }
+  .card-meta-list { display: flex; gap: 18px; font-size: 12px; color: var(--ink-400); letter-spacing: -0.005em; flex-wrap: wrap; }
+  .card-meta-list strong { color: var(--ink-500); font-weight: 600; margin-right: 6px; }
+  .card-arrow { flex-shrink: 0; align-self: center; font-size: 18px; color: var(--ink-300); transition: all .2s; }
+  .program-card:hover .card-arrow { color: var(--accent); transform: translateX(3px); }
+
+  .empty-state { padding: 56px 24px; background: #FFF; border: 1px dashed #D1D5DB; border-radius: 16px; text-align: center; color: var(--ink-500); font-size: 14px; }
+  .empty-state strong { display: block; color: var(--ink-900); font-size: 16px; margin-bottom: 6px; font-weight: 700; letter-spacing: -0.015em; }
+  .program-section.hidden { display: none; }
+
+  .doc-footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px; }
+  .footer-brand { font-size: 12px; font-weight: 700; color: var(--ink-500); letter-spacing: -0.01em; }
+  .footer-brand .apostrophe { color: var(--urgent); }
+  .footer-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 500; color: var(--ink-400); letter-spacing: 0.04em; text-align: right; line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .doc { padding: 24px 16px 60px; }
+    .hero-title { font-size: 28px; }
+    .controls { padding: 16px; }
+    .program-card { padding: 18px; }
+    .card-row { flex-direction: column; gap: 14px; }
+    .card-status { width: 100%; display: flex; gap: 12px; align-items: center; justify-content: flex-start; padding: 10px 14px; }
+    .card-status-label { margin-top: 0; }
+    .card-arrow { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+
+  <header class="brand-header">
+    <div class="brand-mark">
+      <img src="logo.png" alt="GROWTH'HIGH" class="brand-logo" onerror="this.style.display='none'">
+      <span class="wordmark">GROWTH<span class="apostrophe">'</span>HIGH</span>
+      <span class="tagline">Scale-up Studio</span>
+    </div>
+  </header>
+
+  <nav class="crumb" id="crumb"></nav>
+
+  <div class="hero">
+    <h1 class="hero-title" id="page-title">전체 지원사업</h1>
+    <p class="hero-desc" id="page-desc">진행 중 · 종료된 사업을 모두 모았습니다.</p>
+  </div>
+
+  <!-- 전체 화면: 상위 업종 카드 -->
+  <div class="cat-grid" id="cat-grid" style="display:none;"></div>
+
+  <!-- 상위 업종 화면: 세부업종 네비 -->
+  <nav class="subnav" id="subnav" style="display:none;"></nav>
+
+  <div class="controls" id="controls">
+    <div class="search-wrap">
+      <input type="text" id="search-input" class="search-input" placeholder="사업명, 키워드, 운영기관 검색..." autocomplete="off">
+      <button id="search-clear" class="search-clear" title="검색어 지우기">✕</button>
+    </div>
+    <div class="filter-group" id="type-filter-group">
+      <label class="filter-label">유형</label>
+      <div class="filter-chips" id="type-chips"></div>
+    </div>
+    <div class="controls-footer">
+      <div class="result-count" id="result-count"></div>
+      <button id="reset-btn" class="reset-btn" disabled>↺ 전체 해제</button>
+    </div>
+  </div>
+
+  <section class="program-section" id="active-section">
+    <div class="section-header-row">
+      <span class="section-dot"></span>
+      <div class="section-title">진행 중인 사업</div>
+      <div class="section-count" id="active-cnt">0</div>
+    </div>
+    <div class="program-list" id="active-list"></div>
+  </section>
+
+  <section class="program-section" id="closed-section">
+    <div class="section-header-row">
+      <span class="section-dot closed"></span>
+      <div class="section-title">종료된 사업 (참고용)</div>
+      <div class="section-count" id="closed-cnt">0</div>
+    </div>
+    <div class="program-list" id="closed-list"></div>
+  </section>
+
+  <div class="empty-state" id="empty-state" style="display:none;">
+    <strong>표시할 사업이 없습니다</strong>
+    검색어나 필터를 변경해 보세요.
+  </div>
+
+  <footer class="doc-footer">
+    <div class="footer-brand">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</div>
+    <div class="footer-meta">Curated by GROWTH'HIGH<br><span id="footer-updated"></span></div>
+  </footer>
+
+</div>
+
+<script>
+(() => {
+  'use strict';
+
+  // ── 업종 계층 정의 ──
+  const TOP_INDUSTRIES = ['제조업', '지식서비스업', '게임개발업'];
+  const SUB_MAP = {
+    '제조업': ['뷰티','라이프','푸드','패션','반도체/소부장','스포츠','로봇','바이오헬스케어']
+    // 지식서비스업/게임개발업 세부는 추후 추가
+  };
+
+  let state = { programs: [], filters: { types: [] }, selType: new Set(), search: '', cat: '', updated_at: '' };
+
+  function calcDday(isoStr) {
+    if (!isoStr) return 9999;
+    const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
+    const toUTC = (s) => { const [y, m, d] = s.split('-').map(Number); return Date.UTC(y, m - 1, d); };
+    const dlMs = toUTC(fmt.format(new Date(isoStr)));
+    const nowMs = toUTC(fmt.format(new Date()));
+    return Math.round((dlMs - nowMs) / 86400000);
+  }
+  function getStatus(dday) { if (dday < 0) return 'closed'; if (dday <= 3) return 'urgent'; if (dday <= 7) return 'warning'; return 'active'; }
+  function statusLabel(dday, st) { if (st === 'closed') return 'REF'; if (st === 'urgent') return 'URGENT'; if (st === 'warning') return 'WARNING'; return 'ACTIVE'; }
+  function ddayText(dday, st) { if (st === 'closed') return 'CLOSED'; if (dday === 0) return 'D−0'; if (dday >= 9999) return '상시'; return 'D−' + dday; }
+  function esc(s) { return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+  function renderCard(p) {
+    const dday = calcDday(p.deadline_iso);
+    const st = getStatus(dday);
+    const subTags = (p.sub_industries || []).map(s => '<span class="card-tag sub">' + esc(s) + '</span>').join('');
+    const tagsHtml = subTags + (p.tags || []).map((t, i) => '<span class="card-tag' + (i === 0 ? '' : ' alt') + '">' + esc(t) + '</span>').join('');
+    const metaHtml = Object.entries(p.meta || {}).map(([k, v]) => '<span><strong>' + esc(k) + '</strong>' + esc(v) + '</span>').join('');
+    return '<a href="' + esc(p.file) + '" target="_blank" rel="noopener" class="program-card' + (st === 'closed' ? ' is-closed' : '') + '"><div class="card-row"><div class="card-status ' + st + '"><div class="card-dday">' + ddayText(dday, st) + '</div><div class="card-status-label">' + statusLabel(dday, st) + '</div></div><div class="card-body-wrap"><div class="card-tags">' + tagsHtml + '</div><h3 class="card-title">' + esc(p.title) + '</h3><p class="card-summary">' + esc(p.summary || '') + '</p><div class="card-meta-list">' + metaHtml + '</div></div><div class="card-arrow">→</div></div></a>';
+  }
+
+  function matchesSearch(p, q) {
+    if (!q) return true;
+    const hay = [p.title, p.summary, ...(p.tags||[]), ...(p.industries||[]), ...(p.sub_industries||[]), ...(p.types||[])].join(' ').toLowerCase();
+    return q.toLowerCase().split(/\s+/).every(t => hay.includes(t));
+  }
+
+  // 현재 cat에 해당하는 사업 추출
+  function inCat(p) {
+    if (!state.cat) return true;                       // 전체
+    if (TOP_INDUSTRIES.includes(state.cat)) return (p.industries||[]).includes(state.cat);
+    // 세부업종
+    return (p.sub_industries||[]).includes(state.cat);
+  }
+  function matchesType(p) { if (state.selType.size === 0) return true; return (p.types||[]).some(t => state.selType.has(t)); }
+
+  function topOfSub(sub) { for (const [top, subs] of Object.entries(SUB_MAP)) if (subs.includes(sub)) return top; return ''; }
+
+  function buildCrumb() {
+    const c = document.getElementById('crumb');
+    let html = '<a href="?">전체 지원사업</a>';
+    if (state.cat && TOP_INDUSTRIES.includes(state.cat)) {
+      html += '<span class="sep">›</span><span class="current">' + esc(state.cat) + '</span>';
+    } else if (state.cat) {
+      const top = topOfSub(state.cat);
+      if (top) html += '<span class="sep">›</span><a href="?cat=' + encodeURIComponent(top) + '">' + esc(top) + '</a>';
+      html += '<span class="sep">›</span><span class="current">' + esc(state.cat) + '</span>';
+    }
+    c.innerHTML = html;
+  }
+
+  function countFor(catName) {
+    return state.programs.filter(p => {
+      if (TOP_INDUSTRIES.includes(catName)) return (p.industries||[]).includes(catName);
+      return (p.sub_industries||[]).includes(catName);
+    }).length;
+  }
+
+  function buildCatGrid() {
+    const g = document.getElementById('cat-grid');
+    g.innerHTML = TOP_INDUSTRIES.map(top => {
+      const subs = SUB_MAP[top] || [];
+      const subText = subs.length ? subs.join(' · ') : '세부 분류 준비 중';
+      return '<a class="cat-card" href="?cat=' + encodeURIComponent(top) + '"><div class="cat-name">' + esc(top) + '</div><div class="cat-cnt">' + countFor(top) + '개 사업</div><div class="cat-subs">' + esc(subText) + '</div></a>';
+    }).join('');
+  }
+
+  function buildSubnav() {
+    const nav = document.getElementById('subnav');
+    const top = TOP_INDUSTRIES.includes(state.cat) ? state.cat : topOfSub(state.cat);
+    const subs = SUB_MAP[top] || [];
+    if (!subs.length) { nav.style.display = 'none'; return; }
+    let html = '<a href="?cat=' + encodeURIComponent(top) + '"' + (state.cat === top ? ' class="active"' : '') + '>전체<span class="cnt">' + countFor(top) + '</span></a>';
+    html += subs.map(s => '<a href="?cat=' + encodeURIComponent(s) + '"' + (state.cat === s ? ' class="active"' : '') + '>' + esc(s) + '<span class="cnt">' + countFor(s) + '</span></a>').join('');
+    nav.innerHTML = html;
+    nav.style.display = 'flex';
+  }
+
+  function renderTypeChips() {
+    const el = document.getElementById('type-chips');
+    el.innerHTML = state.filters.types.map(t => '<button class="chip' + (state.selType.has(t) ? ' active' : '') + '" data-value="' + esc(t) + '">' + esc(t) + '</button>').join('');
+    el.querySelectorAll('.chip').forEach(ch => ch.addEventListener('click', () => {
+      const v = ch.dataset.value;
+      if (state.selType.has(v)) { state.selType.delete(v); ch.classList.remove('active'); }
+      else { state.selType.add(v); ch.classList.add('active'); }
+      render();
+    }));
+  }
+
+  function render() {
+    const pool = state.programs.filter(p => inCat(p) && matchesSearch(p, state.search) && matchesType(p));
+    const active = [], closed = [];
+    pool.forEach(p => { (getStatus(calcDday(p.deadline_iso)) === 'closed' ? closed : active).push(p); });
+    active.sort((a, b) => calcDday(a.deadline_iso) - calcDday(b.deadline_iso));
+    closed.sort((a, b) => calcDday(b.deadline_iso) - calcDday(a.deadline_iso));
+
+    document.getElementById('active-list').innerHTML = active.map(renderCard).join('');
+    document.getElementById('closed-list').innerHTML = closed.map(renderCard).join('');
+    document.getElementById('active-cnt').textContent = active.length;
+    document.getElementById('closed-cnt').textContent = closed.length;
+    document.getElementById('active-section').classList.toggle('hidden', active.length === 0);
+    document.getElementById('closed-section').classList.toggle('hidden', closed.length === 0);
+    document.getElementById('empty-state').style.display = pool.length === 0 ? 'block' : 'none';
+
+    const total = state.programs.filter(inCat).length;
+    const rc = document.getElementById('result-count');
+    rc.innerHTML = (pool.length === total)
+      ? '전체 <strong>' + total + '</strong>개 (진행 ' + active.length + ' · 종료 ' + closed.length + ')'
+      : '<strong>' + total + '</strong>개 中 <strong>' + pool.length + '</strong>개 표시';
+    document.getElementById('reset-btn').disabled = !(state.search || state.selType.size);
+  }
+
+  function applyView() {
+    const isTop = TOP_INDUSTRIES.includes(state.cat);
+    const isSub = state.cat && !isTop;
+    const isAll = !state.cat;
+
+    document.getElementById('cat-grid').style.display = isAll ? 'grid' : 'none';
+    buildCrumb();
+
+    // 제목
+    const t = document.getElementById('page-title'), d = document.getElementById('page-desc');
+    if (isAll) { t.innerHTML = '전체 지원사업'; d.textContent = '진행 중 · 종료된 사업을 모두 모았습니다.'; }
+    else { t.innerHTML = esc(state.cat) + ' 지원사업'; d.textContent = state.cat + ' 분야 지원사업 (종료 포함).'; }
+
+    if (isAll) buildCatGrid();
+    if (isTop || isSub) buildSubnav(); else document.getElementById('subnav').style.display = 'none';
+  }
+
+  function bindSearch() {
+    const si = document.getElementById('search-input'), sc = document.getElementById('search-clear');
+    let timer;
+    si.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { state.search = si.value.trim(); sc.classList.toggle('visible', !!state.search); render(); }, 200); });
+    si.addEventListener('keydown', e => { if (e.key === 'Escape') { si.value = ''; state.search = ''; sc.classList.remove('visible'); render(); } });
+    sc.addEventListener('click', () => { si.value = ''; state.search = ''; sc.classList.remove('visible'); si.focus(); render(); });
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      si.value = ''; state.search = ''; sc.classList.remove('visible'); state.selType.clear();
+      document.querySelectorAll('#type-chips .chip.active').forEach(c => c.classList.remove('active'));
+      render();
+    });
+  }
+
+  async function init() {
+    try {
+      const res = await fetch('data-full.json?v=' + Date.now());
+      const data = await res.json();
+      state.programs = data.programs;
+      state.filters = data.filters || { types: [] };
+      if (!state.filters.types) state.filters.types = [];
+      state.updated_at = data.updated_at || '';
+      state.cat = new URLSearchParams(location.search).get('cat') || '';
+      const fu = document.getElementById('footer-updated');
+      if (fu) fu.textContent = (data.updated_at || '').replace(/-/g, '.');
+      applyView();
+      renderTypeChips();
+      bindSearch();
+      render();
+    } catch (err) {
+      console.error('load fail', err);
+      document.getElementById('active-list').innerHTML = '<div class="empty-state"><strong>데이터를 불러올 수 없습니다</strong>잠시 후 다시 시도해 주세요.</div>';
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+</body>
+</html>
