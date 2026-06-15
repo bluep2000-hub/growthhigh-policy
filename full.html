@@ -121,6 +121,7 @@
   .card-tags { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
   .card-tag { font-size: 11px; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 3px 9px; border-radius: 8px; letter-spacing: -0.005em; }
   .card-tag.sub { background: #ECFDF5; color: #047857; }
+  .card-tag.type { background: #FEF3E2; color: #B45309; }
   .card-tag.alt { background: #F3F4F6; color: var(--ink-500); }
   .card-title { font-size: 18px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.32; margin-bottom: 8px; color: var(--ink-900); }
   .card-summary { font-size: 13.5px; color: var(--ink-500); line-height: 1.6; margin-bottom: 12px; letter-spacing: -0.005em; }
@@ -252,7 +253,8 @@
     const dday = calcDday(p.deadline_iso);
     const st = getStatus(dday);
     const subTags = (p.sub_industries || []).map(s => '<span class="card-tag sub">' + esc(s) + '</span>').join('');
-    const tagsHtml = subTags + (p.tags || []).map((t, i) => '<span class="card-tag' + (i === 0 ? '' : ' alt') + '">' + esc(t) + '</span>').join('');
+    const typeTags = (p.types || []).map(t => '<span class="card-tag type">' + esc(t) + '</span>').join('');
+    const tagsHtml = typeTags + subTags + (p.tags || []).map((t, i) => '<span class="card-tag' + (i === 0 ? '' : ' alt') + '">' + esc(t) + '</span>').join('');
     const metaHtml = Object.entries(p.meta || {}).map(([k, v]) => '<span><strong>' + esc(k) + '</strong>' + esc(v) + '</span>').join('');
     return '<a href="' + esc(p.file) + '" target="_blank" rel="noopener" class="program-card' + (st === 'closed' ? ' is-closed' : '') + '"><div class="card-row"><div class="card-status ' + st + '"><div class="card-dday">' + ddayText(dday, st) + '</div><div class="card-status-label">' + statusLabel(dday, st) + '</div></div><div class="card-body-wrap"><div class="card-tags">' + tagsHtml + '</div><h3 class="card-title">' + esc(p.title) + '</h3><p class="card-summary">' + esc(p.summary || '') + '</p><div class="card-meta-list">' + metaHtml + '</div></div><div class="card-arrow">→</div></div></a>';
   }
