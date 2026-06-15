@@ -26,6 +26,11 @@
   .client-title{font-size:36px;font-weight:800;letter-spacing:-.045em;color:var(--ink-900);margin-bottom:12px;line-height:1.15;}
   .client-title .accent{color:var(--accent);}
   .client-desc{font-size:15px;color:var(--ink-500);line-height:1.6;}
+  .share-bar{display:flex;gap:10px;align-items:center;margin-top:16px;flex-wrap:wrap;}
+  .copy-btn{font-size:13px;font-weight:600;color:#fff;background:var(--accent);border:none;border-radius:10px;padding:10px 16px;cursor:pointer;transition:all .15s;}
+  .copy-btn:hover{background:#1D4ED8;}
+  .copy-hint{font-size:12px;color:var(--ink-400);}
+  body.share-mode .share-bar{display:none;}
   .controls{margin:24px 0 32px;padding:18px 20px;background:#fff;border:1px solid var(--line-card);border-radius:16px;box-shadow:var(--shadow-sm);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
   .result-count{font-size:13px;color:var(--ink-500);}
   .result-count strong{color:var(--ink-900);font-weight:700;}
@@ -79,7 +84,7 @@
       <span class="wordmark">GROWTH<span class="apostrophe">'</span>HIGH</span>
       <span class="tagline">Scale-up Studio</span>
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="nav-links">
       <a href="full.html">전체 큐레이션</a>
       <a href="lists.html" class="active">재생목록</a>
     </nav>
@@ -89,6 +94,7 @@
     <div class="client-badge">PLAYLIST</div>
     <h1 class="client-title" id="client-title">— 큐레이션</h1>
     <p class="client-desc" id="client-desc">담당 컨설턴트가 선별하여 보낸 맞춤 지원사업입니다.</p>
+    <div class="share-bar" id="share-bar"><button class="copy-btn" id="copy-btn">🔗 클라이언트 공유 링크 복사</button><span class="copy-hint">이 버튼은 클라이언트 화면에는 보이지 않습니다</span></div>
   </div>
 
   <div class="controls" id="type-controls" style="display:flex;flex-direction:column;align-items:stretch;gap:12px;">
@@ -188,7 +194,19 @@ async function init(){
     const res = await fetch('data-full.json?v='+Date.now());
     const data = await res.json();
     data.programs.forEach(p => { state.bySlug[p.file.replace(/\.html$/,'')] = p; });
-    state.list = new URLSearchParams(location.search).get('list') || '';
+    const params = new URLSearchParams(location.search);
+    state.list = params.get('list') || '';
+    const shareMode = params.get('share') === '1';
+    if (shareMode) {
+      document.body.classList.add('share-mode');
+      const nav = document.getElementById('nav-links'); if (nav) nav.style.display = 'none';
+    } else {
+      const cb = document.getElementById('copy-btn');
+      if (cb) cb.addEventListener('click', () => {
+        const url = location.origin + location.pathname + '?list=' + encodeURIComponent(state.list) + '&share=1';
+        navigator.clipboard.writeText(url).then(() => { cb.textContent = '✓ 복사됨'; setTimeout(() => cb.textContent = '🔗 클라이언트 공유 링크 복사', 1800); });
+      });
+    }
     document.getElementById('client-title').innerHTML = esc(state.list) + ' <span class="accent">재생목록</span>';
     document.getElementById('client-desc').textContent = '담당 컴설턴트가 선별한 맞춤 지원사업입니다.';
     if (state.list) {

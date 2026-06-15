@@ -535,11 +535,7 @@ $('edit-toggle').addEventListener('click', () => {
   window.EDIT_MODE = !window.EDIT_MODE;
   $('edit-toggle').classList.toggle('on', window.EDIT_MODE);
   $('edit-toggle').textContent = window.EDIT_MODE ? '✓ 담기 모드 ON' : '+ 재생목록 담기 모드';
-  if (window.EDIT_MODE && !authed) {
-    const p = prompt('편집 암호를 입력하세요');
-    if (p === EDIT_PASSCODE) { authed = true; loadPlaylists(); }
-    else { showMsg('암호가 틀렸습니다', true); window.EDIT_MODE = false; $('edit-toggle').classList.remove('on'); $('edit-toggle').textContent = '+ 재생목록 담기 모드'; return; }
-  }
+  if (window.EDIT_MODE && !authed) { authed = true; loadPlaylists(); }
   if (window.renderRef) window.renderRef();
   $('picker-bar').classList.toggle('show', window.EDIT_MODE && window.PICKED.size > 0);
 });
