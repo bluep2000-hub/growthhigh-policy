@@ -11,7 +11,11 @@
   *{box-sizing:border-box;}
   body{font-family:'Pretendard Variable',Pretendard,sans-serif;background:#fff;color:var(--ink-700);margin:0;}
   .doc{max-width:880px;margin:0 auto;padding:32px 32px 96px;}
-  .brand-header{display:flex;align-items:center;padding:0 0 20px;margin-bottom:28px;border-bottom:1px solid var(--line);}
+  .brand-header{display:flex;align-items:center;justify-content:space-between;padding:0 0 20px;margin-bottom:28px;border-bottom:1px solid var(--line);}
+  .nav-links{display:flex;gap:8px;}
+  .nav-links a{font-size:13px;font-weight:600;color:var(--ink-500);text-decoration:none;padding:9px 14px;border-radius:10px;transition:all .15s;white-space:nowrap;}
+  .nav-links a:hover{background:#F4F5F7;color:var(--ink-900);}
+  .nav-links a.active{background:var(--accent-soft);color:var(--accent);}
   .brand-mark{display:flex;align-items:center;gap:10px;}
   .wordmark{font-size:17px;font-weight:800;letter-spacing:-.04em;color:var(--ink-900);}
   .apostrophe{color:var(--urgent);font-weight:800;}
@@ -24,6 +28,12 @@
   .count-badge{font-size:13px;color:var(--ink-500);}
   .count-badge strong{color:var(--ink-900);font-weight:700;}
   .full-link{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;padding:8px 14px;background:var(--accent-soft);border-radius:10px;}
+  .type-filter{margin-bottom:20px;padding:16px 18px;background:#fff;border:1px solid var(--line-card);border-radius:14px;}
+  .type-filter .tf-label{font-size:12px;font-weight:600;color:var(--ink-400);margin-bottom:10px;display:block;}
+  .type-chips{display:flex;flex-wrap:wrap;gap:6px;}
+  .chip{font-family:inherit;font-size:13px;font-weight:500;padding:7px 14px;background:#FAFBFC;border:1px solid var(--line);border-radius:10px;color:var(--ink-500);cursor:pointer;transition:all .15s;user-select:none;}
+  .chip:hover{border-color:var(--ink-400);color:var(--ink-700);}
+  .chip.active{background:var(--ink-900);border-color:var(--ink-900);color:#fff;}
   .list-grid{display:grid;gap:12px;}
   .list-card{display:flex;align-items:center;gap:18px;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line-card);border-radius:16px;padding:22px 24px;transition:all .2s;box-shadow:var(--shadow-sm);}
   .list-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg);border-color:#D1D5DB;}
@@ -52,6 +62,10 @@
       <span class="wordmark">GROWTH<span class="apostrophe">'</span>HIGH</span>
       <span class="tagline">Scale-up Studio</span>
     </div>
+    <nav class="nav-links">
+      <a href="full.html">전체 큐레이션</a>
+      <a href="lists.html" class="active">재생목록</a>
+    </nav>
   </header>
 
   <div class="hero">
@@ -61,7 +75,12 @@
 
   <div class="toolbar">
     <div class="count-badge" id="count-badge"></div>
-    <a class="full-link" href="full.html">+ 전체 큐레이션에서 담기</a>
+    <a class="full-link" href="full.html">+ 사업 담으러 가기</a>
+  </div>
+
+  <div class="type-filter" id="type-filter" style="display:none;">
+    <span class="tf-label">유형으로 재생목록 거르기</span>
+    <div class="type-chips" id="type-chips"></div>
   </div>
 
   <div class="loading" id="loading">재생목록을 불러오는 중...</div>
@@ -83,31 +102,72 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+const ALL_TYPES = ['R&D','창업','판로수출','인력','정책자금','인증','투자유치'];
+let allLists = [];
+let bySlug = {};
+let selType = new Set();
+
+function renderLists(){
+  let lists = allLists;
+  if(selType.size) lists = lists.filter(l => [...l.types].some(t=>selType.has(t)));
+  const grid = document.getElementById('list-grid');
+  if(lists.length===0){
+    grid.innerHTML='';
+    document.getElementById('empty-state').style.display='block';
+    document.getElementById('empty-state').innerHTML='<strong>해당 유형의 재생목록이 없습니다</strong>다른 유형을 선택해 보세요.';
+    document.getElementById('count-badge').innerHTML='재생목록 <strong>0</strong>개';
+    return;
+  }
+  document.getElementById('empty-state').style.display='none';
+  document.getElementById('count-badge').innerHTML = '재생목록 <strong>' + lists.length + '</strong>개' + (selType.size?' (필터됨)':'');
+  grid.innerHTML = lists.map(l =>
+    '<a class="list-card" href="playlist.html?list=' + encodeURIComponent(l.name) + '">' +
+      '<div class="list-icon">📁</div>' +
+      '<div class="list-body"><div class="list-name">' + esc(l.name) + '</div>' +
+      '<div class="list-meta">' + (l.updated ? '<span class="mono">' + esc(l.updated.replace(/-/g,'.')) + ' 수정</span>' : '') + '</div></div>' +
+      '<div class="list-count"><div class="num">' + l.count + '</div><div class="lbl">사업</div></div>' +
+      '<div class="list-arrow">→</div>' +
+    '</a>'
+  ).join('');
+}
+
+function buildTypeChips(){
+  const el=document.getElementById('type-chips');
+  el.innerHTML=ALL_TYPES.map(t=>'<button class="chip" data-v="'+t+'">'+t+'</button>').join('');
+  el.querySelectorAll('.chip').forEach(ch=>ch.addEventListener('click',()=>{
+    const v=ch.dataset.v;
+    if(selType.has(v)){selType.delete(v);ch.classList.remove('active');}
+    else{selType.add(v);ch.classList.add('active');}
+    renderLists();
+  }));
+  document.getElementById('type-filter').style.display='block';
+}
+
 async function init(){
   try{
+    try{
+      const res = await fetch('data-full.json?v='+Date.now());
+      const data = await res.json();
+      data.programs.forEach(p => { bySlug[p.file.replace(/\.html$/,'')] = p.types||[]; });
+    }catch(e){ console.warn('data-full.json 로드 실패', e); }
+
     const snap = await getDocs(collection(db, 'playlists'));
-    const lists = [];
     snap.forEach(d => {
       const data = d.data();
-      lists.push({ name: d.id, count: (data.items||[]).length, updated: data.updated_at || '' });
+      const items = data.items||[];
+      const types = new Set();
+      items.forEach(it => (bySlug[it.slug]||[]).forEach(t=>types.add(t)));
+      allLists.push({ name: d.id, count: items.length, updated: data.updated_at || '', types });
     });
-    lists.sort((a,b) => (b.updated||'').localeCompare(a.updated||''));
+    allLists.sort((a,b) => (b.updated||'').localeCompare(a.updated||''));
     document.getElementById('loading').style.display = 'none';
-    if (lists.length === 0){
+    if (allLists.length === 0){
       document.getElementById('empty-state').style.display = 'block';
       document.getElementById('count-badge').innerHTML = '재생목록 <strong>0</strong>개';
       return;
     }
-    document.getElementById('count-badge').innerHTML = '재생목록 <strong>' + lists.length + '</strong>개';
-    document.getElementById('list-grid').innerHTML = lists.map(l =>
-      '<a class="list-card" href="playlist.html?list=' + encodeURIComponent(l.name) + '">' +
-        '<div class="list-icon">📁</div>' +
-        '<div class="list-body"><div class="list-name">' + esc(l.name) + '</div>' +
-        '<div class="list-meta">' + (l.updated ? '<span class="mono">' + esc(l.updated.replace(/-/g,'.')) + ' 수정</span>' : '') + '</div></div>' +
-        '<div class="list-count"><div class="num">' + l.count + '</div><div class="lbl">사업</div></div>' +
-        '<div class="list-arrow">→</div>' +
-      '</a>'
-    ).join('');
+    buildTypeChips();
+    renderLists();
   }catch(e){
     console.error(e);
     document.getElementById('loading').innerHTML = '데이터를 불러올 수 없습니다: ' + esc(e.message);
