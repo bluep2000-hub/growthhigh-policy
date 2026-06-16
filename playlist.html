@@ -66,6 +66,10 @@
   .card-meta-list{display:flex;gap:18px;font-size:12px;color:var(--ink-400);flex-wrap:wrap;}
   .card-meta-list strong{color:var(--ink-500);font-weight:600;margin-right:6px;}
   .sent-log{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:5px 11px;background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;font-size:11.5px;font-weight:600;color:#047857;font-family:'JetBrains Mono',monospace;letter-spacing:-.01em;}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;}
+  .remove-btn{flex-shrink:0;font-size:12px;font-weight:600;color:#9AA3B2;background:#fff;border:1px solid #E3E8F0;border-radius:8px;padding:6px 12px;cursor:pointer;transition:.15s;position:relative;z-index:5;}
+  .remove-btn:hover{color:#E0431F;border-color:#F3C0B6;background:#FDEEEA;}
+  body.share-mode .remove-btn{display:none;}
   .card-arrow{flex-shrink:0;align-self:center;font-size:18px;color:var(--ink-300);transition:all .2s;}
   .program-card:hover .card-arrow{color:var(--accent);transform:translateX(3px);}
   .empty-state{padding:56px 24px;background:#fff;border:1px dashed #D1D5DB;border-radius:16px;text-align:center;color:var(--ink-500);font-size:14px;}
@@ -128,7 +132,7 @@
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
@@ -149,8 +153,10 @@ function renderCard(p, addedAt){
   const typ=(p.types||[]).map(t=>'<span class="card-tag type">'+esc(t)+'</span>').join('');
   const tags=typ+sub+(p.tags||[]).map((t,i)=>'<span class="card-tag'+(i===0?'':' alt')+'">'+esc(t)+'</span>').join('');
   const meta=Object.entries(p.meta||{}).map(([k,v])=>'<span><strong>'+esc(k)+'</strong>'+esc(v)+'</span>').join('');
-  const log=addedAt?'<div class="sent-log">✓ '+esc(addedAt)+' 추가됨</div>':'';
-  return '<a href="'+esc(p.file)+'" target="_blank" rel="noopener" class="program-card'+(st==='closed'?' is-closed':'')+'"><div class="card-row"><div class="card-status '+st+'"><div class="card-dday">'+ddayText(dd,st)+'</div><div class="card-status-label">'+statusLabel(dd,st)+'</div></div><div class="card-body-wrap"><div class="card-tags">'+tags+'</div><h3 class="card-title">'+esc(p.title)+'</h3><p class="card-summary">'+esc(p.summary||'')+'</p><div class="card-meta-list">'+meta+'</div>'+log+'</div><div class="card-arrow">→</div></div></a>';
+  const slug=p.file.replace(/\.html$/,'');
+  const log=addedAt?'<div class="sent-log">✓ '+esc(addedAt)+' 추가됨</div>':'<span></span>';
+  const rmBtn='<button class="remove-btn" onclick="window.removeFromList(event,\''+esc(slug)+'\')">− 재생목록에서 빼기</button>';
+  return '<a href="'+esc(p.file)+'" target="_blank" rel="noopener" class="program-card'+(st==='closed'?' is-closed':'')+'"><div class="card-row"><div class="card-status '+st+'"><div class="card-dday">'+ddayText(dd,st)+'</div><div class="card-status-label">'+statusLabel(dd,st)+'</div></div><div class="card-body-wrap"><div class="card-tags">'+tags+'</div><h3 class="card-title">'+esc(p.title)+'</h3><p class="card-summary">'+esc(p.summary||'')+'</p><div class="card-meta-list">'+meta+'</div><div class="card-foot">'+log+rmBtn+'</div></div><div class="card-arrow">→</div></div></a>';
 }
 
 function buildTypeChips(){
@@ -168,6 +174,17 @@ function buildTypeChips(){
     render();
   });
 }
+
+window.removeFromList = async function(ev, slug){
+  ev.preventDefault(); ev.stopPropagation();
+  if(!confirm('이 사업을 재생목록에서 뫏까요?')) return;
+  try{
+    const today = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'});
+    state.items = state.items.filter(it => it.slug !== slug);
+    await setDoc(doc(db,'playlists',state.list), { items: state.items, updated_at: today }, { merge:true });
+    render();
+  }catch(e){ console.error(e); alert('빼기 실패: '+e.message); }
+};
 
 function render(){
   let rows = state.items.map(it => ({ p: state.bySlug[it.slug], added: it.added_at })).filter(r => r.p);
