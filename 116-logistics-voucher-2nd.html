@@ -223,7 +223,7 @@
         <button class="pdf-modal-btn pdf-modal-close" id="pdfModalClose" aria-label="닫기">&#10005;</button>
       </div>
     </div>
-    <div class="pdf-modal-body"><iframe id="pdfModalFrame" title="공고문 PDF"></iframe></div>
+    <div class="pdf-modal-body"><iframe id="pdfModalFrame" title="공고문 PDF"></iframe><div id="pdfFallback" style="display:none;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;color:#fff;text-align:center;padding:24px;"><div style="font-size:15px;opacity:.85;">브라우저에서 PDF를 바로 표시할 수 없습니다.</div><a id="pdfFallbackOpen" target="_blank" style="padding:12px 24px;border-radius:10px;background:#fff;color:#0A1828;font-weight:700;text-decoration:none;">새 탭에서 PDF 열기 ↗</a></div></div>
   </div>
   <script>
   var PDF_DATA=[
@@ -234,8 +234,8 @@
   ];
   (function(){
     var modal=document.getElementById('pdfModal'),frame=document.getElementById('pdfModalFrame'),dl=document.getElementById('pdfDownloadBtn');
-    window.openPdfModal=function(i){i=i||0;if(!modal)return;frame.src=PDF_DATA[i];dl.href=PDF_DATA[i];dl.setAttribute('download',PDF_NAME[i]);document.getElementById('pdfModalTitle').textContent=PDF_NAME[i];modal.classList.add('open');document.body.style.overflow='hidden';};
-    function closePdf(){if(!modal)return;modal.classList.remove('open');frame.src='';document.body.style.overflow='';}
+    window.openPdfModal=function(i){i=i||0;if(!modal)return;var parts=PDF_DATA[i].split(",");var bin=atob(parts[1]);var len=bin.length;var arr=new Uint8Array(len);for(var j=0;j<len;j++){arr[j]=bin.charCodeAt(j);}var blob=new Blob([arr],{type:"application/pdf"});var url=URL.createObjectURL(blob);frame.src=url;dl.href=url;dl.setAttribute("download",PDF_NAME[i]);var fo=document.getElementById("pdfFallbackOpen");if(fo)fo.href=url;document.getElementById("pdfModalTitle").textContent=PDF_NAME[i];modal.classList.add("open");modal.style.setProperty("display","flex","important");modal.style.flexDirection="column";document.body.style.overflow="hidden";modal._blobUrl=url;};
+    function closePdf(){if(!modal)return;modal.classList.remove('open');modal.style.setProperty('display','none','important');frame.src='';if(modal._blobUrl){URL.revokeObjectURL(modal._blobUrl);modal._blobUrl=null;}document.body.style.overflow='';}
     var cb=document.getElementById('pdfModalClose');if(cb)cb.addEventListener('click',closePdf);
     if(modal)modal.addEventListener('click',function(e){if(e.target===modal)closePdf();});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closePdf();});
