@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-06-16T04:50:00+09:00",
+  "updated_at": "2026-06-28T16:00:00+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4194,6 +4194,361 @@
         "마감": "7.16(목) 18:00"
       },
       "sent_to": []
+    },
+    {
+      "id": "151",
+      "file": "151-gyeonggi-ai-global.html",
+      "title": "2026 경기 AI기업 글로벌 공동연구·해외진출",
+      "summary": "경기 소재 AI 기업의 글로벌 공동연구개발과 해외진출을 지원해요.",
+      "tags": [],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-07T15:00:00+09:00",
+      "deadline_display": "7.7(화) 15:00",
+      "meta": {
+        "마감": "7.7(화) 15:00"
+      }
+    },
+    {
+      "id": "152",
+      "file": "152-saas-transition-consulting.html",
+      "title": "2026 SaaS 전환·개발 컨설팅 (2차)",
+      "summary": "SaaS 전환·개발이 필요한 수요기업 대상 맞춤 컨설팅을 지원해요. (2차)",
+      "tags": [],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-20T18:00:00+09:00",
+      "deadline_display": "7.20(월) 18:00",
+      "meta": {
+        "마감": "7.20(월) 18:00"
+      }
+    },
+    {
+      "id": "153",
+      "file": "153-vietnam-kcontent-expo.html",
+      "title": "2026 K-베트남 콘텐츠 엑스포",
+      "summary": "콘텐츠 기업의 베트남 K-콘텐츠 엑스포 참가·수출상담을 지원해요.",
+      "tags": [],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-20T11:00:00+09:00",
+      "deadline_display": "7.20(월) 11:00",
+      "meta": {
+        "마감": "7.20(월) 11:00"
+      }
+    },
+    {
+      "id": "154",
+      "file": "154-knock-content-valuation.html",
+      "title": "2026 케이녹(KNOCK) 콘텐츠가치평가",
+      "summary": "콘텐츠 IP 보유기업 대상 케이녹(KNOCK) 콘텐츠 가치평가 라운드예요.",
+      "tags": [],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-07-10T14:00:00+09:00",
+      "deadline_display": "7.10(금) 14:00",
+      "meta": {
+        "마감": "7.10(금) 14:00"
+      }
+    },
+    {
+      "id": "155",
+      "file": "155-culture-content-guarantee.html",
+      "title": "2026년 문화콘텐츠기업보증",
+      "summary": "문화콘텐츠 기업 대상 제작·운영 자금 보증이에요. (상시)",
+      "tags": [],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": null,
+      "deadline_display": "예산 소진시까지 (상시)",
+      "meta": {
+        "마감": "예산 소진시까지 (상시)"
+      }
+    },
+    {
+      "id": "156",
+      "file": "156-agrifood-global-package.html",
+      "title": "2026년 농식품글로벌성장패키지(공모형 추가)",
+      "summary": "농식품 기업의 글로벌 진출을 패키지로 지원해요. (공모형 추가)",
+      "tags": [],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-03T16:00:00+09:00",
+      "deadline_display": "7.3(금) 16:00",
+      "meta": {
+        "마감": "7.3(금) 16:00"
+      }
+    },
+    {
+      "id": "157",
+      "file": "157-industrial-service-personnel.html",
+      "title": "2027년 신규 병역지정업체(산업기능요원) 신청",
+      "summary": "제조 중소기업 대상 산업기능요원 병역지정업체 신규 선정·인원 신청이에요. (상시)",
+      "tags": [],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "인력"
+      ],
+      "deadline_iso": "2026-07-10T18:00:00+09:00",
+      "deadline_display": "7.10(금) 18:00",
+      "meta": {
+        "마감": "7.10(금) 18:00"
+      }
+    },
+    {
+      "id": "159",
+      "file": "159-culture-completion-guarantee.html",
+      "title": "2026년 문화산업 완성보증",
+      "summary": "문화산업 프로젝트 대상 완성보증이에요. (상시)",
+      "tags": [],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": null,
+      "deadline_display": "예산 소진시까지 (상시)",
+      "meta": {
+        "마감": "예산 소진시까지 (상시)"
+      }
+    },
+    {
+      "id": "160",
+      "file": "160-content-ip-guarantee.html",
+      "title": "2026년 콘텐츠IP보증",
+      "summary": "콘텐츠 IP 기반 자금조달을 위한 콘텐츠IP보증이에요. (상시)",
+      "tags": [],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": null,
+      "deadline_display": "예산 소진시까지 (상시)",
+      "meta": {
+        "마감": "예산 소진시까지 (상시)"
+      }
+    },
+    {
+      "id": "161",
+      "file": "161-core-hub.html",
+      "title": "2026년 하반기 『Core기업』 모집",
+      "summary": "유망 창업·중소기업 대상 하반기 『Core기업』을 모집해요.",
+      "tags": [],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-22T16:00:00+09:00",
+      "deadline_display": "7.22(수) 16:00",
+      "meta": {
+        "마감": "7.22(수) 16:00"
+      }
+    },
+    {
+      "id": "162",
+      "file": "162-openinno-strategy.html",
+      "title": "2026 민관협력 오픈이노베이션 전략과제 해결형(Top-Down) (2차)",
+      "summary": "대기업·기관 전략과제 해결형(Top-Down) 오픈이노베이션 창업기업을 모집해요. (2차)",
+      "tags": [],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-14T16:00:00+09:00",
+      "deadline_display": "7.14(화) 16:00",
+      "meta": {
+        "마감": "7.14(화) 16:00"
+      }
+    },
+    {
+      "id": "163",
+      "file": "163-taiwan-testmkt.html",
+      "title": "2026 대만 유통망 한국상품전 연계 테스트마케팅",
+      "summary": "소비재 기업의 대만 오프라인 유통망 한국상품전 연계 테스트마케팅을 지원해요.",
+      "tags": [],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-10T18:00:00+09:00",
+      "deadline_display": "7.10(금)",
+      "meta": {
+        "마감": "7.10(금)"
+      }
+    },
+    {
+      "id": "164",
+      "file": "164-gif-idea.html",
+      "title": "2026년 GIF 창업 아이디어 경진대회",
+      "summary": "예비·초기 창업자 대상 GIF 창업 아이디어 경진대회예요.",
+      "tags": [],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-07T18:00:00+09:00",
+      "deadline_display": "8.7(금) 18:00",
+      "meta": {
+        "마감": "8.7(금) 18:00"
+      }
+    },
+    {
+      "id": "165",
+      "file": "165-ai-bigdata-sosang.html",
+      "title": "2026 AI·빅데이터 기반 소상공인 매출 증대 프로젝트",
+      "summary": "소상공인 대상 AI·빅데이터 기반 매출 증대 프로젝트예요.",
+      "tags": [],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-08T18:00:00+09:00",
+      "deadline_display": "7.8(수)",
+      "meta": {
+        "마감": "7.8(수)"
+      }
+    },
+    {
+      "id": "166",
+      "file": "166-global-openinno.html",
+      "title": "2026 AI 글로벌 챌린지 오픈이노베이션",
+      "summary": "AI 기업의 글로벌 오픈이노베이션 참가를 지원해요. (AI 글로벌 챌린지)",
+      "tags": [],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-08T18:00:00+09:00",
+      "deadline_display": "7.8(수)",
+      "meta": {
+        "마감": "7.8(수)"
+      }
+    },
+    {
+      "id": "167",
+      "file": "167-koindex-consortium.html",
+      "title": "2026 대한민국산업전시회(KoINDEX) 수출컨소시엄 단체관",
+      "summary": "수출기업의 대한민국산업전시회(KoINDEX) 수출컨소시엄 단체관 참가를 지원해요.",
+      "tags": [],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-06-30T18:00:00+09:00",
+      "deadline_display": "6.30(화) 18:00",
+      "meta": {
+        "마감": "6.30(화) 18:00"
+      }
+    },
+    {
+      "id": "168",
+      "file": "168-incheon-publictest.html",
+      "title": "2026 인천 공공 실증 오픈이노베이션",
+      "summary": "인천 지역 공공 실증 오픈이노베이션 참여기업을 모집해요.",
+      "tags": [],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-10T23:59:00+09:00",
+      "deadline_display": "7.10(금) 23:59",
+      "meta": {
+        "마감": "7.10(금) 23:59"
+      }
+    },
+    {
+      "id": "169",
+      "file": "169-publish-rnd.html",
+      "title": "2026년 출판콘텐츠 기술개발 지원",
+      "summary": "출판 분야 콘텐츠 기술개발(R&D)을 지원해요.",
+      "tags": [],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-10T18:00:00+09:00",
+      "deadline_display": "7.10(금)",
+      "meta": {
+        "마감": "7.10(금)"
+      }
+    },
+    {
+      "id": "170",
+      "file": "170-k-edutech.html",
+      "title": "2026 K-에듀테크 콘테스트",
+      "summary": "에듀테크 기업·팀 대상 K-에듀테크 콘테스트예요.",
+      "tags": [],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-15T18:00:00+09:00",
+      "deadline_display": "7.15(수)",
+      "meta": {
+        "마감": "7.15(수)"
+      }
     }
   ],
   "clients": [
