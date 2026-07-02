@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-02T15:07:05+09:00",
+  "updated_at": "2026-07-02T15:48:32+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4603,6 +4603,33 @@
         "마감": "07.17"
       },
       "source_url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000123848"
+    },
+    {
+      "id": "173",
+      "file": "173-ip-emergency-support-3rd.html",
+      "title": "2026 지식재산 긴급지원 사업 (3차)",
+      "summary": "지역 소재 중소기업 대상 IP 긴급지원(3차). IP 현안 진단·직접컨설팅 + 국내 상표출원(42만원)·해외특허 PCT 출원(228만원) 지원. 기업당 최대 2,000만원, 분담금 현금 40%. 지역센터별 예산 소진 시 조기 마감.",
+      "tags": [
+        "지식재산 · IP",
+        "진단+출원지원"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-07-21T18:00:00+09:00",
+      "deadline_display": "2026.07.21",
+      "meta": {
+        "지원": "최대 2,000만원",
+        "비율": "분담 40%",
+        "마감": "07.21"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123839"
     }
   ],
   "clients": [
