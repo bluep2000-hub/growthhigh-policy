@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-02T12:30:00+09:00",
+  "updated_at": "2026-07-02T15:07:05+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4577,6 +4577,32 @@
         "마감": "07.10"
       },
       "source_url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000123845"
+    },
+    {
+      "id": "172",
+      "file": "172-pyeongtaek-overseas-platform.html",
+      "title": "2026 평택 해외플랫폼 입점 지원사업 (2차)",
+      "summary": "평택시 소재 중소기업 대상 해외플랫폼(아마존·테무·쇼피 등) 입점 마케팅비 지원. 20개사, 최대 450만원·90%(자부담 10%). 판매수수료·광고·콘텐츠 3분야, 2026.1.1 이후 소급 인정.",
+      "tags": [
+        "수출 · 판로",
+        "마케팅 비용지원"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-17T18:00:00+09:00",
+      "deadline_display": "2026.07.17",
+      "meta": {
+        "지원": "최대 450만원",
+        "비율": "90%",
+        "마감": "07.17"
+      },
+      "source_url": "https://www.bizinfo.go.kr/web/lay1/bbs/S1T122C128/AS/74/view.do?pblancId=PBLN_000000000123848"
     }
   ],
   "clients": [
