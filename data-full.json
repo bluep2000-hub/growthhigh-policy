@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:42:03+09:00",
+  "updated_at": "2026-07-03T14:44:04+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4784,6 +4784,31 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123514"
+    },
+    {
+      "id": "180",
+      "file": "180-sogongin-clean-manufacturing.html",
+      "title": "2026 소공인 클린제조환경조성 사업 (추가)",
+      "summary": "중소벤처기업부·소상공인시장진흥공단. 상시근로자 10인 미만 제조 소공인(C10~C34) 작업장의 안전·환경 또는 에너지효율 개선을 국비 70% 매칭 지원(안전·환경 630만/고위험 1,050만, 에너지 490만원). 900개사 내외, 기존 설비 교체·개보수만 지원.",
+      "tags": [
+        "소공인 · 시설개선",
+        "클린제조환경조성"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-07-06T18:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "국비 70% 매칭",
+        "규모": "900개사 내외",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123419"
     }
   ],
   "clients": [
