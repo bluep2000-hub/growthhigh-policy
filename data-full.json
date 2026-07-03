@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:30:30+09:00",
+  "updated_at": "2026-07-03T14:32:42+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4734,6 +4734,31 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123539"
+    },
+    {
+      "id": "178",
+      "file": "178-dubai-big5-korea-pavilion.html",
+      "title": "2026 두바이 BIG5 SHOW 한국관 참가기업 모집",
+      "summary": "KOTRA·한국냉동공조산업협회. 두바이 건축전(THE BIG5, 2026.11.23~26) 한국관에 건축·냉난방·설비기자재 수출기업 12개사 참가 지원. 부스임차료·장치비 70% 국고지원, 운송 1CBM 100%. 총 참가비 720만원(신청금 선납).",
+      "tags": [
+        "판로수출 · 해외전시",
+        "두바이 BIG5 건축전"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-06T18:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "부스·장치 70% 국고",
+        "참가비": "720만원(선납)",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123590"
     }
   ],
   "clients": [
