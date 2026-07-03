@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:46:10+09:00",
+  "updated_at": "2026-07-03T14:48:01+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4835,6 +4835,32 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122700"
+    },
+    {
+      "id": "182",
+      "file": "182-sme-structural-rnd.html",
+      "title": "2026 하반기 중소기업기술혁신개발 유망기술개발(구조혁신R&D)",
+      "summary": "중소벤처기업부·중소기업기술정보진흥원. 최근 2년 이내 '사업전환계획 승인기업' 중 중진공이 추천한 중소기업 대상 자유공모 기술개발. 최대 2년·5억원(정부지원 75% 이내). 총 20억(2차 10개 과제). 3책5공 적용, IRIS 접수.",
+      "tags": [
+        "R&D · 기술개발",
+        "구조혁신 R&D"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-06T18:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "최대 2년·5억원",
+        "대상": "사업전환 승인·중진공 추천",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120845"
     }
   ],
   "clients": [
