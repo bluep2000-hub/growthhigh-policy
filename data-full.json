@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:26:44+09:00",
+  "updated_at": "2026-07-03T14:28:44+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4682,6 +4682,32 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123757"
+    },
+    {
+      "id": "176",
+      "file": "176-overseas-promo-uae-vietnam.html",
+      "title": "2026 관계부처협력 해외홍보관 입점 (아랍에미리트·베트남)",
+      "summary": "한국디자인진흥원(KIDP)·산업통상부. 두바이 DFCM/하노이 롯데몰 해외홍보관에 디자인상품 보유 중소·중견기업 입점 지원. 현지판매(POS·TikTok 라이브커머스)·B2B 매칭·수출 컨설팅. 20개사 내외, 상품 입점 최대 1년.",
+      "tags": [
+        "판로수출 · 해외진출",
+        "해외홍보관 입점"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-06T17:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "해외홍보관 입점",
+        "규모": "20개사 내외",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123635"
     }
   ],
   "clients": [
