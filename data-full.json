@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:32:42+09:00",
+  "updated_at": "2026-07-03T14:42:03+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4759,6 +4759,31 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123590"
+    },
+    {
+      "id": "179",
+      "file": "179-broadcast-drama-production.html",
+      "title": "2026 방송영상콘텐츠 제작지원 (드라마 장편, 추가)",
+      "summary": "한국콘텐츠진흥원(KOCCA). 중소 방송영상제작사(중기확인서+독립제작사 신고필증 필수) 대상 드라마(영화 제외) 장편 1편 제작지원, 과제당 최대 5억원(자부담 10%+). 서면→발표→종합심의(서면40+발표60). 해외 OTT 독점 작품 제외.",
+      "tags": [
+        "콘텐츠 · 제작지원",
+        "드라마 장편"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-07-06T14:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "과제당 최대 5억원",
+        "대상": "중소 방송영상제작사",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123514"
     }
   ],
   "clients": [
