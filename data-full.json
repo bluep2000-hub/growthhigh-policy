@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-02T15:48:32+09:00",
+  "updated_at": "2026-07-03T14:17:33+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4630,6 +4630,32 @@
         "마감": "07.21"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123839"
+    },
+    {
+      "id": "174",
+      "file": "174-biostar-2-0.html",
+      "title": "바이오스타 2.0 초기창업기업 모집 (1차)",
+      "summary": "KIST 원내 기술·연구팀과 연계해 첨단바이오 초기창업기업(창업 2년 이내)의 기술고도화·IP전략·임상인허가·투자연계를 지원. 2개사 이내, 선정기업당 연 3.4억원 내외(2026.8~2028.12).",
+      "tags": [
+        "창업 · 바이오",
+        "초기창업기업"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-06T18:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "연 3.4억원 내외",
+        "대상": "창업 2년내",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123505"
     }
   ],
   "clients": [
