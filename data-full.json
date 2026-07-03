@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:28:44+09:00",
+  "updated_at": "2026-07-03T14:30:30+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4708,6 +4708,32 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123635"
+    },
+    {
+      "id": "177",
+      "file": "177-daegu-innopolis-campus.html",
+      "title": "2026 대구특구 이노폴리스캠퍼스 지원사업",
+      "summary": "씨엔티테크(주) 운영. 기술기반 예비창업자·7년 이내 창업기업 대상 맞춤형 액셀러레이팅(BM 진단·PMF 멘토링·IPO 컨설팅)과 투자유치(IR·데모데이·우수 2개사 직접투자·TIPS 추천). 33개사 내외, 대구연구개발특구·연구소기업·대구 5대 신산업 우대.",
+      "tags": [
+        "창업 · 액셀러레이팅",
+        "이노폴리스캠퍼스"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-06T18:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "액셀러레이팅+투자",
+        "규모": "33개사 내외",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123539"
     }
   ],
   "clients": [
