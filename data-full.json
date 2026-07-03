@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:48:01+09:00",
+  "updated_at": "2026-07-03T14:51:43+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4861,6 +4861,31 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120845"
+    },
+    {
+      "id": "183",
+      "file": "183-sba-lg-kbeauty-thailand.html",
+      "title": "SBA×LG전자 K-뷰티·라이프스타일 판로 연계사업 (태국)",
+      "summary": "서울경제진흥원(SBA)×LG전자. LG전자 태국 가전구독 고객 채널(홈페이지·LG ThinQ 앱)로 서울 뷰티·라이프스타일 자사 브랜드의 태국 판로를 확장. 대상: 쇼피·라자다 등 태국서 판매중인 서울 중소기업 10개사. 우수기업은 싱가포르·말레이시아 확대·뷰티박스 참여.",
+      "tags": [
+        "판로수출 · 해외판로",
+        "K-뷰티 태국"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-06T10:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "LG 태국 채널 홍보",
+        "규모": "10개사 내외",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123386"
     }
   ],
   "clients": [
