@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-03T14:17:33+09:00",
+  "updated_at": "2026-07-03T14:26:44+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -4656,6 +4656,32 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123505"
+    },
+    {
+      "id": "175",
+      "file": "175-ip-rnd-strategy-4th.html",
+      "title": "2026 하반기 4차 IP-R&D 전략지원 (유관기관 연계)",
+      "summary": "한국특허전략개발원(KISTA) 특허전략전문가(PM)+분석기관이 연구조직 보유 중소·중견기업에 IP-R&D 밀착 특허전략(핵심특허 대응·R&D 방향·IP 창출)을 수립 지원. 연계기관(KISA·환경·해양·디캠프 등) 확정 기업 대상, R&D수행형 12주/맞춤형 8주.",
+      "tags": [
+        "R&D · 지식재산",
+        "IP-R&D 전략"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-06T14:00:00+09:00",
+      "deadline_display": "2026.07.06",
+      "meta": {
+        "지원": "PM 밀착 특허전략",
+        "형태": "연계기관 확정",
+        "마감": "07.06"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123757"
     }
   ],
   "clients": [
