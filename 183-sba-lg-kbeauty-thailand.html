@@ -65,12 +65,24 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--ink);
   line-height: 1;
 }
+
+.logo-symbol {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.logo-text { display: inline-block; }
 
 .logo .apostrophe { color: var(--urgent); font-weight: 800; }
 
@@ -766,7 +778,7 @@ details.more p {
 <div class="doc">
 
   <header class="brand-header">
-    <div class="logo">GROWTH<span class="apostrophe">'</span>HIGH<span class="tagline">Scale-up Studio</span></div>
+    <div class="logo"><img class="logo-symbol" src="logo.png" alt="GROWTH'HIGH"><span class="logo-text">GROWTH<span class="apostrophe">'</span>HIGH<span class="tagline">Scale-up Studio</span></span></div>
     <div class="doc-meta"><strong>지원사업 검토 서식</strong>v1.0 STANDARD · 2026.07.02</div>
   </header>
 
