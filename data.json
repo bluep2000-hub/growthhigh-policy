@@ -42,7 +42,9 @@
         "지원": "5년 인증 + 5백만원",
         "혜택": "가점·금리·보증",
         "마감": "4.30(목) 17:00"
-      }
+      },
+      "notion_key": "PBLN_000000000120611",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120611"
     },
     {
       "id": "02",
@@ -92,7 +94,9 @@
         "지원": "최대 1억원",
         "비율": "50~70%",
         "마감": "5.6(수) 17:00"
-      }
+      },
+      "notion_key": "PBLN_000000000120853",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120853"
     },
     {
       "id": "04",
@@ -116,7 +120,9 @@
         "지원": "최대 1억원",
         "비율": "50~70%",
         "마감": "5.29(금) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121178",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121178"
     },
     {
       "id": 4,
@@ -142,7 +148,9 @@
         "대상": "창업 7년 이내 청년창업기업(만19~39세)",
         "지원": "입주공간(연 39~40만원, 최대 3년)",
         "마감": "6.11(목) 17:00"
-      }
+      },
+      "notion_key": "KST_177657",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177657"
     },
     {
       "id": "05",
@@ -168,7 +176,9 @@
         "지원": "BI·SBA 가점",
         "대상": "서울 중소기업",
         "마감": "5.8(금) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121052",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121052"
     },
     {
       "id": 5,
@@ -217,7 +227,9 @@
         "지원": "VC 매칭 + 상금",
         "형태": "민간 투자유치",
         "마감": "5.8(금) 14:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121342",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121342"
     },
     {
       "id": 6,
@@ -268,7 +280,9 @@
         "지원": "최대 1.5억원",
         "비율": "40~60%",
         "마감": "5.26(화) 18:00"
-      }
+      },
+      "notion_key": "MSS_1067786",
+      "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1067786&parentSeq=1067786"
     },
     {
       "id": 7,
@@ -292,7 +306,9 @@
         "대상": "식품 가공업 중소·중견 제조기업",
         "지원": "고도화 2억/기초 6천만",
         "마감": "6.12(금)"
-      }
+      },
+      "notion_key": "PBLN_000000000121894",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121894"
     },
     {
       "id": 8,
@@ -316,7 +332,9 @@
         "대상": "도시형소공인(개별형 연매출 2억↑)",
         "지원": "최대 6천만(국비 60%)",
         "마감": "6.2(화) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123150",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123150"
     },
     {
       "id": "09",
@@ -366,7 +384,9 @@
         "지원": "현지 IR + 항공비",
         "일정": "7.7~7.10 도쿄",
         "마감": "5.11(월) 14:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121337",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121337"
     },
     {
       "id": "11",
@@ -391,7 +411,9 @@
         "지원": "최대 1억원",
         "형태": "로컬+혁신 트랙",
         "마감": "5.15(금) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121064",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121064"
     },
     {
       "id": "12",
@@ -418,7 +440,9 @@
         "지원": "최대 1억원",
         "분야": "AI·Bio·Defence 등",
         "마감": "5.18(월) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121379",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121379"
     },
     {
       "id": "13",
@@ -444,7 +468,9 @@
         "지원": "긴급바우처",
         "완료": "~26.11.30",
         "마감": "4.26(일) 종료"
-      }
+      },
+      "notion_key": "PBLN_000000000120963",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120963"
     },
     {
       "id": "14",
@@ -469,7 +495,9 @@
         "지원": "과제당 1.8억",
         "비율": "75%",
         "마감": "4.23(목) 종료"
-      }
+      },
+      "notion_key": "PBLN_000000000120374",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120374"
     },
     {
       "id": "15",
@@ -517,7 +545,9 @@
         "지원": "최대 1.5억원",
         "예산": "400억원",
         "마감": "예산 소진시까지"
-      }
+      },
+      "notion_key": "PBLN_000000000118786",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000118786"
     },
     {
       "id": "17",
@@ -545,7 +575,9 @@
         "지원": "일반 8억 / 딥테크 15억",
         "예산": "R&D 1,624억",
         "마감": "분기별 접수"
-      }
+      },
+      "notion_key": "PBLN_000000000119754",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000119754"
     },
     {
       "id": "18",
@@ -650,7 +682,9 @@
         "지원": "기준연봉 40~50%",
         "기간": "최대 3년",
         "마감": "3.6(금) 종료"
-      }
+      },
+      "notion_key": "PBLN_000000000118209",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000118209"
     },
     {
       "id": "22",
@@ -675,7 +709,9 @@
         "지원": "최대 1억원",
         "비율": "50~70%",
         "마감": "상시 (~11.30)"
-      }
+      },
+      "notion_key": "PBLN_000000000118090",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000118090"
     },
     {
       "id": "23",
@@ -701,7 +737,9 @@
         "지원": "LIPSⅠ 5억 / LIPSⅡ 2억",
         "예산": "660억원",
         "마감": "예산 소진시까지"
-      }
+      },
+      "notion_key": "PBLN_000000000120117",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120117"
     },
     {
       "id": 24,
@@ -849,7 +887,9 @@
         "지원": "AC + OI 협업",
         "대상": "창업 7~10년",
         "마감": "3.16 종료"
-      }
+      },
+      "notion_key": "KST_177947",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177947"
     },
     {
       "id": 30,
@@ -1147,7 +1187,9 @@
         "지원": "한도 차등",
         "대상": "농식품 수출기업",
         "마감": "2.6 23:59 종료"
-      }
+      },
+      "notion_key": "PBLN_000000000121389",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121389"
     },
     {
       "id": 42,
@@ -1614,7 +1656,9 @@
         "지원": "최대 5억원",
         "대상": "서울 AI 기업",
         "마감": "3.10 종료"
-      }
+      },
+      "notion_key": "SRDC_272",
+      "notion_url": "https://seoul.rnbd.kr/client/c030100/c030100_04.jsp?seqNo=272"
     },
     {
       "id": 61,
@@ -1663,7 +1707,9 @@
         "지원": "전문대행사 매칭",
         "대상": "온라인 소상공인",
         "마감": "5.29(금) 18시"
-      }
+      },
+      "notion_key": "MSS_1068107",
+      "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068107&parentSeq=1068107"
     },
     {
       "id": 63,
@@ -1687,7 +1733,9 @@
         "지원": "최대 30백만원(3천만)",
         "대상": "Ⅰ뷰티패션푸드 / Ⅱ전제조업",
         "마감": "6.5(금) 18시"
-      }
+      },
+      "notion_key": "PBLN_000000000121803",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121803"
     },
     {
       "id": 64,
@@ -1761,7 +1809,9 @@
         "지원": "최대 1.4억원",
         "대상": "창업기업(중견 매칭)",
         "마감": "6.15(월) 16시"
-      }
+      },
+      "notion_key": "PBLN_000000000121074",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121074"
     },
     {
       "id": 67,
@@ -1810,7 +1860,9 @@
         "지원": "최대 6억원",
         "대상": "중소기업+수요처",
         "마감": "6.29(월) 18시"
-      }
+      },
+      "notion_key": "MSS_1068560",
+      "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068560&parentSeq=1068560"
     },
     {
       "id": 69,
@@ -2011,7 +2063,9 @@
         "대상": "기술개발제품 인증기업",
         "지원": "공공기관 시범구매 연계",
         "마감": "6.17(수) 18시"
-      }
+      },
+      "notion_key": "PBLN_000000000122452",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122452"
     },
     {
       "id": 77,
@@ -2035,7 +2089,9 @@
         "대상": "경기 CT 스타트업·중소",
         "지원": "기업당 3,800만원",
         "마감": "6.10(수) 18시"
-      }
+      },
+      "notion_key": "PBLN_000000000122467",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122467"
     },
     {
       "id": 79,
@@ -2133,7 +2189,9 @@
         "대상": "서울 생활권 업력7년 미만 (예비)창업자",
         "지원": "창업활동금 최대 1,000만+입주공간",
         "마감": "6.1(월) 13:00"
-      }
+      },
+      "notion_key": "KST_177665",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177665"
     },
     {
       "id": 83,
@@ -2208,7 +2266,9 @@
         "대상": "부천 소재 창업7년 미만 콘텐츠 법인",
         "지원": "콘텐츠 개발지원 500만+멘토링",
         "마감": "6.5(금) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000122137",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122137"
     },
     {
       "id": 86,
@@ -2258,7 +2318,9 @@
         "대상": "경기도 7년 이내 기술기업",
         "지원": "도쿄 OI·IR+직접투자 5억+TIPS",
         "마감": "6.5(금) 17:00"
-      }
+      },
+      "notion_key": "KST_177742",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177742"
     },
     {
       "id": 88,
@@ -2283,7 +2345,9 @@
         "대상": "예비~창업 7년 이내 초기기업",
         "지원": "Bio·Medical 특화 입주공간(3~5년)",
         "마감": "6.10(수) 자정"
-      }
+      },
+      "notion_key": "KST_177508",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177508"
     },
     {
       "id": 89,
@@ -2309,7 +2373,9 @@
         "대상": "딥테크 5대 분야 초기·도약 기업",
         "지원": "사업화 평균 1.3억(최대 2억)+AI인재",
         "마감": "6.12(금) 18:00"
-      }
+      },
+      "notion_key": "MSS_1068297",
+      "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068297&parentSeq=1068297"
     },
     {
       "id": 90,
@@ -2333,7 +2399,9 @@
         "대상": "관광분야 혁신 기술·서비스 중소기업",
         "지원": "기업당 1~2억(정부 80%)",
         "마감": "6.5(금) 14:00"
-      }
+      },
+      "notion_key": "KST_177800",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177800"
     },
     {
       "id": 91,
@@ -2358,7 +2426,9 @@
         "대상": "서울 소재 10년 미만 제약·바이오",
         "지원": "보스턴 현지 AC+RESI 400만",
         "마감": "6.7(일) 23:59"
-      }
+      },
+      "notion_key": "KST_177872",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177872"
     },
     {
       "id": 92,
@@ -2384,7 +2454,9 @@
         "대상": "예비~창업 7년 이내 창업기업",
         "지원": "입주공간(605호)+보육서비스",
         "마감": "6.10(수) 23:59"
-      }
+      },
+      "notion_key": "KST_177796",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177796"
     },
     {
       "id": 93,
@@ -2433,7 +2505,9 @@
         "대상": "2019년 이후 콘텐츠 스타트업(게임 포함)",
         "지원": "미국·UAE·싱가포르 AC+체재비",
         "마감": "6.10(수) 11:00"
-      }
+      },
+      "notion_key": "KST_177867",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177867"
     },
     {
       "id": 95,
@@ -2458,7 +2532,9 @@
         "대상": "경기 7년 이내(신산업 10년) 스타트업",
         "지원": "투자사 1:1 밋업+IR 컨설팅",
         "마감": "6.12(금) 15:00"
-      }
+      },
+      "notion_key": "GSP_6238",
+      "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6238"
     },
     {
       "id": 96,
@@ -2508,7 +2584,9 @@
         "대상": "중소기업(세부과제별 자격 상이)",
         "지원": "글로벌선도 10억/소부장 5억(정부 65~75%)",
         "마감": "6.15(월) 18:00"
-      }
+      },
+      "notion_key": "MSS_1068239",
+      "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068239"
     },
     {
       "id": 98,
@@ -2554,7 +2632,9 @@
       "deadline_display": "6.10(수) 17:00",
       "meta": {
         "마감": "6.10(수) 17:00"
-      }
+      },
+      "notion_key": "PBLN_000000000122770",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122770"
     },
     {
       "id": 100,
@@ -2600,7 +2680,9 @@
       "deadline_display": "6.24(수) 18:00",
       "meta": {
         "마감": "6.24(수) 18:00"
-      }
+      },
+      "notion_key": "GCON_11193",
+      "notion_url": "https://www.gcon.or.kr/gcon/business/gconNotice/view.do?pbancSrnm=11193&menuNo=200061"
     },
     {
       "id": 102,
@@ -2763,7 +2845,9 @@
       "meta": {
         "지원": "국가 신기술(NET) 인증 획득",
         "마감": "7.20(월) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000122826",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122826"
     },
     {
       "id": 109,
@@ -2785,7 +2869,9 @@
       "deadline_display": "6.19(금) 16:00",
       "meta": {
         "마감": "6.19(금) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000120371",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120371"
     },
     {
       "id": 110,
@@ -2809,7 +2895,9 @@
       "meta": {
         "지원": "국내 30억 · 15개 + 해외 10억 · 5개",
         "마감": "7.9(목) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000122627",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122627"
     },
     {
       "id": 111,
@@ -2833,7 +2921,9 @@
       "meta": {
         "지원": "체재비(항공·숙박) + 현지 AC 프로그램",
         "마감": "6.10(수) 18:00"
-      }
+      },
+      "notion_key": "KST_177867",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177867"
     },
     {
       "id": 112,
@@ -2976,7 +3066,9 @@
         "지원": "현지방문 1인 경비",
         "규모": "6개사",
         "마감": "6.23(화) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123601",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123601"
     },
     {
       "id": "118",
@@ -3049,7 +3141,9 @@
         "지원": "IR 컨설팅·네트워킹",
         "규모": "10개사",
         "마감": "6.26(금) 24:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123044",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123044"
     },
     {
       "id": "121",
@@ -3098,7 +3192,9 @@
         "지원": "상담·통역 제공",
         "규모": "15개사 내외",
         "마감": "7.3(금)"
-      }
+      },
+      "notion_key": "PBLN_000000000123090",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123090"
     },
     {
       "id": "123",
@@ -3247,7 +3343,9 @@
         "지원": "IR 밸류업 풀패키지",
         "규모": "30개사",
         "마감": "6.24(수) 18:00"
-      }
+      },
+      "notion_key": "GCON_11193",
+      "notion_url": "https://www.gcon.or.kr/gcon/business/gconNotice/view.do?pbancSrnm=11193&menuNo=200061"
     },
     {
       "id": "129",
@@ -3271,7 +3369,9 @@
         "지원": "최대 6천만원",
         "비율": "국비 60%",
         "마감": "7.3(금) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123150",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123150"
     },
     {
       "id": "130",
@@ -3321,7 +3421,9 @@
         "지원": "최대 4천만원",
         "비율": "80%",
         "마감": "7.3(금) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123187",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123187"
     },
     {
       "id": "132",
@@ -3493,7 +3595,9 @@
         "지원": "최대 1.4억",
         "비율": "사업화자금",
         "마감": "7.10(금) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123270",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123270"
     },
     {
       "id": "139",
@@ -3587,7 +3691,9 @@
         "지원": "최대 5천만",
         "비율": "기업부담 25%",
         "마감": "6.25(목) 17:00"
-      }
+      },
+      "notion_key": "SBSC_389",
+      "notion_url": "https://sbsc.sba.kr/front/bbs/notice/view.do?bbs_seq=389&bbs_cd=1&path1=notice"
     },
     {
       "id": "143",
@@ -3611,7 +3717,9 @@
         "지원": "조달 교육·상담회",
         "비율": "무료",
         "마감": "7.7(화) 16:00"
-      }
+      },
+      "notion_key": "KST_177723",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=177723"
     },
     {
       "id": "144",
@@ -3753,7 +3861,9 @@
         "지원": "사업화 자금",
         "비율": "정부 70%↓",
         "마감": "7.8(수) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123394",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123394"
     },
     {
       "id": "150",
@@ -3796,7 +3906,9 @@
       "deadline_display": "7.7(화) 15:00",
       "meta": {
         "마감": "7.7(화) 15:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123605",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123605"
     },
     {
       "id": "152",
@@ -3833,7 +3945,9 @@
       "deadline_display": "7.20(월) 11:00",
       "meta": {
         "마감": "7.20(월) 11:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123614",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123614"
     },
     {
       "id": "154",
@@ -3852,7 +3966,9 @@
       "deadline_display": "7.10(금) 14:00",
       "meta": {
         "마감": "7.10(금) 14:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123616",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123616"
     },
     {
       "id": "155",
@@ -3908,7 +4024,9 @@
       "deadline_display": "7.10(금) 18:00",
       "meta": {
         "마감": "7.10(금) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123495",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123495"
     },
     {
       "id": "159",
@@ -3966,7 +4084,9 @@
       "deadline_display": "7.22(수) 16:00",
       "meta": {
         "마감": "7.22(수) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123546",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123546"
     },
     {
       "id": "162",
@@ -3985,7 +4105,9 @@
       "deadline_display": "7.14(화) 16:00",
       "meta": {
         "마감": "7.14(화) 16:00"
-      }
+      },
+      "notion_key": "KST_178253",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178253"
     },
     {
       "id": "163",
@@ -4003,7 +4125,9 @@
       "deadline_display": "7.10(금)",
       "meta": {
         "마감": "7.10(금)"
-      }
+      },
+      "notion_key": "PBLN_000000000123579",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123579"
     },
     {
       "id": "164",
@@ -4041,7 +4165,9 @@
       "deadline_display": "7.8(수)",
       "meta": {
         "마감": "7.8(수)"
-      }
+      },
+      "notion_key": "PBLN_000000000123600",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123600"
     },
     {
       "id": "166",
@@ -4059,7 +4185,9 @@
       "deadline_display": "7.8(수)",
       "meta": {
         "마감": "7.8(수)"
-      }
+      },
+      "notion_key": "GSP_6274",
+      "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6274"
     },
     {
       "id": "167",
@@ -4132,7 +4260,9 @@
       "deadline_display": "7.15(수)",
       "meta": {
         "마감": "7.15(수)"
-      }
+      },
+      "notion_key": "PBLN_000000000123637",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123637"
     },
     {
       "id": "171",
@@ -4230,7 +4360,9 @@
         "지원": "연 3.4억원 내외",
         "대상": "창업 2년내",
         "마감": "07.06"
-      }
+      },
+      "notion_key": "PBLN_000000000123505",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123505"
     },
     {
       "id": "175",
@@ -4278,7 +4410,9 @@
         "지원": "해외홍보관 입점",
         "규모": "20개사 내외",
         "마감": "07.06"
-      }
+      },
+      "notion_key": "PBLN_000000000123635",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123635"
     },
     {
       "id": "177",
@@ -4325,7 +4459,9 @@
         "지원": "부스·장치 70% 국고",
         "참가비": "720만원(선납)",
         "마감": "07.06"
-      }
+      },
+      "notion_key": "PBLN_000000000123590",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123590"
     },
     {
       "id": "179",
@@ -4348,7 +4484,9 @@
         "지원": "과제당 최대 5억원",
         "대상": "중소 방송영상제작사",
         "마감": "07.06"
-      }
+      },
+      "notion_key": "PBLN_000000000123514",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123514"
     },
     {
       "id": "180",
@@ -4395,7 +4533,9 @@
         "지원": "우수 연구소 지정",
         "대상": "연구소 3년+ 중소중견",
         "마감": "07.06"
-      }
+      },
+      "notion_key": "PBLN_000000000122700",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122700"
     },
     {
       "id": "182",
@@ -4419,7 +4559,9 @@
         "지원": "최대 2년·5억원",
         "대상": "사업전환 승인·중진공 추천",
         "마감": "07.06"
-      }
+      },
+      "notion_key": "PBLN_000000000120845",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120845"
     },
     {
       "id": "183",
@@ -4465,7 +4607,9 @@
         "지원": "수출·마케팅·입점",
         "대상": "서울 뷰티 브랜드",
         "마감": "07.13"
-      }
+      },
+      "notion_key": "KST_178392",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178392"
     },
     {
       "id": "185",
@@ -4489,7 +4633,9 @@
       "meta": {
         "지원": "총 4억원 이상",
         "마감": "07.13(월) 17:00"
-      }
+      },
+      "notion_key": "GSP_6291",
+      "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6291"
     },
     {
       "id": "186",
@@ -4512,7 +4658,9 @@
       "meta": {
         "지원": "DDP 쇼룸 실증공간 + 비용 지원",
         "마감": "07.16(목) 15:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123850",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123850"
     },
     {
       "id": "187",
@@ -4536,7 +4684,9 @@
       "meta": {
         "지원": "10개사 내외",
         "마감": "07.09(목) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000121991",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000121991"
     },
     {
       "id": "188",
@@ -4558,7 +4708,9 @@
       "meta": {
         "지원": "해외인증 종합(신청~완료) 맞춤 멘토링",
         "마감": "07.15(수) 18:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123690",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123690"
     },
     {
       "id": "189",
@@ -4581,7 +4733,9 @@
       "meta": {
         "지원": "최대 6개사 내외",
         "마감": "07.07(화) 24:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123702",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123702"
     },
     {
       "id": "190",
@@ -4605,7 +4759,9 @@
       "meta": {
         "지원": "싱가포르 진출 지원 프로그램",
         "마감": "07.10 17:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123706",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123706"
     },
     {
       "id": "191",
@@ -4627,7 +4783,9 @@
       "meta": {
         "지원": "매칭·수출상담·현지 판촉 행사",
         "마감": "07.23(목) 16:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123744",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123744"
     },
     {
       "id": "192",
@@ -4673,7 +4831,9 @@
       "meta": {
         "지원": "과제 실증 + 정부·공공 첫 구매(판로)",
         "마감": "07.22(수) 15:00"
-      }
+      },
+      "notion_key": "PBLN_000000000123819",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123819"
     },
     {
       "id": "194",
@@ -4720,7 +4880,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123605",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123605"
     },
     {
       "id": "01",
@@ -4768,7 +4930,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123150",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123150"
     },
     {
       "id": "03",
@@ -4804,7 +4968,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123614",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123614"
     },
     {
       "id": "04",
@@ -4816,7 +4982,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123187",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123187"
     },
     {
       "id": "04",
@@ -4828,7 +4996,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123616",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123616"
     },
     {
       "id": "05",
@@ -4864,7 +5034,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123495",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123495"
     },
     {
       "id": "08",
@@ -4876,7 +5048,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "MSS_1068742",
+      "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068742&parentSeq=1068742"
     },
     {
       "id": "09",
@@ -4912,7 +5086,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123546",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123546"
     },
     {
       "id": "12",
@@ -4924,7 +5100,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "KST_178253",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178253"
     },
     {
       "id": "129",
@@ -4948,7 +5126,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123579",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123579"
     },
     {
       "id": "130",
@@ -4996,7 +5176,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123600",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123600"
     },
     {
       "id": "16",
@@ -5008,7 +5190,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "GSP_6274",
+      "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6274"
     },
     {
       "id": "17",
@@ -5056,7 +5240,9 @@
       "types": [],
       "deadline_iso": null,
       "deadline_display": "",
-      "meta": {}
+      "meta": {},
+      "notion_key": "PBLN_000000000123637",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123637"
     },
     {
       "id": "78",
