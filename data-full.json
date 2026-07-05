@@ -4886,6 +4886,33 @@
         "마감": "07.06"
       },
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123386"
+    },
+    {
+      "id": "184",
+      "file": "184-au-nz-cosmetics-channel.html",
+      "title": "2026 호주·뉴질랜드 화장품 채널 진출사업",
+      "summary": "서울 뷰티 브랜드의 호주·뉴질랜드 W Cosmetics 리테일 채널 입점·수출 지원",
+      "tags": [
+        "판로수출",
+        "채널 진출"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "뷰티"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-13T23:59:59+09:00",
+      "deadline_display": "2026.07.13",
+      "meta": {
+        "지원": "수출·마케팅·입점",
+        "대상": "서울 뷰티 브랜드",
+        "마감": "07.13"
+      },
+      "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178392"
     }
   ],
   "clients": [
