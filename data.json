@@ -4872,20 +4872,6 @@
     },
     {
       "id": "01",
-      "file": "01-gyeonggi-ai-global.html",
-      "title": "경기 AI기업 글로벌 공동연구·해외진출",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123605",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123605"
-    },
-    {
-      "id": "01",
       "file": "01-mulryu-voucher.html",
       "title": "2026년도 일반 물류바우처(2차) 참여기업 모집",
       "summary": "",
@@ -4921,20 +4907,6 @@
       "meta": {}
     },
     {
-      "id": "02",
-      "file": "02-smart-gongbang.html",
-      "title": "2026 소공인 스마트제조지원 (스마트공방) 추가 모집",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123150",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123150"
-    },
-    {
       "id": "03",
       "file": "03-panro-track1.html",
       "title": "2026 소공인 판로개척지원 민간협업형(Track1) 추가 모집",
@@ -4959,48 +4931,6 @@
       "meta": {}
     },
     {
-      "id": "03",
-      "file": "03-vietnam-kcontent-expo.html",
-      "title": "K-베트남 콘텐츠 엑스포",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123614",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123614"
-    },
-    {
-      "id": "04",
-      "file": "04-ai-sosanggongin.html",
-      "title": "2026 혁신 소상공인 AI 활용지원 사업",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123187",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123187"
-    },
-    {
-      "id": "04",
-      "file": "04-knock-content-valuation.html",
-      "title": "케이녹(KNOCK) 콘텐츠가치평가",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123616",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123616"
-    },
-    {
       "id": "05",
       "file": "05-culture-content-guarantee.html",
       "title": "문화콘텐츠 기업보증",
@@ -5023,20 +4953,6 @@
       "deadline_iso": null,
       "deadline_display": "",
       "meta": {}
-    },
-    {
-      "id": "07",
-      "file": "07-industrial-service-personnel.html",
-      "title": "신규 병역지정업체 (산업기능요원)",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123495",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123495"
     },
     {
       "id": "08",
@@ -5077,34 +4993,6 @@
       "meta": {}
     },
     {
-      "id": "11",
-      "file": "11-core-hub.html",
-      "title": "2026년 하반기 『Core기업』 모집",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123546",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123546"
-    },
-    {
-      "id": "12",
-      "file": "12-openinno-strategy.html",
-      "title": "민관협력 오픈이노베이션 2026 제2차 전략과제 해결형(Top-Down) 창업기업 모집",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "KST_178253",
-      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178253"
-    },
-    {
       "id": "129",
       "file": "129-sports-preleader.html",
       "title": "2026년 스포츠산업 예비 선도기업 육성 지원사업",
@@ -5115,20 +5003,6 @@
       "deadline_iso": null,
       "deadline_display": "",
       "meta": {}
-    },
-    {
-      "id": "13",
-      "file": "13-taiwan-testmkt.html",
-      "title": "2026 대만 오프라인 유통망 한국상품전 연계 테스트마케팅",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123579",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123579"
     },
     {
       "id": "130",
@@ -5167,34 +5041,6 @@
       "meta": {}
     },
     {
-      "id": "15",
-      "file": "15-ai-bigdata-sosang.html",
-      "title": "2026 AI·빅데이터 기반 소상공인 매출 증대 프로젝트",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123600",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123600"
-    },
-    {
-      "id": "16",
-      "file": "16-global-openinno.html",
-      "title": "2026 AI 글로벌 챌린지 글로벌 오픈이노베이션 참가기업 모집",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "GSP_6274",
-      "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6274"
-    },
-    {
       "id": "17",
       "file": "17-koindex-consortium.html",
       "title": "2026 대한민국산업전시회(KoINDEX) 수출컨소시엄 단체관 참가기업 모집",
@@ -5229,20 +5075,6 @@
       "deadline_iso": null,
       "deadline_display": "",
       "meta": {}
-    },
-    {
-      "id": "20",
-      "file": "20-k-edutech.html",
-      "title": "2026 K-에듀테크 콘테스트",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {},
-      "notion_key": "PBLN_000000000123637",
-      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123637"
     },
     {
       "id": "78",
