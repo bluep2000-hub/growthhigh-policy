@@ -170,6 +170,19 @@
       <label class="filter-label">유형</label>
       <div class="filter-chips" id="type-chips"></div>
     </div>
+    <div class="filter-group" id="sort-filter-group">
+      <label class="filter-label">정렬</label>
+      <div class="filter-chips" id="sort-chips">
+        <button class="chip active" data-sort="dday">마감임박순</button>
+        <button class="chip" data-sort="added">최근 발행순</button>
+      </div>
+    </div>
+    <div class="filter-group" id="recent-filter-group">
+      <label class="filter-label">신규</label>
+      <div class="filter-chips">
+        <button class="chip" id="recent-toggle">최근 3일 신규만</button>
+      </div>
+    </div>
     <div class="controls-footer">
       <div class="result-count" id="result-count"></div>
       <button id="reset-btn" class="reset-btn" disabled>↺ 전체 해제</button><button class="edit-toggle" id="edit-toggle">+ 재생목록 담기 모드</button>
@@ -217,7 +230,14 @@
     // 지식서비스업/게임개발업 세부는 추후 추가
   };
 
-  let state = { programs: [], filters: { types: [] }, selType: new Set(), search: '', cat: '', updated_at: '' };
+  let state = { programs: [], filters: { types: [] }, selType: new Set(), search: '', cat: '', updated_at: '', sort: 'dday', recentOnly: false, recentDays: 3 };
+
+  function daysSince(dateStr) {
+    if (!dateStr) return Infinity;
+    const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
+    const toUTC = (s) => { const [y, m, d] = s.split('-').map(Number); return Date.UTC(y, m - 1, d); };
+    return Math.round((toUTC(fmt.format(new Date())) - toUTC(dateStr)) / 86400000);
+  }
 
   function calcDday(isoStr) {
     if (!isoStr) return 9999;
@@ -272,6 +292,7 @@
     return (p.sub_industries||[]).includes(state.cat);
   }
   function matchesType(p) { if (state.selType.size === 0) return true; return (p.types||[]).some(t => state.selType.has(t)); }
+  function matchesRecent(p) { if (!state.recentOnly) return true; if (!p.added_at) return false; return daysSince(p.added_at) <= state.recentDays; }
 
   function topOfSub(sub) { for (const [top, subs] of Object.entries(SUB_MAP)) if (subs.includes(sub)) return top; return ''; }
 
@@ -327,22 +348,24 @@
   }
 
   function render() {
-    const pool = state.programs.filter(p => inCat(p) && matchesSearch(p, state.search) && matchesType(p));
+    const pool = state.programs.filter(p => inCat(p) && matchesSearch(p, state.search) && matchesType(p) && matchesRecent(p));
     const active = [], closed = [];
     pool.forEach(p => { (getStatus(calcDday(p.deadline_iso)) === 'closed' ? closed : active).push(p); });
-    // 세부업종 화면이면: 특화(세부태그 보유)를 위로, 그 안에서 마감 임박순
+    // 세부업종 화면이면: 특화(세부태그 보유)를 위로, 그 안에서 선택된 정렬 기준
     const subView = state.cat && !TOP_INDUSTRIES.includes(state.cat);
-    const sortFn = (a, b) => {
+    const byAdded = (a, b) => (b.added_at || '').localeCompare(a.added_at || '');
+    const activeField = state.sort === 'added' ? byAdded : (a, b) => calcDday(a.deadline_iso) - calcDday(b.deadline_iso);
+    const closedField = state.sort === 'added' ? byAdded : (a, b) => calcDday(b.deadline_iso) - calcDday(a.deadline_iso);
+    active.sort((a, b) => {
       if (subView) {
         const sa = isSpecific(a) ? 0 : 1, sb = isSpecific(b) ? 0 : 1;
         if (sa !== sb) return sa - sb;
       }
-      return calcDday(a.deadline_iso) - calcDday(b.deadline_iso);
-    };
-    active.sort(sortFn);
+      return activeField(a, b);
+    });
     closed.sort((a, b) => {
       if (subView) { const sa = isSpecific(a)?0:1, sb = isSpecific(b)?0:1; if (sa!==sb) return sa-sb; }
-      return calcDday(b.deadline_iso) - calcDday(a.deadline_iso);
+      return closedField(a, b);
     });
 
     document.getElementById('active-list').innerHTML = active.map(renderCard).join('');
@@ -368,7 +391,7 @@
     rc.innerHTML = (pool.length === total)
       ? '전체 <strong>' + total + '</strong>개 (진행 ' + active.length + ' · 종료 ' + closed.length + ')'
       : '<strong>' + total + '</strong>개 中 <strong>' + pool.length + '</strong>개 표시';
-    document.getElementById('reset-btn').disabled = !(state.search || state.selType.size);
+    document.getElementById('reset-btn').disabled = !(state.search || state.selType.size || state.sort !== 'dday' || state.recentOnly);
   }
 
   function applyView() {
@@ -394,9 +417,24 @@
     si.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { state.search = si.value.trim(); sc.classList.toggle('visible', !!state.search); render(); }, 200); });
     si.addEventListener('keydown', e => { if (e.key === 'Escape') { si.value = ''; state.search = ''; sc.classList.remove('visible'); render(); } });
     sc.addEventListener('click', () => { si.value = ''; state.search = ''; sc.classList.remove('visible'); si.focus(); render(); });
+
+    document.querySelectorAll('#sort-chips .chip').forEach(ch => ch.addEventListener('click', () => {
+      state.sort = ch.dataset.sort;
+      document.querySelectorAll('#sort-chips .chip').forEach(c => c.classList.toggle('active', c === ch));
+      render();
+    }));
+    document.getElementById('recent-toggle').addEventListener('click', (e) => {
+      state.recentOnly = !state.recentOnly;
+      e.currentTarget.classList.toggle('active', state.recentOnly);
+      render();
+    });
+
     document.getElementById('reset-btn').addEventListener('click', () => {
       si.value = ''; state.search = ''; sc.classList.remove('visible'); state.selType.clear();
+      state.sort = 'dday'; state.recentOnly = false;
       document.querySelectorAll('#type-chips .chip.active').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('#sort-chips .chip').forEach(c => c.classList.toggle('active', c.dataset.sort === 'dday'));
+      document.getElementById('recent-toggle').classList.remove('active');
       render();
     });
   }

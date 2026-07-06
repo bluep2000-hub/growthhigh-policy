@@ -33,7 +33,12 @@ import download_notice as dn
 # 이 스크립트는 <레포>/automation/ 에 있으므로 레포 루트 = 상위의 상위 (이식성: 다른 PC/경로에서도 동작)
 REPO = os.environ.get("GH_POLICY_REPO") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(REPO, "data-full.json")
+DATA_SMALL = os.path.join(REPO, "data.json")
 KST = timezone(timedelta(hours=9))
+
+# data.json은 data-full.json의 필드 부분집합만 쓴다(sub_industries·sent_to·source_url·curated 제외).
+DATA_SMALL_FIELDS = ["id", "file", "title", "summary", "tags", "industries", "types",
+                     "deadline_iso", "deadline_display", "meta", "notion_key", "notion_url", "added_at"]
 
 MIN_SCORE_DEFAULT = 100   # 공고문 후보 점수가 이 미만이면 '어느 게 공고문인지 불확실'로 판단
 DEFAULT_TYPE = "경영/기타"
@@ -185,6 +190,9 @@ def finalize(job_path, entry_path, do_push=True):
     pdf_dst = os.path.join(REPO, "pdfs", f"{slug}.pdf")
     shutil.copyfile(job["staged_pdf"], pdf_dst)
 
+    # 발행일(KST, YYYY-MM-DD) 심기 — 오늘 이후 신규 발행분부터, 기존 227건은 소급하지 않음
+    entry["added_at"] = datetime.now(KST).strftime("%Y-%m-%d")
+
     # data-full.json 삽입
     if entry["types"][0] not in data["filters"]["types"]:
         data["filters"]["types"].append(entry["types"][0])
@@ -192,8 +200,17 @@ def finalize(job_path, entry_path, do_push=True):
     data["updated_at"] = datetime.now(KST).replace(microsecond=0).isoformat()
     json.dump(data, open(DATA, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
+    # data.json 병행 삽입(부분 필드만) — 평소 수동 유지지만 added_at은 여기서 함께 심는다
+    data_small = json.load(open(DATA_SMALL, encoding="utf-8"))
+    small_entry = {k: entry[k] for k in DATA_SMALL_FIELDS if k in entry}
+    if entry["types"][0] not in data_small["filters"]["types"]:
+        data_small["filters"]["types"].append(entry["types"][0])
+    data_small["programs"].append(small_entry)
+    data_small["updated_at"] = data["updated_at"]
+    json.dump(data_small, open(DATA_SMALL, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
     # git add · commit · push
-    _git(["add", entry["file"], rel_pdf, "data-full.json"])
+    _git(["add", entry["file"], rel_pdf, "data-full.json", "data.json"])
     msg = f"검토서 추가: {entry['title']} (id {entry['id']})\n\n자동 발행 (publish_review.py). source: {entry.get('source_url')}\n\nCo-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
     c = _git(["commit", "-m", msg])
     push_out = ""

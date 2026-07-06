@@ -102,6 +102,8 @@ python automation/publish_review.py finalize <job.json> <entry.json> [--no-push]
 ```
 - **id = 기존 최대 +1** (preflight의 `next_id`가 계산).
 - **types 8종**: R&D·창업·판로수출·인력·정책자금·인증·투자유치·**경영/기타**(2026-07 신설: 경영·컨설팅·진단·자문류 + 분류 애매).
+- **`added_at`**(2026-07-06 신설): finalize가 발행 시각(KST, `YYYY-MM-DD`)을 자동으로 채워 넣는다. entry.json에 넣을 필요 없음.
+  data-full.json·data.json 양쪽에 동일하게 들어간다(finalize가 data.json도 함께 append). 기존 227건은 소급하지 않음(없으면 "발행일 미상"으로 취급).
 - **source_url = 중복 판정 키**(pblancId). 없으면 중복 감지 안 됨 → 아래 숙제 참조.
 
 ---

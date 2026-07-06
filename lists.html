@@ -28,6 +28,9 @@
   .count-badge{font-size:13px;color:var(--ink-500);}
   .count-badge strong{color:var(--ink-900);font-weight:700;}
   .full-link{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;padding:8px 14px;background:var(--accent-soft);border-radius:10px;}
+  .tab-bar{display:flex;gap:6px;margin-bottom:20px;padding:5px;background:#F4F5F7;border-radius:12px;width:fit-content;}
+  .tab-btn{font-family:inherit;font-size:13.5px;font-weight:600;padding:9px 18px;background:none;border:none;border-radius:9px;color:var(--ink-500);cursor:pointer;transition:all .15s;}
+  .tab-btn.active{background:#fff;color:var(--ink-900);box-shadow:var(--shadow-sm);}
   .type-filter{margin-bottom:20px;padding:16px 18px;background:#fff;border:1px solid var(--line-card);border-radius:14px;}
   .type-filter .tf-label{font-size:12px;font-weight:600;color:var(--ink-400);margin-bottom:10px;display:block;}
   .type-chips{display:flex;flex-wrap:wrap;gap:6px;}
@@ -73,6 +76,11 @@
     <p class="hero-desc">담당 컨설턴트가 만든 큐레이션 재생목록입니다. 클릭하면 해당 목록으로 이동합니다.</p>
   </div>
 
+  <div class="tab-bar" id="tab-bar">
+    <button class="tab-btn" data-tab="브리핑">📅 브리핑</button>
+    <button class="tab-btn active" data-tab="클라이언트">👤 클라이언트</button>
+  </div>
+
   <div class="toolbar">
     <div class="count-badge" id="count-badge"></div>
     <a class="full-link" href="full.html">+ 사업 담으러 가기</a>
@@ -103,18 +111,22 @@ const db = getFirestore(app);
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const ALL_TYPES = ['R&D','창업','판로수출','인력','정책자금','인증','투자유치'];
+const BRIEFING_PREFIX = '브리핑/';
 let allLists = [];
 let bySlug = {};
 let selType = new Set();
+let activeTab = '클라이언트';
 
 function renderLists(){
-  let lists = allLists;
+  let lists = allLists.filter(l => l.tab === activeTab);
   if(selType.size) lists = lists.filter(l => [...l.types].some(t=>selType.has(t)));
   const grid = document.getElementById('list-grid');
   if(lists.length===0){
     grid.innerHTML='';
     document.getElementById('empty-state').style.display='block';
-    document.getElementById('empty-state').innerHTML='<strong>해당 유형의 재생목록이 없습니다</strong>다른 유형을 선택해 보세요.';
+    document.getElementById('empty-state').innerHTML = selType.size
+      ? '<strong>해당 유형의 재생목록이 없습니다</strong>다른 유형을 선택해 보세요.'
+      : (activeTab === '브리핑' ? '<strong>아직 만든 브리핑이 없습니다</strong>full.html에서 담아 "브리핑/YYMMDD" 이름으로 재생목록을 만들어 보세요.' : '<strong>아직 만든 클라이언트 재생목록이 없습니다</strong>전체 큐레이션에서 사업을 체크하고 "담기"로 재생목록을 만들어 보세요.');
     document.getElementById('count-badge').innerHTML='재생목록 <strong>0</strong>개';
     return;
   }
@@ -157,10 +169,16 @@ async function init(){
       const items = data.items||[];
       const types = new Set();
       items.forEach(it => (bySlug[it.slug]||[]).forEach(t=>types.add(t)));
-      allLists.push({ name: d.id, count: items.length, updated: data.updated_at || '', types });
+      const tab = d.id.startsWith(BRIEFING_PREFIX) ? '브리핑' : '클라이언트';
+      allLists.push({ name: d.id, count: items.length, updated: data.updated_at || '', types, tab });
     });
     allLists.sort((a,b) => (b.updated||'').localeCompare(a.updated||''));
     document.getElementById('loading').style.display = 'none';
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+      renderLists();
+    }));
     if (allLists.length === 0){
       document.getElementById('empty-state').style.display = 'block';
       document.getElementById('count-badge').innerHTML = '재생목록 <strong>0</strong>개';
