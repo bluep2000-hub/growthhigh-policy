@@ -38,7 +38,8 @@ KST = timezone(timedelta(hours=9))
 
 # data.json은 data-full.json의 필드 부분집합만 쓴다(sub_industries·sent_to·source_url·curated 제외).
 DATA_SMALL_FIELDS = ["id", "file", "title", "summary", "tags", "industries", "types",
-                     "deadline_iso", "deadline_display", "meta", "notion_key", "notion_url", "added_at"]
+                     "deadline_iso", "deadline_display", "meta", "notion_key", "notion_url", "added_at",
+                     "brief_one"]
 
 MIN_SCORE_DEFAULT = 100   # 공고문 후보 점수가 이 미만이면 '어느 게 공고문인지 불확실'로 판단
 DEFAULT_TYPE = "경영/기타"
@@ -192,6 +193,10 @@ def finalize(job_path, entry_path, do_push=True):
 
     # 발행일(KST, YYYY-MM-DD) 심기 — 오늘 이후 신규 발행분부터, 기존 227건은 소급하지 않음
     entry["added_at"] = datetime.now(KST).strftime("%Y-%m-%d")
+    # 한 줄 훅(brief_one) — 검토서 생성 모델이 공고문 근거로 이미 채웠어야 하는 필드(20~30자,
+    # 추측·과장 금지). finalize는 값을 만들어내지 않고 비어 있으면 빈 값으로 둔다(플레이리스트가
+    # summary로 폴백 렌더링함).
+    entry.setdefault("brief_one", "")
 
     # data-full.json 삽입
     if entry["types"][0] not in data["filters"]["types"]:

@@ -489,6 +489,8 @@ window.EDIT_MODE = false;
 let authed = false;
 
 const $ = id => document.getElementById(id);
+const BRIEFING_PREFIX = '브리핑_';
+function displayListName(id) { return id.startsWith(BRIEFING_PREFIX) ? '브리핑 ' + id.slice(BRIEFING_PREFIX.length) : id; }
 function showMsg(text, isErr) {
   const m = $('picker-msg'); m.textContent = text; m.className = 'picker-msg show' + (isErr ? ' err' : '');
   setTimeout(() => m.classList.remove('show'), 2600);
@@ -501,7 +503,7 @@ async function loadPlaylists() {
   try {
     const snap = await getDocs(collection(db, 'playlists'));
     snap.forEach(d => {
-      const o = document.createElement('option'); o.value = d.id; o.textContent = d.id; sel.appendChild(o);
+      const o = document.createElement('option'); o.value = d.id; o.textContent = displayListName(d.id); sel.appendChild(o);
     });
   } catch(e) { console.error(e); }
   const o = document.createElement('option'); o.value = '__new__'; o.textContent = '+ 새 재생목록 만들기'; sel.appendChild(o);
@@ -547,6 +549,8 @@ $('pick-save').addEventListener('click', async () => {
   let name = $('pick-select').value;
   if (name === '__new__') { name = $('pick-input').value.trim(); if (!name) { showMsg('재생목록 이름을 입력하세요', true); return; } }
   if (!name) return;
+  // Firestore 문서 ID는 '/'를 허용하지 않는다 — 저장 키는 항상 '_'로 정규화(표시만 displayListName으로 예쁘게).
+  name = name.replace(/\//g, '_');
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });
   try {
     const ref = doc(db, 'playlists', name);
@@ -556,7 +560,7 @@ $('pick-save').addEventListener('click', async () => {
     let added = 0;
     window.PICKED.forEach(slug => { if (!existing.has(slug)) { items.push({ slug, added_at: today }); added++; } });
     await setDoc(ref, { items, updated_at: today }, { merge: true });
-    showMsg('"' + name + '"에 ' + added + '개 담김 (중복 ' + (window.PICKED.size - added) + ')');
+    showMsg('"' + displayListName(name) + '"에 ' + added + '개 담김 (중복 ' + (window.PICKED.size - added) + ')');
     window.PICKED.clear();
     document.querySelectorAll('.card-check.checked').forEach(c => c.classList.remove('checked'));
     updateBar();

@@ -85,6 +85,25 @@
     .program-list{grid-template-columns:1fr;}
     .client-title{font-size:28px;}
   }
+
+  /* 브리핑 모드 카드 (개별 검토서 review-index 팔레트 통일) */
+  body.briefing-mode .share-bar{display:none;}
+  :root{ --brand2:#0A1828; --urgent2:#C73E2C; --warning2:#A8771E; --paper2:#FFFFFF; --line2:#E6E4DD; --muted2:#6F6D66; }
+  .idx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+  .idx-card{display:block;background:var(--paper2);border:1px solid var(--line2);border-radius:14px;padding:16px 16px 14px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;position:relative;overflow:hidden;}
+  .idx-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--warning2);}
+  .idx-card.urgent::before{background:var(--urgent2);}
+  .idx-card:hover{border-color:var(--brand2);box-shadow:0 4px 16px rgba(10,24,40,.08);transform:translateY(-1px);}
+  .idx-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:9px;}
+  .idx-tag{font-size:11.5px;color:var(--muted2);background:#FBFAF7;border:1px solid var(--line2);border-radius:999px;padding:2px 9px;white-space:nowrap;}
+  .idx-dday{font-size:12px;font-weight:600;white-space:nowrap;padding:3px 9px;border-radius:7px;background:#FBF1DE;color:var(--warning2);}
+  .idx-dday.urgent{background:#FBE9E6;color:var(--urgent2);}
+  .idx-dday .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--urgent2);margin-right:5px;vertical-align:1px;animation:idxpulse 1.4s ease-in-out infinite;}
+  @keyframes idxpulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+  .idx-title{font-size:15px;font-weight:700;line-height:1.35;margin-bottom:5px;letter-spacing:-.01em;}
+  .idx-one{font-size:12.5px;color:var(--muted2);line-height:1.5;margin-bottom:11px;}
+  .idx-go{font-size:12px;color:var(--brand2);font-weight:500;}
+  @media(max-width:640px){.idx-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -141,8 +160,10 @@ import { firebaseConfig } from "./firebase-config.js";
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-let state = { bySlug: {}, list: '', items: [], selType: new Set() };
+let state = { bySlug: {}, list: '', items: [], selType: new Set(), briefingMode: false };
 const ALL_TYPES = ['R&D','창업','판로수출','인력','정책자금','인증','투자유치'];
+const BRIEFING_PREFIX = '브리핑_';
+function displayListName(id){ return id.startsWith(BRIEFING_PREFIX) ? '브리핑 '+id.slice(BRIEFING_PREFIX.length) : id; }
 
 function calcDday(iso){ if(!iso)return 9999; const fmt=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}); const u=s=>{const[y,m,d]=s.split('-').map(Number);return Date.UTC(y,m-1,d);}; return Math.round((u(fmt.format(new Date(iso)))-u(fmt.format(new Date())))/86400000); }
 function getStatus(dd){ if(dd<0)return'closed'; if(dd<=3)return'urgent'; if(dd<=7)return'warning'; return'active'; }
@@ -167,6 +188,24 @@ function renderCard(p, addedAt){
     '<p class="card-summary">'+esc(p.summary||'')+'</p>'+
     '<div class="card-meta-list">'+meta+'</div>'+
     '<div class="card-foot">'+log+rmBtn+'</div></a>';
+}
+
+function renderBriefCard(p){
+  const dd=calcDday(p.deadline_iso), st=getStatus(dd);
+  const ddCls = st==='urgent'?'urgent':(st==='warning'?'warning':'');
+  const dot = st==='urgent' ? '<span class="dot"></span>' : '';
+  const cat = (p.types&&p.types[0]) || (p.tags&&p.tags[0]) || '지원사업';
+  const summary40 = (p.summary||'').length>40 ? (p.summary||'').slice(0,40)+'…' : (p.summary||'');
+  const one = p.brief_one || summary40;
+  return '<a class="idx-card '+ddCls+'" href="'+esc(p.file)+'" target="_blank" rel="noopener">'+
+    '<div class="idx-top">'+
+      '<span class="idx-tag">'+esc(cat)+'</span>'+
+      '<span class="idx-dday '+ddCls+'">'+dot+'D−'+dd+' · '+esc(p.deadline_display||'')+'</span>'+
+    '</div>'+
+    '<div class="idx-title">'+esc(p.title)+'</div>'+
+    '<div class="idx-one">'+esc(one)+'</div>'+
+    '<div class="idx-go">검토서 열기 →</div>'+
+  '</a>';
 }
 
 function buildTypeChips(){
@@ -198,13 +237,21 @@ window.removeFromList = async function(ev, slug){
 
 function render(){
   let rows = state.items.map(it => ({ p: state.bySlug[it.slug], added: it.added_at })).filter(r => r.p);
+  const totalCount = rows.length;
   if(state.selType.size) rows = rows.filter(r => (r.p.types||[]).some(t=>state.selType.has(t)));
   const active=[], closed=[];
   rows.forEach(r => { (getStatus(calcDday(r.p.deadline_iso))==='closed'?closed:active).push(r); });
   active.sort((a,b)=>calcDday(a.p.deadline_iso)-calcDday(b.p.deadline_iso));
   closed.sort((a,b)=>calcDday(b.p.deadline_iso)-calcDday(a.p.deadline_iso));
-  document.getElementById('active-list').innerHTML=active.map(r=>renderCard(r.p,r.added)).join('');
-  document.getElementById('closed-list').innerHTML=closed.map(r=>renderCard(r.p,r.added)).join('');
+  const cardFn = state.briefingMode ? (r=>renderBriefCard(r.p)) : (r=>renderCard(r.p,r.added));
+  document.getElementById('active-list').classList.toggle('idx-grid', state.briefingMode);
+  document.getElementById('closed-list').classList.toggle('idx-grid', state.briefingMode);
+  document.getElementById('active-list').innerHTML=active.map(cardFn).join('');
+  document.getElementById('closed-list').innerHTML=closed.map(cardFn).join('');
+  if(state.briefingMode){
+    document.getElementById('client-title').textContent = displayListName(state.list);
+    document.getElementById('client-desc').textContent = '신규 '+totalCount+'건 · 마감임박순';
+  }
   document.getElementById('active-cnt').textContent=active.length;
   document.getElementById('closed-cnt').textContent=closed.length;
   document.getElementById('active-section').classList.toggle('hidden',active.length===0);
@@ -223,6 +270,7 @@ async function init(){
     data.programs.forEach(p => { state.bySlug[p.file.replace(/\.html$/,'')] = p; });
     const params = new URLSearchParams(location.search);
     state.list = params.get('list') || '';
+    state.briefingMode = state.list.startsWith(BRIEFING_PREFIX);
     const shareMode = params.get('share') === '1';
     if (shareMode) {
       document.body.classList.add('share-mode');
@@ -234,8 +282,12 @@ async function init(){
         navigator.clipboard.writeText(url).then(() => { cb.textContent = '✓ 복사됨'; setTimeout(() => cb.textContent = '🔗 클라이언트 공유 링크 복사', 1800); });
       });
     }
-    document.getElementById('client-title').innerHTML = esc(state.list) + ' <span class="accent">정부지원사업 큐레이션 리스트</span>';
-    document.getElementById('client-desc').textContent = '담당 컨설턴트가 선별한 맞춤 지원사업입니다.';
+    if (state.briefingMode) {
+      document.body.classList.add('briefing-mode');
+    } else {
+      document.getElementById('client-title').innerHTML = esc(state.list) + ' <span class="accent">정부지원사업 큐레이션 리스트</span>';
+      document.getElementById('client-desc').textContent = '담당 컨설턴트가 선별한 맞춤 지원사업입니다.';
+    }
     if (state.list) {
       const snap = await getDoc(doc(db, 'playlists', state.list));
       state.items = snap.exists() ? (snap.data().items || []) : [];

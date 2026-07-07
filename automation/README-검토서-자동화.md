@@ -97,13 +97,17 @@ python automation/publish_review.py finalize <job.json> <entry.json> [--no-push]
   "sub_industries": [], "types": ["경영/기타"],
   "deadline_iso": "2026-07-21T18:00:00+09:00", "deadline_display": "2026.07.21",
   "meta": {"지원":"최대 2,000만원","비율":"분담 40%","마감":"07.21"},
-  "source_url": "https://www.bizinfo.go.kr/.../selectSIIA200Detail.do?pblancId=PBLN_..."
+  "source_url": "https://www.bizinfo.go.kr/.../selectSIIA200Detail.do?pblancId=PBLN_...",
+  "brief_one": "7개 연계기관 사업 수행 기업만 신청 가능"
 }
 ```
 - **id = 기존 최대 +1** (preflight의 `next_id`가 계산).
 - **types 8종**: R&D·창업·판로수출·인력·정책자금·인증·투자유치·**경영/기타**(2026-07 신설: 경영·컨설팅·진단·자문류 + 분류 애매).
 - **`added_at`**(2026-07-06 신설): finalize가 발행 시각(KST, `YYYY-MM-DD`)을 자동으로 채워 넣는다. entry.json에 넣을 필요 없음.
   data-full.json·data.json 양쪽에 동일하게 들어간다(finalize가 data.json도 함께 append). 기존 227건은 소급하지 않음(없으면 "발행일 미상"으로 취급).
+- **`brief_one`**(2026-07-07 신설, 팀 브리핑 카드용): 검토서 생성 모델이 **entry.json에 직접 채워 넣는다**(added_at과 달리 finalize가 대신 만들지 않음).
+  공고문 내용 근거로 "왜 봐야 하나"를 짚는 20~30자 한 줄 훅. summary(서술형 요약)와 역할이 다르다. 추측·과장 금지, 공고문에 없는 내용 넣지 않기.
+  없으면 finalize가 빈 문자열로 채우고, 플레이리스트 브리핑 카드는 summary 앞 40자로 폴백 렌더링한다.
 - **source_url = 중복 판정 키**(pblancId). 없으면 중복 감지 안 됨 → 아래 숙제 참조.
 
 ---

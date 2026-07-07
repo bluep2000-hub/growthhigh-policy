@@ -111,7 +111,8 @@ const db = getFirestore(app);
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const ALL_TYPES = ['R&D','창업','판로수출','인력','정책자금','인증','투자유치'];
-const BRIEFING_PREFIX = '브리핑/';
+const BRIEFING_PREFIX = '브리핑_';
+function displayName(id){ return id.startsWith(BRIEFING_PREFIX) ? '브리핑 '+id.slice(BRIEFING_PREFIX.length) : id; }
 let allLists = [];
 let bySlug = {};
 let selType = new Set();
@@ -126,7 +127,7 @@ function renderLists(){
     document.getElementById('empty-state').style.display='block';
     document.getElementById('empty-state').innerHTML = selType.size
       ? '<strong>해당 유형의 재생목록이 없습니다</strong>다른 유형을 선택해 보세요.'
-      : (activeTab === '브리핑' ? '<strong>아직 만든 브리핑이 없습니다</strong>full.html에서 담아 "브리핑/YYMMDD" 이름으로 재생목록을 만들어 보세요.' : '<strong>아직 만든 클라이언트 재생목록이 없습니다</strong>전체 큐레이션에서 사업을 체크하고 "담기"로 재생목록을 만들어 보세요.');
+      : (activeTab === '브리핑' ? '<strong>아직 만든 브리핑이 없습니다</strong>full.html에서 담아 "브리핑_YYMMDD" 이름으로 재생목록을 만들어 보세요.' : '<strong>아직 만든 클라이언트 재생목록이 없습니다</strong>전체 큐레이션에서 사업을 체크하고 "담기"로 재생목록을 만들어 보세요.');
     document.getElementById('count-badge').innerHTML='재생목록 <strong>0</strong>개';
     return;
   }
@@ -135,7 +136,7 @@ function renderLists(){
   grid.innerHTML = lists.map(l =>
     '<a class="list-card" href="playlist.html?list=' + encodeURIComponent(l.name) + '">' +
       '<div class="list-icon">📁</div>' +
-      '<div class="list-body"><div class="list-name">' + esc(l.name) + '</div>' +
+      '<div class="list-body"><div class="list-name">' + esc(displayName(l.name)) + '</div>' +
       '<div class="list-meta">' + (l.updated ? '<span class="mono">' + esc(l.updated.replace(/-/g,'.')) + ' 수정</span>' : '') + '</div></div>' +
       '<div class="list-count"><div class="num">' + l.count + '</div><div class="lbl">사업</div></div>' +
       '<div class="list-arrow">→</div>' +
