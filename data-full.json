@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-05T18:00:00+09:00",
+  "updated_at": "2026-07-07T13:09:20+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5561,6 +5561,37 @@
       "deadline_iso": null,
       "deadline_display": "",
       "meta": {}
+    },
+    {
+      "id": "195",
+      "file": "195-ip-risk-response-decision.html",
+      "title": "2026년 수출 도전기업 IP위험 대응역량 강화사업 (위험대응 유형 2차)",
+      "summary": "해외 IP분쟁 위험진단을 마친 수출기업 대상 특허·상표·디자인 분쟁 대응전략 컨설팅을 최대 1,400만원 한도로 70~80% 지원.",
+      "tags": [
+        "IP위험대응",
+        "위험진단 완료기업"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-07-10T16:00:00+09:00",
+      "deadline_display": "2026.07.10",
+      "meta": {
+        "지원": "최대 1,400만원",
+        "비율": "70~80%",
+        "마감": "07.10(금) 16:00"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124012",
+      "notion_key": "PBLN_000000000124012",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124012",
+      "brief_one": "사전 위험진단 미이수 기업은 신청 자체 불가",
+      "added_at": "2026-07-07"
     }
   ],
   "clients": [
