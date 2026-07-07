@@ -5227,6 +5227,33 @@
       "notion_url": null,
       "added_at": "2026-07-08",
       "brief_one": "판매수수료·변동비는 자부담, 1개 채널만 최종선정"
+    },
+    {
+      "id": "200",
+      "file": "200-cosme-week-osaka-kbeauty.html",
+      "title": "2026 Cosme Week Osaka 연계 오사카 K-뷰티 쇼케이스 참가기업 모집",
+      "summary": "뷰티 국내기업 50개사 내외 대상 KOTRA 오사카무역관의 현지 대리 전시·대리 수출상담 지원(현지 출장 불요).",
+      "tags": [
+        "뷰티·수출",
+        "대리전시"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-17T23:59:59+09:00",
+      "deadline_display": "2026.07.17",
+      "meta": {
+        "참가비": "무료",
+        "규모": "50개사",
+        "마감": "07.17 24:00"
+      },
+      "notion_key": null,
+      "notion_url": null,
+      "added_at": "2026-07-08",
+      "brief_one": "현지 출장 없이 KOTRA가 대리전시·대리상담 진행"
     }
   ]
 }
