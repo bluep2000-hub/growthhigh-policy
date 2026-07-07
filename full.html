@@ -491,22 +491,40 @@ let authed = false;
 const $ = id => document.getElementById(id);
 const BRIEFING_PREFIX = '브리핑_';
 function displayListName(id) { return id.startsWith(BRIEFING_PREFIX) ? '브리핑 ' + id.slice(BRIEFING_PREFIX.length) : id; }
+function todayKSTParts() {
+  const fmt = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' });
+  const [y, m, d] = fmt.format(new Date()).split('-');
+  return { display: y + '.' + m + '.' + d, key: BRIEFING_PREFIX + y.slice(2) + m + d };
+}
 function showMsg(text, isErr) {
   const m = $('picker-msg'); m.textContent = text; m.className = 'picker-msg show' + (isErr ? ' err' : '');
   setTimeout(() => m.classList.remove('show'), 2600);
 }
 
-// 재생목록 목록 로드
+// 재생목록 목록 로드 — 드롭다운 맨 위에 "오늘 브리핑"을 항상 자동으로 넣는다(타이핑 없이 담기)
 async function loadPlaylists() {
   const sel = $('pick-select');
   sel.innerHTML = '<option value="">재생목록 선택...</option>';
+  const today = todayKSTParts();
+
+  const briefingGroup = document.createElement('optgroup'); briefingGroup.label = '브리핑';
+  const todayOpt = document.createElement('option'); todayOpt.value = today.key; todayOpt.textContent = '📅 오늘 브리핑 (' + today.display + ')';
+  briefingGroup.appendChild(todayOpt);
+
+  const listGroup = document.createElement('optgroup'); listGroup.label = '재생목록';
   try {
     const snap = await getDocs(collection(db, 'playlists'));
     snap.forEach(d => {
-      const o = document.createElement('option'); o.value = d.id; o.textContent = displayListName(d.id); sel.appendChild(o);
+      if (d.id === today.key) return; // 오늘 브리핑은 이미 위에 있음, 중복 방지
+      const o = document.createElement('option'); o.value = d.id; o.textContent = displayListName(d.id);
+      (d.id.startsWith(BRIEFING_PREFIX) ? briefingGroup : listGroup).appendChild(o);
     });
   } catch(e) { console.error(e); }
-  const o = document.createElement('option'); o.value = '__new__'; o.textContent = '+ 새 재생목록 만들기'; sel.appendChild(o);
+  const newOpt = document.createElement('option'); newOpt.value = '__new__'; newOpt.textContent = '+ 새 재생목록 만들기';
+  listGroup.appendChild(newOpt);
+
+  sel.appendChild(briefingGroup);
+  sel.appendChild(listGroup);
 }
 
 window.togglePick = function(ev, el) {
