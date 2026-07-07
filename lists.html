@@ -50,6 +50,8 @@
   .list-count .lbl{font-size:11px;color:var(--ink-400);margin-top:3px;}
   .list-arrow{flex-shrink:0;font-size:18px;color:var(--ink-300);transition:all .2s;}
   .list-card:hover .list-arrow{color:var(--accent);transform:translateX(3px);}
+  .list-del{flex-shrink:0;width:34px;height:34px;border-radius:10px;border:1px solid var(--line-card);background:#fff;color:var(--ink-400);font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;position:relative;z-index:5;}
+  .list-del:hover{color:var(--urgent);border-color:#F3C0B6;background:#FDEEEA;}
   .empty-state{padding:56px 24px;background:#fff;border:1px dashed #D1D5DB;border-radius:16px;text-align:center;color:var(--ink-500);font-size:14px;}
   .empty-state strong{display:block;color:var(--ink-900);font-size:16px;margin-bottom:6px;font-weight:700;}
   .loading{padding:56px;text-align:center;color:var(--ink-400);font-size:14px;}
@@ -103,7 +105,7 @@
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, collection, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
@@ -139,10 +141,21 @@ function renderLists(){
       '<div class="list-body"><div class="list-name">' + esc(displayName(l.name)) + '</div>' +
       '<div class="list-meta">' + (l.updated ? '<span class="mono">' + esc(l.updated.replace(/-/g,'.')) + ' 수정</span>' : '') + '</div></div>' +
       '<div class="list-count"><div class="num">' + l.count + '</div><div class="lbl">사업</div></div>' +
+      '<button class="list-del" title="삭제" onclick="window.deleteList(event,\'' + esc(l.name) + '\')">🗑</button>' +
       '<div class="list-arrow">→</div>' +
     '</a>'
   ).join('');
 }
+
+window.deleteList = async function(ev, name){
+  ev.preventDefault(); ev.stopPropagation();
+  if(!confirm('"'+displayName(name)+'" 재생목록을 삭제할까요?')) return;
+  try{
+    await deleteDoc(doc(db, 'playlists', name));
+    allLists = allLists.filter(l => l.name !== name);
+    renderLists();
+  }catch(e){ console.error(e); alert('삭제 실패: '+e.message); }
+};
 
 function buildTypeChips(){
   const el=document.getElementById('type-chips');
