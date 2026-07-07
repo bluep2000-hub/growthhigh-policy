@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-08T08:31:49+09:00",
+  "updated_at": "2026-07-08T08:31:50+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5173,6 +5173,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123988",
       "added_at": "2026-07-08",
       "brief_one": "북부 10개 시군 소재 기업만, 3회 수혜 시 3차 지원 불가"
+    },
+    {
+      "id": "198",
+      "file": "198-startup-online-ecommerce-2nd.html",
+      "title": "2026년 창업기업 온라인 판로지원사업(e커머스) 참여기업 모집(2차)",
+      "summary": "창업 7년 이내 중소기업 300개사 내외 대상 네이버·카카오 전용 기획전·딜구좌·판촉 프로모션 지원.",
+      "tags": [
+        "판로수출",
+        "e커머스"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-12T23:59:59+09:00",
+      "deadline_display": "2026.07.12",
+      "meta": {
+        "모집": "300개사",
+        "채널": "네이버·카카오",
+        "마감": "07.12"
+      },
+      "notion_key": null,
+      "notion_url": null,
+      "added_at": "2026-07-08",
+      "brief_one": "창업 7년 이내 기업만, 무형상품·서비스상품은 지원 제외"
     }
   ]
 }
