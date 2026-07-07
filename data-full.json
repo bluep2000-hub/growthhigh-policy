@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-07T13:09:20+09:00",
+  "updated_at": "2026-07-08T08:31:49+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5592,6 +5592,36 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124012",
       "brief_one": "사전 위험진단 미이수 기업은 신청 자체 불가",
       "added_at": "2026-07-07"
+    },
+    {
+      "id": "196",
+      "file": "196-daegu-smartcity-ir-consulting.html",
+      "title": "「스마트도시 특화단지 조성사업」 스타트업 투자유치 및 컨설팅 지원",
+      "summary": "스마트도시 서비스·솔루션(로봇/모빌리티/지능형관제/안전) 스타트업 5개사 대상 IR 컨설팅 및 투자상담회 지원.",
+      "tags": [
+        "투자유치",
+        "자유공모"
+      ],
+      "industries": [
+        "지식서비스업",
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-07-31T23:59:59+09:00",
+      "deadline_display": "2026.07.31",
+      "meta": {
+        "지원": "IR컨설팅+데모데이",
+        "규모": "5개사",
+        "마감": "07.31"
+      },
+      "source_url": "https://dpis.or.kr/",
+      "notion_key": null,
+      "notion_url": null,
+      "brief_one": "대구TP·국토부 협업, 스마트도시 특화분야 스타트업만 선발",
+      "added_at": "2026-07-08"
     }
   ],
   "clients": [
