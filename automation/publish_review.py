@@ -172,7 +172,10 @@ def finalize(job_path, entry_path, do_push=True):
         return _halt("NO_HTML", f"검토서 HTML이 없습니다: {entry['file']}")
     html = open(html_path, encoding="utf-8").read()
     rel_pdf = f"pdfs/{slug}.pdf"
-    if rel_pdf not in html:
+    is_decision = entry["file"].endswith("-decision.html")
+    # 의사결정형은 로컬 PDF 모달이 아니라 공고문 원문 링크(.src-btn)를 쓰는 디자인이라
+    # pdfs/ 상대경로를 HTML에 넣지 않는다 — 표준형만 이 참조를 강제한다.
+    if not is_decision and rel_pdf not in html:
         return _halt("PDF_REF_MISSING", f"HTML이 상대경로 PDF({rel_pdf})를 참조하지 않습니다.")
 
     # 기본값·필수 필드 보정
