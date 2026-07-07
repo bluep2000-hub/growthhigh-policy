@@ -5622,6 +5622,36 @@
       "notion_url": null,
       "brief_one": "대구TP·국토부 협업, 스마트도시 특화분야 스타트업만 선발",
       "added_at": "2026-07-08"
+    },
+    {
+      "id": "197",
+      "file": "197-gyeonggi-bukbu-devprod-3rd.html",
+      "title": "2026년 [북부권역] 중소기업 개발생산판로 맞춤형 지원사업 참가기업 모집(3차)",
+      "summary": "북부 10개 시군 소재 제조업·지식기반서비스업 중소기업 대상 산업재산권·규격인증·시험분석·전시박람회 비용 60% 지원.",
+      "tags": [
+        "제조업·지식서비스업",
+        "사후신청"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-14T17:00:00+09:00",
+      "deadline_display": "2026.07.14",
+      "meta": {
+        "지원": "최대 2,000만원",
+        "비율": "60%",
+        "마감": "07.14(화)17시"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123988",
+      "notion_key": "PBLN_000000000123988",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123988",
+      "brief_one": "북부 10개 시군 소재 기업만, 3회 수혜 시 3차 지원 불가",
+      "added_at": "2026-07-08"
     }
   ],
   "clients": [
