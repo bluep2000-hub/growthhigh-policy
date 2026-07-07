@@ -197,7 +197,9 @@ function renderBriefCard(p){
   const cat = (p.types&&p.types[0]) || (p.tags&&p.tags[0]) || '지원사업';
   const summary40 = (p.summary||'').length>40 ? (p.summary||'').slice(0,40)+'…' : (p.summary||'');
   const one = p.brief_one || summary40;
-  return '<a class="idx-card '+ddCls+'" href="'+esc(p.file)+'" target="_blank" rel="noopener">'+
+  // 이미 의사결정형(-decision.html)인 검토서는 뷰어를 거치지 않고 바로 연다.
+  const href = p.file.endsWith('-decision.html') ? p.file : 'decision-view.html?file='+encodeURIComponent(p.file);
+  return '<a class="idx-card '+ddCls+'" href="'+esc(href)+'" target="_blank" rel="noopener">'+
     '<div class="idx-top">'+
       '<span class="idx-tag">'+esc(cat)+'</span>'+
       '<span class="idx-dday '+ddCls+'">'+dot+'D−'+dd+' · '+esc(p.deadline_display||'')+'</span>'+
