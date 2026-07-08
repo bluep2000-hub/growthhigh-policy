@@ -246,7 +246,52 @@
   <div class="brandbar"><div class="logo">GROWTH<span class="ap">'</span>HIGH<span class="pos">Scale-up Studio</span></div><div class="kicker">내부 의사결정 검토 · 브리핑 변환 뷰</div></div>
   <div class="card" id="card-root"><p style="padding:40px 0;text-align:center;color:var(--muted);">검토서를 불러오는 중…</p></div>
 </div>
+
+<!-- 공고문 원본 PDF 모달 — 원본 검토서의 임베드 PDF를 브리핑 뷰에서도 그대로 연다 -->
+<div class="modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="공고문 원본 PDF">
+  <div class="modal-box">
+    <div class="modal-head">
+      <span class="modal-title" id="pdfModalTitle">공고문 원본</span>
+      <span style="display:flex;align-items:center;gap:8px;">
+        <a class="src-btn" id="pdfDownloadBtn" download style="padding:6px 11px;font-size:12px;">&#11015; 다운로드</a>
+        <button class="modal-x" id="pdfModalClose" type="button" aria-label="닫기">&times;</button>
+      </span>
+    </div>
+    <div class="modal-body"><iframe id="pdfModalFrame" title="공고문 원본 PDF"></iframe></div>
+  </div>
+</div>
 <script>
+// ── 공고문 원본 PDF 모달 (원본 검토서에서 이관) ──
+var PDF_STATE = { data:'', name:'' };
+function openPdfModal(){
+  if(!PDF_STATE.data) return;
+  var modal = document.getElementById('pdfModal');
+  if(!modal) return;
+  var frame = document.getElementById('pdfModalFrame');
+  var dl = document.getElementById('pdfDownloadBtn');
+  if(frame) frame.src = PDF_STATE.data;
+  if(dl){ dl.href = PDF_STATE.data; dl.setAttribute('download', PDF_STATE.name || '공고문.pdf'); }
+  var t = document.getElementById('pdfModalTitle');
+  if(t) t.textContent = PDF_STATE.name || '공고문 원본';
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePdfModal(){
+  var modal = document.getElementById('pdfModal');
+  if(!modal) return;
+  modal.classList.remove('open');
+  var frame = document.getElementById('pdfModalFrame');
+  if(frame) frame.src = '';
+  document.body.style.overflow = '';
+}
+(function(){
+  var modal = document.getElementById('pdfModal');
+  var closeBtn = document.getElementById('pdfModalClose');
+  if(closeBtn) closeBtn.addEventListener('click', closePdfModal);
+  if(modal) modal.addEventListener('click', function(e){ if(e.target === modal) closePdfModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closePdfModal(); });
+})();
+
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function textOf(el){
   if(!el) return '';
@@ -313,10 +358,33 @@ function parseTracks(sectionB){
 }
 
 function parseSrc(doc, sectionA, sectionC){
-  const a = (sectionA && sectionA.querySelector('.source-link a[href]'))
-    || doc.querySelector('a.pdf-link[href]')
-    || (sectionC && sectionC.querySelector('a[href]'));
-  return a ? a.getAttribute('href') : '';
+  // 실제 외부 링크(http/https)만 채택 — 임베드 PDF 검토서의 트리거는
+  // href="javascript:void(0)" onclick="openPdfModal()" 라서 여기선 걸러지고,
+  // 임베드 PDF는 parsePdf()가 별도로 가져온다.
+  const cands = [];
+  if(sectionA) sectionA.querySelectorAll('.source-link a[href]').forEach(a => cands.push(a));
+  doc.querySelectorAll('a.pdf-link[href]').forEach(a => cands.push(a));
+  if(sectionC) sectionC.querySelectorAll('a[href]').forEach(a => cands.push(a));
+  for(const a of cands){
+    const h = a.getAttribute('href') || '';
+    if(/^https?:/i.test(h)) return h;
+  }
+  return '';
+}
+
+// 원본 검토서의 임베드 PDF(공고문 원본) 자산을 그대로 가져온다.
+// 표준형 검토서는 스크립트에 var PDF_DATA="data:application/pdf;base64,…" +
+// var PDF_NAME="….pdf" 로 PDF를 담고, 모달을 openPdfModal()로 연다(SKILL #128 방식).
+// DOMParser는 스크립트를 실행하지 않으므로, 원본 HTML 원문 문자열에서 정규식으로 추출한다.
+function parsePdf(html){
+  const m = html.match(/var\s+PDF_DATA\s*=\s*"(data:application\/pdf;base64,([^"]*))"/);
+  if(!m) return null;
+  const b64 = m[2];
+  // 미임베드(자리표시자 __PDF_B64_PLACEHOLDER__)·빈 값·잘린 값 방어:
+  // 표준 base64 알파벳(A-Za-z0-9+/=) 밖 문자가 있으면(예: '_') 실PDF 아님.
+  if(!b64 || b64.length < 100 || /[^A-Za-z0-9+/=]/.test(b64)) return null;
+  const nm = html.match(/var\s+PDF_NAME\s*=\s*"([^"]*)"/);
+  return { data: m[1], name: (nm && nm[1]) ? nm[1] : '공고문 원본' };
 }
 
 function parseGate(sectionC){
@@ -398,7 +466,7 @@ function parseReview(doc){
   return { title, tags, dday, meta, lede, tracks, src, gate, docs, process, target };
 }
 
-function render(data, file){
+function render(data, file, hasPdf){
   const ddayDot = data.dday.cls === 'urgent' ? '<span class="dot"></span>' : '';
   const tagsHtml = data.tags.map((t,i) => '<span class="tag' + (i===0?' lead':'') + '">' + esc(t) + '</span>').join('');
   const metaHtml = data.meta.map(m => '<div class="ms"><span class="k">' + esc(m.k) + '</span><span class="v">' + esc(m.v) + '</span></div>').join('');
@@ -410,8 +478,14 @@ function render(data, file){
     ? '<section class="overview">' + (metaHtml ? '<div class="ov-metastrip">'+metaHtml+'</div>' : '') + ledeHtml + tracksHtml + '</section>'
     : '';
 
-  const srcHtml = '<div class="src-row">' +
-    (data.src ? '<a class="src-btn" href="' + esc(data.src) + '" target="_blank" rel="noopener"><span class="ico">&#9636;</span> 공고문 원본 보기</a> ' : '') +
+  // 공고문 원본 보기: (1) 임베드 PDF 있으면 모달 버튼, (2) 없고 실제 외부 링크만 있으면 새 탭 링크,
+  // (3) 둘 다 없으면 버튼 자체를 생략(없는 것 지어내지 않음) — '원본 검토서 열기' 백버튼은 항상 유지.
+  const srcBtn = hasPdf
+    ? '<button type="button" class="src-btn" onclick="openPdfModal()"><span class="ico">&#9636;</span> 공고문 원본 보기</button> '
+    : (data.src && /^https?:/i.test(data.src)
+        ? '<a class="src-btn" href="' + esc(data.src) + '" target="_blank" rel="noopener"><span class="ico">&#9636;</span> 공고문 원본 보기</a> '
+        : '');
+  const srcHtml = '<div class="src-row">' + srcBtn +
     '<a class="src-btn back-btn" href="' + esc(file) + '"><span class="ico">&#8617;</span> 원본 검토서 열기</a></div>';
 
   const gateHtml = data.gate.length ? '<div class="block"><h3>지원 요건</h3><div class="gate">' + data.gate.map(g => {
@@ -464,8 +538,10 @@ function renderFallback(file, reason){
     const html = await res.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
     const data = parseReview(doc);
+    const pdf = parsePdf(html);
+    if(pdf){ PDF_STATE.data = pdf.data; PDF_STATE.name = pdf.name; }
     document.title = data.title + " — GROWTH'HIGH 의사결정형(변환)";
-    render(data, file);
+    render(data, file, !!pdf);
   }catch(e){
     console.error(e);
     renderFallback(file, e.message);
