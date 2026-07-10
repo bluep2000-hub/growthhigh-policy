@@ -5310,6 +5310,33 @@
       "notion_url": null,
       "added_at": "2026-07-10",
       "brief_one": "도내 사회적경제조직 제품·기술 활용 아이템만 참가 대상"
+    },
+    {
+      "id": "203",
+      "file": "203-uknock-usa-content-ir.html",
+      "title": "콘텐츠 해외 투자유치 지원 프로그램 「U-KNOCK 2026 in USA」 참가기업 모집",
+      "summary": "IP·엔터 콘텐츠 기업 7개사 내외 대상 미국(LA) 파트너스·투자사 매칭, 상시·현지 IR 및 1인 출장비 지원.",
+      "tags": [
+        "투자유치",
+        "콘텐츠·IP"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-07-29T14:00:00+09:00",
+      "deadline_display": "2026.07.29",
+      "meta": {
+        "지원": "미국 IR·투자매칭",
+        "규모": "7개사 내외",
+        "마감": "07.29(수)14시"
+      },
+      "notion_key": null,
+      "notion_url": null,
+      "added_at": "2026-07-10",
+      "brief_one": "설립 3년+·직전 3개년 연평균 해외매출 10억 이상만 신청"
     }
   ]
 }
