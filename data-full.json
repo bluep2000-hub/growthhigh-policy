@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-10T09:29:28+09:00",
+  "updated_at": "2026-07-10T09:29:29+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5770,6 +5770,36 @@
       "notion_key": null,
       "notion_url": null,
       "brief_one": "4대 과기원 권역 소재 또는 대표자 과기원 동문만 신청 가능",
+      "added_at": "2026-07-10"
+    },
+    {
+      "id": "202",
+      "file": "202-gg-pet-startup-contest.html",
+      "title": "2026년 「경기도 반려동물 창업 공모전」 참가자 모집",
+      "summary": "경기도 예비·초기(3년 이내) 창업자 10팀 대상 반려동물산업 창업 아이디어 공모, 총 상금 3,000만원 및 차년도 지원사업 서류평가 면제.",
+      "tags": [
+        "창업",
+        "공모전"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-24T17:00:00+09:00",
+      "deadline_display": "2026.08.24",
+      "meta": {
+        "상금": "총 3,000만원",
+        "규모": "10팀",
+        "마감": "08.24(월)17시"
+      },
+      "source_url": "https://www.gsp.or.kr",
+      "notion_key": null,
+      "notion_url": null,
+      "brief_one": "도내 사회적경제조직 제품·기술 활용 아이템만 참가 대상",
       "added_at": "2026-07-10"
     }
   ],
