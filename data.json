@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-08T08:31:50+09:00",
+  "updated_at": "2026-07-10T09:29:28+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5254,6 +5254,34 @@
       "notion_url": null,
       "added_at": "2026-07-08",
       "brief_one": "현지 출장 없이 KOTRA가 대리전시·대리상담 진행"
+    },
+    {
+      "id": "201",
+      "file": "201-kaist-deeptech-landing-pad.html",
+      "title": "2026 K-DeepTech Global Landing Pad (4대 과기원 글로벌 딥테크 창업지원)",
+      "summary": "4대 과기원 권역·동문 딥테크 스타트업 8팀 대상 뉴욕 거점 IR·GTM·데모데이 글로벌 랜딩과 체제비(기업당 최대 20백만원) 지원.",
+      "tags": [
+        "투자유치",
+        "글로벌 딥테크"
+      ],
+      "industries": [
+        "지식서비스업",
+        "제조업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-07-14T23:59:59+09:00",
+      "deadline_display": "2026.07.14",
+      "meta": {
+        "지원": "뉴욕랜딩+체제비",
+        "규모": "8팀(과기원별 2팀)",
+        "마감": "07.14"
+      },
+      "notion_key": null,
+      "notion_url": null,
+      "added_at": "2026-07-10",
+      "brief_one": "4대 과기원 권역 소재 또는 대표자 과기원 동문만 신청 가능"
     }
   ]
 }
