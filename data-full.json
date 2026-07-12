@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:39+09:00",
+  "updated_at": "2026-07-12T14:46:41+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6041,6 +6041,36 @@
       "notion_key": "PBLN_000000000124236",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124236",
       "brief_one": "R&D 완료 제품, 수의계약 혁신제품으로",
+      "added_at": "2026-07-12"
+    },
+    {
+      "id": "211",
+      "file": "211-ip-rd-strategy.html",
+      "title": "2026년 하반기 6차 IP-R&D 전략지원 사업",
+      "summary": "특허전략전문가(PM)+분석기관 전담팀이 핵심특허 대응전략·R&D 방향제시전략·IP 창출전략 中 택1~2로 맞춤형 IP-R&D 전략을 지원",
+      "tags": [
+        "R&D",
+        "자유공모"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-20T14:00:00+09:00",
+      "deadline_display": "2026.07.20",
+      "meta": {
+        "지원": "과제단가 최대 6천만원(R&D수행형 12주)/3천만원(중소기업맞춤형 8주)",
+        "마감": "07.20 14:00"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124205",
+      "notion_key": "PBLN_000000000124205",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124205",
+      "brief_one": "핵심특허 대응부터 R&D 방향 제시까지",
       "added_at": "2026-07-12"
     }
   ],
