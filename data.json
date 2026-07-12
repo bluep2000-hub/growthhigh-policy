@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:42+09:00",
+  "updated_at": "2026-07-12T14:46:43+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5584,6 +5584,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124217",
       "added_at": "2026-07-12",
       "brief_one": "라이브커머스 전과정 지원, 상시접수 1,300개사"
+    },
+    {
+      "id": "213",
+      "file": "213-gyeonggi-openground-invest.html",
+      "title": "2026년 오픈그라운드 투자유치 역량강화 프로그램 참여기업 모집 공고",
+      "summary": "경기도 7년 이내 창업기업 10개사 선정, 투자유치 진단·1:1 멘토링·IR컨설팅·데모데이 지원 및 선정기업 대상 총 2억원 직접투자 검토",
+      "tags": [
+        "창업",
+        "단독신청"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-07-12T23:59:00+09:00",
+      "deadline_display": "2026.07.12",
+      "meta": {
+        "지원": "IR 진단·멘토링·컨설팅 + 총 2억원 투자검토",
+        "마감": "07.12"
+      },
+      "notion_key": "PBLN_000000000124210",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124210",
+      "added_at": "2026-07-12",
+      "brief_one": "경기 창업 7년 이내, 오늘 마감 임박"
     }
   ]
 }
