@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T15:33:19+09:00",
+  "updated_at": "2026-07-12T15:41:29+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5841,6 +5841,35 @@
       "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6298",
       "added_at": "2026-07-12",
       "brief_one": "뉴욕 데모데이 + 후속 5억 투자"
+    },
+    {
+      "id": "222",
+      "file": "222-sweden-game-conference.html",
+      "title": "2026년 스웨덴 게임 컨퍼런스(Sweden Game Conference) 참가기업 모집 공고",
+      "summary": "한국콘텐츠진흥원이 국내 인디 게임 개발사의 북유럽 진출을 위해 2026 스웨덴 게임 컨퍼런스(10.15~16, Skövde) 한국공동관 참가기업 5개사 내외를 모집. 전시·상담 공간, 비즈매칭, 스웨덴 게임기업·클러스터 방문, 현지 네트워크 등 비즈니스 지원과 기업별 1인 이코노미 왕복 항공권을 지원하며, 숙박·현지 이동 등 그 외 체재비는 참가사 부담.",
+      "tags": [
+        "수출",
+        "해외전시",
+        "인디게임",
+        "한국콘텐츠진흥원"
+      ],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-27T17:00:00+09:00",
+      "deadline_display": "2026.07.27",
+      "meta": {
+        "지원": "비즈니스 지원 + 항공권(1인 이코노미 왕복)",
+        "마감": "2026.07.27 17:00 (한국시간)"
+      },
+      "notion_key": "PBLN_000000000124258",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124258",
+      "added_at": "2026-07-12",
+      "brief_one": "스웨덴 게임쇼 한국공동관, 항공권 지원"
     }
   ]
 }
