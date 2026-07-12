@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:34+09:00",
+  "updated_at": "2026-07-12T14:46:36+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5420,6 +5420,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124142",
       "added_at": "2026-07-12",
       "brief_one": "롯데백화점 입점, 경기 중기 판로개척 지원"
+    },
+    {
+      "id": "207",
+      "file": "207-robot-regulation-innovation-2nd.html",
+      "title": "2026년도 규제혁신 로봇 실증사업 지원 과제 2차 모집 공고",
+      "summary": "규제 존치·안전기준 미비·검증데이터 부재로 시장 진출이 제한된 서비스로봇을 대상으로, 규제현황·정비방향 기준 2-Track(규제발굴형, 규제해결형) 중 택1 지원. 규제발굴형은 과제당 최대 0.6억원(국비 100%), 규제해결형은 자유공모(국비 최대 50%)·과제제시(국비 최대 70%)로 사업별 적정예산 신청.",
+      "tags": [
+        "로봇",
+        "규제혁신",
+        "실증사업",
+        "R&D"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-04T15:00:00+09:00",
+      "deadline_display": "2026.08.04",
+      "meta": {
+        "지원": "국비 총 40억원 내외(과제당 규제발굴형 최대 0.6억원, 규제해결형 사업별 상이)",
+        "마감": "2026.08.04(화) 15:00 · PMS 온라인 접수"
+      },
+      "notion_key": "PBLN_000000000124068",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124068",
+      "added_at": "2026-07-12",
+      "brief_one": "규제 막힌 로봇, 2-Track 택1로 뚫는다"
     }
   ]
 }
