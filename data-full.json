@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:33+09:00",
+  "updated_at": "2026-07-12T14:46:34+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5890,6 +5890,39 @@
       "notion_key": "PBLN_000000000124119",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124119",
       "brief_one": "고환율 시대, 수출바우처로 최대 1억원 지원받기",
+      "added_at": "2026-07-12"
+    },
+    {
+      "id": "206",
+      "file": "206-gyeonggi-lotte-dept-store.html",
+      "title": "[경기] 2026년 대중소 상생협력 프로그램 지원 민관협력(롯데백화점) 판로개척 지원사업 참여기업 모집공고",
+      "summary": "경기도 소재 중소기업 대상, 상품경쟁력 강화·MD품평회·롯데백화점 입점(온라인몰) 지원, 별도선정 시 드림플라자 입점까지 지원",
+      "tags": [
+        "판로/유통",
+        "단독신청"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "뷰티",
+        "푸드",
+        "패션",
+        "라이프"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-22T16:00:00+09:00",
+      "deadline_display": "2026.07.22",
+      "meta": {
+        "지원": "최대 700만원(상품경쟁력200+MD품평회300+백화점입점200)",
+        "마감": "07.22(수) 16:00"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124142",
+      "notion_key": "PBLN_000000000124142",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124142",
+      "brief_one": "롯데백화점 입점, 경기 중기 판로개척 지원",
       "added_at": "2026-07-12"
     }
   ],
