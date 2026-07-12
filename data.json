@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:37+09:00",
+  "updated_at": "2026-07-12T14:46:38+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5475,6 +5475,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124066",
       "added_at": "2026-07-12",
       "brief_one": "로봇 실증, 국비 최대 70% 매칭 지원"
+    },
+    {
+      "id": "209",
+      "file": "209-tech-sharing-extension.html",
+      "title": "2026년도 산업통상부-공공기관 기술나눔 연장공고",
+      "summary": "중소·중견기업 대상 8개 공공기관 보유 특허 298건(기계·소재/에너지·자원/환경·해양)을 무상이전(양도·실시권 허여). 신청기간 7.20까지 연장.",
+      "tags": [
+        "기술이전",
+        "무상이전",
+        "산업통상부"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-20T23:59:00+09:00",
+      "deadline_display": "2026.07.20",
+      "meta": {
+        "지원": "공공기관 특허 298건 무상이전(양도·실시권)",
+        "마감": "7.20(월) 23:59"
+      },
+      "notion_key": "PBLN_000000000124051",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124051",
+      "added_at": "2026-07-12",
+      "brief_one": "공공기관 특허 298건, 무상으로 내 것 된다"
     }
   ]
 }
