@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T15:33:16+09:00",
+  "updated_at": "2026-07-12T15:33:17+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6313,6 +6313,36 @@
       "notion_key": "KST_178428",
       "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178428",
       "brief_one": "지역 현안 실증 기회, 10개 과제 모집",
+      "added_at": "2026-07-12"
+    },
+    {
+      "id": "220",
+      "file": "220-saas-transition-consulting-2nd.html",
+      "title": "2026년도 SaaS 전환·개발 컨설팅 2차 수요기업 모집",
+      "summary": "기존 구축형(온프레미스) AI SW 서비스를 SaaS로 전환·개발하려는 기업을 대상으로 비즈니스 모델 분석, 서비스 아키텍처(MSA) 설계, 클라우드 필수요건 점검, 확인제·CSAP 인증 등 SaaS 전환·개발 컨설팅을 제공. 전환·개발 컨설팅 10개社와 One-Point 컨설팅 10개社 선정.",
+      "tags": [
+        "SaaS 전환",
+        "클라우드 컨설팅",
+        "AI SW",
+        "NIPA"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-07-20T18:00:00+09:00",
+      "deadline_display": "2026.07.20",
+      "meta": {
+        "지원": "SaaS 전환·개발 컨설팅(비용 운영기관 지급) / 전환·개발 10개社 + One-Point 10개社",
+        "마감": "2026.07.20(월) 18:00"
+      },
+      "source_url": "https://www.nipa.kr/home/2-2/16827",
+      "notion_key": "NIPA_16827",
+      "notion_url": "https://www.nipa.kr/home/2-2/16827",
+      "brief_one": "온프레미스 AI SW를 SaaS로, 전환 컨설팅 무상",
       "added_at": "2026-07-12"
     }
   ],
