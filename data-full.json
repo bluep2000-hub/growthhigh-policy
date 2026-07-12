@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:41+09:00",
+  "updated_at": "2026-07-12T14:46:42+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6071,6 +6071,34 @@
       "notion_key": "PBLN_000000000124205",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124205",
       "brief_one": "핵심특허 대응부터 R&D 방향 제시까지",
+      "added_at": "2026-07-12"
+    },
+    {
+      "id": "212",
+      "file": "212-sogongin-livecommerce.html",
+      "title": "2026년 소상공인 라이브커머스 제작‧운영지원 사업 참여기업 모집 공고",
+      "summary": "판판대로 통해 라이브커머스 방송기획부터 촬영·송출·판매까지 전 과정을 지원, 총 1,300개사 상시 선정",
+      "tags": [
+        "소상공인",
+        "메뉴판 통합신청"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": null,
+      "deadline_display": "상시",
+      "meta": {
+        "지원": "정부지원금 최대 600만원(메뉴판 통합신청 기준)",
+        "마감": "상시(총 1,300개사 한도)"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124217",
+      "notion_key": "PBLN_000000000124217",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124217",
+      "brief_one": "라이브커머스 전과정 지원, 상시접수 1,300개사",
       "added_at": "2026-07-12"
     }
   ],
