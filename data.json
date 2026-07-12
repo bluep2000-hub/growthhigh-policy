@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:36+09:00",
+  "updated_at": "2026-07-12T14:46:37+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5448,6 +5448,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124068",
       "added_at": "2026-07-12",
       "brief_one": "규제 막힌 로봇, 2-Track 택1로 뚫는다"
+    },
+    {
+      "id": "208",
+      "file": "208-service-robot-demo-2nd.html",
+      "title": "2026년도 서비스로봇 실증사업 지원과제 2차 모집 공고",
+      "summary": "서비스로봇 수요분야별 특화 지원을 위해 공공확산형, 민간·지역 확산형, 해외실증형 3-track으로 지원하며, K-Robot 시장 확대를 위한 서비스로봇 9대 분야·기타 서비스 분야·신기술/신산업 분야를 지원한다.",
+      "tags": [
+        "로봇",
+        "컨소시엄"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-04T15:00:00+09:00",
+      "deadline_display": "2026.08.04",
+      "meta": {
+        "지원": "국비 총 40억원 내외",
+        "비율": "최대 70%(공공확산형)",
+        "마감": "08.04"
+      },
+      "notion_key": "PBLN_000000000124066",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124066",
+      "added_at": "2026-07-12",
+      "brief_one": "로봇 실증, 국비 최대 70% 매칭 지원"
     }
   ]
 }
