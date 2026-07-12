@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T15:33:17+09:00",
+  "updated_at": "2026-07-12T15:33:19+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6343,6 +6343,37 @@
       "notion_key": "NIPA_16827",
       "notion_url": "https://www.nipa.kr/home/2-2/16827",
       "brief_one": "온프레미스 AI SW를 SaaS로, 전환 컨설팅 무상",
+      "added_at": "2026-07-12"
+    },
+    {
+      "id": "221",
+      "file": "221-gyeonggi-newyork-invest.html",
+      "title": "2026년 경기 스타트업 글로벌 성장 지원 「뉴욕 투자유치 지원 프로그램」 참여기업 모집공고",
+      "summary": "경기도·경기도경제과학진흥원이 미국 진출 및 현지 투자유치를 희망하는 도내 7년 이내(신산업 10년) 우수 스타트업 10개사를 선정해, 사전 IR 역량강화와 뉴욕 현지 데모데이·KOOM WEEK 2026 참가, 후속 5억원 투자·TIPS 연계를 지원한다.",
+      "tags": [
+        "투자유치",
+        "글로벌 진출",
+        "뉴욕",
+        "IR",
+        "경기도경제과학진흥원"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-08-07T17:00:00+09:00",
+      "deadline_display": "2026.08.07",
+      "meta": {
+        "지원": "사전 IR 역량강화 + 뉴욕 현지 IR·투자 밋업, 후속 5억원 투자·TIPS 연계 (10개사)",
+        "마감": "2026.08.07(금) 17:00"
+      },
+      "source_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6298",
+      "notion_key": "GSP_6298",
+      "notion_url": "https://www.gsp.or.kr/supportProject/UVSD0001.do?sportSeq=6298",
+      "brief_one": "뉴욕 데모데이 + 후속 5억 투자",
       "added_at": "2026-07-12"
     }
   ],
