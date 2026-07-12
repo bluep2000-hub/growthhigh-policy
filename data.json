@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:47+09:00",
+  "updated_at": "2026-07-12T14:46:48+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5641,6 +5641,35 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124166",
       "added_at": "2026-07-12",
       "brief_one": "고환율·수출통제 피해기업, 바우처 최대 1.5억"
+    },
+    {
+      "id": "215",
+      "file": "215-global-expansion-consulting.html",
+      "title": "2026년 2차 중소기업 기술거래 기반조성사업 글로벌 진출기업 역량강화 지원사업 시행계획 공고",
+      "summary": "해외 파트너사와 기술이전 계약(체결·협약·준비중) 중소기업 대상 맞춤형 글로벌 기술사업화 컨설팅 및 전문가 세미나 지원(10개사 내외, 1개사당 20백만원 내외)",
+      "tags": [
+        "수출",
+        "자유공모"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-15T17:00:00+09:00",
+      "deadline_display": "2026.07.15",
+      "meta": {
+        "지원": "1개사당 20백만원 내외",
+        "규모": "10개사 내외",
+        "마감": "07.15"
+      },
+      "notion_key": "PBLN_000000000124264",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124264",
+      "added_at": "2026-07-12",
+      "brief_one": "해외 진출기업 컨설팅 20백만원"
     }
   ]
 }
