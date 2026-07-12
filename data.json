@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T15:01:16+09:00",
+  "updated_at": "2026-07-12T15:33:16+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5755,6 +5755,35 @@
       "notion_url": "https://www.kocca.kr/kocca/pims/view.do?intcNo=326D00091011&menuNo=204104",
       "added_at": "2026-07-12",
       "brief_one": "디자이너 브랜드 패션수주회 + 자카르타 진출"
+    },
+    {
+      "id": "219",
+      "file": "219-regional-poc-openinno.html",
+      "title": "2026 지역실증형 오픈이노베이션",
+      "summary": "강원·경남·대전·부산·서울·전남·제주 창조경제혁신센터가 디캠프·서울경제진흥원(SBA)과 협력, 지역 실증 인프라와 현안을 기반으로 스타트업에 현장 실증 기회를 제공하는 오픈이노베이션 사업. 총 6개 지역 10개 실증 과제에 과제별 1~3개사를 선정하며, 실증 지원금·대중견기업 연계·투자 검토·후속 연계를 지원한다. 공고일 기준 설립 10년 미만 창업기업 대상(예비창업자 불가, 실증과제 중복지원 가능).",
+      "tags": [
+        "지역실증",
+        "오픈이노베이션",
+        "창조경제혁신센터",
+        "PoC"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-31T15:00:00+09:00",
+      "deadline_display": "2026.07.31",
+      "meta": {
+        "지원": "현장 실증 기회·실증 지원금·대중견기업 연계(6개 지역 10개 과제, 과제별 1~3개사)",
+        "마감": "2026.07.31 15:00 (온라인 협업제안서 접수)"
+      },
+      "notion_key": "KST_178428",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178428",
+      "added_at": "2026-07-12",
+      "brief_one": "지역 현안 실증 기회, 10개 과제 모집"
     }
   ]
 }
