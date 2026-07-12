@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:43+09:00",
+  "updated_at": "2026-07-12T14:46:47+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5612,6 +5612,35 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124210",
       "added_at": "2026-07-12",
       "brief_one": "경기 창업 7년 이내, 오늘 마감 임박"
+    },
+    {
+      "id": "214",
+      "file": "214-export-voucher-emergency-4th.html",
+      "title": "2026년 4차 수출지원기반활용사업 참여기업 모집 공고(산업통상부 산업 글로벌 진출역량 강화 긴급지원바우처)",
+      "summary": "고환율 및 주요국 수출통제로 인해 애로를 겪고 있는 중소·중견기업을 선정하여 수출바우처를 발급하고, 참여기업은 이를 활용해 애로를 극복할 수 있는 서비스를 선택·이용 후 소요비용을 정산한다.",
+      "tags": [
+        "수출",
+        "수출바우처",
+        "산업통상부"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-21T18:00:00+09:00",
+      "deadline_display": "2026.07.21",
+      "meta": {
+        "지원": "최대 1억5,000만원(소재부품장비 확장기준)",
+        "마감": "07.21"
+      },
+      "notion_key": "PBLN_000000000124166",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124166",
+      "added_at": "2026-07-12",
+      "brief_one": "고환율·수출통제 피해기업, 바우처 최대 1.5억"
     }
   ]
 }
