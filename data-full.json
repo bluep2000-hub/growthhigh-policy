@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T14:46:48+09:00",
+  "updated_at": "2026-07-12T14:46:49+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6191,6 +6191,34 @@
       "notion_key": "PBLN_000000000124264",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124264",
       "brief_one": "해외 진출기업 컨설팅 20백만원",
+      "added_at": "2026-07-12"
+    },
+    {
+      "id": "216",
+      "file": "216-seoul-online-md-consulting.html",
+      "title": "2026년 서울시 소상공인 온라인 유통 MD 상담 참여 소상공인 모집 공고",
+      "summary": "국내외 유통채널 MD와의 온라인 상담(최대 3회) 및 유통·영업 전문가 교육으로 서울 소상공인 판로 확대 지원",
+      "tags": [
+        "판로·유통",
+        "상시모집"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-11-13T23:59:59+09:00",
+      "deadline_display": "2026.11.13",
+      "meta": {
+        "지원": "MD 온라인상담 최대 3회 + 전문가 교육",
+        "마감": "2026.11.13(상시모집)"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124107",
+      "notion_key": "PBLN_000000000124107",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124107",
+      "brief_one": "MD와 온라인으로 만나는 판로개척 기회",
       "added_at": "2026-07-12"
     }
   ],
