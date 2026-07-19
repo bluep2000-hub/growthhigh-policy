@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:29+09:00",
+  "updated_at": "2026-07-19T17:20:32+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6654,6 +6654,40 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124439",
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124439",
       "brief_one": "방산 오픈이노베이션 — 군 협업 PoC에 최대 1억+후속 연계",
+      "added_at": "2026-07-19"
+    },
+    {
+      "id": "231",
+      "file": "231-sogongin-showcase-day.html",
+      "title": "제11회 소상공인 쇼케이스데이 참가기업 모집",
+      "summary": "라이프스타일형 창업 7년 이내 소상공인 10개사 — 메가쇼 공동관 전시·역량강화·모의IR·사업화지원금",
+      "tags": [
+        "소상공인",
+        "라이프스타일"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "뷰티",
+        "라이프",
+        "푸드",
+        "패션"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-08-10T23:59:59+09:00",
+      "deadline_display": "2026.08.10",
+      "meta": {
+        "지원": "메가쇼 전시+성장지원",
+        "비율": "전시비 최대 100만원",
+        "마감": "08.10"
+      },
+      "notion_key": "PBLN_000000000124326",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124326",
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124326",
+      "brief_one": "라이프스타일 소상공인 — 메가쇼 전시+IR+사업화지원금",
       "added_at": "2026-07-19"
     }
   ],
