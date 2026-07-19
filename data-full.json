@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:32+09:00",
+  "updated_at": "2026-07-19T17:20:34+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6688,6 +6688,37 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124326",
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124326",
       "brief_one": "라이프스타일 소상공인 — 메가쇼 전시+IR+사업화지원금",
+      "added_at": "2026-07-19"
+    },
+    {
+      "id": "232",
+      "file": "232-pre-tips-2nd.html",
+      "title": "2026년 프리 팁스(Pre-TIPS) 2차 창업기업 모집",
+      "summary": "1천만원 이상 투자받은 비수도권 3년 이내 창업기업 — 사업화자금 최대 1억원 + 창업프로그램(예비 팁스 육성, 30개사)",
+      "tags": [
+        "창업",
+        "예비 팁스"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-10T16:00:00+09:00",
+      "deadline_display": "2026.08.10",
+      "meta": {
+        "지원": "사업화자금 최대 1억원",
+        "비율": "정부 70%",
+        "마감": "08.10"
+      },
+      "notion_key": "PBLN_000000000124377",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124377",
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124377",
+      "brief_one": "비수도권 투자유치 창업기업 — 예비 팁스, 최대 1억",
       "added_at": "2026-07-19"
     }
   ],
