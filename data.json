@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:25+09:00",
+  "updated_at": "2026-07-19T17:20:27+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6036,6 +6036,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124363",
       "added_at": "2026-07-19",
       "brief_one": "경기 중소기업 수출 물류비 최대 500만원(해상 운임)"
+    },
+    {
+      "id": "229",
+      "file": "229-global-saas-marketplace.html",
+      "title": "2026년 글로벌 SaaS 마켓플레이스 지원사업(GSMP) 국내 SaaS 중소·중견 지원기업 모집",
+      "summary": "국내 SaaS·SW 기업 일본(후쿠오카·도쿄) 현지 홍보·비즈매칭·항공권 지원(Level3, 12개사)",
+      "tags": [
+        "수출",
+        "SaaS·SW"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-30T23:59:59+09:00",
+      "deadline_display": "2026.07.30",
+      "meta": {
+        "지원": "일본 현지 홍보+항공권",
+        "비율": "기업당 1개 도시",
+        "마감": "07.30"
+      },
+      "notion_key": "PBLN_000000000124421",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124421",
+      "added_at": "2026-07-19",
+      "brief_one": "SaaS 기업 일본 진출 — 후쿠오카·도쿄 현지 홍보+비즈매칭"
     }
   ]
 }
