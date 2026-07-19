@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:17+09:00",
+  "updated_at": "2026-07-19T17:20:20+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5954,6 +5954,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124365",
       "added_at": "2026-07-19",
       "brief_one": "콘텐츠 스타트업 UAE·싱가포르 진출 — 현지 AC+체재비"
+    },
+    {
+      "id": "226",
+      "file": "226-ai-content-production.html",
+      "title": "2026년 AI활용 콘텐츠 제작 지원사업 참여기업 모집",
+      "summary": "창업 7년 이내 중소기업 상품을 생성형 AI로 연출사진·스타일링 콘텐츠 제작 지원(100개사, 디지털 판로 강화)",
+      "tags": [
+        "판로·마케팅",
+        "AI 콘텐츠"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-28T23:59:59+09:00",
+      "deadline_display": "2026.07.28",
+      "meta": {
+        "지원": "AI 상품 콘텐츠 제작",
+        "비율": "무료 지원",
+        "마감": "07.28"
+      },
+      "notion_key": "PBLN_000000000124320",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124320",
+      "added_at": "2026-07-19",
+      "brief_one": "창업기업 상품을 생성형 AI로 촬영·스타일링 — 디지털 판로용"
     }
   ]
 }
