@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:15+09:00",
+  "updated_at": "2026-07-19T17:20:17+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -5926,6 +5926,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124362",
       "added_at": "2026-07-19",
       "brief_one": "체육인 기창업자 전용 — 500만원 + 밀착 보육(열매과정 추가모집)"
+    },
+    {
+      "id": "225",
+      "file": "225-content-startup-launchpad.html",
+      "title": "2026 콘텐츠 스타트업 글로벌 엑셀러레이팅 프로그램(론치패드) 참가기업(UAE·싱가포르) 추가 모집",
+      "summary": "국내 콘텐츠 스타트업 해외진출 — UAE·싱가포르 현지 엑셀러레이팅 + 체재비 지원(추가 8개사 내외)",
+      "tags": [
+        "수출",
+        "콘텐츠 스타트업"
+      ],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-27T15:00:00+09:00",
+      "deadline_display": "2026.07.27",
+      "meta": {
+        "지원": "현지 엑셀러레이팅+체재비",
+        "비율": "항공·숙박 상한 내",
+        "마감": "07.27"
+      },
+      "notion_key": "PBLN_000000000124365",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124365",
+      "added_at": "2026-07-19",
+      "brief_one": "콘텐츠 스타트업 UAE·싱가포르 진출 — 현지 AC+체재비"
     }
   ]
 }
