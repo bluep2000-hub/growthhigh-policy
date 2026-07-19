@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:23+09:00",
+  "updated_at": "2026-07-19T17:20:25+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6009,6 +6009,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124313",
       "added_at": "2026-07-19",
       "brief_one": "딥테크 스타트업 — 투자사·대중견 1:1 밋업, G-SUMMIT 연계"
+    },
+    {
+      "id": "228",
+      "file": "228-gyeonggi-export-logistics-matching.html",
+      "title": "2026년 중소기업 마케팅 지원사업 수출 매칭 지원사업 참여기업 추가모집",
+      "summary": "경기도 소재 중소기업 해상 수출 운임비 등 최대 500만원 지원(11.30까지 선적 완료 건)",
+      "tags": [
+        "수출",
+        "해상 물류비"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-29T17:00:00+09:00",
+      "deadline_display": "2026.07.29",
+      "meta": {
+        "지원": "해상 운임비 최대 500만원",
+        "비율": "1건·직접지급",
+        "마감": "07.29"
+      },
+      "notion_key": "PBLN_000000000124363",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124363",
+      "added_at": "2026-07-19",
+      "brief_one": "경기 중소기업 수출 물류비 최대 500만원(해상 운임)"
     }
   ]
 }
