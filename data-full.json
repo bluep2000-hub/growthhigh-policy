@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:12+09:00",
+  "updated_at": "2026-07-19T17:20:15+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6439,6 +6439,37 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124318",
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124318",
       "brief_one": "정책면세점 입점사 전용 — 공항 팝업으로 대표상품 홍보·체험",
+      "added_at": "2026-07-19"
+    },
+    {
+      "id": "224",
+      "file": "224-athlete-startup-yeolmae.html",
+      "title": "2026년 체육인 직업안정 사업(창업지원) 창업점검과정(열매) 참여자 추가모집",
+      "summary": "은퇴·경력단절 체육인 기창업자 대상 — 사업화지원금 500만원 + 14종 맞춤 보육 프로그램(창업점검과정 열매 추가모집)",
+      "tags": [
+        "창업",
+        "체육인"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-07-23T23:59:59+09:00",
+      "deadline_display": "2026.07.23",
+      "meta": {
+        "지원": "사업화지원금 500만원 + 14종 보육",
+        "비율": "자부담 없음",
+        "마감": "07.23"
+      },
+      "notion_key": "PBLN_000000000124362",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124362",
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124362",
+      "brief_one": "체육인 기창업자 전용 — 500만원 + 밀착 보육(열매과정 추가모집)",
       "added_at": "2026-07-19"
     }
   ],
