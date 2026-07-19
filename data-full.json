@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-12T15:41:29+09:00",
+  "updated_at": "2026-07-19T17:20:12+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6406,6 +6406,40 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124258",
       "brief_one": "스웨덴 게임쇼 한국공동관, 항공권 지원",
       "added_at": "2026-07-12"
+    },
+    {
+      "id": "223",
+      "file": "223-incheon-airport-popup.html",
+      "title": "인천공항 중소기업제품전용 팝업 스토어 참여기업 모집",
+      "summary": "인천공항 T1 랜드사이드 팝업 홍보관 — 정책면세점 입점 중소기업 대표상품 2개를 홍보·체험 지원",
+      "tags": [
+        "판로·홍보",
+        "팝업스토어"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "뷰티",
+        "푸드",
+        "패션",
+        "라이프"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-20T23:59:59+09:00",
+      "deadline_display": "2026.07.20",
+      "meta": {
+        "지원": "공항 팝업 홍보관(업체당 15일)",
+        "비율": "무료·운영상품 자부담",
+        "마감": "07.20"
+      },
+      "notion_key": "PBLN_000000000124318",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124318",
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124318",
+      "brief_one": "정책면세점 입점사 전용 — 공항 팝업으로 대표상품 홍보·체험",
+      "added_at": "2026-07-19"
     }
   ],
   "clients": [
