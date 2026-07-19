@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:27+09:00",
+  "updated_at": "2026-07-19T17:20:29+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6063,6 +6063,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124421",
       "added_at": "2026-07-19",
       "brief_one": "SaaS 기업 일본 진출 — 후쿠오카·도쿄 현지 홍보+비즈매칭"
+    },
+    {
+      "id": "230",
+      "file": "230-defense-startup-challenge-2nd.html",
+      "title": "「민관협력 오픈이노베이션 지원」 2026년 제2차 방산 스타트업 챌린지(모두의 챌린지–방산) 창업기업 모집",
+      "summary": "군·수요기업 협업과제 43개 — 창업기업에 PoC·시제품 사업화자금 과제별 최대 1억원 + 후속 R&D 연계(50개사)",
+      "tags": [
+        "창업",
+        "방산 오픈이노베이션"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-04T16:00:00+09:00",
+      "deadline_display": "2026.08.04",
+      "meta": {
+        "지원": "사업화자금 과제별 최대 1억원",
+        "비율": "후속 최대 6억 연계",
+        "마감": "08.04"
+      },
+      "notion_key": "PBLN_000000000124439",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124439",
+      "added_at": "2026-07-19",
+      "brief_one": "방산 오픈이노베이션 — 군 협업 PoC에 최대 1억+후속 연계"
     }
   ]
 }
