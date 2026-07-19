@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:34+09:00",
+  "updated_at": "2026-07-19T17:20:36+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6147,6 +6147,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124377",
       "added_at": "2026-07-19",
       "brief_one": "비수도권 투자유치 창업기업 — 예비 팁스, 최대 1억"
+    },
+    {
+      "id": "233",
+      "file": "233-overseas-cert-acquisition-2nd.html",
+      "title": "2026년 해외규격인증획득지원사업(일반지원) 2차 참여기업 모집",
+      "summary": "수출 중소기업 해외규격인증(FCC·FDA·CE·CPNP·HALAL 등) 획득비용 50~70% 지원(기업당 최대 4건·1억원, 180개사)",
+      "tags": [
+        "인증",
+        "해외규격인증"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "인증"
+      ],
+      "deadline_iso": "2026-08-14T18:00:00+09:00",
+      "deadline_display": "2026.08.14",
+      "meta": {
+        "지원": "인증비용 50~70%",
+        "비율": "기업당 최대 1억원",
+        "마감": "08.14"
+      },
+      "notion_key": "PBLN_000000000124375",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124375",
+      "added_at": "2026-07-19",
+      "brief_one": "수출 인증 획득비 50~70% 지원 — 기업당 최대 4건·1억"
     }
   ]
 }
