@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:20+09:00",
+  "updated_at": "2026-07-19T17:20:23+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6529,6 +6529,40 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124320",
       "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124320",
       "brief_one": "창업기업 상품을 생성형 AI로 촬영·스타일링 — 디지털 판로용",
+      "added_at": "2026-07-19"
+    },
+    {
+      "id": "227",
+      "file": "227-gyeonggi-startup-summit-invest-connect.html",
+      "title": "2026 경기 스타트업 서밋 Invest Connect 2차 참가기업 모집",
+      "summary": "G-SUMMIT 2026 연계 — 국내외 투자사·대중견기업 1:1 IR 밋업 + AC 기업진단(딥테크 스타트업 40개사 내외)",
+      "tags": [
+        "투자유치",
+        "IR·밋업"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [
+        "반도체/소부장",
+        "로봇",
+        "바이오헬스케어"
+      ],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-07-29T15:00:00+09:00",
+      "deadline_display": "2026.07.29",
+      "meta": {
+        "지원": "투자사·대중견 1:1 밋업+IR",
+        "비율": "참가비 무료",
+        "마감": "07.29"
+      },
+      "notion_key": "PBLN_000000000124313",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124313",
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124313",
+      "brief_one": "딥테크 스타트업 — 투자사·대중견 1:1 밋업, G-SUMMIT 연계",
       "added_at": "2026-07-19"
     }
   ],
