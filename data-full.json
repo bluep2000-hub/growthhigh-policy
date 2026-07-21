@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-19T17:20:39+09:00",
+  "updated_at": "2026-07-21T18:00:00+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6778,6 +6778,97 @@
       "source_url": "https://www.nipa.kr/home/2-2/16852",
       "brief_one": "B2C AI기업에 정부 GPU 배분 — 전국민 무료 AI 서비스 개발",
       "added_at": "2026-07-19"
+    },
+    {
+      "notion_key": null,
+      "notion_url": null,
+      "source_url": null,
+      "brief_one": "SK에코플랜트 오픈이노베이션 — 딥테크 창업기업 PoC 최대 2,500만원",
+      "added_at": "2026-07-21",
+      "id": "235",
+      "file": "235-tri-nexus-ai-deeptech.html",
+      "title": "2026 Tri Nexus ⌜AI 딥테크⌟ 오픈이노베이션",
+      "summary": "SK에코플랜트와 기술협력·기술실증(PoC) 기반 사업화 오픈이노베이션. 업력 7년 이내 기술창업기업 1개사 내외, PoC 자금 최대 2,500만원. Industry/생성형/보안 AI·로봇·반도체 EPC 등 8개 수요기술.",
+      "tags": [
+        "ICT·AI",
+        "오픈이노베이션"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-10T18:00:00+09:00",
+      "deadline_display": "2026.08.10",
+      "meta": {
+        "지원": "PoC 최대 2,500만원",
+        "비율": "1개사 내외",
+        "마감": "08.10"
+      }
+    },
+    {
+      "notion_key": null,
+      "notion_url": null,
+      "source_url": null,
+      "brief_one": "멕시코 K-뷰티 팝업스토어 — 8개사, 전시·인플루언서 마케팅",
+      "added_at": "2026-07-21",
+      "id": "236",
+      "file": "236-kexpo-mexico-kbeauty.html",
+      "title": "K-EXPO MEXICO K-뷰티 팝업 스토어",
+      "summary": "멕시코 수출(예정) K-뷰티 중소기업 대상 K-EXPO MEXICO 팝업 스토어 전시·인플루언서 마케팅·후속 컨설팅. 8개사 내외, 자부담 10%. 2026.9.25~27 멕시코시티 WTC.",
+      "tags": [
+        "수출",
+        "해외 팝업스토어"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "뷰티"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-31T18:00:00+09:00",
+      "deadline_display": "2026.07.31",
+      "meta": {
+        "지원": "팝업전시+마케팅",
+        "비율": "자부담 10%",
+        "마감": "07.31"
+      }
+    },
+    {
+      "notion_key": null,
+      "notion_url": null,
+      "source_url": null,
+      "brief_one": "경기 레벨업 하반기 — 콘텐츠·IP 초기기업 직접투자 연계(시드·프리A)",
+      "added_at": "2026-07-21",
+      "id": "237",
+      "file": "237-gyeonggi-levelup-2nd.html",
+      "title": "2026년 경기 레벨업 프로그램(하반기) 지원기업 모집",
+      "summary": "경기도 소재(이전 예정) 콘텐츠·IP 초기 법인 대상 직접투자 연계+성장지원+매칭 지원금. 시드 5개사(투자잔액 30억)·프리A 10개사(연내 5억+) 2트랙 통합공고.",
+      "tags": [
+        "투자유치",
+        "통합공고 2트랙"
+      ],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "투자유치"
+      ],
+      "deadline_iso": "2026-08-10T15:00:00+09:00",
+      "deadline_display": "2026.08.10",
+      "meta": {
+        "지원": "직접투자 연계",
+        "비율": "시드5·프리A10",
+        "마감": "08.10"
+      }
     }
   ],
   "clients": [
