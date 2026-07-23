@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-21T18:00:00+09:00",
+  "updated_at": "2026-07-23T09:25:25+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6869,6 +6869,36 @@
         "비율": "시드5·프리A10",
         "마감": "08.10"
       }
+    },
+    {
+      "id": "238",
+      "file": "238-samsung-tech-sharing.html",
+      "title": "2026년도 산업통상부-삼성전자 기술나눔",
+      "summary": "삼성전자 보유 미활용 특허(모바일·디스플레이·가전 202건)를 중소·중견기업에 무상 권리양도하여 기술경쟁력 제고를 지원.",
+      "tags": [
+        "R&D",
+        "기술나눔·특허 무상이전"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-26T23:59:00+09:00",
+      "deadline_display": "2026.08.26",
+      "meta": {
+        "지원": "특허 무상양도(202건)",
+        "제공": "삼성전자",
+        "마감": "08.26(수)23:59"
+      },
+      "source_url": "https://www.tech-storm.io/techshare",
+      "notion_key": null,
+      "notion_url": null,
+      "brief_one": "특허 이전 행정경비·연차료는 양수기업 부담(무상 권리양도)",
+      "added_at": "2026-07-23"
     }
   ],
   "clients": [
