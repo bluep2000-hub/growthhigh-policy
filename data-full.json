@@ -6992,6 +6992,305 @@
       "notion_url": null,
       "brief_one": "창업 7년 이내 4대 소비재만, 수입제품·대중견기업 제품 제외",
       "added_at": "2026-07-23"
+    },
+    {
+      "id": "242",
+      "file": "242-lam-global-demo.html",
+      "title": "2026년 「인간-AI협업형 LAM개발·글로벌 실증」 사업 신규 연구개발과제 공모",
+      "summary": "제조 현장 융합데이터 기반 정밀제어 LAM(Large Action Model) 핵심기술 개발·실증 R&D. 지정공모 23개 과제, '26년 협약일로부터 최대 5년, 기관부담연구개발비 40% 이상 매칭 의무.",
+      "tags": [
+        "R&D",
+        "지정공모·피지컬 AI"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-07-28T15:00:00+09:00",
+      "deadline_display": "2026.07.28",
+      "meta": {
+        "지원": "과제별 상이(최대 5년)",
+        "규모": "총 23개 과제",
+        "마감": "07.28(화)15시"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124527",
+      "notion_key": "PBLN_000000000124527",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124527",
+      "brief_one": "지정공모 23개 과제, 민간부담금 40% 이상 매칭 의무",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "243",
+      "file": "243-boomup-korea-smartfarm.html",
+      "title": "2026 수출 붐업코리아 스마트팜 쇼케이스 참가기업 모집",
+      "summary": "국내 스마트팜·농업 기술 보유 기업 10개사 대상 킨텍스 쇼케이스 부스 및 바이어 1:1 수출상담(2일) 지원. 참가비 무료.",
+      "tags": [
+        "판로수출",
+        "전시·수출상담회"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-31T23:59:59+09:00",
+      "deadline_display": "2026.07.31",
+      "meta": {
+        "지원": "부스+바이어상담(무료)",
+        "규모": "10개사",
+        "마감": "07.31(금)"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124696",
+      "notion_key": "PBLN_000000000124696",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124696",
+      "brief_one": "참가비 무료, 10.21~22 킨텍스 / 서류 미흡 시 평가 불이익",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "244",
+      "file": "244-gobiz-export-platform-2nd.html",
+      "title": "2026년 온라인수출플랫폼 사업(고비즈 수출지원) 참여기업 2차 모집",
+      "summary": "온라인 수출 초기 인프라 구축이 필요한 중소기업 50개사 내외 대상 영문 상품페이지·미니사이트·제품동영상 제작, 맞춤형 교육·컨설팅, 바이어 발굴·매칭 지원. 자부담금 100만원.",
+      "tags": [
+        "판로수출",
+        "온라인 수출 인프라"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-07-31T18:00:00+09:00",
+      "deadline_display": "2026.07.31",
+      "meta": {
+        "지원": "상품페이지·동영상 제작",
+        "규모": "50개사(자부담 100만원)",
+        "마감": "07.31(금)18시"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124634",
+      "notion_key": "PBLN_000000000124634",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124634",
+      "brief_one": "기반조성 분야만 2차 모집(수출성장 분야는 마감)",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "245",
+      "file": "245-lotte-rnd-open-innovation.html",
+      "title": "롯데중앙연구소×스타트업 오픈이노베이션 챌린지 2026",
+      "summary": "업력 7년 미만 스타트업 1개사 대상 롯데중앙연구소 PoC 테스트베드·멘토링 및 PoC 지원금 최대 1천만원 지원. 식품 신선도·섭취경험 혁신·자유주제 3개 분야.",
+      "tags": [
+        "창업",
+        "오픈이노베이션·PoC"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-04T18:00:00+09:00",
+      "deadline_display": "2026.08.04",
+      "meta": {
+        "지원": "PoC 최대 1천만원",
+        "규모": "총 1개사",
+        "마감": "08.04(화)18시"
+      },
+      "source_url": null,
+      "notion_key": null,
+      "notion_url": null,
+      "brief_one": "선정 1개사뿐, AX 관련 기술 보유 스타트업 우대",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "246",
+      "file": "246-kday-tokyo.html",
+      "title": "2026 K-브랜드 융복합 KDAY TOKYO 참여기업 모집",
+      "summary": "해외 진출 희망 국내 소비재 기업 30개사 대상 도쿄 오모테산도 힐즈 K-브랜드 쇼케이스 전시·판매 섹션 및 현지 온·오프라인 마케팅 지원. 패션·뷰티·푸드·리빙 4개 분야.",
+      "tags": [
+        "판로수출",
+        "해외 쇼케이스·일본"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "패션",
+        "뷰티",
+        "푸드",
+        "리빙"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-08-05T14:00:00+09:00",
+      "deadline_display": "2026.08.05",
+      "meta": {
+        "지원": "전시·판매+현지 마케팅",
+        "규모": "총 30개사",
+        "마감": "08.05(수)14시"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124627",
+      "notion_key": "PBLN_000000000124627",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124627",
+      "brief_one": "독립 부스 아닌 통합관, 항공·숙박·판매수수료는 기업 부담",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "247",
+      "file": "247-cybersecurity-ai-foundation.html",
+      "title": "특화 인공지능 파운데이션 모델 개발(사이버보안 분야) 사업",
+      "summary": "국내 AI·사이버보안 기업·대학·연구기관 컨소시엄 1개 과제 대상 GPU(B200) 256장(32노드) 지원. '26.9~'27.7 총 10개월, 단계평가로 2단계 지원 여부 결정.",
+      "tags": [
+        "R&D",
+        "GPU 인프라·사이버보안"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-21T14:00:00+09:00",
+      "deadline_display": "2026.08.21",
+      "meta": {
+        "지원": "GPU B200 256장",
+        "규모": "총 1개 과제",
+        "마감": "08.21(금)14시"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124664",
+      "notion_key": "PBLN_000000000124664",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124664",
+      "brief_one": "현금 아닌 GPU 지원, 대학 주관·참여 필수",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "248",
+      "file": "248-advanced-materials-investment-2nd.html",
+      "title": "2026년 국가첨단전략산업 소부장 중소·중견기업 투자지원금 사업시행 2차 공고",
+      "summary": "국가첨단전략산업 지원품목(공급망안정품목·전략물자) 생산 중소·중견 소부장 기업 대상 국내 투자비 보조. 총 투자 비용의 50% 이내, 기업당 총 200억원·투자 건당 150억원 한도.",
+      "tags": [
+        "정책자금",
+        "투자보조금·소부장"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "정책자금"
+      ],
+      "deadline_iso": "2026-08-21T16:00:00+09:00",
+      "deadline_display": "2026.08.21",
+      "meta": {
+        "지원": "기업당 총 200억원",
+        "비율": "총 투자비 50% 이내",
+        "마감": "08.21(금)16시"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124695",
+      "notion_key": "PBLN_000000000124695",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124695",
+      "brief_one": "지원품목 해당 여부는 KIAT 검토요청서로 사전 확인 필요",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "249",
+      "file": "249-moduui-panro.html",
+      "title": "공영홈쇼핑 「모두의 판로」 상품 공개모집",
+      "summary": "중소기업·소상공인·농어민생산자 대상 공영홈쇼핑 입점 특별 공개모집. 소비자상품평가위원회 합격 시 온라인몰(공영샵)·라이브커머스 판매지원 후 시즌성을 고려한 TV 방송편성으로 연계.",
+      "tags": [
+        "판로수출",
+        "홈쇼핑 입점"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-08-21T23:59:59+09:00",
+      "deadline_display": "2026.08.21",
+      "meta": {
+        "지원": "홈쇼핑 입점 기회",
+        "비율": "금전 지원 없음",
+        "마감": "08.21(금)"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124701",
+      "notion_key": "PBLN_000000000124701",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124701",
+      "brief_one": "금전 지원 없음, 상품명 앞 [모두의 판로] 기재 필수",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "250",
+      "file": "250-sports-industry-loan.html",
+      "title": "2026년 국민체육진흥기금 스포츠산업 융자(튼튼론) 신청 공고",
+      "summary": "민간체육시설업·체육용구생산업·스포츠서비스업 대상 은행 담보부 대리대출. 융자규모 2,416억원, 동일업체 한도 85억원, '26년 3/4분기 금리 3.80%(분기 변동).",
+      "tags": [
+        "정책자금",
+        "융자·튼튼론"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "정책자금"
+      ],
+      "deadline_iso": "2026-09-01T23:59:59+09:00",
+      "deadline_display": "2026.09.01",
+      "meta": {
+        "지원": "융자 2,416억원",
+        "비율": "금리 3.80% 변동",
+        "마감": "09.01(화) 5차"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124607",
+      "notion_key": "PBLN_000000000124607",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124607",
+      "brief_one": "담보부 대리대출 — 은행 담보 부족 시 대출 불가할 수 있음",
+      "added_at": "2026-07-26"
+    },
+    {
+      "id": "251",
+      "file": "251-online-export-logistics-2nd.html",
+      "title": "2026년 온라인수출 중소기업 물류 지원 사업 참여기업 2차 모집",
+      "summary": "온라인수출 영위(예정) 중소기업 대상 풀필먼트 서비스 이용료 및 부산항만공사 해외물류센터 활용 비용 70% 사후정산 지원. 전년도 수출실적에 따라 최대 3,000만원 차등 배정.",
+      "tags": [
+        "판로수출",
+        "물류비 지원"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-09-16T23:59:59+09:00",
+      "deadline_display": "2026.09.16",
+      "meta": {
+        "지원": "이용료 70%(최대 3천만원)",
+        "비율": "사후정산",
+        "마감": "09.16(수)"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124473",
+      "notion_key": "PBLN_000000000124473",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124473",
+      "brief_one": "전년도 수출실적에 따라 한도 차등, 조기 마감 가능",
+      "added_at": "2026-07-26"
     }
   ],
   "clients": [
