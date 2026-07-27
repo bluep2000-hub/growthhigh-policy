@@ -4896,18 +4896,6 @@
       "meta": {}
     },
     {
-      "id": "02",
-      "file": "02-saas-transition-consulting.html",
-      "title": "SaaS 전환·개발 컨설팅 (2차)",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
       "id": "03",
       "file": "03-panro-track1.html",
       "title": "2026 소공인 판로개척지원 민간협업형(Track1) 추가 모집",
@@ -4932,30 +4920,6 @@
       "meta": {}
     },
     {
-      "id": "05",
-      "file": "05-culture-content-guarantee.html",
-      "title": "문화콘텐츠 기업보증",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
-      "id": "06",
-      "file": "06-agrifood-global-package.html",
-      "title": "농식품글로벌 성장패키지",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
       "id": "08",
       "file": "08-defense-startup-challenge.html",
       "title": "방산 스타트업 챌린지 (모두의 챌린지–방산)",
@@ -4968,30 +4932,6 @@
       "meta": {},
       "notion_key": "MSS_1068742",
       "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068742&parentSeq=1068742"
-    },
-    {
-      "id": "09",
-      "file": "09-culture-completion-guarantee.html",
-      "title": "문화산업 완성보증",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
-      "id": "10",
-      "file": "10-content-ip-guarantee.html",
-      "title": "콘텐츠IP 보증",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
     },
     {
       "id": "129",
@@ -5021,54 +4961,6 @@
       "id": "131",
       "file": "131-strong-sme-growth.html",
       "title": "2026년 소상공인 도약 지원 사업 (강한소상공인 성장지원)",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
-      "id": "14",
-      "file": "14-gif-idea.html",
-      "title": "2026년 GIF 창업 아이디어 경진대회",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
-      "id": "17",
-      "file": "17-koindex-consortium.html",
-      "title": "2026 대한민국산업전시회(KoINDEX) 수출컨소시엄 단체관 참가기업 모집",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
-      "id": "18",
-      "file": "18-incheon-publictest.html",
-      "title": "인천 공공 실증 오픈이노베이션 참여기업 모집",
-      "summary": "",
-      "tags": [],
-      "industries": [],
-      "types": [],
-      "deadline_iso": null,
-      "deadline_display": "",
-      "meta": {}
-    },
-    {
-      "id": "19",
-      "file": "19-publish-rnd.html",
-      "title": "2026년 출판콘텐츠 기술개발 지원",
       "summary": "",
       "tags": [],
       "industries": [],
