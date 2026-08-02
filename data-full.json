@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:21:44+09:00",
+  "updated_at": "2026-08-02T14:23:31+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7391,6 +7391,37 @@
       "notion_key": "PBLN_000000000123648",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123648",
       "brief_one": "울산TP 장비로 이차전지 시험평가",
+      "added_at": "2026-08-02"
+    },
+    {
+      "id": "259",
+      "file": "259-textile-itube-3rd.html",
+      "title": "섬유산업 지능형 마이크로팩토리 I-Tube 기술지원 서비스 (2026-3차)",
+      "summary": "액티브웨어·스마트웨어 등 테크패션 기업에 디지털 의류 설계 장비, 3D 가상착의 프로그램, 우븐 패브릭 설계 DB와 기술 컨설팅을 지원합니다. 총 8개사 내외를 선착순으로 받으며 기술·장비 이용료는 기업이 부담합니다.",
+      "tags": [
+        "장비·기술컨설팅",
+        "선착순 접수"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "패션"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-21T12:00:00+09:00",
+      "deadline_display": "2026.08.21",
+      "meta": {
+        "지원": "설계장비·3D·기술컨설팅 (8개사)",
+        "비율": "기업 부담금 있음",
+        "마감": "08.21"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124960",
+      "notion_key": "PBLN_000000000124960",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124960",
+      "brief_one": "선착순 8개사 · 기업 부담금 별도",
       "added_at": "2026-08-02"
     }
   ],
