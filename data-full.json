@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:33:00+09:00",
+  "updated_at": "2026-08-02T14:34:39+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7571,6 +7571,37 @@
       "notion_key": "PBLN_000000000124976",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124976",
       "brief_one": "전국민 무료 AI 챗봇 연내 출시가 조건",
+      "added_at": "2026-08-02"
+    },
+    {
+      "id": "265",
+      "file": "265-supply-chain-stabilization-3rd.html",
+      "title": "2026년 공급망안정화 지원사업 (3차)",
+      "summary": "해외 M&A·지분투자·전략적 제휴 투자계획을 보유한 국내기업에 공급망 안정화 전문가 컨설팅 비용을 선정기업당 최대 1.2억원 지원합니다. 중기업 이상·상장기업·소부장 으뜸기업 등이 대상이며 민간부담금은 최소 3천만원 현금입니다.",
+      "tags": [
+        "M&A 컨설팅",
+        "중기업 이상"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "반도체/소부장"
+      ],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-08-27T16:00:00+09:00",
+      "deadline_display": "2026.08.27",
+      "meta": {
+        "지원": "최대 1.2억원",
+        "비율": "민간부담 3천만원 이상",
+        "마감": "08.27"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124508",
+      "notion_key": "PBLN_000000000124508",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124508",
+      "brief_one": "해외 M&A 투자계획 보유 기업만 신청",
       "added_at": "2026-08-02"
     }
   ],
