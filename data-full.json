@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:51:48+09:00",
+  "updated_at": "2026-08-02T14:53:47+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7661,6 +7661,37 @@
       "notion_key": "PBLN_000000000124059",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124059",
       "brief_one": "게임·웹툰 등 콘텐츠 해외 권리화 비용",
+      "added_at": "2026-08-02"
+    },
+    {
+      "id": "268",
+      "file": "268-ip-valuation-3rd.html",
+      "title": "2026년 IP사업화연계 지식재산평가지원사업 (3차)",
+      "summary": "보유한 특허·상표·실용신안의 가치평가 비용을 50%(우대 시 60%)까지 연간 5천만원 한도로 지원합니다. 기술거래·현물출자·사업타당성·마케팅홍보·기술인증 5개 용도 중 하나를 선택하며 평가기관이 대리 신청합니다.",
+      "tags": [
+        "IP 가치평가",
+        "평가용도 택1"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-08-07T17:00:00+09:00",
+      "deadline_display": "2026.08.07",
+      "meta": {
+        "지원": "연간 5천만원 이내",
+        "비율": "평가비용의 50~60%",
+        "마감": "08.07"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124772",
+      "notion_key": "PBLN_000000000124772",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124772",
+      "brief_one": "우대 조건 채우면 평가비 60%까지",
       "added_at": "2026-08-02"
     }
   ],
