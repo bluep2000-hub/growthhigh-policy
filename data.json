@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:25:45+09:00",
+  "updated_at": "2026-08-02T14:27:54+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6808,6 +6808,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124877",
       "added_at": "2026-08-02",
       "brief_one": "선지급 후 사후정산 · 11월 말 완료 조건"
+    },
+    {
+      "id": "261",
+      "file": "261-ghg-intl-reduction-3rd.html",
+      "title": "2026년 온실가스 국제감축사업 투자지원 (3차)",
+      "summary": "협력국 내 환경분야 온실가스 감축설비 설치에 총 사업비 중 투자비의 최대 50%, 1건당 최대 100억원을 지원합니다. 기업규모 제한이 없어 대기업·공공기관도 신청할 수 있으며 3차 모집은 2건 이내를 우선 선정합니다.",
+      "tags": [
+        "설비 투자지원",
+        "기업규모 무관"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-08-31T18:00:00+09:00",
+      "deadline_display": "2026.08.31",
+      "meta": {
+        "지원": "1건당 최대 100억원",
+        "비율": "투자비의 최대 50%",
+        "마감": "08.31"
+      },
+      "notion_key": "PBLN_000000000123814",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123814",
+      "added_at": "2026-08-02",
+      "brief_one": "설비 투자비 50%·최대 100억 · 2건 이내"
     }
   ]
 }
