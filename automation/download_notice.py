@@ -1,18 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-기업마당(bizinfo.go.kr) 공고 다운로더 (자동화 1단계)
+정부지원사업 공고 다운로더 (자동화 1단계) — 기업마당 / K-Startup
 
 공고 상세 URL 하나를 받아서:
-  1) 상세 HTML에서 첨부(atchFileId + fileSn) 목록을 뽑고
+  1) 상세 HTML에서 첨부 목록을 뽑고
   2) 첨부를 전부 내려받아 실제 파일 종류(pdf/hwp/hwpx/...)를 magic byte로 판별하고
   3) 그 중 '공고문'을 골라
   4) hwp/hwpx면 한컴 COM으로 PDF 변환, 이미 PDF면 그대로 채택
 최종적으로 '공고문 PDF' 한 개의 경로를 만들어 낸다.
 
+출처마다 다른 건 1)뿐이다(첨부 URL을 어떻게 만드는가). 2)~4)는 공용.
+그래서 출처별 어댑터가 "상세 URL → [(다운로드 URL, 아는 파일명)]"까지만 책임지고,
+그 뒤 판별·선택·변환은 한 경로로 합류한다.
+
+  기업마당 : fileDown.do?atchFileId=FILE_n&fileSn=n  (파일명은 Content-Disposition/UTF-8)
+  K-Startup: /afile/fileDownload/<불투명토큰>          (파일명은 상세 HTML title 속성)
+
 사용:  python download_notice.py "<공고 상세 URL>" [출력폴더]
 """
 import sys, os, re, json, zipfile, argparse, shutil
+import html as _html
 
 import requests
 
@@ -25,11 +33,31 @@ for _s in (sys.stdout, sys.stderr):
 
 BASE = "https://www.bizinfo.go.kr"
 DOWN = BASE + "/cmm/fms/fileDown.do"
+KST_BASE = "https://www.k-startup.go.kr"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
                   "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
     "Referer": BASE,
 }
+
+
+def detect_source(url):
+    """**URL**로 출처 판별. 모르면 'bizinfo'(기존 동작).
+
+    ※ 상세 HTML 본문으로는 판별하지 않는다 — 기업마당 페이지가 본문에 k-startup.go.kr
+      링크를 걸고 있어 오판한다(실측). 첨부 추출은 패턴 우선순위로 가른다.
+    """
+    if "k-startup.go.kr" in (url or ""):
+        return "kstartup"
+    return "bizinfo"
+
+
+def _headers_for(url):
+    """Referer를 대상 사이트에 맞춘다(기업마당 URL이면 기존 HEADERS와 동일)."""
+    h = dict(HEADERS)
+    if detect_source(url) == "kstartup":
+        h["Referer"] = KST_BASE
+    return h
 
 # 파일명에 못 쓰는 Windows 금지문자
 _INVALID = re.compile(r'[\\/:*?"<>|\r\n\t]')
@@ -40,24 +68,70 @@ def log(msg):
 
 
 def fetch(url):
-    r = requests.get(url, headers=HEADERS, timeout=30)
+    r = requests.get(url, headers=_headers_for(url), timeout=30)
     r.raise_for_status()
     return r
 
 
 def extract_pblanc_id(url):
+    """공고 식별자. **반드시 상세 URL의 부분문자열**이어야 한다 —
+    publish_review 의 중복 게이트가 `pid in source_url` 로 판정하기 때문."""
     m = re.search(r'pblancId=(PBLN_[0-9]+)', url)
-    return m.group(1) if m else "notice"
+    if m:
+        return m.group(1)
+    m = re.search(r'(pbancSn=\d+)', url)      # K-Startup
+    if m:
+        return m.group(1)
+    return "notice"
 
 
-def extract_file_refs(html):
-    """상세 HTML에서 (atchFileId, fileSn) 순서 유지 + 중복 제거."""
+def extract_file_refs(html, source=None):
+    """상세 HTML → [{'url': 다운로드URL, 'name': 아는 파일명 or None}] (순서 유지·중복 제거).
+
+    출처별로 다른 건 여기까지다. 이후 다운로드·판별·선택·변환은 공용 경로.
+    source를 안 주면 패턴 우선순위로 가른다 — 기업마당 패턴(fileDown.do?atchFileId=FILE_)이
+    잡히면 기업마당, 아니면 K-Startup. 기업마당 결과가 기존과 100% 같도록 이 순서를 지킨다.
+    """
+    if source == "kstartup":
+        return _refs_kstartup(html)
+    if source == "bizinfo":
+        return _refs_bizinfo(html)
+    return _refs_bizinfo(html) or _refs_kstartup(html)
+
+
+def _refs_bizinfo(html):
+    """기업마당: fileDown.do?atchFileId=FILE_n&fileSn=n (파일명은 Content-Disposition에서 복원)."""
     seen, out = set(), []
     for m in re.finditer(r'fileDown\.do\?atchFileId=(FILE_[0-9]+)&(?:amp;)?fileSn=(\d+)', html):
         key = (m.group(1), m.group(2))
         if key not in seen:
             seen.add(key)
-            out.append(key)
+            out.append({"url": f"{DOWN}?atchFileId={key[0]}&fileSn={key[1]}",
+                        "name": None, "atchFileId": key[0], "fileSn": key[1]})
+    return out
+
+
+def _refs_kstartup(html):
+    """K-Startup: /afile/fileDownload/<불투명토큰>.
+
+    파일명은 Content-Disposition이 CP949라 기존 복원 로직(latin1→utf-8)으로는 깨진다.
+    상세 HTML의 `<a class="file_bg" title="[첨부파일] …">` 에 정확한 이름이 있으므로 그걸 쓴다.
+    (파일명이 깨지면 공고문 점수 판정이 통째로 무력화됨)
+    """
+    start = html.find('class="board_file"')
+    block = html[start:] if start >= 0 else html
+    seen, out = set(), []
+    for li in re.split(r'<li class="clear">', block)[1:]:
+        hm = re.search(r'href="(/afile/fileDownload/[^"]+)"', li)
+        if not hm:
+            continue
+        url = KST_BASE + _html.unescape(hm.group(1))
+        if url in seen:
+            continue
+        seen.add(url)
+        nm = re.search(r'class="file_bg"[^>]*title="\[첨부파일\]\s*([^"]+)"', li)
+        name = _html.unescape(nm.group(1)).strip() if nm else None
+        out.append({"url": url, "name": name})
     return out
 
 
@@ -133,11 +207,12 @@ def safe_name(name, fallback):
 
 def download_all(refs, outdir):
     files = []
-    for i, (fid, sn) in enumerate(refs, 1):
-        url = f"{DOWN}?atchFileId={fid}&fileSn={sn}"
-        r = requests.get(url, headers=HEADERS, timeout=60)
+    for i, ref in enumerate(refs, 1):
+        url = ref["url"]
+        r = requests.get(url, headers=_headers_for(url), timeout=60)
         r.raise_for_status()
-        name = recover_filename(r.headers.get('Content-Disposition'))
+        # 상세 HTML에서 이미 확보한 이름이 있으면 그게 정확(K-Startup) — 없으면 헤더에서 복원(기업마당)
+        name = ref.get("name") or recover_filename(r.headers.get('Content-Disposition'))
         kind_tmp = os.path.join(outdir, f"_att_{i}.tmp")
         with open(kind_tmp, 'wb') as f:
             f.write(r.content)
@@ -150,7 +225,8 @@ def download_all(refs, outdir):
         if os.path.exists(dest):
             os.remove(dest)
         os.replace(kind_tmp, dest)
-        files.append({'idx': i, 'atchFileId': fid, 'fileSn': sn,
+        files.append({'idx': i, 'url': url,
+                      'atchFileId': ref.get('atchFileId'), 'fileSn': ref.get('fileSn'),
                       'name': name or base, 'kind': kind,
                       'path': dest, 'size': len(r.content)})
     return files

@@ -44,6 +44,16 @@ DATA_SMALL_FIELDS = ["id", "file", "title", "summary", "tags", "industries", "ty
 MIN_SCORE_DEFAULT = 100   # 공고문 후보 점수가 이 미만이면 '어느 게 공고문인지 불확실'로 판단
 DEFAULT_TYPE = "경영/기타"
 
+# HALT 메시지에 보여줄 '올바른 공고 상세 URL 형식' (출처별)
+_URL_FORM = {
+    "bizinfo": "bizinfo.go.kr/…/selectSIIA200Detail.do?pblancId=PBLN_…",
+    "kstartup": "k-startup.go.kr/…/bizpbanc-ongoing.do?…&schM=view&pbancSn=…",
+}
+
+
+def _url_form(url):
+    return _URL_FORM.get(dn.detect_source(url), _URL_FORM["bizinfo"])
+
 
 def _load_data():
     return json.load(open(DATA, encoding="utf-8"))
@@ -79,7 +89,7 @@ def preflight(url, staging, min_score):
     refs = dn.extract_file_refs(html)
     if not refs:
         return _halt("NO_ATTACHMENT",
-                     f"이 URL에서 첨부를 찾지 못했습니다. 공고 상세(view.do?pblancId=…) URL이 맞는지 확인해 주세요. (pblancId={pid})")
+                     f"이 URL에서 첨부를 찾지 못했습니다. 공고 상세({_url_form(url)}) URL이 맞는지 확인해 주세요. (공고ID={pid})")
 
     files = dn.download_all(refs, staging)
     chosen, ranked = dn.pick_announcement(files)
