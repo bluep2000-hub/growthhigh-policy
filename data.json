@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:57:39+09:00",
+  "updated_at": "2026-08-02T15:39:03+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7058,6 +7058,35 @@
       "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178615",
       "added_at": "2026-08-02",
       "brief_one": "안양시 본사 이전이 입주 조건"
+    },
+    {
+      "id": "271",
+      "file": "271-yongin-startup-center-3rd.html",
+      "title": "2026년 제3차 창업지원센터 입주기업 모집 (용인)",
+      "summary": "용인시산업진흥원 3개 창업지원센터에 창업 7년 미만 기업·예비창업자 8개사를 모집합니다. 동백썬월드(바이오·헬스) 3개사, 영덕(AI·반도체) 2개사, 역북(전산업) 3개사이며 카이스트청년창업투자지주 연계 투자유치 프로그램을 제공합니다.",
+      "tags": [
+        "입주공간 지원",
+        "용인 이전 필수"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "창업"
+      ],
+      "deadline_iso": "2026-08-19T16:00:00+09:00",
+      "deadline_display": "2026.08.19",
+      "meta": {
+        "지원": "입주공간 8개사 + KAIST AC 연계",
+        "비율": "입주부담금 월 26.6만~61.2만원",
+        "마감": "08.19"
+      },
+      "notion_key": "KST_178708",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178708",
+      "added_at": "2026-08-02",
+      "brief_one": "용인 3개 센터 중 1곳만 신청 가능"
     }
   ]
 }
