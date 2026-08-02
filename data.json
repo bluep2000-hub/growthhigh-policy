@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-07-30T16:54:57+09:00",
+  "updated_at": "2026-08-02T14:16:55+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6645,6 +6645,33 @@
       "notion_url": null,
       "added_at": "2026-07-30",
       "brief_one": "온라인 판매 소상공인만, 기업당 최대 600만원(8개 사업 합산)·자부담 10%+부가세—과거 지원 동일상품 재지원 불가"
+    },
+    {
+      "id": "255",
+      "file": "255-process-optimization-rd.html",
+      "title": "2026년도 표준공정 기반 공정최적화 기술개발사업(공정최적화R&D)",
+      "summary": "제조현장진단을 받은 중소제조기업만 신청할 수 있는 공정최적화 R&D 과제입니다. 과제당 최대 2년·10억원 이내 정부지원연구개발비를 지원하며, 전문연구기관·스마트제조기술기업과 컨소시엄 구성이 필수입니다.",
+      "tags": [
+        "R&D",
+        "컨소시엄 자유공모"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-28T18:00:00+09:00",
+      "deadline_display": "2026.08.28",
+      "meta": {
+        "지원": "최대 10억원 (2년)",
+        "비율": "정부 75% 이내",
+        "마감": "08.28"
+      },
+      "notion_key": "PBLN_000000000124904",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124904",
+      "added_at": "2026-08-02",
+      "brief_one": "제조현장진단 받은 기업만 신청 가능"
     }
   ]
 }
