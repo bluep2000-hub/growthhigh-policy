@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:31:08+09:00",
+  "updated_at": "2026-08-02T14:33:00+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7542,6 +7542,35 @@
       "notion_key": "PBLN_000000000122103",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000122103",
       "brief_one": "임치계약 있어야 신청 · 50개사 한정",
+      "added_at": "2026-08-02"
+    },
+    {
+      "id": "264",
+      "file": "264-moduui-ai-gpu.html",
+      "title": "전 국민 AI 서비스 보편적 활용 지원(모두의 AI) 사업 수정 공고",
+      "summary": "전국민 대상 무료 범용 AI 챗봇 서비스를 연내 출시하는 조건으로 정부구매 GPU(최대 B200 512장 내외)를 배분합니다. B2C 서비스 역량을 보유한 기업 2~3개사를 선정하며 자부담금 매칭이 필수입니다.",
+      "tags": [
+        "GPU 인프라 지원",
+        "단일 또는 컨소시엄"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "sub_industries": [],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-08-18T17:00:00+09:00",
+      "deadline_display": "2026.08.18",
+      "meta": {
+        "지원": "GPU B200 최대 512장 내외",
+        "비율": "자부담금 매칭 필수",
+        "마감": "08.18"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124976",
+      "notion_key": "PBLN_000000000124976",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124976",
+      "brief_one": "전국민 무료 AI 챗봇 연내 출시가 조건",
       "added_at": "2026-08-02"
     }
   ],
