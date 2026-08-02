@@ -6068,33 +6068,6 @@
       "brief_one": "수출 인증 획득비 50~70% 지원 — 기업당 최대 4건·1억"
     },
     {
-      "id": "234",
-      "file": "234-moduui-ai-nipa.html",
-      "title": "전 국민 AI 서비스 보편적 활용 지원(모두의 AI) 사업",
-      "summary": "B2C AI서비스 기업에 정부 GPU(B200) 배분 — 국산 AI모델 기반 전국민 무료 AI 챗봇·에이전트 개발(2~3개사, 5개년)",
-      "tags": [
-        "ICT·AI",
-        "GPU 인프라"
-      ],
-      "industries": [
-        "지식서비스업"
-      ],
-      "types": [
-        "R&D"
-      ],
-      "deadline_iso": "2026-08-11T17:00:00+09:00",
-      "deadline_display": "2026.08.11",
-      "meta": {
-        "지원": "정부 GPU(B200) 배분",
-        "비율": "자부담 매칭 필수",
-        "마감": "08.11"
-      },
-      "notion_key": null,
-      "notion_url": null,
-      "added_at": "2026-07-19",
-      "brief_one": "B2C AI기업에 정부 GPU 배분 — 전국민 무료 AI 서비스 개발"
-    },
-    {
       "id": "235",
       "file": "235-tri-nexus-ai-deeptech.html",
       "title": "2026 Tri Nexus ⌜AI 딥테크⌟ 오픈이노베이션",
