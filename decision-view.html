@@ -241,7 +241,16 @@
 
   /* 개별 산출물(NN-슬러그-decision.html)은 카드가 1개뿐이므로 :target 없이 항상 표시(원본 review-index.html은 다중 카드 SPA용) */
   .review-view{display:block;}
-</style></head><body>
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7D1SWPQJPK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7D1SWPQJPK');
+</script>
+</head><body>
 <div class="review-view" id="viewer">
   <div class="brandbar"><div class="logo">GROWTH<span class="ap">'</span>HIGH<span class="pos">Scale-up Studio</span></div><div class="kicker">내부 의사결정 검토 · 브리핑 변환 뷰</div></div>
   <div class="card" id="card-root"><p style="padding:40px 0;text-align:center;color:var(--muted);">검토서를 불러오는 중…</p></div>
