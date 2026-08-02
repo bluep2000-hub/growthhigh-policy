@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:23:31+09:00",
+  "updated_at": "2026-08-02T14:25:45+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7422,6 +7422,37 @@
       "notion_key": "PBLN_000000000124960",
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124960",
       "brief_one": "선착순 8개사 · 기업 부담금 별도",
+      "added_at": "2026-08-02"
+    },
+    {
+      "id": "260",
+      "file": "260-ai-esthetic-device.html",
+      "title": "2026년 AI 융합 에스테틱 의료기기 글로벌 사업화 기반구축 사업(1차년도)",
+      "summary": "전국 소재 AI 융합 에스테틱 의료기기 개발 기업에 시제품 개발(최대 7,000만원), GMP·MFDS 인증, 시험성적서, 해외 마케팅까지 전주기를 지원합니다. 3개 기관이 통합 모집하며 3건 이하로 복수 신청할 수 있습니다.",
+      "tags": [
+        "시제품·인증 전주기",
+        "3개 기관 통합모집"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "sub_industries": [
+        "바이오헬스케어"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-19T18:00:00+09:00",
+      "deadline_display": "2026.08.19",
+      "meta": {
+        "지원": "시제품 개발 최대 7,000만원 등",
+        "비율": "기업부담 10% 이상",
+        "마감": "08.19"
+      },
+      "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124877",
+      "notion_key": "PBLN_000000000124877",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124877",
+      "brief_one": "선지급 후 사후정산 · 11월 말 완료 조건",
       "added_at": "2026-08-02"
     }
   ],
