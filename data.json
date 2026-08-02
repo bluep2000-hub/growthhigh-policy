@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:34:39+09:00",
+  "updated_at": "2026-08-02T14:36:42+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6945,6 +6945,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124508",
       "added_at": "2026-08-02",
       "brief_one": "해외 M&A 투자계획 보유 기업만 신청"
+    },
+    {
+      "id": "266",
+      "file": "266-dna-jv-overseas.html",
+      "title": "2026년 DNA 융합 제품·서비스 해외진출 지원 사업",
+      "summary": "해외 현지 조인트벤처(JV) 파트너를 확보한 비상장 중소기업에 법률·회계·특허·마케팅 전문 서비스와 JV 운영비·현지활동비를 기업당 최대 3,500만원 지원합니다. 총 20개사 내외를 선정하며 2차는 영어 발표평가입니다.",
+      "tags": [
+        "해외 JV 설립",
+        "월별 마감 평가"
+      ],
+      "industries": [
+        "지식서비스업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-09-30T18:00:00+09:00",
+      "deadline_display": "2026.09.30",
+      "meta": {
+        "지원": "기업당 최대 3,500만원",
+        "비율": "기업 자부담 25%",
+        "마감": "09.30"
+      },
+      "notion_key": "PBLN_000000000119394",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000119394",
+      "added_at": "2026-08-02",
+      "brief_one": "해외 JV 파트너 이미 있어야 신청 가능"
     }
   ]
 }
