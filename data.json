@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:53:47+09:00",
+  "updated_at": "2026-08-02T14:55:28+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7029,6 +7029,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124772",
       "added_at": "2026-08-02",
       "brief_one": "우대 조건 채우면 평가비 60%까지"
+    },
+    {
+      "id": "269",
+      "file": "269-content-ip-market.html",
+      "title": "2026 콘텐츠IP 마켓 참가기업 모집",
+      "summary": "웹툰·출판·게임·방송·캐릭터 등 콘텐츠 IP를 보유한 기업 80개사에 12월 코엑스 B2B 마켓의 상담 부스와 사전·현장 바이어 매칭, 통역을 지원합니다. IP·판권 또는 협상권을 직접 보유해야 신청할 수 있습니다.",
+      "tags": [
+        "IP 비즈니스 마켓",
+        "B2B 부스 지원"
+      ],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "판로수출"
+      ],
+      "deadline_iso": "2026-08-19T11:00:00+09:00",
+      "deadline_display": "2026.08.19",
+      "meta": {
+        "지원": "상담 부스 1개 + 비즈매칭 (80개사)",
+        "비율": "참가비 공고문 미기재",
+        "마감": "08.19"
+      },
+      "notion_key": "PBLN_000000000124404",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124404",
+      "added_at": "2026-08-02",
+      "brief_one": "웹툰·게임 IP 직접 보유해야 신청 가능"
     }
   ]
 }
