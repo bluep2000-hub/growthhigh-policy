@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:16:55+09:00",
+  "updated_at": "2026-08-02T14:19:08+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6672,6 +6672,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124904",
       "added_at": "2026-08-02",
       "brief_one": "제조현장진단 받은 기업만 신청 가능"
+    },
+    {
+      "id": "256",
+      "file": "256-industrial-rd-planning-3rd.html",
+      "title": "2026년도 제3차 산업기술R&D연구기획사업 신규지원 대상과제",
+      "summary": "「글로벌 산업환경규제(PFAS 등) 대응 핵심기술개발사업기획연구」 1개 과제를 선정하는 사전 기획연구 공모입니다. 기술개발이 아닌 산업분석·타당성분석을 수행하며, 0.5억원 내외를 4개월 이내로 지원하고 기관부담금 0원 신청이 가능합니다.",
+      "tags": [
+        "R&D 기획",
+        "지정공모 1개 과제"
+      ],
+      "industries": [
+        "제조업",
+        "지식서비스업"
+      ],
+      "types": [
+        "R&D"
+      ],
+      "deadline_iso": "2026-08-27T18:00:00+09:00",
+      "deadline_display": "2026.08.27",
+      "meta": {
+        "지원": "0.5억원 내외 (4개월)",
+        "비율": "정부 100% 이하",
+        "마감": "08.27"
+      },
+      "notion_key": "PBLN_000000000124927",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124927",
+      "added_at": "2026-08-02",
+      "brief_one": "PFAS 대응 기획연구 1개 과제만 선정"
     }
   ]
 }
