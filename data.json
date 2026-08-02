@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:55:28+09:00",
+  "updated_at": "2026-08-02T14:57:39+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -7057,6 +7057,34 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124404",
       "added_at": "2026-08-02",
       "brief_one": "웹툰·게임 IP 직접 보유해야 신청 가능"
+    },
+    {
+      "id": "270",
+      "file": "270-dc-growth-center-2026-1st.html",
+      "title": "디지털콘텐츠기업 성장지원센터 입주기업 모집 (2026-1차)",
+      "summary": "XR/VR/AR·AI 디지털콘텐츠 제작 중소기업에 안양창업지원센터 사무공간과 가상융합 테스트랩을 최대 4년간 임대료 전액 지원으로 제공합니다. B타입 4개사·C타입 1개사를 모집하며 입주 1개월 이내 본사를 안양시로 이전해야 합니다.",
+      "tags": [
+        "입주공간 지원",
+        "안양 이전 필수"
+      ],
+      "industries": [
+        "지식서비스업",
+        "게임개발업"
+      ],
+      "types": [
+        "경영/기타"
+      ],
+      "deadline_iso": "2026-08-21T14:00:00+09:00",
+      "deadline_display": "2026.08.21",
+      "meta": {
+        "지원": "임대료 전액 (최대 4년)",
+        "비율": "관리비 전액 자부담",
+        "마감": "08.21"
+      },
+      "notion_key": "KST_178615",
+      "notion_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178615",
+      "added_at": "2026-08-02",
+      "brief_one": "안양시 본사 이전이 입주 조건"
     }
   ]
 }
