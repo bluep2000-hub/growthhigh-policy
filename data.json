@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-08-02T14:27:54+09:00",
+  "updated_at": "2026-08-02T14:29:19+09:00",
   "filters": {
     "industries": [
       "제조업",
@@ -6835,6 +6835,33 @@
       "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123814",
       "added_at": "2026-08-02",
       "brief_one": "설비 투자비 50%·최대 100억 · 2건 이내"
+    },
+    {
+      "id": "262",
+      "file": "262-env-facility-loan-3rd.html",
+      "title": "2026년도 제3차 미래환경산업육성융자 (오염방지시설자금)",
+      "summary": "중소·중견 환경기업에 오염방지시설 자금을 장기·저리로 대출합니다. 융자규모 총 1,300억원, 대출금리는 기후에너지환경부 분기별 고시금리(1분기 2.01%)이며 접수규모 초과 시 제출 완료 순으로 조기 마감됩니다.",
+      "tags": [
+        "정책자금 융자",
+        "선착순 마감"
+      ],
+      "industries": [
+        "제조업"
+      ],
+      "types": [
+        "정책자금"
+      ],
+      "deadline_iso": "2026-10-30T18:00:00+09:00",
+      "deadline_display": "2026.10.30",
+      "meta": {
+        "지원": "융자 총 1,300억원",
+        "비율": "금리 2.01% (분기 고시)",
+        "마감": "10.30"
+      },
+      "notion_key": "PBLN_000000000120355",
+      "notion_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120355",
+      "added_at": "2026-08-02",
+      "brief_one": "접수규모 초과 시 선착순 조기 마감"
     }
   ]
 }
