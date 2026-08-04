@@ -57,7 +57,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:#fff;color:var(--ink);
+body{margin:0;background:#fff;color:var(--ink);word-break:keep-all;
   font-family:"Pretendard Variable",Pretendard,-apple-system,system-ui,sans-serif;
   font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
@@ -146,8 +146,8 @@ b{font-weight:700}
 
 
 /* 세션 소개 */
-.sess-intro{max-width:860px;margin:56px auto 0;padding:44px 40px;text-align:center;
-  background:#fafbfc;border:1px solid var(--line);border-radius:16px}
+.sess-intro{margin:56px 0 0;padding:44px 40px;text-align:center;
+  background:#fafbfc;border:1px solid var(--line);border-radius:14px}
 
 .sess-fw{margin:10px 0 22px;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.02em}
 .sess-fw i{font-style:normal;color:#b9c2d2;margin:0 6px}
@@ -158,34 +158,40 @@ b{font-weight:700}
 
 /* 리포트 */
 .rpt{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 32px}
-.rpt-head{max-width:760px;margin:0 auto 30px;text-align:center}
+.rpt-head{max-width:760px;margin:0 auto 26px;text-align:center}
 .rpt-head .t{margin:0 0 12px;font-size:20px;font-weight:700;letter-spacing:-.02em}
 .rpt-head .hl{margin:0 0 12px;font-size:17px;font-weight:700;color:var(--ink);line-height:1.6;letter-spacing:-.015em}
-.rpt-head .hl span{background:linear-gradient(transparent 60%,rgba(15,157,118,.22) 60%)}
+.rpt-head .hl span{color:var(--green)}
+.rpt-head .d{margin:0 0 16px;font-size:14.5px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
+.rpt-head .d:last-child{margin-bottom:0}
+.rpt-head .d b{color:var(--green);font-weight:700}
 .rpt-how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;text-align:left}
 .how{border:1px solid var(--line);border-radius:10px;padding:16px 16px 15px;background:#fafbfc}
 .how .hk{margin:0 0 8px;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--green)}
 .how .hv{margin:0 0 6px;font-size:14px;font-weight:700;letter-spacing:-.01em;line-height:1.5}
-.how .hd{margin:0;font-size:12px;color:var(--ink-2);line-height:1.75}
-.rpt-head .d{margin:0 0 16px;font-size:14.5px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
-.rpt-head .d:last-child{margin-bottom:0}
-.rpt-head .d b{color:var(--green);font-weight:700}
-.rpt-grid{display:grid;grid-template-columns:.62fr 1.38fr;gap:30px;align-items:stretch}
+.how .hd{margin:0;font-size:12px;color:var(--ink-2);line-height:1.8}
+
+.rpt-meta{text-align:center;margin:0 0 20px;font-size:12.5px;font-weight:700;color:var(--green);
+  letter-spacing:.02em}
+.rpt-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:26px;align-items:start}
 .rpt-cover{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;
-  box-shadow:0 12px 30px rgba(20,25,35,.11);background:#f4f6f8}
+  box-shadow:0 12px 30px rgba(23,40,74,.12);background:#f4f6f9;position:sticky;top:20px}
 .rpt-cover img{width:100%;display:block}
 .rpt-cover .cap{position:absolute;top:11px;left:11px;background:rgba(255,255,255,.94);
-  font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:5px}
-.rpt-hint{margin:11px 0 0;font-size:11.5px;color:var(--ink-3);text-align:center}
-.rpt-list{display:flex;flex-direction:column;justify-content:space-between;gap:8px}
-.rpt-it{flex:1;display:flex;flex-direction:column;justify-content:center;border:1px solid var(--line);border-radius:9px;padding:13px 16px;cursor:pointer;
+  font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:5px;z-index:2}
+.rpt-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.rpt-it{border:1px solid var(--line);border-radius:10px;padding:14px 14px;cursor:pointer;
   transition:border-color .15s,background .15s}
-.rpt-it .n{margin:0;font-size:14px;font-weight:700}
-.rpt-it .n i{font-style:normal;color:var(--ink-3);font-size:11.5px;margin-right:9px}
-.rpt-it .dd{margin:8px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.8;display:none}
+.rpt-it .n{margin:0 0 9px;font-size:13.5px;font-weight:700;line-height:1.45;letter-spacing:-.01em}
+.rpt-it .n i{font-style:normal;color:var(--ink-3);font-size:11.5px;margin-right:8px}
+.rpt-it .dd{margin:0;padding:0;list-style:none}
+.rpt-it .dd li{position:relative;padding-left:11px;font-size:11.5px;color:var(--ink-2);line-height:1.85}
+.rpt-it .dd li::before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;
+  border-radius:50%;background:#c8d0dd}
 .rpt-it.on{border-color:var(--green);background:#f5fbf9}
-.rpt-it.on .dd{display:block}
 .rpt-it.on .n i{color:var(--green)}
+.rpt-it.on .dd li::before{background:var(--green)}
+.rpt-hint{margin:16px 0 0;font-size:11.5px;color:var(--ink-3);text-align:center}
 
 /* 디테일 */
 .rule{display:block;width:34px;height:3px;background:var(--green);border-radius:2px;margin:0 auto 18px}
@@ -274,8 +280,10 @@ b{font-weight:700}
   .rpt-how{grid-template-columns:1fr;gap:10px}
   .rpt-head .hl{font-size:15.5px}
   .rpt{padding:24px 20px}
+  .rpt-list{grid-template-columns:1fr}
+  .rpt-cover{position:static;max-width:300px;margin:0 auto}
   .rpt-grid{grid-template-columns:1fr;gap:22px}
-  .rpt-it{flex:none}
+
   .rpt-cover{max-width:320px;margin:0 auto}
   .steps > .step + .step::after{display:none}
   .why-grid{grid-template-columns:1fr;gap:12px}
@@ -420,41 +428,40 @@ b{font-weight:700}
         </div>
       </div>
     </div>
+    <div class="rpt-meta">6개 섹션 · 24개 세부 항목</div>
     <div class="rpt-grid" id="rpt">
-      <div>
-        <div class="rpt-cover">
-          <span class="cap">CUSTOMIZED REPORT</span>
-          <img id="rptImg" src="img/rp-cover.png" alt="스케일업 세션 리포트 표지">
-        </div>
-        <p class="rpt-hint">항목을 열면 해당 장이 보입니다</p>
+      <div class="rpt-cover">
+        <span class="cap">CUSTOMIZED REPORT</span>
+        <img id="rptImg" src="img/rp-cover.png" alt="스케일업 세션 리포트 표지">
       </div>
       <div class="rpt-list">
-        <div class="rpt-it" data-img="img/rp-s01.png">
-          <p class="n"><i>01</i>진단기업 개요 심화</p>
-          <p class="dd">기본 정보와 사업 영위 개요에 BM 캔버스, 핵심 자원, 경쟁구도 분석을 더해 심화합니다.</p>
-        </div>
-        <div class="rpt-it" data-img="img/rp-s02.png">
-          <p class="n"><i>02</i>맞춤 전략 리포팅 심화</p>
-          <p class="dd">적합 정부지원사업과 정책자금·보증, 기업인증 로드맵, 추가 전략 기회를 매칭하고 실행 절차까지 안내합니다.</p>
-        </div>
-        <div class="rpt-it" data-img="img/rp-s03.png">
-          <p class="n"><i>03</i>사업별 검토리뷰 + PSST 작성 전략</p>
-          <p class="dd">상위 3개 사업을 PSST 프레임(Problem·Solution·Scale-up·Team) 4개 항목별로 분해합니다.</p>
-        </div>
-        <div class="rpt-it" data-img="img/rp-s04.png">
-          <p class="n"><i>04</i>전략기술 로드맵 매핑 + R&amp;D 과제명</p>
-          <p class="dd">보유 기술을 전략기술 로드맵 품목과 매핑하고, 신청 가능한 R&amp;D 과제명 후보까지 제시합니다.</p>
-        </div>
-        <div class="rpt-it" data-img="img/rp-s05.png">
-          <p class="n"><i>05</i>동종 업계 선정 사례 + 합격요인</p>
-          <p class="dd">동종 사례를 합격요인 PSST 분해·자사 적용 시사점·차별 우위 3축으로 정리합니다.</p>
-        </div>
-        <div class="rpt-it" data-img="img/rp-s06.png">
-          <p class="n"><i>06</i>종합 진단</p>
-          <p class="dd">5개 항목을 점수화한 레이더 차트와 사업 단계 타임라인, 핵심 권고 3가지를 담습니다.</p>
-        </div>
+      <div class="rpt-it" data-img="img/rp-s01.png">
+        <p class="n"><i>01</i>진단기업 개요 심화</p>
+        <ul class="dd"><li>기본 정보</li><li>BM 캔버스</li><li>핵심 자원 4유형</li><li>경쟁구도 분석</li></ul>
+      </div>
+      <div class="rpt-it" data-img="img/rp-s02.png">
+        <p class="n"><i>02</i>맞춤 전략 리포팅 심화</p>
+        <ul class="dd"><li>적합 정부지원사업 5건</li><li>적합 정책자금·보증 4종</li><li>기업인증 로드맵 4대 인증</li><li>추가 전략 기회 5항목</li></ul>
+      </div>
+      <div class="rpt-it" data-img="img/rp-s03.png">
+        <p class="n"><i>03</i>사업별 검토리뷰 + PSST 작성 전략</p>
+        <ul class="dd"><li>상위 3개 사업 선정</li><li>사업별 PSST 4항목 분해</li><li>핵심 메시지 · 자사 보유 근거</li><li>보완 필요 항목</li></ul>
+      </div>
+      <div class="rpt-it" data-img="img/rp-s04.png">
+        <p class="n"><i>04</i>전략기술 로드맵 매핑 + R&amp;D 과제명</p>
+        <ul class="dd"><li>산업 동향 · 정책 맥락</li><li>자사 기술 매핑</li><li>R&amp;D 과제명 후보 9개</li><li>매핑 인사이트</li></ul>
+      </div>
+      <div class="rpt-it" data-img="img/rp-s05.png">
+        <p class="n"><i>05</i>동종 업계 선정 사례 + 합격요인</p>
+        <ul class="dd"><li>동종 선정 사례 3건</li><li>합격요인 PSST 분해</li><li>자사 적용 시사점</li><li>자사 차별 우위</li></ul>
+      </div>
+      <div class="rpt-it" data-img="img/rp-s06.png">
+        <p class="n"><i>06</i>종합 진단</p>
+        <ul class="dd"><li>진단 인포그래픽 5항목</li><li>사업 단계 타임라인</li><li>종합 진단 의견</li><li>스케일업 세션 핵심 권고 3</li></ul>
+      </div>
       </div>
     </div>
+    <p class="rpt-hint">항목에 마우스를 올리거나 탭하면 해당 장이 왼쪽에 표시됩니다</p>
   </div>
 </section>
 
