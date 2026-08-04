@@ -146,17 +146,39 @@ b{font-weight:700}
 /* 배경 리듬 */
 .band{background:#fbfbfc;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   margin-top:56px;padding-bottom:60px}
-.band .sec-head{padding-top:56px}
+.band .sec-head{padding-top:46px}
 
-/* 리포트 미리보기 */
-.report{margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:14px;
-  padding:30px 30px 32px}
-.report-txt{max-width:680px;margin:0 auto 26px;text-align:center}
-.report .t{margin:0 0 9px;font-size:18px;font-weight:700;letter-spacing:-.01em}
-.report .d{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.9}
-.report-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.report-imgs img{width:100%;display:block;border:1px solid var(--line);border-radius:8px;
-  box-shadow:0 8px 22px rgba(20,25,35,.09)}
+/* 세션 소개 */
+.sess-intro{max-width:760px;margin:0 auto;padding-top:56px;text-align:center}
+.sess-intro .lead{margin:0 0 10px;font-size:13.5px;font-weight:700;color:var(--green)}
+.sess-intro .sess-t{margin:0 0 24px;font-size:25px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1.45}
+.sess-intro p{margin:0 0 22px;font-size:15px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
+.sess-intro p b{color:var(--ink);font-weight:600}
+.sess-intro p:last-child{margin-bottom:0}
+
+/* 리포트 */
+.rpt{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 32px}
+.rpt-head{max-width:760px;margin:0 auto 30px;text-align:center}
+.rpt-head .t{margin:0 0 18px;font-size:20px;font-weight:700;letter-spacing:-.02em}
+.rpt-head .d{margin:0 0 16px;font-size:14.5px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
+.rpt-head .d:last-child{margin-bottom:0}
+.rpt-head .d b{color:var(--ink);font-weight:600}
+.rpt-grid{display:grid;grid-template-columns:.62fr 1.38fr;gap:30px;align-items:stretch}
+.rpt-cover{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;
+  box-shadow:0 12px 30px rgba(20,25,35,.11);background:#f4f6f8}
+.rpt-cover img{width:100%;display:block}
+.rpt-cover .cap{position:absolute;top:11px;left:11px;background:rgba(255,255,255,.94);
+  font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:5px}
+.rpt-hint{margin:11px 0 0;font-size:11.5px;color:var(--ink-3);text-align:center}
+.rpt-list{display:flex;flex-direction:column;justify-content:space-between;gap:8px}
+.rpt-it{flex:1;display:flex;flex-direction:column;justify-content:center;border:1px solid var(--line);border-radius:9px;padding:13px 16px;cursor:pointer;
+  transition:border-color .15s,background .15s}
+.rpt-it .n{margin:0;font-size:14px;font-weight:700}
+.rpt-it .n i{font-style:normal;color:var(--ink-3);font-size:11.5px;margin-right:9px}
+.rpt-it .dd{margin:8px 0 0;font-size:12.5px;color:#6b7079;line-height:1.8;display:none}
+.rpt-it.on{border-color:var(--green);background:#f5fbf9}
+.rpt-it.on .dd{display:block}
+.rpt-it.on .n i{color:var(--green)}
 
 /* 디테일 */
 .rule{display:block;width:34px;height:3px;background:var(--green);border-radius:2px;margin:0 auto 18px}
@@ -238,8 +260,10 @@ b{font-weight:700}
   .stats > div + div{border-left:0}
   .stats > div:nth-child(n+3){margin-top:22px}
   .steps{gap:14px}
-  .report{padding:22px}
-  .report-imgs{grid-template-columns:1fr;gap:12px}
+  .rpt{padding:24px 20px}
+  .rpt-grid{grid-template-columns:1fr;gap:22px}
+  .rpt-it{flex:none}
+  .rpt-cover{max-width:320px;margin:0 auto}
   .steps > .step + .step::after{display:none}
   .why-grid{grid-template-columns:1fr;gap:12px}
   .why-lead{font-size:20px}
@@ -282,7 +306,7 @@ b{font-weight:700}
       <p>SK하이닉스 · 교보<br>한국전력공사 · 한국도로공사<br>사내벤처 BM 고도화 · IR 멘토링</p>
     </article>
     <article class="card reveal">
-      <div class="thumb"><span class="badge">투자기관</span><img src="img/ref-invest.jpg" alt="투자기업 육성사업 자문 테이블 장면" style="object-position:42% 48%"></div>
+      <div class="thumb"><span class="badge">투자기관</span><img src="img/ref-invest.jpg" alt="투자기업 육성사업 자문 테이블 장면" style="object-position:50% 45%"></div>
       <h3>투자기관</h3>
       <p>엑셀러레이터 주관<br>LIPS · TIPS 운영사<br>투자기업 육성사업 컨설팅</p>
     </article>
@@ -313,6 +337,12 @@ b{font-weight:700}
 </section>
 <div class="band">
 <section class="wrap">
+  <div class="sess-intro">
+    <p class="lead">우리 기업에 맞는 자금조달 방향을 찾는 첫 번째 세션</p>
+    <h2 class="sess-t">그로스하이 무료 스케일업 세션</h2>
+    <p>지원사업과 정책자금, 보증, 투자까지 기업이 활용할 수 있는 자금조달 방법은 다양합니다.<br><b>그러나 모든 기업에 같은 전략이 적용되지는 않습니다.</b></p>
+    <p>그로스하이 스케일업 세션은 <b>기업의 비즈니스모델과 현재 사업단계</b>에서 출발합니다.<br>기술·산업 동향과 시장환경, 지금까지 확보한 성과를 함께 분석해 지금 검토해야 할 <b>자금조달 경로와 준비 순서</b>를 짚어드립니다.</p>
+  </div>
   <div class="sec-head">
     <span class="rule"></span>
     <h2>스케일업 세션 프로세스</h2>
@@ -351,15 +381,46 @@ b{font-weight:700}
       </ul>
     </div>
   </div>
-  <div class="report reveal">
-    <div class="report-txt">
+  <div class="rpt reveal">
+    <div class="rpt-head">
       <p class="t">스케일업 세션 리포트</p>
-      <p class="d">공개 데이터와 신청 정보를 종합해 맞춤 사업목록, 사업별 검토리뷰, 전략기술 로드맵 매핑, 동종 업계 선정 사례, 종합 진단으로 구성합니다.</p>
+      <p class="d">세션에서 나온 이야기가 상담으로만 끝나지 않도록<br>기업의 비즈니스모델과 시장환경, 자금조달 방향을 다시 정리한 <b>기업별 스케일업 리포트</b>를 제공합니다.</p>
+      <p class="d">1,200개 이상의 스타트업을 검토하며 축적한 기준을 바탕으로<br><b>우리 기업이 지금 집중해야 할 과제</b>와 <b>다음 자금조달 준비</b>를 한눈에 확인할 수 있도록 구성했습니다.</p>
     </div>
-    <div class="report-imgs">
-      <img src="img/report-p1.png" alt="맞춤 자금조달 진단 리포트 표지">
-      <img src="img/report-p5.png" alt="맞춤 전략 리포팅 페이지">
-      <img src="img/report-p14.png" alt="종합 진단 인포그래픽 페이지">
+    <div class="rpt-grid" id="rpt">
+      <div>
+        <div class="rpt-cover">
+          <span class="cap">CUSTOMIZED REPORT</span>
+          <img id="rptImg" src="img/rp-cover.png" alt="스케일업 세션 리포트 표지">
+        </div>
+        <p class="rpt-hint">항목을 열면 해당 장이 보입니다</p>
+      </div>
+      <div class="rpt-list">
+        <div class="rpt-it" data-img="img/rp-s01.png">
+          <p class="n"><i>01</i>진단기업 개요</p>
+          <p class="dd">신청 정보와 공개 데이터를 종합해 기본 정보와 사업 영위 개요를 담습니다.</p>
+        </div>
+        <div class="rpt-it" data-img="img/rp-s02.png">
+          <p class="n"><i>02</i>맞춤 전략 리포팅</p>
+          <p class="dd">적합 정부지원사업, 정책자금·보증, 기업인증 로드맵, 추가 전략 기회를 매칭합니다.</p>
+        </div>
+        <div class="rpt-it" data-img="img/rp-s03.png">
+          <p class="n"><i>03</i>사업별 검토리뷰</p>
+          <p class="dd">상위 3개 사업에 대해 적합 포인트·보완 포인트·합격 전략의 3단 분석을 제공합니다.</p>
+        </div>
+        <div class="rpt-it" data-img="img/rp-s04.png">
+          <p class="n"><i>04</i>중소기업 전략기술 로드맵 매핑</p>
+          <p class="dd">보유 기술을 전략기술 로드맵 키워드와 매핑해 R&amp;D·기술혁신 트랙 적합도를 분석합니다.</p>
+        </div>
+        <div class="rpt-it" data-img="img/rp-s05.png">
+          <p class="n"><i>05</i>동종 업계 선정 사례</p>
+          <p class="dd">유사한 단계·업종·기술 영역의 선정 사례와 자사와의 유사도, 합격 시사점을 제시합니다.</p>
+        </div>
+        <div class="rpt-it" data-img="img/rp-s06.png">
+          <p class="n"><i>06</i>종합 진단</p>
+          <p class="dd">항목별 진단을 점수화하고 사업 단계를 함께 짚습니다.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -411,6 +472,26 @@ b{font-weight:700}
     <p class="fc">&copy; Growth High Corp. All rights reserved.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var items=document.querySelectorAll('#rpt .rpt-it');
+  var img=document.getElementById('rptImg');
+  if(items.length && img){
+    var cover=img.getAttribute('src');
+    function openIt(el){
+      items.forEach(function(x){ x.classList.remove('on'); });
+      if(!el){ img.src=cover; return; }
+      el.classList.add('on'); img.src=el.dataset.img;
+    }
+    items.forEach(function(el){
+      el.addEventListener('mouseenter',function(){ openIt(el); });
+      el.addEventListener('click',function(){ openIt(el); });
+    });
+    document.getElementById('rpt').addEventListener('mouseleave',function(){ openIt(null); });
+  }
+})();
+</script>
+
 <script>
 (function(){
   var HOOK='https://hook.us2.make.com/xy1dy8br6t9c4w14fbl11hbokipwjadu';
