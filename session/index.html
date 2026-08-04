@@ -47,12 +47,13 @@
 <style>
 :root{
   --green:#0f9d76;
-  --ink:#16181d;
-  --ink-2:#6b7079;
-  --ink-3:#9aa0a8;
-  --line:#e6e8ea;
+  --navy:#17284a;
+  --ink:#17284a;
+  --ink-2:#5c6577;
+  --ink-3:#959db0;
+  --line:#e3e7ee;
   --line-2:#cfd4d8;
-  --fill:#eef0f2;
+  --fill:#eef1f6;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -67,7 +68,7 @@ b{font-weight:700}
 .site-head{border-bottom:1px solid var(--line);padding:18px 0}
 .mark{font-size:17px;font-weight:700;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
 .mark em{font-style:normal;color:var(--green)}
-.site-foot{border-top:1px solid var(--line);background:#fafbfb;padding:38px 0 46px;margin-top:0}
+.site-foot{border-top:1px solid var(--line);background:#fafbfc;padding:38px 0 46px;margin-top:0}
 .fm{margin:0 0 14px;font-size:15px;font-weight:700;color:var(--ink)}
 .fm em{font-style:normal;color:var(--green)}
 .fi{margin:0 0 14px;font-size:12.5px;color:var(--ink-2);line-height:1.9}
@@ -97,7 +98,7 @@ b{font-weight:700}
 
 /* 숫자 */
 .stats{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);
-  background:#f7f8f9;border-radius:16px;padding:30px 10px}
+  background:#f6f8fb;border-radius:16px;padding:30px 10px}
 .stats > div + div{border-left:1px solid #e3e6e9}
 .stats .n{margin:0 0 6px;font-size:30px;font-weight:700;color:var(--green);line-height:1.2;text-align:center}
 .stats .n span{font-size:15px;color:var(--ink);margin-left:2px}
@@ -123,7 +124,7 @@ b{font-weight:700}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 
 /* 무료 이유 */
-.why-box{margin-top:52px;background:#f7f8f9;border-radius:16px;padding:44px 44px 40px;text-align:center}
+.why-box{margin-top:52px;background:#f6f8fb;border-radius:16px;padding:44px 44px 40px;text-align:center}
 .why-lead{margin:0 0 12px;font-size:23px;font-weight:700;letter-spacing:-.02em}
 .why-desc{margin:0 0 34px;font-size:14.5px;color:var(--ink-2);line-height:1.9}
 .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}
@@ -146,22 +147,29 @@ b{font-weight:700}
 
 /* 세션 소개 */
 .sess-intro{max-width:860px;margin:56px auto 0;padding:44px 40px;text-align:center;
-  background:#fafbfb;border:1px solid var(--line);border-radius:16px}
+  background:#fafbfc;border:1px solid var(--line);border-radius:16px}
 
-.sess-intro .sess-t{margin:0 0 22px;font-size:25px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1.45}
+.sess-fw{margin:10px 0 22px;font-size:13px;font-weight:700;color:var(--green);letter-spacing:.02em}
+.sess-fw i{font-style:normal;color:#b9c2d2;margin:0 6px}
+.sess-intro .sess-t{margin:0 0 0;font-size:25px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1.45}
 .sess-intro p{margin:0 0 22px;font-size:15px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
-.sess-intro p b{color:var(--ink);font-weight:600}
+.sess-intro p b{color:var(--green);font-weight:700}
 .sess-intro p:last-child{margin-bottom:0}
 
 /* 리포트 */
 .rpt{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 32px}
 .rpt-head{max-width:760px;margin:0 auto 30px;text-align:center}
 .rpt-head .t{margin:0 0 12px;font-size:20px;font-weight:700;letter-spacing:-.02em}
-.rpt-head .kw{display:inline-block;margin:0 0 20px;font-size:13px;font-weight:700;color:var(--green);
-  background:#f0f9f5;border:1px solid #d7ece5;border-radius:999px;padding:7px 18px;letter-spacing:-.01em}
+.rpt-head .hl{margin:0 0 12px;font-size:17px;font-weight:700;color:var(--ink);line-height:1.6;letter-spacing:-.015em}
+.rpt-head .hl span{background:linear-gradient(transparent 60%,rgba(15,157,118,.22) 60%)}
+.rpt-how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;text-align:left}
+.how{border:1px solid var(--line);border-radius:10px;padding:16px 16px 15px;background:#fafbfc}
+.how .hk{margin:0 0 8px;font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--green)}
+.how .hv{margin:0 0 6px;font-size:14px;font-weight:700;letter-spacing:-.01em;line-height:1.5}
+.how .hd{margin:0;font-size:12px;color:var(--ink-2);line-height:1.75}
 .rpt-head .d{margin:0 0 16px;font-size:14.5px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
 .rpt-head .d:last-child{margin-bottom:0}
-.rpt-head .d b{color:var(--ink);font-weight:600}
+.rpt-head .d b{color:var(--green);font-weight:700}
 .rpt-grid{display:grid;grid-template-columns:.62fr 1.38fr;gap:30px;align-items:stretch}
 .rpt-cover{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;
   box-shadow:0 12px 30px rgba(20,25,35,.11);background:#f4f6f8}
@@ -174,14 +182,14 @@ b{font-weight:700}
   transition:border-color .15s,background .15s}
 .rpt-it .n{margin:0;font-size:14px;font-weight:700}
 .rpt-it .n i{font-style:normal;color:var(--ink-3);font-size:11.5px;margin-right:9px}
-.rpt-it .dd{margin:8px 0 0;font-size:12.5px;color:#6b7079;line-height:1.8;display:none}
+.rpt-it .dd{margin:8px 0 0;font-size:12.5px;color:var(--ink-2);line-height:1.8;display:none}
 .rpt-it.on{border-color:var(--green);background:#f5fbf9}
 .rpt-it.on .dd{display:block}
 .rpt-it.on .n i{color:var(--green)}
 
 /* 디테일 */
 .rule{display:block;width:34px;height:3px;background:var(--green);border-radius:2px;margin:0 auto 18px}
-.hl{background:linear-gradient(transparent 62%,rgba(15,157,118,.16) 62%);padding:0 2px}
+.hl{background:linear-gradient(transparent 60%,rgba(15,157,118,.22) 60%);padding:0 2px}
 .badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.94);
   color:var(--ink);font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:6px;
   letter-spacing:-.01em}
@@ -203,6 +211,7 @@ b{font-weight:700}
 .step ul{margin:0;padding:0;list-style:none;border-top:1px solid #f0f2f4;padding-top:14px}
 .step li{position:relative;padding-left:15px;font-size:13.5px;color:var(--ink-2);
   line-height:1.7;margin-bottom:9px}
+.step li b{color:var(--green);font-weight:700}
 .step li:last-child{margin-bottom:0}
 .step li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;
   border-radius:50%;background:#cdd3d9}
@@ -215,6 +224,7 @@ b{font-weight:700}
 .form-head{text-align:center;padding-bottom:26px;margin-bottom:26px;border-bottom:1px solid var(--line)}
 .form-head h2{margin:0 0 10px;font-size:23px;font-weight:700;line-height:1.5;letter-spacing:-.02em}
 .form-head h2 span{color:var(--green)}
+.form-head h2{color:var(--navy)}
 .form-head p{margin:0;font-size:13.5px;color:var(--ink-2)}
 
 /* 폼 */
@@ -261,7 +271,8 @@ b{font-weight:700}
   .steps{gap:14px}
   .sess-intro{padding:28px 20px;margin-top:36px}
   .sess-intro .sess-t{font-size:21px}
-  .rpt-head .kw{font-size:12px;padding:7px 14px;line-height:1.7}
+  .rpt-how{grid-template-columns:1fr;gap:10px}
+  .rpt-head .hl{font-size:15.5px}
   .rpt{padding:24px 20px}
   .rpt-grid{grid-template-columns:1fr;gap:22px}
   .rpt-it{flex:none}
@@ -341,8 +352,9 @@ b{font-weight:700}
   <div class="sess-intro">
     <span class="rule"></span>
     <h2 class="sess-t">그로스하이 스케일업 세션</h2>
-    <p>지원사업과 정책자금, 보증, 투자까지 기업이 활용할 수 있는 자금조달 방법은 다양합니다.<br><b>그러나 모든 기업에 같은 전략이 적용되지는 않습니다.</b></p>
-    <p>그로스하이 스케일업 세션은 <b>기업의 비즈니스모델과 현재 사업단계</b>에서 출발합니다.<br>기술·산업 동향과 시장환경, 지금까지 확보한 성과를 함께 분석해 지금 검토해야 할 <b>자금조달 경로와 준비 순서</b>를 짚어드립니다.</p>
+    <p class="sess-fw">BM진단 <i>→</i> 밸류라이징 <i>→</i> 런웨이 플랜</p>
+    <p>정책자금과 지원사업, 보증, 투자까지 기업이 확보할 수 있는 <b>런웨이</b>는 다양합니다.<br><b>그러나 모든 기업에 같은 전략이 적용되지는 않습니다.</b></p>
+    <p>그로스하이 스케일업 세션은 <b>기업의 비즈니스모델과 현재 사업단계</b>에서 출발합니다.<br>기술·산업 동향과 시장환경, 지금까지 확보한 성과를 함께 분석해 지금 확보 가능한 <b>런웨이와 준비 순서</b>를 짚어드립니다.</p>
   </div>
 </section>
 
@@ -358,9 +370,9 @@ b{font-weight:700}
       <h4>귀사 사전 분석</h4>
       <p class="when">세션 전 1주간</p>
       <ul>
-        <li>산업 · BM · 전략 히스토리 사전 분석</li>
+        <li><b>산업 · BM · 전략 히스토리</b> 사전 분석</li>
         <li>섹터 케이스 스터디</li>
-        <li>맞춤 스케일업 전략 리포트 준비</li>
+        <li><b>맞춤 스케일업 전략 리포트</b> 준비</li>
       </ul>
     </div>
     <div class="step reveal">
@@ -369,7 +381,7 @@ b{font-weight:700}
       <p class="when">60분 대면 세션</p>
       <ul>
         <li>섹터 내 Issue · Needs 파인딩</li>
-        <li>전략 진단 - BM · R&amp;D · 자금 전략방향</li>
+        <li>전략 진단 - <b>BM · R&amp;D · 런웨이</b> 전략방향</li>
         <li>블루프린트 - 해결 케이스 기반</li>
         <li>자문 지도 - 액션 아이템</li>
       </ul>
@@ -379,7 +391,7 @@ b{font-weight:700}
       <h4>리캡노트 정리</h4>
       <p class="when">세션 후 즉시</p>
       <ul>
-        <li>맞춤 리캡노트 제공</li>
+        <li><b>맞춤 리캡노트</b> 제공</li>
         <li>논의된 액션아이템 구조화 요약</li>
         <li>필요 시 심층 리포트(50P) 별도 구매</li>
       </ul>
@@ -388,9 +400,25 @@ b{font-weight:700}
   <div class="rpt reveal">
     <div class="rpt-head">
       <p class="t">스케일업 세션 리포트</p>
-      <p class="kw">「BM · R&amp;D · 자금」 필요충분조건 &nbsp;+&nbsp; 맞춤형 성장 로드맵</p>
-      <p class="d">세션에서 나눈 이야기를 상담으로 끝내지 않고, <b>실제 성장 전략으로 이어갑니다.</b><br>비즈니스 모델과 사업 단계, 자금 조달 전략을 기업 상황에 맞게 설계한 <b>맞춤형 스케일업 리포트</b>를 제공해 다음 액션을 구체화합니다.</p>
-      <p class="d">이 리포트에는 그로스하이가 <b>1,200여 개 스타트업</b>을 컨설팅하며 축적한 경험과<br><b>134건의 스케일업 사례</b>에서 얻은 인사이트를 담았습니다.</p>
+      <p class="hl">세션에서 나눈 이야기를 상담으로 끝내지 않고, <span>실제 성장 전략으로 이어갑니다.</span></p>
+      <p class="d">비즈니스 모델과 사업 단계, 런웨이 플랜을 기업 상황에 맞게 설계한 <b>맞춤형 스케일업 리포트</b>를 제공해 다음 액션을 구체화합니다.</p>
+      <div class="rpt-how">
+        <div class="how">
+          <p class="hk">DATA</p>
+          <p class="hv">실시간 17개 정책사이트</p>
+          <p class="hd">공고 원문에서 지원 규모·자격·마감을 직접 확인</p>
+        </div>
+        <div class="how">
+          <p class="hk">AI AGENT</p>
+          <p class="hv">그로스하이 자체 경험칙 학습</p>
+          <p class="hd">1,200여 개 컨설팅과 134건 스케일업 사례 기준으로 매칭</p>
+        </div>
+        <div class="how">
+          <p class="hk">REVIEW</p>
+          <p class="hv">담당 컨설턴트 인적 검수</p>
+          <p class="hd">기업 상황에 맞는지 사람이 다시 판단하고 보완</p>
+        </div>
+      </div>
     </div>
     <div class="rpt-grid" id="rpt">
       <div>
@@ -402,28 +430,28 @@ b{font-weight:700}
       </div>
       <div class="rpt-list">
         <div class="rpt-it" data-img="img/rp-s01.png">
-          <p class="n"><i>01</i>진단기업 개요</p>
-          <p class="dd">신청 정보와 공개 데이터를 종합해 기본 정보와 사업 영위 개요를 담습니다.</p>
+          <p class="n"><i>01</i>진단기업 개요 심화</p>
+          <p class="dd">기본 정보와 사업 영위 개요에 BM 캔버스, 핵심 자원, 경쟁구도 분석을 더해 심화합니다.</p>
         </div>
         <div class="rpt-it" data-img="img/rp-s02.png">
-          <p class="n"><i>02</i>맞춤 전략 리포팅</p>
-          <p class="dd">적합 정부지원사업, 정책자금·보증, 기업인증 로드맵, 추가 전략 기회를 매칭합니다.</p>
+          <p class="n"><i>02</i>맞춤 전략 리포팅 심화</p>
+          <p class="dd">적합 정부지원사업과 정책자금·보증, 기업인증 로드맵, 추가 전략 기회를 매칭하고 실행 절차까지 안내합니다.</p>
         </div>
         <div class="rpt-it" data-img="img/rp-s03.png">
-          <p class="n"><i>03</i>사업별 검토리뷰</p>
-          <p class="dd">상위 3개 사업에 대해 적합 포인트·보완 포인트·합격 전략의 3단 분석을 제공합니다.</p>
+          <p class="n"><i>03</i>사업별 검토리뷰 + PSST 작성 전략</p>
+          <p class="dd">상위 3개 사업을 PSST 프레임(Problem·Solution·Scale-up·Team) 4개 항목별로 분해합니다.</p>
         </div>
         <div class="rpt-it" data-img="img/rp-s04.png">
-          <p class="n"><i>04</i>중소기업 전략기술 로드맵 매핑</p>
-          <p class="dd">보유 기술을 전략기술 로드맵 키워드와 매핑해 R&amp;D·기술혁신 트랙 적합도를 분석합니다.</p>
+          <p class="n"><i>04</i>전략기술 로드맵 매핑 + R&amp;D 과제명</p>
+          <p class="dd">보유 기술을 전략기술 로드맵 품목과 매핑하고, 신청 가능한 R&amp;D 과제명 후보까지 제시합니다.</p>
         </div>
         <div class="rpt-it" data-img="img/rp-s05.png">
-          <p class="n"><i>05</i>동종 업계 선정 사례</p>
-          <p class="dd">유사한 단계·업종·기술 영역의 선정 사례와 자사와의 유사도, 합격 시사점을 제시합니다.</p>
+          <p class="n"><i>05</i>동종 업계 선정 사례 + 합격요인</p>
+          <p class="dd">동종 사례를 합격요인 PSST 분해·자사 적용 시사점·차별 우위 3축으로 정리합니다.</p>
         </div>
         <div class="rpt-it" data-img="img/rp-s06.png">
           <p class="n"><i>06</i>종합 진단</p>
-          <p class="dd">항목별 진단을 점수화하고 사업 단계를 함께 짚습니다.</p>
+          <p class="dd">5개 항목을 점수화한 레이더 차트와 사업 단계 타임라인, 핵심 권고 3가지를 담습니다.</p>
         </div>
       </div>
     </div>
