@@ -145,9 +145,10 @@ b{font-weight:700}
 
 
 /* 세션 소개 */
-.sess-intro{max-width:760px;margin:0 auto;padding:64px 0 8px;text-align:center}
-.sess-intro .lead{margin:0 0 28px;font-size:13.5px;color:var(--ink-3)}
-.sess-intro .sess-t{margin:0 0 7px;font-size:25px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1.45}
+.sess-intro{max-width:860px;margin:56px auto 0;padding:44px 40px;text-align:center;
+  background:#fafbfb;border:1px solid var(--line);border-radius:16px}
+
+.sess-intro .sess-t{margin:0 0 22px;font-size:25px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1.45}
 .sess-intro p{margin:0 0 22px;font-size:15px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
 .sess-intro p b{color:var(--ink);font-weight:600}
 .sess-intro p:last-child{margin-bottom:0}
@@ -155,7 +156,9 @@ b{font-weight:700}
 /* 리포트 */
 .rpt{margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:34px 32px}
 .rpt-head{max-width:760px;margin:0 auto 30px;text-align:center}
-.rpt-head .t{margin:0 0 18px;font-size:20px;font-weight:700;letter-spacing:-.02em}
+.rpt-head .t{margin:0 0 12px;font-size:20px;font-weight:700;letter-spacing:-.02em}
+.rpt-head .kw{display:inline-block;margin:0 0 20px;font-size:13px;font-weight:700;color:var(--green);
+  background:#f0f9f5;border:1px solid #d7ece5;border-radius:999px;padding:7px 18px;letter-spacing:-.01em}
 .rpt-head .d{margin:0 0 16px;font-size:14.5px;color:var(--ink-2);line-height:2.05;word-break:keep-all}
 .rpt-head .d:last-child{margin-bottom:0}
 .rpt-head .d b{color:var(--ink);font-weight:600}
@@ -256,6 +259,9 @@ b{font-weight:700}
   .stats > div + div{border-left:0}
   .stats > div:nth-child(n+3){margin-top:22px}
   .steps{gap:14px}
+  .sess-intro{padding:28px 20px;margin-top:36px}
+  .sess-intro .sess-t{font-size:21px}
+  .rpt-head .kw{font-size:12px;padding:7px 14px;line-height:1.7}
   .rpt{padding:24px 20px}
   .rpt-grid{grid-template-columns:1fr;gap:22px}
   .rpt-it{flex:none}
@@ -334,8 +340,7 @@ b{font-weight:700}
 <section class="wrap">
   <div class="sess-intro">
     <span class="rule"></span>
-    <h2 class="sess-t">그로스하이 무료 스케일업 세션</h2>
-    <p class="lead">우리 기업에 맞는 자금조달 방향을 찾는 첫 번째 세션</p>
+    <h2 class="sess-t">그로스하이 스케일업 세션</h2>
     <p>지원사업과 정책자금, 보증, 투자까지 기업이 활용할 수 있는 자금조달 방법은 다양합니다.<br><b>그러나 모든 기업에 같은 전략이 적용되지는 않습니다.</b></p>
     <p>그로스하이 스케일업 세션은 <b>기업의 비즈니스모델과 현재 사업단계</b>에서 출발합니다.<br>기술·산업 동향과 시장환경, 지금까지 확보한 성과를 함께 분석해 지금 검토해야 할 <b>자금조달 경로와 준비 순서</b>를 짚어드립니다.</p>
   </div>
@@ -383,6 +388,7 @@ b{font-weight:700}
   <div class="rpt reveal">
     <div class="rpt-head">
       <p class="t">스케일업 세션 리포트</p>
+      <p class="kw">「BM · R&amp;D · 자금」 필요충분조건 &nbsp;+&nbsp; 맞춤형 성장 로드맵</p>
       <p class="d">세션에서 나눈 이야기를 상담으로 끝내지 않고, <b>실제 성장 전략으로 이어갑니다.</b><br>비즈니스 모델과 사업 단계, 자금 조달 전략을 기업 상황에 맞게 설계한 <b>맞춤형 스케일업 리포트</b>를 제공해 다음 액션을 구체화합니다.</p>
       <p class="d">이 리포트에는 그로스하이가 <b>1,200여 개 스타트업</b>을 컨설팅하며 축적한 경험과<br><b>134건의 스케일업 사례</b>에서 얻은 인사이트를 담았습니다.</p>
     </div>
