@@ -124,14 +124,12 @@ b{font-weight:700}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 
 /* 무료 이유 */
-.why-box{margin-top:52px;background:#f6f8fb;border-radius:16px;padding:44px 44px 40px;text-align:center}
-.why-lead{margin:0 0 12px;font-size:23px;font-weight:700;letter-spacing:-.02em}
-.why-desc{margin:0 0 34px;font-size:14.5px;color:var(--ink-2);line-height:1.9}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}
-.why-grid > div{background:#fff;border-radius:12px;padding:24px 22px}
-.why-grid .t{margin:0 0 9px;font-size:15.5px;font-weight:700;color:var(--green);line-height:1.5}
+.why-box{margin-top:52px;background:#f6f8fb;border-radius:16px;padding:44px 44px 42px;text-align:center}
+.why-lead{margin:0 0 30px;font-size:23px;font-weight:700;letter-spacing:-.02em;line-height:1.45}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:center}
+.why-grid > div{background:#fff;border-radius:12px;padding:26px 22px;display:flex;flex-direction:column;justify-content:center}
+.why-grid .t{margin:0 0 11px;font-size:16px;font-weight:700;color:var(--green);line-height:1.5}
 .why-grid .d{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.85}
-.why-tail{margin:30px 0 0;font-size:14px;color:var(--ink);font-weight:600}
 .card .thumb{position:relative;background:var(--fill);aspect-ratio:4/3;border-radius:12px;overflow:hidden}
 .card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .card:hover .thumb img{transform:scale(1.04)}
@@ -173,9 +171,11 @@ b{font-weight:700}
 
 .rpt-meta{text-align:center;margin:0 0 22px;font-size:12.5px;font-weight:700;color:var(--green);letter-spacing:.02em}
 .rpt-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:26px;align-items:stretch}
-.rpt-cover{position:relative;width:100%;aspect-ratio:952/1348;border:1px solid var(--line);border-radius:12px;overflow:hidden;
+.rpt-cover{position:relative;border:1px solid var(--line);border-radius:12px;overflow:hidden;
   background:#f4f6f9;box-shadow:0 14px 34px rgba(23,40,74,.13)}
 .rpt-cover img{width:100%;display:block;position:absolute;inset:0;height:100%;object-fit:cover;object-position:top center}
+.rpt-cover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;z-index:1;
+  background:linear-gradient(transparent,rgba(255,255,255,.92))}
 .rpt-cover .cap{position:absolute;top:11px;left:11px;background:rgba(255,255,255,.94);
   font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:5px;z-index:2}
 .rpt-list{display:flex;flex-direction:column;justify-content:space-between;gap:8px}
@@ -331,23 +331,22 @@ b{font-weight:700}
 <section class="wrap">
   <div class="why-box">
     <span class="rule"></span>
-    <p class="why-lead">그로스하이가 일하는 방식</p>
-    <p class="why-desc">컨설팅은 내는 비용만 명확하고, 받을 것은 만나봐야 압니다.<br>사업을 꺼내놓는 일부터 부담이 되는 자리입니다.</p>
-    <div class="why-grid reveal">
+    <p class="why-lead">그로스하이 시그니처<br>스케일업 세션의 차별점</p>
+    <div class="why-grid">
       <div>
         <p class="t">먼저 보여드리는 자리</p>
-        <p class="d">받고 시작하는 컨설팅이 아니라, 저희가 일하는 방식을 먼저 꺼내 보이는 자리입니다.</p>
+        <p class="d">최적화된 가이드와 전문적인 상담을 통해, 저희가 일하는 가치를 먼저 공유드리는 자리입니다.</p>
       </div>
       <div>
-        <p class="t">영업 제안 없는 첫 세션</p>
-        <p class="d">더 깊이 갈지는 그 자리에서 나눈 내용을 보고 대표님이 정하시면 됩니다.</p>
+        <p class="t">제안이 없는 자리</p>
+        <p class="d">어디까지나 기업을 위한 맞춤형 세션에 초점을 맞춥니다. 실행을 위한 수주 제안은 의향이 있으실 경우에만 진행됩니다.</p>
       </div>
       <div>
-        <p class="t">저희에게도 남는 자리</p>
-        <p class="d">고객사의 스케일업이 저희 사업모델입니다. 함께 성과를 낼 회사를 만나는 자리이기도 합니다.</p>
+        <p class="t">나누고 알리는 자리</p>
+        <p class="d">함께 성과를 낼 기업을 만나, 저희가 가진 것을 나누고 저희를 알리는 자리이기도 합니다.</p>
       </div>
     </div>
-    <p class="why-tail">입장료가 없는 대신, 정말 필요하신 분들이 성의를 갖고 와주시길 부탁드립니다.</p>
+  </div>
   </div>
 </section>
 <section class="wrap">
