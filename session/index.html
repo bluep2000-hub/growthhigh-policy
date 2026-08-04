@@ -171,31 +171,23 @@ b{font-weight:700}
 .how .hv{margin:0 0 6px;font-size:14px;font-weight:700;letter-spacing:-.01em;line-height:1.5}
 .how .hd{margin:0;font-size:12px;color:var(--ink-2);line-height:1.8}
 
-.rpt-meta{text-align:center;margin:0 0 20px;font-size:12.5px;font-weight:700;color:var(--green);
-  letter-spacing:.02em}
-.rpt-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:26px;align-items:start}
-.rpt-cover{position:relative;border:1px solid var(--line);border-radius:10px;overflow:hidden;
-  box-shadow:0 12px 30px rgba(23,40,74,.12);background:#f4f6f9;position:sticky;top:20px}
-.rpt-cover img{width:100%;display:block}
-.rpt-cover .cap{position:absolute;top:11px;left:11px;background:rgba(255,255,255,.94);
-  font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:5px;z-index:2}
-.rpt-list{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.rpt-it{border:1px solid var(--line);border-radius:10px;padding:14px 14px;cursor:pointer;
-  transition:border-color .15s,background .15s}
-.rpt-it .n{margin:0 0 9px;font-size:13.5px;font-weight:700;line-height:1.45;letter-spacing:-.01em}
-.rpt-it .n i{font-style:normal;color:var(--ink-3);font-size:11.5px;margin-right:8px}
-.rpt-it .dd{margin:0;padding:0;list-style:none}
-.rpt-it .dd li{position:relative;padding-left:11px;font-size:11.5px;color:var(--ink-2);line-height:1.85}
-.rpt-it .dd li::before{content:"";position:absolute;left:0;top:9px;width:4px;height:4px;
-  border-radius:50%;background:#c8d0dd}
-.rpt-it.on{border-color:var(--green);background:#f5fbf9}
-.rpt-it.on .n i{color:var(--green)}
-.rpt-it.on .dd li::before{background:var(--green)}
-.rpt-hint{margin:16px 0 0;font-size:11.5px;color:var(--ink-3);text-align:center}
+.rpt-meta{text-align:center;margin:0 0 20px;font-size:12.5px;font-weight:700;color:var(--green);letter-spacing:.02em}
+.rpt-view{max-width:900px;margin:0 auto}
+.rpt-stage{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#f4f6f9;
+  box-shadow:0 14px 34px rgba(23,40,74,.13);margin-bottom:18px}
+.rpt-stage img{width:100%;display:block}
+.rpt-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.th{margin:0;cursor:pointer}
+.th img{width:100%;display:block;border:1px solid var(--line);border-radius:6px;
+  transition:border-color .15s,transform .15s}
+.th figcaption{margin-top:6px;font-size:10.5px;color:var(--ink-3);line-height:1.5;text-align:center}
+.th:hover img,.th.on img{border-color:var(--green);transform:translateY(-2px)}
+.th.on figcaption{color:var(--green);font-weight:700}
+.rpt-hint{margin:18px 0 0;font-size:11.5px;color:var(--ink-3);text-align:center}
 
 /* 디테일 */
 .rule{display:block;width:34px;height:3px;background:var(--green);border-radius:2px;margin:0 auto 18px}
-.hl{background:linear-gradient(transparent 60%,rgba(15,157,118,.22) 60%);padding:0 2px}
+.hl{color:var(--green)}
 .badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.94);
   color:var(--ink);font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:6px;
   letter-spacing:-.01em}
@@ -280,11 +272,9 @@ b{font-weight:700}
   .rpt-how{grid-template-columns:1fr;gap:10px}
   .rpt-head .hl{font-size:15.5px}
   .rpt{padding:24px 20px}
-  .rpt-list{grid-template-columns:1fr}
-  .rpt-cover{position:static;max-width:300px;margin:0 auto}
-  .rpt-grid{grid-template-columns:1fr;gap:22px}
+  .rpt-thumbs{grid-template-columns:repeat(3,1fr);gap:8px}
+  .th figcaption{font-size:9.5px}
 
-  .rpt-cover{max-width:320px;margin:0 auto}
   .steps > .step + .step::after{display:none}
   .why-grid{grid-template-columns:1fr;gap:12px}
   .why-lead{font-size:20px}
@@ -428,40 +418,27 @@ b{font-weight:700}
         </div>
       </div>
     </div>
-    <div class="rpt-meta">6개 섹션 · 24개 세부 항목</div>
-    <div class="rpt-grid" id="rpt">
-      <div class="rpt-cover">
-        <span class="cap">CUSTOMIZED REPORT</span>
-        <img id="rptImg" src="img/rp-cover.png" alt="스케일업 세션 리포트 표지">
+    <div class="rpt-meta">6개 섹션 · 24개 세부 항목 · 25페이지 내외</div>
+    <div class="rpt-view">
+      <div class="rpt-stage">
+        <img id="rptImg" src="img/rp-p01.png" alt="스케일업 세션 리포트 지면">
       </div>
-      <div class="rpt-list">
-      <div class="rpt-it" data-img="img/rp-s01.png">
-        <p class="n"><i>01</i>진단기업 개요 심화</p>
-        <ul class="dd"><li>기본 정보</li><li>BM 캔버스</li><li>핵심 자원 4유형</li><li>경쟁구도 분석</li></ul>
-      </div>
-      <div class="rpt-it" data-img="img/rp-s02.png">
-        <p class="n"><i>02</i>맞춤 전략 리포팅 심화</p>
-        <ul class="dd"><li>적합 정부지원사업 5건</li><li>적합 정책자금·보증 4종</li><li>기업인증 로드맵 4대 인증</li><li>추가 전략 기회 5항목</li></ul>
-      </div>
-      <div class="rpt-it" data-img="img/rp-s03.png">
-        <p class="n"><i>03</i>사업별 검토리뷰 + PSST 작성 전략</p>
-        <ul class="dd"><li>상위 3개 사업 선정</li><li>사업별 PSST 4항목 분해</li><li>핵심 메시지 · 자사 보유 근거</li><li>보완 필요 항목</li></ul>
-      </div>
-      <div class="rpt-it" data-img="img/rp-s04.png">
-        <p class="n"><i>04</i>전략기술 로드맵 매핑 + R&amp;D 과제명</p>
-        <ul class="dd"><li>산업 동향 · 정책 맥락</li><li>자사 기술 매핑</li><li>R&amp;D 과제명 후보 9개</li><li>매핑 인사이트</li></ul>
-      </div>
-      <div class="rpt-it" data-img="img/rp-s05.png">
-        <p class="n"><i>05</i>동종 업계 선정 사례 + 합격요인</p>
-        <ul class="dd"><li>동종 선정 사례 3건</li><li>합격요인 PSST 분해</li><li>자사 적용 시사점</li><li>자사 차별 우위</li></ul>
-      </div>
-      <div class="rpt-it" data-img="img/rp-s06.png">
-        <p class="n"><i>06</i>종합 진단</p>
-        <ul class="dd"><li>진단 인포그래픽 5항목</li><li>사업 단계 타임라인</li><li>종합 진단 의견</li><li>스케일업 세션 핵심 권고 3</li></ul>
-      </div>
+      <div class="rpt-thumbs" id="rpt">
+        <figure class="th on" data-img="img/rp-p01.png"><img src="img/rp-p01.png" alt="표지"><figcaption>표지</figcaption></figure>
+        <figure class="th" data-img="img/rp-p02.png"><img src="img/rp-p02.png" alt="01 기본 정보"><figcaption>01 기본 정보</figcaption></figure>
+        <figure class="th" data-img="img/rp-p03.png"><img src="img/rp-p03.png" alt="01 BM 캔버스"><figcaption>01 BM 캔버스</figcaption></figure>
+        <figure class="th" data-img="img/rp-p04.png"><img src="img/rp-p04.png" alt="01 핵심 자원"><figcaption>01 핵심 자원</figcaption></figure>
+        <figure class="th" data-img="img/rp-p05.png"><img src="img/rp-p05.png" alt="01 경쟁구도 분석"><figcaption>01 경쟁구도 분석</figcaption></figure>
+        <figure class="th" data-img="img/rp-p06.png"><img src="img/rp-p06.png" alt="02 적합 정부지원사업"><figcaption>02 적합 정부지원사업</figcaption></figure>
+        <figure class="th" data-img="img/rp-p07.png"><img src="img/rp-p07.png" alt="02 적합 정책자금·보증"><figcaption>02 적합 정책자금·보증</figcaption></figure>
+        <figure class="th" data-img="img/rp-p08.png"><img src="img/rp-p08.png" alt="02 기업인증 로드맵"><figcaption>02 기업인증 로드맵</figcaption></figure>
+        <figure class="th" data-img="img/rp-p09.png"><img src="img/rp-p09.png" alt="03 PSST 작성 전략"><figcaption>03 PSST 작성 전략</figcaption></figure>
+        <figure class="th" data-img="img/rp-p10.png"><img src="img/rp-p10.png" alt="04 전략기술 로드맵 매핑"><figcaption>04 전략기술 로드맵 매핑</figcaption></figure>
+        <figure class="th" data-img="img/rp-p11.png"><img src="img/rp-p11.png" alt="05 동종 업계 선정 사례"><figcaption>05 동종 업계 선정 사례</figcaption></figure>
+        <figure class="th" data-img="img/rp-p12.png"><img src="img/rp-p12.png" alt="06 종합 진단"><figcaption>06 종합 진단</figcaption></figure>
       </div>
     </div>
-    <p class="rpt-hint">항목에 마우스를 올리거나 탭하면 해당 장이 왼쪽에 표시됩니다</p>
+    <p class="rpt-hint">지면에 마우스를 올리거나 탭하면 위에서 크게 볼 수 있습니다</p>
   </div>
 </section>
 
@@ -513,20 +490,17 @@ b{font-weight:700}
 </footer>
 <script>
 (function(){
-  var items=document.querySelectorAll('#rpt .rpt-it');
+  var items=document.querySelectorAll('#rpt .th');
   var img=document.getElementById('rptImg');
   if(items.length && img){
-    var cover=img.getAttribute('src');
     function openIt(el){
       items.forEach(function(x){ x.classList.remove('on'); });
-      if(!el){ img.src=cover; return; }
       el.classList.add('on'); img.src=el.dataset.img;
     }
     items.forEach(function(el){
       el.addEventListener('mouseenter',function(){ openIt(el); });
       el.addEventListener('click',function(){ openIt(el); });
     });
-    document.getElementById('rpt').addEventListener('mouseleave',function(){ openIt(null); });
   }
 })();
 </script>
