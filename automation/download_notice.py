@@ -272,8 +272,10 @@ def hwp_to_pdf(src, dst, kind):
       (1) 소스를 ASCII-only 임시 경로로 복사해서 열고
       (2) 결과 PDF도 임시 ASCII 경로로 저장한 뒤 최종 이름으로 옮기며
       (3) Open 실패/빈 결과를 감지해 예외를 던진다.
+
+    Windows가 아니면 한컴 COM이 없으므로 LibreOffice(soffice) headless로 변환한다.
     """
-    import win32com.client as win32
+    import platform
     import tempfile
 
     ext = '.hwpx' if kind == 'hwpx' else '.hwp'
@@ -282,6 +284,31 @@ def hwp_to_pdf(src, dst, kind):
     tmp_pdf = os.path.join(tmpdir, "output.pdf")
     shutil.copyfile(src, tmp_src)
 
+    if platform.system() != "Windows":
+        import subprocess
+        # soffice는 변환에 실패해도 exit 0을 내므로 종료코드를 믿을 수 없다.
+        # "출력 PDF가 실제로 생겼고 pypdf로 페이지가 읽히는가"로만 성공을 판정한다.
+        soffice_pdf = os.path.join(tmpdir, "input.pdf")   # soffice는 입력 파일명 기준으로 저장
+        try:
+            p = subprocess.run(
+                ["soffice", "--headless", "--convert-to", "pdf", "--outdir", tmpdir, tmp_src],
+                capture_output=True, text=True, timeout=600,
+            )
+            if not os.path.exists(soffice_pdf):
+                msg = (p.stderr or p.stdout or "").strip().replace("\n", " ")[:300]
+                raise RuntimeError(f"soffice 변환 결과 PDF가 생성되지 않음 (kind={kind}, rc={p.returncode}) {msg}")
+            from pypdf import PdfReader
+            pages = len(PdfReader(soffice_pdf).pages)
+            if pages < 1:
+                raise RuntimeError("soffice 변환 PDF의 페이지 수가 0 — 변환 실패로 간주")
+            if os.path.exists(dst):
+                os.remove(dst)
+            shutil.move(soffice_pdf, dst)
+        finally:
+            shutil.rmtree(tmpdir, ignore_errors=True)
+        return True
+
+    import win32com.client as win32
     hwp = win32.Dispatch("HWPFrame.HwpObject")
     hwp.RegisterModule("FilePathCheckDLL", "FilePathCheckerModule")  # 보안 팝업 차단(무인 자동화)
     try:
