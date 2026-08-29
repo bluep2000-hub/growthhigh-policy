@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026년도 [동부거점] 중소기업 개발생산판로 맞춤형 지원사업 통합공고(3차) — GROWTH'HIGH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ───── 그로스하이 표준형 검토서 — 공통 스타일 ───── */
+
+:root {
+  --bg: #FFFFFF;
+  --surface: #FAFAF7;
+  --surface-alt: #F4F2EC;
+  --ink: #0A0A0A;
+  --ink-muted: #4A4A4A;
+  --ink-subtle: #8A8A8A;
+  --line: #E8E6DD;
+  --line-strong: #C9C5B4;
+
+  --brand: #0A1828;
+  --brand-soft: #E5E8ED;
+
+  --urgent: #C73E2C;
+  --urgent-soft: #FBEAE7;
+  --warning: #A8771E;
+  --warning-soft: #FAF3E0;
+  --success: #2E6B4F;
+  --success-soft: #E5F0EA;
+  --info-soft: #EEF2F7;
+  --closed: #6B6B6B;
+  --closed-soft: #EEEEEC;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-feature-settings: "ss01", "ss02";
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+.doc {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+/* ─── Brand Header ─── */
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.logo-symbol {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.logo-text { display: inline-block; }
+
+.logo .apostrophe { color: var(--urgent); font-weight: 800; }
+
+.logo .tagline {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+  margin-top: 4px;
+}
+
+.doc-meta {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.doc-meta strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* ─── Title ─── */
+.title-block { margin-bottom: 40px; }
+
+.label-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.label-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  background: var(--brand-soft);
+  padding: 5px 11px;
+  border-radius: 2px;
+}
+
+.label-tag.alt { background: var(--surface-alt); color: var(--ink-muted); }
+
+.doc-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.doc-subtitle {
+  font-size: 14px;
+  color: var(--ink-muted);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+/* ─── D-day Strip (status colors) ─── */
+.dday-strip {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  margin-bottom: 64px;
+  border-left: 4px solid;
+}
+
+.dday-strip.urgent { background: var(--urgent-soft); border-left-color: var(--urgent); }
+.dday-strip.warning { background: var(--warning-soft); border-left-color: var(--warning); }
+.dday-strip.closed { background: var(--closed-soft); border-left-color: var(--closed); }
+
+.dday-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  position: relative;
+  padding-left: 18px;
+}
+
+.dday-strip.urgent .dday-badge { color: var(--urgent); }
+.dday-strip.warning .dday-badge { color: var(--warning); }
+.dday-strip.closed .dday-badge { color: var(--closed); }
+
+.dday-badge::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dday-strip.urgent .dday-badge::before { background: var(--urgent); animation: pulse 2s infinite; }
+.dday-strip.warning .dday-badge::before { background: var(--warning); animation: pulse 2.5s infinite; }
+.dday-strip.closed .dday-badge::before { background: var(--closed); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+  50% { opacity: 0.4; transform: translateY(-50%) scale(1.5); }
+}
+
+.dday-text {
+  font-size: 14px;
+  color: var(--ink);
+  flex: 1;
+  line-height: 1.5;
+}
+
+.dday-text strong { font-weight: 700; }
+
+/* ─── Section ─── */
+section { margin-bottom: 64px; }
+
+.section-header {
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.section-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-subtle);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.section-en .num { color: var(--urgent); margin-right: 6px; }
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+/* ─── A. Meta Grid ─── */
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.meta-cell {
+  padding: 18px 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.meta-cell:nth-child(2n) { border-right: none; }
+.meta-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+.meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+  margin-bottom: 6px;
+}
+
+.meta-value {
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.source-link {
+  font-size: 13px;
+  color: var(--ink-muted);
+  padding: 4px 0;
+}
+
+.source-link a {
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px solid var(--brand-soft);
+  transition: border-color 0.2s;
+  font-weight: 500;
+}
+
+.source-link a:hover { border-bottom-color: var(--brand); }
+
+/* ─── B. Core Cards ─── */
+.core-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.core-card {
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.core-card:hover { transform: translateY(-2px); border-color: var(--ink); }
+
+.core-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+}
+
+.card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-subtle);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.card-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.card-headline {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+}
+
+.card-body {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+/* ─── Tables ─── */
+.table-block { margin-bottom: 36px; }
+
+.block-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.block-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.block-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+table.tracks {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+table.tracks thead { background: var(--surface); }
+
+table.tracks th {
+  text-align: left;
+  padding: 13px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--line);
+}
+
+table.tracks td {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+table.tracks tr:last-child td { border-bottom: none; }
+table.tracks tr:hover td { background: var(--surface); }
+
+table.tracks .track-name { font-weight: 700; }
+
+.new-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--warning);
+  background: var(--warning-soft);
+  padding: 2px 6px;
+  margin-left: 6px;
+  letter-spacing: 0.08em;
+  vertical-align: 1px;
+}
+
+/* ─── Highlight Boxes ─── */
+.highlight-box {
+  padding: 22px 26px;
+  border-left: 3px solid;
+  margin-bottom: 14px;
+}
+
+.highlight-box.warning { background: var(--warning-soft); border-left-color: var(--warning); }
+.highlight-box.urgent { background: var(--urgent-soft); border-left-color: var(--urgent); }
+.highlight-box.success { background: var(--success-soft); border-left-color: var(--success); }
+.highlight-box.info { background: var(--info-soft); border-left-color: var(--brand); }
+
+.highlight-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.highlight-box.warning .highlight-title { color: var(--warning); }
+.highlight-box.urgent .highlight-title { color: var(--urgent); }
+.highlight-box.success .highlight-title { color: var(--success); }
+.highlight-box.info .highlight-title { color: var(--brand); }
+
+.highlight-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.highlight-box.warning .highlight-en { color: var(--warning); }
+.highlight-box.urgent .highlight-en { color: var(--urgent); }
+.highlight-box.success .highlight-en { color: var(--success); }
+
+.highlight-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.highlight-list li {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  padding-left: 22px;
+  position: relative;
+}
+
+.highlight-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 1px;
+}
+
+.highlight-box.warning .highlight-list li::before { background: var(--warning); }
+.highlight-box.urgent .highlight-list li::before { background: var(--urgent); }
+.highlight-box.success .highlight-list li::before { background: var(--success); }
+.highlight-box.info .highlight-list li::before { background: var(--brand); }
+
+.highlight-list li strong { font-weight: 700; }
+
+/* ─── C. Checklist ─── */
+.checklist-group {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 22px 26px;
+  margin-bottom: 14px;
+}
+
+.group-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--line-strong);
+  flex-shrink: 0;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: var(--bg);
+}
+
+.check:hover { border-color: var(--ink); }
+
+.check.checked {
+  background: var(--ink);
+  border-color: var(--ink);
+  position: relative;
+}
+
+.check.checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checklist li.bonus { color: var(--brand); font-weight: 500; }
+
+.new-inline {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--warning);
+  background: var(--warning-soft);
+  padding: 2px 6px;
+  margin-left: 6px;
+  letter-spacing: 0.08em;
+  vertical-align: 1px;
+}
+
+/* ─── PDF Link ─── */
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--brand);
+  text-decoration: none;
+  margin: 18px 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--brand-soft);
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+
+.pdf-link:hover { border-bottom-color: var(--brand); }
+
+/* ─── Details ─── */
+details.more {
+  background: var(--surface);
+  margin-top: 18px;
+  border: 1px solid var(--line);
+}
+
+details.more summary {
+  padding: 16px 22px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+  letter-spacing: -0.005em;
+}
+
+details.more summary::-webkit-details-marker { display: none; }
+
+details.more summary::before {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink-subtle);
+  transition: all 0.2s;
+  display: inline-block;
+  width: 16px;
+  line-height: 1;
+}
+
+details.more[open] summary::before { content: '−'; color: var(--ink); }
+
+details.more .more-content {
+  padding: 8px 22px 22px;
+  border-top: 1px solid var(--line);
+}
+
+details.more h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 18px 0 10px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+details.more h4:first-child { margin-top: 8px; }
+
+details.more h4 .en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+details.more ul { list-style: none; padding-left: 0; }
+
+details.more ul li {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  padding-left: 14px;
+  position: relative;
+}
+
+details.more ul li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--ink-subtle);
+}
+
+details.more p {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  margin: 6px 0;
+}
+
+/* ─── Footer ─── */
+.doc-footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 2px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-brand {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.footer-brand .apostrophe { color: var(--urgent); }
+
+.footer-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.06em;
+  text-align: right;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 720px) {
+  .doc { padding: 32px 20px 60px; }
+  .doc-title { font-size: 28px; }
+  .meta-grid { grid-template-columns: 1fr; }
+  .meta-cell { border-right: none; }
+  .meta-cell:not(:last-child) { border-bottom: 1px solid var(--line); }
+  .core-cards { grid-template-columns: 1fr; }
+  table.tracks { font-size: 12px; }
+  table.tracks th, table.tracks td { padding: 10px 12px; }
+  .brand-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .doc-meta { text-align: left; }
+}
+
+/* ─── Print ─── */
+@media print {
+  body { background: white; }
+  .doc { padding: 0; max-width: 100%; }
+  .core-card:hover { transform: none; }
+  .dday-badge::before { animation: none; }
+  details.more[open] summary { display: none; }
+  details.more .more-content { padding: 0; border: none; }
+}
+
+/* ===== PDF 모달 뷰어 ===== */
+.pdf-modal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(10,24,40,.72);backdrop-filter:blur(3px);}
+.pdf-modal.open{display:flex;flex-direction:column;}
+.pdf-modal-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;background:var(--brand);color:#fff;flex:none;}
+.pdf-modal-title{font-size:14px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.pdf-modal-actions{display:flex;align-items:center;gap:8px;flex:none;}
+.pdf-modal-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s ease;}
+.pdf-modal-btn:hover{background:rgba(255,255,255,.2);}
+.pdf-modal-close{width:38px;height:38px;justify-content:center;padding:0;font-size:18px;}
+.pdf-modal-body{flex:1;background:#525659;}
+.pdf-modal-body iframe{width:100%;height:100%;border:0;}
+@media (max-width:480px){.pdf-modal-title{font-size:12px;}.pdf-modal-btn{padding:7px 10px;font-size:12px;}}
+
+/* ===== GROWTH'HIGH 플로팅 버튼 ===== */
+.gh-fab{position:fixed;right:24px;bottom:24px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.gh-fab-menu{display:flex;flex-direction:column;align-items:flex-end;gap:10px;opacity:0;transform:translateY(12px) scale(.96);pointer-events:none;transition:opacity .22s ease,transform .22s ease;}
+.gh-fab.open .gh-fab-menu{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+.gh-fab-item{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;background:#fff;border:1px solid var(--line-strong);border-radius:999px;box-shadow:0 4px 16px rgba(10,24,40,.13);text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.01em;color:var(--brand);white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;}
+.gh-fab-item:hover{transform:translateX(-3px);box-shadow:0 6px 20px rgba(10,24,40,.2);}
+.gh-fab-ico{font-size:16px;line-height:1;}
+.gh-fab-cta{background:var(--urgent);color:#fff;border-color:var(--urgent);}
+.gh-fab-cta:hover{background:#B33523;}
+.gh-fab-toggle{position:relative;width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;background:var(--brand);color:#fff;box-shadow:0 6px 22px rgba(10,24,40,.32);font-family:inherit;display:flex;align-items:center;justify-content:center;transition:transform .18s ease,background .18s ease;}
+.gh-fab-toggle:hover{transform:scale(1.06);}
+.gh-fab.open .gh-fab-toggle{background:var(--ink);}
+.gh-fab-toggle-open{display:inline-flex;}
+.gh-fab-toggle-close{display:none;font-size:22px;line-height:1;}
+.gh-fab.open .gh-fab-toggle-open{display:none;}
+.gh-fab.open .gh-fab-toggle-close{display:inline-flex;}
+@media print{.gh-fab{display:none !important;}.pdf-modal{display:none !important;}}
+@media (max-width:480px){.gh-fab{right:16px;bottom:16px;}.gh-fab-toggle{width:54px;height:54px;}.gh-fab-item{padding:10px 14px;font-size:13px;}}
+
+</style>
+</head>
+<body>
+<div class="doc">
+  <header class="brand-header">
+    <div class="logo"><img class="logo-symbol" src="logo.png" alt="GROWTH'HIGH"><span class="logo-text">GROWTH<span class="apostrophe">'</span>HIGH<span class="tagline">Scale-up Studio</span></span></div>
+    <div class="doc-meta"><strong>지원사업 검토 서식</strong>v1.0 STANDARD · 2026.08.29</div>
+  </header>
+  <div class="title-block">
+    <div class="label-row"><span class="label-tag">제품·판로</span><span class="label-tag alt">비용 60% 지원</span><span class="label-tag alt">경기 동부 5개 시군 · 연 2,000만원</span></div>
+    <h1 class="doc-title">2026년도 [동부거점] 중소기업 개발생산판로 맞춤형 지원사업 통합공고(3차)</h1>
+    <div class="doc-subtitle">경기 동부 5개 시군 · 연 2,000만원</div>
+  </div>
+  <div class="dday-strip warning">
+    <div class="dday-badge">D−13</div>
+    <div class="dday-text"><strong>모집중</strong> · ~ <strong>2026.09.11 마감</strong></div>
+  </div>
+  <section>
+    <div class="section-header"><div class="section-en"><span class="num">A</span>Project Overview</div><h2 class="section-title">사업 개요</h2></div>
+    <div class="meta-grid"><div class="meta-cell"><div class="meta-label">지원대상 / Eligibility</div><div class="meta-value">경기 광주·하남·이천·여주·양평에 본사 또는 공장이 있는 전년도 매출 120억원 이하 제조업·지식기반서비스 중소기업</div></div><div class="meta-cell"><div class="meta-label">지원규모 / Scale</div><div class="meta-value">과제별 한도 내 · 여러 과제 신청 시 연간 2,000만원 이내</div></div><div class="meta-cell"><div class="meta-label">지원내용 / Support</div><div class="meta-value">창안개발·제품생산·판로개척 등 분야별 소요비용의 60% 지원</div></div><div class="meta-cell"><div class="meta-label">신청기간 / Period</div><div class="meta-value">2026.08.21(금) ~ 09.11(금)</div></div><div class="meta-cell"><div class="meta-label">주관 / Host</div><div class="meta-value">경기도경제과학진흥원 동부거점센터 (031-830-8566)</div></div><div class="meta-cell"><div class="meta-label">신청 / Apply</div><div class="meta-value">경기기업비서(www.egbiz.or.kr) 온라인 신청</div></div></div>
+    <div class="source-link"><a href="javascript:void(0)" onclick="openPdfModal()">→ 공고문 원본 보기 (PDF)</a> &nbsp; · &nbsp; 신청처: 경기기업비서(www.egbiz.or.kr) 온라인 신청</div>
+  </section>
+  <section>
+    <div class="section-header"><div class="section-en"><span class="num">B</span>Program Essentials</div><h2 class="section-title">사업 핵심</h2></div>
+    <div class="core-cards"><div class="core-card"><div class="card-num">B.01</div><div class="card-label">핵심 1 / Point</div><div class="card-headline">소요비용 60%<br>연 3회·2,000만원</div><div class="card-body">홈페이지·제품패키지·홍보동영상·카탈로그·시제품제작(금형, 목업)은 사전신청, 특허·상표·디자인 출원과 규격인증·시험분석·국내외전시회는 공고일 이전 완료 건을 사후신청.</div></div><div class="core-card"><div class="card-num">B.02</div><div class="card-label">핵심 2 / Point</div><div class="card-headline">동부 5개 시군<br>매출 120억 이하</div><div class="card-body">광주·하남·이천·여주·양평에 본사 또는 공장이 소재하고 지방세를 완납한 제조업 또는 지식기반서비스 중소기업. 본사와 공장이 모두 경기도면 본사 소재지가 기준.</div></div><div class="core-card"><div class="card-num">B.03</div><div class="card-label">핵심 3 / Point</div><div class="card-headline">전액 선지출 후<br>지원금 지급</div><div class="card-body">신청기업이 부가세 포함 총 소요비용을 먼저 지출하고 지원금 신청서를 내면 적정성 검토 후 지정계좌로 입금. 전자세금계산서 처리가 원칙이며 부가세 환급금과 한도 초과분은 기업 부담.</div></div></div>
+  </section>
+  <section>
+    <div class="section-header"><div class="section-en"><span class="num">C</span>Eligibility Checklist</div><h2 class="section-title">자격 체크리스트</h2></div>
+    <div class="checklist-group"><div class="group-title">공통 자격 / Common</div><ul class="checklist"><li><span class="check"></span><span>동부거점센터 소관 사업비 출연 시군(광주·하남·이천·여주·양평)에 본사 또는 공장이 소재</span></li><li><span class="check"></span><span>전년도 매출액 120억원 이하의 지방세 완납 제조업 또는 지식기반서비스 영위 중소기업</span></li><li><span class="check"></span><span>경기도에 본사와 공장이 모두 소재하는 경우 본사 소재지 우선</span></li><li><span class="check"></span><span>지식기반서비스업은 산업발전법 제8조 2항에 따른 업종 중 진흥원이 인정하는 업종</span></li></ul></div><div class="checklist-group"><div class="group-title">지원 제외 / Exclusion</div><ul class="checklist"><li><span class="check"></span><span>본 지원사업 지원제외 업종을 영위하는 기업</span></li><li><span class="check"></span><span>민원야기·환경오염·불법공장 등 사회적 물의를 빚은 기업</span></li><li><span class="check"></span><span>허위 또는 부정한 방법으로 신청한 기업, 국세·지방세 체납 기업</span></li><li><span class="check"></span><span>금융기관으로부터 여신거래가 불가능한 기업, 휴·폐업 중이거나 가동 중이지 않은 기업</span></li><li><span class="check"></span><span>법정관리 또는 화의절차가 진행 중인 경우</span></li><li><span class="check"></span><span>국가·지자체 사업에 참여제한을 받고 있거나 동일한 아이템으로 타 사업을 수행 중인 기업</span></li><li><span class="check"></span><span>경과원 他사업 지원과제 참여 중 부당지원 수혜자로 최종 제재 결정된 기업</span></li></ul></div><div class="checklist-group"><div class="group-title">우대 가점 / Bonus Points</div><ul class="checklist"><li class="bonus"><span class="check"></span><span>사업비 출연 시군 내 창업보육센터(중기부 및 시·군 지정) 또는 벤처집적시설 입주기업 우대</span></li><li class="bonus"><span class="check"></span><span>경기도가 운영하는 창업혁신공간 8개소 입주기업 우대</span></li></ul></div>
+    <a href="javascript:void(0)" class="pdf-link" onclick="openPdfModal()">→ 공고문 PDF 원본 보기</a>
+  </section>
+  <footer class="doc-footer">
+    <div class="footer-brand">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</div>
+    <div class="footer-meta">Source: 경기도경제과학진흥원 동부거점센터 (031-830-8566)<br>Reviewed: 2026.08.29 · v1.0 Standard</div>
+  </footer>
+</div>
+  <div class="gh-fab" id="ghFab">
+    <div class="gh-fab-menu">
+      <a class="gh-fab-item" href="https://growthhigh.co.kr" target="_blank" rel="noopener"><span class="gh-fab-ico">&#127968;</span>홈페이지</a>
+      <a class="gh-fab-item" href="https://blog.naver.com/growthhigh" target="_blank" rel="noopener"><span class="gh-fab-ico">&#9997;&#65039;</span>블로그</a>
+      <a class="gh-fab-item gh-fab-cta" href="https://yuncommon.notion.site/351815d712b980abaaace37e5eb0354c" target="_blank" rel="noopener"><span class="gh-fab-ico">&#128172;</span>무료 진단 상담</a>
+    </div>
+    <button class="gh-fab-toggle" id="ghFabToggle" aria-label="상담 메뉴 열기" aria-expanded="false">
+      <span class="gh-fab-toggle-open"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.477 3 2 6.79 2 11.5c0 2.27 1.05 4.32 2.76 5.84-.12 1.06-.5 2.5-1.36 3.66 1.74-.2 3.3-.86 4.45-1.66 1.1.36 2.32.56 3.62.56 5.523 0 10-3.79 10-8.5S17.523 3 12 3z" fill="#fff"/></svg></span>
+      <span class="gh-fab-toggle-close">&#10005;</span>
+    </button>
+  </div>
+
+  <div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="공고문 PDF 뷰어">
+    <div class="pdf-modal-bar">
+      <div class="pdf-modal-title" id="pdfModalTitle">공고문 원본</div>
+      <div class="pdf-modal-actions">
+        <a class="pdf-modal-btn" id="pdfDownloadBtn" download>&#11015; 다운로드</a>
+        <button class="pdf-modal-btn pdf-modal-close" id="pdfModalClose" aria-label="닫기">&#10005;</button>
+      </div>
+    </div>
+    <div class="pdf-modal-body"><iframe id="pdfModalFrame" title="공고문 PDF"></iframe></div>
+  </div>
+
+<script>
+var PDF_DATA="pdfs/321-gg-east-dev-prod-sales.pdf";
+var PDF_NAME="(통합공고문) 2026년도 개발생산판로 맞춤형 지원사업[동부거점 3차].pdf";
+</script>
+<script>
+
+(function(){
+  // 체크박스 토글
+  document.querySelectorAll('.check').forEach(check => {
+  check.addEventListener('click', () => check.classList.toggle('checked'));
+});
+
+  // 플로팅 버튼
+  var fab=document.getElementById('ghFab'),tg=document.getElementById('ghFabToggle');
+  if(tg){tg.addEventListener('click',function(e){e.stopPropagation();var o=fab.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',function(e){if(fab.classList.contains('open')&&!fab.contains(e.target)){fab.classList.remove('open');tg.setAttribute('aria-expanded','false');}});}
+  // PDF 모달
+  var modal=document.getElementById('pdfModal'),frame=document.getElementById('pdfModalFrame'),dl=document.getElementById('pdfDownloadBtn');
+  window.openPdfModal=function(){if(!modal)return;frame.src=PDF_DATA;dl.href=PDF_DATA;dl.setAttribute('download',PDF_NAME);document.getElementById('pdfModalTitle').textContent=PDF_NAME;modal.classList.add('open');document.body.style.overflow='hidden';};
+  function closePdf(){if(!modal)return;modal.classList.remove('open');frame.src='';document.body.style.overflow='';}
+  var cb=document.getElementById('pdfModalClose');if(cb)cb.addEventListener('click',closePdf);
+  if(modal)modal.addEventListener('click',function(e){if(e.target===modal)closePdf();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePdf();});
+})();
+
+</script>
+</body>
+</html>
