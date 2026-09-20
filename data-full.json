@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-13T18:00:00+09:00",
+ "updated_at": "2026-09-20T18:00:00+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -11342,6 +11342,692 @@
    "brief_one": "기존 보증 이용 시 선정 후 전액 상환 필요",
    "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126270",
    "added_at": "2026-09-13"
+  },
+  {
+   "id": "400",
+   "file": "400-gtec-bi-tenant-7th.html",
+   "title": "2026년 경기과학기술대학교 창업보육센터 제7차 신규창업기업(일반) 모집",
+   "summary": "창업 7년 이내 기업·예비창업자에 시흥 경기과기대 보육센터 창업공간(49.5~135.3㎡)과 사업화 지원 제공.",
+   "tags": [
+    "창업보육",
+    "입주공간",
+    "경기 시흥"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-09-23T15:00:00+09:00",
+   "deadline_display": "2026.09.23",
+   "meta": {
+    "지원": "보육공간 입주",
+    "규모": "공고문 참조",
+    "마감": "09.23(수)15시"
+   },
+   "brief_one": "관리비 1년분·보증금을 입주 전 선납해야 한다",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179231",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "401",
+   "file": "401-korea-fintech-week-2026.html",
+   "title": "코리아 핀테크 위크 2026 전시 참가기업 모집 재공고",
+   "summary": "코리아 핀테크 위크 2026(11.25~27, aT센터) 금융관·협력관 독립부스 2곳 추가모집. 부스 임차료·IR·마케팅 지원.",
+   "tags": [
+    "핀테크",
+    "전시·박람회",
+    "한국핀테크지원센터"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-09-23T17:00:00+09:00",
+   "deadline_display": "2026.09.23",
+   "meta": {
+    "지원": "부스·IR·마케팅",
+    "규모": "2개사 내외",
+    "마감": "09.23(수)17시"
+   },
+   "brief_one": "재공고로 남은 부스는 금융관·협력관 2곳뿐",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126529",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "402",
+   "file": "402-sleeptech-fda-mdr-clinical.html",
+   "title": "2026년 AI기반 슬립테크 국제협력 실증 확산 지원사업 기업지원 공고(미국 FDA or 유럽 MDR 임상시험 지원)",
+   "summary": "AI기반 슬립테크 의료기기 중소기업 1곳에 미국 FDA·유럽 MDR 확증 임상시험 준비·수행을 정부 최대 7억원 지원.",
+   "tags": [
+    "의료기기",
+    "해외 임상",
+    "삼성서울병원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-09-28T23:00:00+09:00",
+   "deadline_display": "2026.09.28",
+   "meta": {
+    "지원": "최대 7억원",
+    "규모": "1건",
+    "마감": "09.28(월)23시"
+   },
+   "brief_one": "기업부담금 20% 이상을 현금으로만 매칭해야 한다",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126466",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "403",
+   "file": "403-kbrand-gov-cert-2nd.html",
+   "title": "2026년 K-브랜드 정부인증제도 참여기업 모집 공고(2차)",
+   "summary": "해외 위조상품 피해 예방용 국가인증상표 2회차 모집. 정품인증기술 도입비 50%, 기업별 최대 2억원 지원.",
+   "tags": [
+    "인증",
+    "위조상품 대응",
+    "지식재산처"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-09-28T18:00:00+09:00",
+   "deadline_display": "2026.09.28",
+   "meta": {
+    "지원": "도입비 50%·최대 2억",
+    "규모": "총 30억원",
+    "마감": "09.28(월)18시"
+   },
+   "brief_one": "사용 허락을 받아도 비용 지원은 점수순·예산 한도",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126491",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "404",
+   "file": "404-kbrand-glow-week-2026.html",
+   "title": "2026년 K-Brand GLOW WEEK 참여기업 모집",
+   "summary": "중소기업 700개사에 해외 바이어 130여개사 1:1 수출상담, 70개사에 성수동 팝업스토어 전시 무료 지원.",
+   "tags": [
+    "수출",
+    "수출상담회",
+    "중소벤처기업진흥공단"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-09-29T18:00:00+09:00",
+   "deadline_display": "2026.09.29",
+   "meta": {
+    "지원": "참가비 무료",
+    "규모": "상담회 700개사",
+    "마감": "09.29(화)18시"
+   },
+   "brief_one": "바이어 15개사를 골라도 실제 매칭은 3개사 이내",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126431",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "405",
+   "file": "405-lbs-safety-solution-award.html",
+   "title": "2026년 국민안전 LBS 솔루션 대상 참가기업 모집",
+   "summary": "위치정보 기반 안전 솔루션 보유 중소기업·스타트업 3개사에 상금 최대 500만원과 공공·민간 판로 연계 지원.",
+   "tags": [
+    "위치정보",
+    "공모전",
+    "방송미디어통신위원회"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-09-30T16:00:00+09:00",
+   "deadline_display": "2026.09.30",
+   "meta": {
+    "지원": "상금·판로 연계",
+    "규모": "3개사",
+    "마감": "09.30(수)16시"
+   },
+   "brief_one": "아이디어가 아니라 제품을 보유해야 응모 가능",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126433",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "406",
+   "file": "406-gg-agrifood-cert-add.html",
+   "title": "2026년 경기도 무역위기대응 K-Food 비관세장벽 해소지원사업 — 농식품기업 해외 인증 검사 지원 수요기업 추가 모집",
+   "summary": "경기도 농식품 (예비)수출 중소기업 20개사 내외에 해외 인증 획득·통관 시험검사·인증 갱신 비용 총 350만원 지원.",
+   "tags": [
+    "인증",
+    "판로수출",
+    "경기도"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-09-30T23:59:00+09:00",
+   "deadline_display": "2026.09.30",
+   "meta": {
+    "지원": "인증·시험비 350만원",
+    "규모": "20개사 내외",
+    "마감": "09.30(수)"
+   },
+   "brief_one": "추가 모집분, 지원금은 인증 완료 후 사후 지급",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126459",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "407",
+   "file": "407-content-production-5th.html",
+   "title": "2026년 콘텐츠 제작 지원사업 참여기업 5차 모집",
+   "summary": "온라인 판매 소상공인 150개사 내외에 상품 홍보영상·이미지컷·GIF 패키지 제작. 정부지원금 234.9만원(90%).",
+   "tags": [
+    "소상공인",
+    "판로수출",
+    "온라인 판로"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-09-30T13:00:00+09:00",
+   "deadline_display": "2026.09.30",
+   "meta": {
+    "지원": "정부지원금 234.9만원",
+    "규모": "150개사 내외",
+    "마감": "09.30(수)13시"
+   },
+   "brief_one": "8개 사업 합산 600만원 한도, 기존 선정분부터 확인",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126566",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "408",
+   "file": "408-detail-page-production-5th.html",
+   "title": "2026년 상세페이지 제작지원사업 참여기업 5차 모집",
+   "summary": "소상공인 B2C 상품 상세페이지 제작(사진 15컷 이상·GIF) 지원. 정부지원금 160.2만원, 100개사 내외.",
+   "tags": [
+    "소상공인",
+    "판로수출",
+    "온라인 판로"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-09-30T13:00:00+09:00",
+   "deadline_display": "2026.09.30",
+   "meta": {
+    "지원": "정부지원금 160.2만원",
+    "규모": "100개사 내외",
+    "마감": "09.30(수)13시"
+   },
+   "brief_one": "소공인 판로개척 선정사는 평가 없이 우선 선정",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126567",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "409",
+   "file": "409-sb-product-improvement-5th.html",
+   "title": "2026년 상품개선 지원사업 참여기업 5차 모집",
+   "summary": "소상공인 패키지 또는 브랜드 디자인 5종 개선과 활용 제작물 1종 지원. 정부지원금 238.5만원, 150개사 내외.",
+   "tags": [
+    "소상공인",
+    "판로수출",
+    "온라인 판로"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-09-30T13:00:00+09:00",
+   "deadline_display": "2026.09.30",
+   "meta": {
+    "지원": "정부지원금 238.5만원",
+    "규모": "150개사 내외",
+    "마감": "09.30(수)13시"
+   },
+   "brief_one": "패키지형·브랜드형 택1, 선정 후 변경 불가",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126568",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "410",
+   "file": "410-sobujang-import-diversify-3rd.html",
+   "title": "2026년 소부장 공급망안정 종합지원 사업 공고(3차) — 수입처다변화 지원사업",
+   "summary": "원부자재 수입처를 바꾸려는 소부장 중소·중견기업 1개사 내외에 발굴·샘플·시험인증·시운전 비용 80%, 최대 5천만원 지원.",
+   "tags": [
+    "공급망",
+    "소부장",
+    "KOTRA"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-09-30T23:59:00+09:00",
+   "deadline_display": "2026.09.30",
+   "meta": {
+    "지원": "비용 80%·최대 5천만원",
+    "규모": "1개사 내외",
+    "마감": "09.30(수)"
+   },
+   "brief_one": "1개사 내외 선발, 사전승인 없는 지출 불인정",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126627",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "411",
+   "file": "411-green-abs-interest-6th.html",
+   "title": "2026년 녹색자산유동화증권 이차보전 지원사업(신보6차)",
+   "summary": "녹색분류체계 부합 사업을 하는 중소·중견기업이 녹색 회사채를 발행하면 1차년 이자 연 3%p(중견 2%p) 보전, 연 최대 3억원.",
+   "tags": [
+    "정책자금",
+    "이차보전",
+    "한국환경산업기술원"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "정책자금"
+   ],
+   "deadline_iso": "2026-10-01T18:00:00+09:00",
+   "deadline_display": "2026.10.01",
+   "meta": {
+    "지원": "이자 연 3%p(중견 2%p)",
+    "규모": "기업당 연 3억원",
+    "마감": "10.01(목)18시"
+   },
+   "brief_one": "조달자금에 시설자금이 없으면 신청 불가",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126593",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "412",
+   "file": "412-arts-industry-loan-5th.html",
+   "title": "2026 예술산업 금융지원 시범사업(융자) 5차 공모",
+   "summary": "예술 분야 사업자에 시설자금 최대 30억원·운전자금 5억원을 연 3.59%(청년 대표 2.5% 고정)로 융자. 총 500억원.",
+   "tags": [
+    "정책자금",
+    "예술 융자",
+    "예술경영지원센터"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "정책자금"
+   ],
+   "deadline_iso": "2026-10-02T16:00:00+09:00",
+   "deadline_display": "2026.10.02",
+   "meta": {
+    "지원": "연 3.59%·청년 2.5%",
+    "규모": "운전 5억·시설 최대 30억",
+    "마감": "10.02(금)16시"
+   },
+   "brief_one": "은행 사전확인서 발급(최대 1주) 먼저 받아야 접수",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126440",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "413",
+   "file": "413-rising-star-research-firm.html",
+   "title": "2026년도 성장단계별 우수 연구소기업(라이징스타·스타) 지정 신청 공고",
+   "summary": "연구소기업 중 라이징스타 10개사·스타 2개사를 지정해 과기정통부 장관 지정서와 2027년 특구 R&BD 연계·우선 지원.",
+   "tags": [
+    "기업 지정",
+    "연구소기업",
+    "연구개발특구진흥재단"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-10-02T16:00:00+09:00",
+   "deadline_display": "2026.10.02",
+   "meta": {
+    "지원": "지정서+R&BD 연계",
+    "규모": "라이징 10·스타 2개사",
+    "마감": "10.02(금)16시"
+   },
+   "brief_one": "연구소기업 등록 기업만 신청, 매출·투자 정량기준 필수",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126497",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "414",
+   "file": "414-rocketship-ir-content-platform.html",
+   "title": "2026년 초기창업패키지 로켓십 IR 경진대회 2회차 참가기업 모집 (콘텐츠·플랫폼)",
+   "summary": "초기창업패키지 선정·졸업 콘텐츠·플랫폼 기업 10개사에 투자사 IR 발표·1:1 상담, 우수기업 최대 5억원 직접투자 검토.",
+   "tags": [
+    "투자유치",
+    "IR 경진대회",
+    "초기창업패키지 기업 한정"
+   ],
+   "industries": [
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "투자유치"
+   ],
+   "deadline_iso": "2026-10-02T18:00:00+09:00",
+   "deadline_display": "2026.10.02",
+   "meta": {
+    "지원": "IR+최대 5억 투자검토",
+    "규모": "10개사",
+    "마감": "10.02(금)18시"
+   },
+   "brief_one": "초기창업패키지 선정·졸업기업이 아니면 신청 불가",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179246",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "415",
+   "file": "415-public-data-oi-topdown.html",
+   "title": "2026년 민관협력 오픈이노베이션 지원 '공공데이터 활용 지원' 공공기관 제안형(Top-Down) 창업기업 모집",
+   "summary": "창업 7년 이내 기업이 공공기관 제안 22개 과제 중 1개를 공공데이터로 수행, 과제별 최대 1억원 사업화자금 지원.",
+   "tags": [
+    "오픈이노베이션",
+    "공공데이터 PoC",
+    "중소벤처기업부"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-10-06T16:00:00+09:00",
+   "deadline_display": "2026.10.06",
+   "meta": {
+    "지원": "과제별 최대 1억원",
+    "규모": "20개사 내외",
+    "마감": "10.06(화)16시"
+   },
+   "brief_one": "오픈이노베이션 기선정 이력 있으면 신청 불가",
+   "source_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1071194&parentSeq=1071194",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "416",
+   "file": "416-world-webtoon-festival-2026.html",
+   "title": "2026 월드 웹툰 페스티벌 전시 참가자 모집",
+   "summary": "웹툰 IP 보유 기업·단체·개인 대상 12월 코엑스 월드 웹툰 페스티벌 전시 부스 40개 내외 모집. 굿즈 판매·팬 프로그램 가능.",
+   "tags": [
+    "콘텐츠",
+    "웹툰 전시",
+    "한국콘텐츠진흥원"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-06T23:59:00+09:00",
+   "deadline_display": "2026.10.06",
+   "meta": {
+    "지원": "전시 부스 참가",
+    "규모": "40부스 내외",
+    "마감": "10.06(화)24시"
+   },
+   "brief_one": "평가 40점이 관람객 확장성, 팬 프로그램 기획이 관건",
+   "source_url": "https://www.kocca.kr/kocca/pims/view.do?intcNo=326D00092012&menuNo=204104",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "417",
+   "file": "417-pitti-uomo-111-code-korea.html",
+   "title": "Pitti Uomo 111 CODE KOREA 참여 브랜드 모집 (2027 피렌체 남성복·유니섹스 수주회)",
+   "summary": "남성복·유니섹스 디자이너 브랜드 6개 내외에 2027년 1월 피렌체 Pitti Uomo 한국관 입주와 최대 600만원 실비 지원.",
+   "tags": [
+    "패션",
+    "해외 수주회",
+    "한국콘텐츠진흥원"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-08T22:00:00+09:00",
+   "deadline_display": "2026.10.08",
+   "meta": {
+    "지원": "최대 600만원 실비",
+    "규모": "6개 브랜드 내외",
+    "마감": "10.08(목)22시"
+   },
+   "brief_one": "WelCon 등록 필수, 접수는 10.1~10.8뿐",
+   "source_url": "https://www.kocca.kr/kocca/pims/view.do?intcNo=326D00089011&menuNo=204104",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "418",
+   "file": "418-innopolis-lg-oi-meetup.html",
+   "title": "2026 Innopolis×LG Open Innovation Meet-up Day 참여기업 모집",
+   "summary": "연구개발특구 딥테크 스타트업 12개사 내외를 선정해 LG사이언스파크 기술전문가와 심층 밋업, 우수기업은 LG 계열사 PoC 검토로 연계.",
+   "tags": [
+    "오픈이노베이션",
+    "대기업 협업",
+    "연구개발특구 한정"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-08T15:00:00+09:00",
+   "deadline_display": "2026.10.08",
+   "meta": {
+    "지원": "LG 기술밋업",
+    "규모": "12개사 내외",
+    "마감": "10.08(목)15시"
+   },
+   "brief_one": "연구개발특구 기업만 대상, 사전검토 통과해야 밋업",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179250",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "419",
+   "file": "419-kised-sv-gtm-program.html",
+   "title": "2026년 실리콘밸리 GTM(Go-To-Market) 프로그램 창업기업 모집",
+   "summary": "국내 또는 미국 매출이 있는 창업기업 10개사에 14주 실리콘밸리 GTM 전략 수립과 코어위크 항공료 최대 200만원 지원.",
+   "tags": [
+    "수출",
+    "미국 진출",
+    "창업진흥원"
+   ],
+   "industries": [
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-09T18:00:00-07:00",
+   "deadline_display": "2026.10.09",
+   "meta": {
+    "지원": "GTM 전략·항공료",
+    "규모": "10개사 내외",
+    "마감": "10.09(금)18시(미서부)"
+   },
+   "brief_one": "사업화 자금 없고 영어 인터뷰로 선발",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179294",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "420",
+   "file": "420-mainbiz-ip-ai-support.html",
+   "title": "2026년 IP기반 AI활용 지원사업 참여기업 모집",
+   "summary": "중소·중견기업이 자부담 40만원으로 IP 특화 AI 솔루션 구독료(최대 260만원 상당)와 IP 전문가 멘토링 6회를 지원받는다.",
+   "tags": [
+    "지식재산",
+    "AI 솔루션",
+    "메인비즈협회"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-10-11T23:59:00+09:00",
+   "deadline_display": "2026.10.11",
+   "meta": {
+    "지원": "260만원 상당",
+    "규모": "자부담 40만원",
+    "마감": "10.11(일)"
+   },
+   "brief_one": "자부담 40만원, 한도 소진 시 조기마감",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126618",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "421",
+   "file": "421-gwanak-sboost-demoday-2026.html",
+   "title": "2026 관악S밸리 브릿지 데모데이(S-Boost Track) 및 투자자 매칭데이 참가기업 모집",
+   "summary": "Pre-A~Series A 단계 로봇·AI·딥테크 스타트업 10개사에 투자자 1:1 매칭, 결선 상위 3개사에 시상금 총 900만원.",
+   "tags": [
+    "투자유치",
+    "데모데이",
+    "관악중소벤처진흥원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "투자유치"
+   ],
+   "deadline_iso": "2026-10-12T14:00:00+09:00",
+   "deadline_display": "2026.10.12",
+   "meta": {
+    "지원": "시상금·투자매칭",
+    "규모": "10개사·총 900만원",
+    "마감": "10.12(월)14시"
+   },
+   "brief_one": "관외 기업은 수상 시 관악구 이전해야 상금",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126443",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "422",
+   "file": "422-everyone-idea-corp-track.html",
+   "title": "2027 모두의 아이디어 지정공모(기업부문) 참여기업 모집",
+   "summary": "국민 아이디어 공모에 과제를 발제할 기업 5개사 내외 모집. 특허출원까지 거친 아이디어를 받고 거래금(중소 500만원)을 부담한다.",
+   "tags": [
+    "지식재산",
+    "개방형 혁신",
+    "지식재산처"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-11-16T18:00:00+09:00",
+   "deadline_display": "2026.11.16",
+   "meta": {
+    "지원": "아이디어 공모·고도화",
+    "규모": "5개사 내외",
+    "마감": "11.16(월)18시"
+   },
+   "brief_one": "지원금이 아니라 기업이 거래금 500만원 부담",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126611",
+   "added_at": "2026-09-20"
+  },
+  {
+   "id": "423",
+   "file": "423-kconsumer-hallyu-freeride.html",
+   "title": "2026년 K-소비재 수출기업 대상 한류편승행위 대응 지원사업 참여기업 모집",
+   "summary": "해외에서 한류편승 침해를 겪는 K-소비재 수출 중소·중견기업에 현지 단속·경고장 비용 건당 $20,000, 기업당 최대 2건 지원.",
+   "tags": [
+    "수출",
+    "해외 IP 보호",
+    "한국지식재산보호원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-27T18:00:00+09:00",
+   "deadline_display": "2026.11.27",
+   "meta": {
+    "지원": "건당 $20,000",
+    "규모": "기업당 최대 2건",
+    "마감": "11.27(금)18시"
+   },
+   "brief_one": "10개국·4개 품목 침해 정황 있어야 신청 가능",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126490",
+   "added_at": "2026-09-20"
   }
  ],
  "clients": [
