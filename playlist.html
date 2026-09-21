@@ -189,7 +189,8 @@ function renderCard(p, addedAt){
   const ddayCls = st==='closed'?'closed':(st==='urgent'?'urgent':(st==='warning'?'warning':''));
   const ddayVal = st==='closed'?'\uc885\ub8cc':ddayText(dd,st);
   const log=addedAt?'<div class="sent-log">\u2713 '+esc(addedAt)+' \ucd94\uac00\ub428</div>':'<span></span>';
-  const rmBtn='<button class="remove-btn" onclick="window.removeFromList(event,\''+esc(slug)+'\')">\u2212 \uc7ac\uc0dd\ubaa9\ub85d\uc5d0\uc11c \ube7c\uae30</button>';
+  const rmBtn=state.list==='보울게임즈'?'':
+    '<button class="remove-btn" onclick="window.removeFromList(event,\''+esc(slug)+'\')">\u2212 \uc7ac\uc0dd\ubaa9\ub85d\uc5d0\uc11c \ube7c\uae30</button>';
   return '<a href="'+esc(p.file)+'" target="_blank" rel="noopener" class="program-card'+(st==='closed'?' is-closed':'')+'">'+
     '<div class="card-head"><div class="card-tags">'+tags+'</div><div class="card-dday '+ddayCls+'"><div class="dv">'+ddayVal+'</div></div></div>'+
     '<h3 class="card-title">'+esc(p.title)+'</h3>'+
@@ -236,6 +237,7 @@ function buildTypeChips(){
 
 window.removeFromList = async function(ev, slug){
   ev.preventDefault(); ev.stopPropagation();
+  if(state.list==='보울게임즈') return;
   if(!confirm('이 사업을 재생목록에서 뫏까요?')) return;
   try{
     const today = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'});
@@ -298,7 +300,12 @@ async function init(){
       document.getElementById('client-title').innerHTML = esc(state.list) + ' <span class="accent">정부지원사업 큐레이션 리스트</span>';
       document.getElementById('client-desc').textContent = '담당 컨설턴트가 선별한 맞춤 지원사업입니다.';
     }
-    if (state.list) {
+    if (state.list === '보울게임즈') {
+      const response = await fetch('https://client.growthhigh.co.kr/bowlgames/recommendations/share',
+        { cache: 'no-store' });
+      if (!response.ok) throw new Error('보울게임즈 추천 목록을 불러오지 못했습니다');
+      state.items = (await response.json()).items || [];
+    } else if (state.list) {
       const snap = await getDoc(doc(db, 'playlists', state.list));
       state.items = snap.exists() ? (snap.data().items || []) : [];
     }

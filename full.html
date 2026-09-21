@@ -577,6 +577,10 @@ $('pick-save').addEventListener('click', async () => {
   if (!name) return;
   // Firestore 문서 ID는 '/'를 허용하지 않는다 — 저장 키는 항상 '_'로 정규화(표시만 displayListName으로 예쁘게).
   name = name.replace(/\//g, '_');
+  if (name === '보울게임즈') {
+    showMsg('보울게임즈 추천 사업은 클라이언트페이지에서 관리해 주세요', true);
+    return;
+  }
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Seoul' });
   try {
     const ref = doc(db, 'playlists', name);
