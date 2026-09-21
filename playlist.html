@@ -63,6 +63,7 @@
   .card-tag.type{background:var(--warn-soft);color:var(--warn);}
   .card-tag.sub{background:var(--ok-soft);color:var(--ok);}
   .card-tag.alt{background:#F1F3F7;color:var(--ink-500);}
+  .card-tag.pinned{background:#FFF2D8;color:#8A5600;}
   .card-dday{flex-shrink:0;text-align:center;min-width:56px;padding:8px 10px;border-radius:12px;background:var(--bg-soft);}
   .card-dday .dv{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;letter-spacing:-.02em;line-height:1;color:var(--ink-700);}
   .card-dday.urgent{background:var(--urgent-soft);}.card-dday.urgent .dv{color:var(--urgent);}
@@ -179,11 +180,11 @@ function statusLabel(dd,st){ if(st==='closed')return'REF'; if(st==='urgent')retu
 function ddayText(dd,st){ if(st==='closed')return'CLOSED'; if(dd===0)return'D−0'; if(dd>=9999)return'상시'; return'D−'+dd; }
 function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
-function renderCard(p, addedAt){
+function renderCard(p, addedAt, pinned){
   const dd=calcDday(p.deadline_iso), st=getStatus(dd);
   const sub=(p.sub_industries||[]).map(s=>'<span class="card-tag sub">'+esc(s)+'</span>').join('');
   const typ=(p.types||[]).map(t=>'<span class="card-tag type">'+esc(t)+'</span>').join('');
-  const tags=typ+sub;
+  const tags=(pinned?'<span class="card-tag pinned">★ 즐겨찾기</span>':'')+typ+sub;
   const meta=Object.entries(p.meta||{}).map(([k,v])=>'<span><strong>'+esc(k)+'</strong>'+esc(v)+'</span>').join('');
   const slug=p.file.replace(/\.html$/,'');
   const ddayCls = st==='closed'?'closed':(st==='urgent'?'urgent':(st==='warning'?'warning':''));
@@ -248,14 +249,17 @@ window.removeFromList = async function(ev, slug){
 };
 
 function render(){
-  let rows = state.items.map(it => ({ p: state.bySlug[it.slug], added: it.added_at })).filter(r => r.p);
+  let rows = state.items.map(it => ({ p: state.bySlug[it.slug], added: it.added_at,
+    pinned: state.list==='보울게임즈' && !!it.pinned })).filter(r => r.p);
   const totalCount = rows.length;
   if(state.selType.size) rows = rows.filter(r => (r.p.types||[]).some(t=>state.selType.has(t)));
   const active=[], closed=[];
   rows.forEach(r => { (getStatus(calcDday(r.p.deadline_iso))==='closed'?closed:active).push(r); });
-  active.sort((a,b)=>calcDday(a.p.deadline_iso)-calcDday(b.p.deadline_iso));
-  closed.sort((a,b)=>calcDday(b.p.deadline_iso)-calcDday(a.p.deadline_iso));
-  const cardFn = state.briefingMode ? (r=>renderBriefCard(r.p)) : (r=>renderCard(r.p,r.added));
+  active.sort((a,b)=>Number(b.pinned)-Number(a.pinned)
+    || calcDday(a.p.deadline_iso)-calcDday(b.p.deadline_iso));
+  closed.sort((a,b)=>Number(b.pinned)-Number(a.pinned)
+    || calcDday(b.p.deadline_iso)-calcDday(a.p.deadline_iso));
+  const cardFn = state.briefingMode ? (r=>renderBriefCard(r.p)) : (r=>renderCard(r.p,r.added,r.pinned));
   document.getElementById('active-list').classList.toggle('idx-grid', state.briefingMode);
   document.getElementById('closed-list').classList.toggle('idx-grid', state.briefingMode);
   document.getElementById('active-list').innerHTML=active.map(cardFn).join('');
