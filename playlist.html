@@ -304,10 +304,11 @@ async function init(){
       document.getElementById('client-title').innerHTML = esc(state.list) + ' <span class="accent">정부지원사업 큐레이션 리스트</span>';
       document.getElementById('client-desc').textContent = '담당 컨설턴트가 선별한 맞춤 지원사업입니다.';
     }
-    if (state.list === '보울게임즈') {
-      const response = await fetch('https://client.growthhigh.co.kr/bowlgames/recommendations/share',
+    if (['보울게임즈','담은결'].includes(state.list)) {
+      const clientSlug = state.list === '담은결' ? 'dameungyeol' : 'bowlgames';
+      const response = await fetch(`https://client.growthhigh.co.kr/${clientSlug}/recommendations/share`,
         { cache: 'no-store' });
-      if (!response.ok) throw new Error('보울게임즈 추천 목록을 불러오지 못했습니다');
+      if (!response.ok) throw new Error(state.list+' 추천 목록을 불러오지 못했습니다');
       state.items = (await response.json()).items || [];
     } else if (state.list) {
       const snap = await getDoc(doc(db, 'playlists', state.list));
