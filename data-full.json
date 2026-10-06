@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-09-29T18:00:00+09:00",
+ "updated_at": "2026-10-06T18:00:00+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -12810,6 +12810,35 @@
    "brief_one": "기업진단→IR 고도화→투자사 미팅·투자 검토로 구성",
    "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124964",
    "added_at": "2026-09-29"
+  },
+  {
+   "id": "452",
+   "file": "452-cuk-bi-tenant-2026.html",
+   "title": "2026년 가톨릭대학교 창업보육센터 입주기업 모집",
+   "summary": "입주 후 3개월 내 창업 가능한 예비창업자와 업력 7년 이내 기술집약형 기업에 부천 성심교정 BI관·밤비노관 입주공간과 보육 프로그램을 1년간 제공합니다. 본점 이전이 조건입니다.",
+   "tags": [
+    "창업",
+    "경기 부천",
+    "창업보육센터 입주"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-10-06T22:00:00+09:00",
+   "deadline_display": "2026.10.06. 22:00",
+   "meta": {
+    "지원": "입주공간·공동장비, 창업교육·멘토링, 사업화·유관기관 연계",
+    "규모": "BI관 7개실 + 밤비노관 4개실 / 입주 1년",
+    "마감": "2026.10.06. 22:00"
+   },
+   "brief_one": "입주 확정 후 3개월 안에 본점을 옮겨야 한다",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179343",
+   "added_at": "2026-10-06"
   }
  ],
  "clients": [
