@@ -115,6 +115,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, collection, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { firebaseConfig } from "./firebase-config.js";
+import { clientpageClients } from "./clientpage-clients.js";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -149,7 +150,7 @@ function renderLists(){
       '<div class="list-body"><div class="list-name">' + esc(displayName(l.name)) + '</div>' +
       '<div class="list-meta">' + (l.updated ? '<span class="mono">' + esc(l.updated.replace(/-/g,'.')) + ' 수정</span>' : '') + '</div></div>' +
       '<div class="list-count"><div class="num">' + l.count + '</div><div class="lbl">사업</div></div>' +
-      (['보울게임즈','담은결'].includes(l.name) ? '' : '<button class="list-del" title="삭제" onclick="window.deleteList(event,\'' + esc(l.name) + '\')">🗑</button>') +
+      (Object.hasOwn(clientpageClients,l.name) ? '' : '<button class="list-del" title="삭제" onclick="window.deleteList(event,\'' + esc(l.name) + '\')">🗑</button>') +
       '<div class="list-arrow">→</div>' +
     '</a>'
   ).join('');
@@ -157,7 +158,7 @@ function renderLists(){
 
 window.deleteList = async function(ev, name){
   ev.preventDefault(); ev.stopPropagation();
-  if(['보울게임즈','담은결'].includes(name)) return;
+  if(Object.hasOwn(clientpageClients,name)) return;
   if(!confirm('"'+displayName(name)+'" 재생목록을 삭제할까요?')) return;
   try{
     await deleteDoc(doc(db, 'playlists', name));
@@ -189,7 +190,7 @@ async function init(){
     try {
       const snap = await getDocs(collection(db, 'playlists'));
       snap.forEach(d => {
-        if(['보울게임즈','담은결'].includes(d.id)) return;
+        if(Object.hasOwn(clientpageClients,d.id)) return;
         const data = d.data();
         const items = data.items||[];
         const types = new Set();
@@ -199,7 +200,7 @@ async function init(){
       });
     } catch (error) { console.warn('기존 재생목록을 불러오지 못했습니다', error); }
     let clientListFailed = false;
-    for (const [name, slug] of [['보울게임즈','bowlgames'],['담은결','dameungyeol']]) {
+    for (const [name, slug] of Object.entries(clientpageClients)) {
       try {
         const response = await fetch(`https://client.growthhigh.co.kr/${slug}/recommendations/share`, {cache:'no-store'});
         if (!response.ok) throw new Error('unavailable');

@@ -488,6 +488,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, doc, getDoc, setDoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 import { firebaseConfig, EDIT_PASSCODE } from "./firebase-config.js";
+import { clientpageClients } from "./clientpage-clients.js";
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -523,7 +524,7 @@ async function loadPlaylists() {
   try {
     const snap = await getDocs(collection(db, 'playlists'));
     snap.forEach(d => {
-      if (d.id === today.key) return; // 오늘 브리핑은 이미 위에 있음, 중복 방지
+      if (d.id === today.key || Object.hasOwn(clientpageClients, d.id)) return;
       const o = document.createElement('option'); o.value = d.id; o.textContent = displayListName(d.id);
       (d.id.startsWith(BRIEFING_PREFIX) ? briefingGroup : listGroup).appendChild(o);
     });
@@ -577,7 +578,7 @@ $('pick-save').addEventListener('click', async () => {
   if (!name) return;
   // Firestore 문서 ID는 '/'를 허용하지 않는다 — 저장 키는 항상 '_'로 정규화(표시만 displayListName으로 예쁘게).
   name = name.replace(/\//g, '_');
-  if (['보울게임즈','담은결'].includes(name)) {
+  if (Object.hasOwn(clientpageClients, name)) {
     showMsg(name+' 추천 사업은 클라이언트페이지에서 관리해 주세요', true);
     return;
   }
