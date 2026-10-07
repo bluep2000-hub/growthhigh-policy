@@ -6,4 +6,12 @@ export const clientpageClients = {
   '웰던프로덕트': 'welldoneproduct',
   '사유존': 'sayuzone',
   '서윤웰스': 'sywells',
+  '동선컴퍼니': 'dongseoncompany',
+  '새움솔루션': 'saeumsolution',
+  '트리봇코리아': 'tribotkorea',
+  '프리랜드': 'freeland',
+  '처음청약': 'firstsubscription',
+  '프로젝트모름': 'projectmoreum',
+  '잘빠진방앗간': 'jalppajinbangatgan',
+  '비쉐어': 'beshare',
 };
