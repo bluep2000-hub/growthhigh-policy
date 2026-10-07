@@ -14,4 +14,7 @@ export const clientpageClients = {
   '프로젝트모름': 'projectmoreum',
   '잘빠진방앗간': 'jalppajinbangatgan',
   '비쉐어': 'beshare',
+  '디지털이엔에스': 'digitalens',
+  '영원희': 'youngwonhee',
+  '모비먼트': 'mobiment',
 };
