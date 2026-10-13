@@ -17,4 +17,7 @@ export const clientpageClients = {
   '디지털이엔에스': 'digitalens',
   '영원희': 'youngwonhee',
   '모비먼트': 'mobiment',
+  '엔에프비엠': 'nfbm',
+  '무월소프트': 'muwolsoft',
+  '삼부자푸드': 'sambujafood',
 };
