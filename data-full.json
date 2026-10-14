@@ -5391,8 +5391,8 @@
    "tags": [],
    "industries": [],
    "types": [],
-   "deadline_iso": null,
-   "deadline_display": "",
+   "deadline_iso": "2026-06-19T18:00:00+09:00",
+   "deadline_display": "2026.06.19. 18:00",
    "meta": {}
   },
   {
@@ -5415,8 +5415,8 @@
    "tags": [],
    "industries": [],
    "types": [],
-   "deadline_iso": null,
-   "deadline_display": "",
+   "deadline_iso": "2026-06-29T16:00:00+09:00",
+   "deadline_display": "2026.06.29. 16:00",
    "meta": {},
    "notion_key": "MSS_1068742",
    "notion_url": "https://www.mss.go.kr/site/smba/ex/bbs/View.do?cbIdx=310&bcIdx=1068742&parentSeq=1068742"
@@ -5465,8 +5465,8 @@
    "tags": [],
    "industries": [],
    "types": [],
-   "deadline_iso": null,
-   "deadline_display": "",
+   "deadline_iso": "2026-06-09T18:00:00+09:00",
+   "deadline_display": "2026.06.09. 18:00",
    "meta": {}
   },
   {
