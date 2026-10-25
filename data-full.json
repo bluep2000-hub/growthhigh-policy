@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-10-18T18:00:00+09:00",
+ "updated_at": "2026-10-25T18:00:00+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -14758,6 +14758,523 @@
    "brief_one": "매출 100억원 이력 필수 — 혁신형은 12.21까지",
    "source_url": "https://www.kosmes.or.kr/nsh/SH/NTS/SHNTS001F0.do?seqNo=6107158&nowPage=1&searchC=null&searchG=titleCon&searchT=&tabPage=01",
    "added_at": "2026-10-18"
+  },
+  {
+   "id": "519",
+   "file": "519-kgf-happy-outdoor-popup.html",
+   "title": "2026년 10월 코리아그랜드페스티벌 오프라인 기획전 (행복한백화점 야외 광장)",
+   "summary": "생활·잡화·주방·식품 업체가 행복한백화점 야외 광장에서 10.30~11.15 주말 3회차 기획전에 참여. 판매인원 상주 필수.",
+   "tags": [
+    "판로수출",
+    "야외 기획전",
+    "행복한백화점"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-27T23:59:00+09:00",
+   "deadline_display": "2026.10.27",
+   "meta": {
+    "지원": "야외 광장 기획전",
+    "규모": "공고문 미기재",
+    "마감": "10.27(화)23:59"
+   },
+   "brief_one": "판매인원 상주 가능 업체만 신청 가능",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127397",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "520",
+   "file": "520-overseas-trademark-squat-7.html",
+   "title": "2026년 해외 상표 무단선점 심층조사 지원사업 (정기 7차)",
+   "summary": "해외 상표 무단선점 피해(예상) 기업 300개사에 상표 최대 3개·10개국 심층조사 보고서와 온라인 상담을 무료 제공. 7차는 10.28 마감.",
+   "tags": [
+    "지식재산",
+    "상표 무단선점",
+    "한국지식재산보호원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-10-28T23:59:00+09:00",
+   "deadline_display": "2026.10.28",
+   "meta": {
+    "지원": "무료 심층조사",
+    "규모": "300개사",
+    "마감": "10.28(수)"
+   },
+   "brief_one": "7차는 접수 28일까지, 평소보다 8일 길다",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127351",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "521",
+   "file": "521-nipa-b300-gpu-beta.html",
+   "title": "2026년 「첨단 GPU 활용 지원 사업」 베타서비스 참여자 모집",
+   "summary": "중소기업·스타트업·대학·연구소에 B300 GPU 서버 1~4대를 10.30~12.11 43일간 무상 제공하는 베타서비스. 총 480장.",
+   "tags": [
+    "AI 인프라",
+    "GPU 베타서비스",
+    "NIPA"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-10-28T15:00:00+09:00",
+   "deadline_display": "2026.10.28",
+   "meta": {
+    "지원": "B300 무상 이용",
+    "규모": "과제당 서버 1~4대",
+    "마감": "10.28(수)15시"
+   },
+   "brief_one": "접수 6일, 1~2쪽 요약서로 B300 무상 사용",
+   "source_url": "https://www.nipa.kr/home/2-2/16976",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "522",
+   "file": "522-kotra-zhengzhou-kconsumer.html",
+   "title": "2026년 K-소비재 온-오프라인 판촉 상담회 참가기업 모집 (정저우 중부6성 박람회 연계)",
+   "summary": "중국 내륙 진출 희망 소비재 기업 20개사 내외에 11.20 정저우 허난성 바이어 1:1 온·오프라인 상담 주선. 참가비·통역 무료.",
+   "tags": [
+    "판로수출",
+    "수출상담회",
+    "KOTRA"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-30T23:59:00+09:00",
+   "deadline_display": "2026.10.30",
+   "meta": {
+    "지원": "바이어 1:1 상담·통역",
+    "규모": "20개사 내외",
+    "마감": "10.30(금)"
+   },
+   "brief_one": "온라인은 출장 없이, 현장은 여비 자부담",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127342",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "523",
+   "file": "523-dapa-export-item-2nd-ext.html",
+   "title": "2026년 2차 유망수출품목발굴 지원사업 참여기업 모집 연장 공고 (방산 수출)",
+   "summary": "방산 중소·중견기업의 해외인증·수출컨설팅·해외 성능시현 비용 70~75%를 기업당 최대 5천만원 지원. 10.30 정오까지 연장 접수.",
+   "tags": [
+    "방산 수출",
+    "해외인증·컨설팅",
+    "방위사업청"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-30T12:00:00+09:00",
+   "deadline_display": "2026.10.30",
+   "meta": {
+    "지원": "비용 70~75%",
+    "규모": "최대 5천만원",
+    "마감": "10.30(금)12시"
+   },
+   "brief_one": "연장 접수, 마감이 15시에서 정오로 당겨짐",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127395",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "524",
+   "file": "524-kspo-sporting-goods-awards.html",
+   "title": "2026년 우수 스포츠용품 선정 (K-Sporting Goods Awards)",
+   "summary": "국내 중소기업이 제조한 B2C 스포츠용품 10개 품목을 선정해 언론보도·SPOEX 홍보관·공단 지원사업 가점 등을 지원.",
+   "tags": [
+    "스포츠산업",
+    "우수제품 선정",
+    "국민체육진흥공단"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-10-30T18:00:00+09:00",
+   "deadline_display": "2026.10.30",
+   "meta": {
+    "지원": "홍보·SPOEX·가점",
+    "규모": "10개 품목",
+    "마감": "10.30(금)18시"
+   },
+   "brief_one": "OEM은 가능, ODM·단순수입 제품은 불가",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127431",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "525",
+   "file": "525-seoul-jewelry-master300.html",
+   "title": "2026년 서울 주얼리 제조 마스터 300 발굴(1차년도) 2차 추가모집",
+   "summary": "서울 소재 업력 3년 이상 주얼리 소공인·제조업체 50개사 내외에 홍보사진 촬영·소개 콘텐츠 제작과 디자이너-제조 매칭을 지원한다.",
+   "tags": [
+    "판로·마케팅",
+    "주얼리 제조",
+    "서울 한정"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-10-31T23:59:00+09:00",
+   "deadline_display": "2026.10.31",
+   "meta": {
+    "지원": "홍보촬영·일감 매칭",
+    "규모": "50개사 내외",
+    "마감": "10.31(토)"
+   },
+   "brief_one": "현금 지원 없음, 홍보촬영과 디자이너 일감 매칭 사업",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127390",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "526",
+   "file": "526-seafood-cold-storage-q4.html",
+   "title": "2026년 국내 저온 저장시설 보관 지원업체 모집(4분기)",
+   "summary": "수산물 수출 중소·중견기업의 국내 저온창고 보관비(VAT 제외)를 최대 80%, 업체당 연 20백만원까지 분기별 사후정산으로 지원한다.",
+   "tags": [
+    "수출",
+    "수산물 저온창고",
+    "한국수산무역협회"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-02T16:00:00+09:00",
+   "deadline_display": "2026.11.02",
+   "meta": {
+    "지원": "보관비 최대 80%",
+    "규모": "업체당 2천만원",
+    "마감": "11.02(월)16시"
+   },
+   "brief_one": "4분기 선정 시 1~9월 보관비까지 소급 청구 가능",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127296",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "527",
+   "file": "527-seoulcon-2nd-partner.html",
+   "title": "2026 서울콘(SeoulCon) 2차 프로그램 협력사 공개모집",
+   "summary": "서울 소재 민간 주체에 서울콘(12.29~1.1) 인플루언서 모객 프로그램 운영비를 협력사당 최대 4천만원 지원한다. 1:1 이상 민간매칭 필수.",
+   "tags": [
+    "콘텐츠",
+    "행사 협력사",
+    "서울 한정"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-11-02T18:00:00+09:00",
+   "deadline_display": "2026.11.02",
+   "meta": {
+    "지원": "최대 4천만원",
+    "규모": "총 3억원",
+    "마감": "11.02(월)18시"
+   },
+   "brief_one": "인플루언서 100명 모객·1:1 민간매칭 필수",
+   "source_url": "https://www.sba.seoul.kr/Pages/BusinessApply/PostingDetail.aspx?p=0&mid=df35f59f-51cc-f111-b404-d4f5ef4a1e33",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "528",
+   "file": "528-gg-local-startup-bizday.html",
+   "title": "2026 로컬 스타트업 챌린지 비즈니스 데이 참가기업 모집(투자사 1:1 매칭)",
+   "summary": "투자사 1:1 미팅을 원하는 스타트업 30개사를 심사 없이 선착순으로 받아 11.4 의정부 비즈니스 데이에서 투자사와 매칭한다.",
+   "tags": [
+    "투자유치",
+    "투자사 매칭",
+    "경기콘텐츠진흥원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "투자유치"
+   ],
+   "deadline_iso": "2026-11-02T13:00:00+09:00",
+   "deadline_display": "2026.11.02",
+   "meta": {
+    "지원": "투자사 1:1 매칭",
+    "규모": "30개사 선착순",
+    "마감": "11.02(월)13시"
+   },
+   "brief_one": "심사 없는 선착순 30개사, 지역 제한 없음",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127329",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "529",
+   "file": "529-content-americas-2027-extra.html",
+   "title": "2027 콘텐츠 아메리카(Content Americas) 한국공동관 및 쇼케이스 참가기업 추가모집",
+   "summary": "방송영상 해외수출 희망 기업 최대 2개사에 2027년 1월 마이애미 콘텐츠 아메리카 한국공동관 상담테이블과 쇼케이스 발표를 지원한다.",
+   "tags": [
+    "수출",
+    "콘텐츠 마켓",
+    "한국콘텐츠진흥원"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-03T17:00:00+09:00",
+   "deadline_display": "2026.11.03",
+   "meta": {
+    "지원": "공동관·쇼케이스",
+    "규모": "최대 2개사",
+    "마감": "11.03(화)17시"
+   },
+   "brief_one": "9월 본모집 이후 추가모집, 최대 2개사만 선정",
+   "source_url": "https://www.kocca.kr/kocca/pims/view.do?intcNo=326D00085010&menuNo=204104",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "530",
+   "file": "530-tipa-rnd-mock-eval.html",
+   "title": "2026년 중소기업기술개발지원사업 모의평가 프로그램",
+   "summary": "2027년 중소기업 R&D 참여를 준비하는 중소기업 200개사 내외에 실제 선정평가와 유사한 대면 모의평가와 컨설팅을 선착순 제공한다.",
+   "tags": [
+    "R&D",
+    "모의평가",
+    "중소기업기술정보진흥원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "R&D"
+   ],
+   "deadline_iso": "2026-11-05T18:00:00+09:00",
+   "deadline_display": "2026.11.05",
+   "meta": {
+    "지원": "대면 모의평가",
+    "규모": "200개사 내외",
+    "마감": "11.05(목)18시"
+   },
+   "brief_one": "10.29 접수 시작, 선착순 조기마감 주의",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127338",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "531",
+   "file": "531-konkuk-biofoodtech-contract.html",
+   "title": "2027학년도 건국대학교 AI-바이오푸드테크 계약학과 참여기업 모집",
+   "summary": "바이오·푸드테크 기업이 건국대 계약학과 석사생을 공동 선발해 3학기 교육 후 즉시 채용하는 인재 확보 프로그램.",
+   "tags": [
+    "인력",
+    "계약학과",
+    "건국대학교"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인력"
+   ],
+   "deadline_iso": "2026-11-06T18:00:00+09:00",
+   "deadline_display": "2026.11.06",
+   "meta": {
+    "지원": "석사 인재 선발·채용",
+    "규모": "공고문 참조",
+    "마감": "11.06(금)18시"
+   },
+   "brief_one": "최종 선발권은 기업, 졸업 후 1년 의무근무",
+   "source_url": "https://www.egbiz.or.kr/sp/supportPrjDtl.do?listUrl=supportPrjPlanList&bizCyclId=PD000000057389",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "532",
+   "file": "532-dongguk-bi-seoul-2026.html",
+   "title": "2026 동국대학교 창업보육센터(서울) 신규 입주기업 모집",
+   "summary": "AI·플랫폼 분야 예비·7년 이내 창업기업 대상 동국대 충무로관 보육실 3개 호실 입주기업 모집. 기본 3년.",
+   "tags": [
+    "창업",
+    "보육공간",
+    "서울 한정"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-09T11:00:00+09:00",
+   "deadline_display": "2026.11.09",
+   "meta": {
+    "지원": "보육실 입주",
+    "규모": "3개 호실",
+    "마감": "11.09(월)11시"
+   },
+   "brief_one": "AI·플랫폼 한정, 보증금·발전기금 선납",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179598",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "533",
+   "file": "533-pilot-purchase-4th.html",
+   "title": "2026년 기술개발제품 시범구매 지원계획(4차)",
+   "summary": "기술개발제품 인증 중소기업의 공공기관 시범구매 연계. 창업·일반·소액·딥테크 4과제 택1, 561개 구매기관.",
+   "tags": [
+    "공공조달",
+    "시범구매",
+    "중소벤처기업유통원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-10T18:00:00+09:00",
+   "deadline_display": "2026.11.10",
+   "meta": {
+    "지원": "공공기관 시범구매",
+    "규모": "구매기관 561개",
+    "마감": "11.10(화)18시"
+   },
+   "brief_one": "이번 4차부터 딥테크과제 신설, 대상 인증 17종",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127379",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "534",
+   "file": "534-seoul-game-lab-2026.html",
+   "title": "2026 서울게임콘텐츠센터 게임랩 신규 입주기업 모집",
+   "summary": "서울 소재·이전 희망 5인 이하 게임개발사에 게임랩 좌석 6석 제공. 임대료·보증금·관리비 전액 지원, 최장 3년.",
+   "tags": [
+    "게임",
+    "입주공간",
+    "서울 한정"
+   ],
+   "industries": [
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-10T15:00:00+09:00",
+   "deadline_display": "2026.11.10",
+   "meta": {
+    "지원": "임대료·관리비 전액",
+    "규모": "총 6석",
+    "마감": "11.10(화)15시"
+   },
+   "brief_one": "직원 5인 이하만, 과거 입주 이력 있으면 불가",
+   "source_url": "https://www.sba.seoul.kr/Pages/BusinessApply/PostingDetail.aspx?p=0&mid=61860843-d4cd-f111-b404-d4f5ef4a1e33",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "535",
+   "file": "535-ibk-changgong-2027h1.html",
+   "title": "2027년 상반기 IBK창공(創工) 혁신창업기업 모집",
+   "summary": "업력 7년 이내 중소기업 대상 IBK창공 6개 거점 95개사 내외 선발. 투자 검토·대출 연계·멘토링·무상 사무공간 5개월.",
+   "tags": [
+    "창업",
+    "액셀러레이팅",
+    "IBK기업은행"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-13T14:00:00+09:00",
+   "deadline_display": "2026.11.13",
+   "meta": {
+    "지원": "투자·멘토링·공간",
+    "규모": "95개사 내외",
+    "마감": "11.13(금)14시"
+   },
+   "brief_one": "업종 무관, 예비창업자·중복지원 불가",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127358",
+   "added_at": "2026-10-25"
+  },
+  {
+   "id": "536",
+   "file": "536-kocca-vp-infra-extra.html",
+   "title": "2026년 VP 활용 콘텐츠 제작 인프라 지원 추가공모",
+   "summary": "제작 중인 중소 방송영상 작품 5편 이내에 대전 스튜디오큐브 VP 스튜디오 대관료 50%와 장비·기술인력 무상 지원.",
+   "tags": [
+    "방송영상",
+    "VP 인프라",
+    "한국콘텐츠진흥원"
+   ],
+   "industries": [
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-11-17T11:00:00+09:00",
+   "deadline_display": "2026.11.17",
+   "meta": {
+    "지원": "대관료 50%·장비 무상",
+    "규모": "5개 작품 이내",
+    "마감": "11.17(화)11시"
+   },
+   "brief_one": "현금 지원 없음, 12.30까지 촬영 마쳐야",
+   "source_url": "https://www.kocca.kr/kocca/pims/view.do?intcNo=326D00059002&menuNo=204104",
+   "added_at": "2026-10-25"
   }
  ],
  "clients": [
