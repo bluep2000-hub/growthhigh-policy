@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-10-25T18:00:00+09:00",
+ "updated_at": "2026-10-29T14:09:54+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -5375,13 +5375,29 @@
    "id": "02",
    "file": "02-innovation-voucher.html",
    "title": "2026년 중소기업 혁신바우처 사업 1차",
-   "summary": "",
-   "tags": [],
-   "industries": [],
-   "types": [],
-   "deadline_iso": null,
-   "deadline_display": "",
-   "meta": {}
+   "summary": "제조업 소기업(3년 평균 매출 140억 이하)에 컨설팅·기술지원·마케팅 바우처 최대 5천만원. 매출·지역별 보조율 40~85%, 지방 최대 95%.",
+   "tags": [
+    "제조 · 바우처",
+    "혁신바우처",
+    "중기부·중진공"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2025-12-02T18:00:00+09:00",
+   "deadline_display": "2025.12.02",
+   "meta": {
+    "지원": "최대 5천만원",
+    "비율": "40~85%",
+    "마감": "12.2(화)18시"
+   },
+   "brief_one": "제조 소기업 전용, 지방은 보조율 최대 95%",
+   "source_url": "https://www.mssmiv.com/portal/Main",
+   "added_at": "2026-10-29"
   },
   {
    "id": "03",
@@ -15275,6 +15291,101 @@
    "brief_one": "현금 지원 없음, 12.30까지 촬영 마쳐야",
    "source_url": "https://www.kocca.kr/kocca/pims/view.do?intcNo=326D00059002&menuNo=204104",
    "added_at": "2026-10-25"
+  },
+  {
+   "id": "537",
+   "file": "537-seoul-award-2026-2nd.html",
+   "title": "2026년도 서울어워드 우수제품 모집 (2차)",
+   "summary": "서울 소재 중소기업이 직접 제조한 뷰티·식품·리빙 소비재 150개 제품 선정. 지원금 없이 선정확인서·엠블럼과 SBA 해외 판로사업 가산점 제공.",
+   "tags": [
+    "수출 · 우수제품",
+    "서울 소비재",
+    "서울경제진흥원"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [
+    "뷰티",
+    "푸드",
+    "라이프"
+   ],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-06-04T18:00:00+09:00",
+   "deadline_display": "2026.06.04",
+   "meta": {
+    "지원": "선정확인서·엠블럼",
+    "규모": "150개 제품 내외",
+    "마감": "6.4(목)18시"
+   },
+   "brief_one": "현금 없음, SBA 해외사업 가산점이 실익",
+   "source_url": "https://smc.sba.kr/Pages/BusinessApply/PostingDetail.aspx?p=0&mid=1699cbfc-a34e-f111-b404-d4f5ef4a1e33",
+   "added_at": "2026-10-29"
+  },
+  {
+   "id": "538",
+   "file": "538-k-export-strategic-items-2026.html",
+   "title": "2026년 K-수출전략품목 육성사업 참여기업 모집",
+   "summary": "'25년 수출실적이 있는 뷰티·패션·라이프·푸드 제조 중소기업 200개사를 3년간 지정. 올리브영·무신사 등 협력사 프로그램과 수출바우처 우선선정 연계.",
+   "tags": [
+    "수출 · 지정제",
+    "4대 소비재",
+    "중기부·유통원"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [
+    "뷰티",
+    "패션",
+    "라이프",
+    "푸드"
+   ],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-06-25T23:59:00+09:00",
+   "deadline_display": "2026.06.25",
+   "meta": {
+    "지원": "지정+수출사업 우선선정",
+    "규모": "200개사 내외",
+    "마감": "6.25(목)"
+   },
+   "brief_one": "성장성 자료 미제출 시 자동 탈락",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?schM=view&pbancSn=178042",
+   "added_at": "2026-10-29"
+  },
+  {
+   "id": "539",
+   "file": "539-seoul-export-promising-beginner.html",
+   "title": "2026 수출유망기업(수출초보기업) 육성지원사업",
+   "summary": "서울 소재 '25년 수출 10만불 미만 중소기업 20개사에 500만원 수출 바우처(자부담 10%). 전시회·인증·마케팅 등 9개 분야, 1.1 소급 정산.",
+   "tags": [
+    "수출 · 바우처",
+    "서울 수출초보",
+    "서울경제진흥원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-03-20T14:00:00+09:00",
+   "deadline_display": "2026.03.20",
+   "meta": {
+    "지원": "500만원 (자부담 10%)",
+    "규모": "20개사",
+    "마감": "3.20(금)14시"
+   },
+   "brief_one": "수출 0원도 신청, 1월 지출분 소급 인정",
+   "source_url": "https://www.sba.seoul.kr/Pages/BusinessApply/PostingDetail.aspx?p=0&mid=706A4ABF-5F1B-F111-B404-D4F5EF4A1E33",
+   "added_at": "2026-10-29"
   }
  ],
  "clients": [

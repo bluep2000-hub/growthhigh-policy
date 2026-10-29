@@ -8,215 +8,856 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYN8GNHPDW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-BYN8GNHPDW');
-</script>
+<style>
+/* ───── 그로스하이 표준형 검토서 — 공통 스타일 ───── */
+
+:root {
+  --bg: #FFFFFF;
+  --surface: #FAFAF7;
+  --surface-alt: #F4F2EC;
+  --ink: #0A0A0A;
+  --ink-muted: #4A4A4A;
+  --ink-subtle: #8A8A8A;
+  --line: #E8E6DD;
+  --line-strong: #C9C5B4;
+
+  --brand: #0A1828;
+  --brand-soft: #E5E8ED;
+
+  --urgent: #C73E2C;
+  --urgent-soft: #FBEAE7;
+  --warning: #A8771E;
+  --warning-soft: #FAF3E0;
+  --success: #2E6B4F;
+  --success-soft: #E5F0EA;
+  --info-soft: #EEF2F7;
+  --closed: #6B6B6B;
+  --closed-soft: #EEEEEC;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-feature-settings: "ss01", "ss02";
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+.doc {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+/* ─── Brand Header ─── */
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.logo-symbol {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.logo-text { display: inline-block; }
+
+.logo .apostrophe { color: var(--urgent); font-weight: 800; }
+
+.logo .tagline {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+  margin-top: 4px;
+}
+
+.doc-meta {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+.doc-meta strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* ─── Title ─── */
+.title-block { margin-bottom: 40px; }
+
+.label-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.label-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  background: var(--brand-soft);
+  padding: 5px 11px;
+  border-radius: 2px;
+}
+
+.label-tag.alt { background: var(--surface-alt); color: var(--ink-muted); }
+
+.doc-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  margin-bottom: 14px;
+  color: var(--ink);
+}
+
+.doc-subtitle {
+  font-size: 14px;
+  color: var(--ink-muted);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+/* ─── D-day Strip (status colors) ─── */
+.dday-strip {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  margin-bottom: 64px;
+  border-left: 4px solid;
+}
+
+.dday-strip.urgent { background: var(--urgent-soft); border-left-color: var(--urgent); }
+.dday-strip.warning { background: var(--warning-soft); border-left-color: var(--warning); }
+.dday-strip.closed { background: var(--closed-soft); border-left-color: var(--closed); }
+
+.dday-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  position: relative;
+  padding-left: 18px;
+}
+
+.dday-strip.urgent .dday-badge { color: var(--urgent); }
+.dday-strip.warning .dday-badge { color: var(--warning); }
+.dday-strip.closed .dday-badge { color: var(--closed); }
+
+.dday-badge::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dday-strip.urgent .dday-badge::before { background: var(--urgent); animation: pulse 2s infinite; }
+.dday-strip.warning .dday-badge::before { background: var(--warning); animation: pulse 2.5s infinite; }
+.dday-strip.closed .dday-badge::before { background: var(--closed); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+  50% { opacity: 0.4; transform: translateY(-50%) scale(1.5); }
+}
+
+.dday-text {
+  font-size: 14px;
+  color: var(--ink);
+  flex: 1;
+  line-height: 1.5;
+}
+
+.dday-text strong { font-weight: 700; }
+
+/* ─── Section ─── */
+section { margin-bottom: 64px; }
+
+.section-header {
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.section-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-subtle);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.section-en .num { color: var(--urgent); margin-right: 6px; }
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+/* ─── A. Meta Grid ─── */
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.meta-cell {
+  padding: 18px 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.meta-cell:nth-child(2n) { border-right: none; }
+.meta-cell:nth-last-child(-n+2) { border-bottom: none; }
+
+.meta-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+  margin-bottom: 6px;
+}
+
+.meta-value {
+  font-size: 15px;
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.source-link {
+  font-size: 13px;
+  color: var(--ink-muted);
+  padding: 4px 0;
+}
+
+.source-link a {
+  color: var(--brand);
+  text-decoration: none;
+  border-bottom: 1px solid var(--brand-soft);
+  transition: border-color 0.2s;
+  font-weight: 500;
+}
+
+.source-link a:hover { border-bottom-color: var(--brand); }
+
+/* ─── B. Core Cards ─── */
+.core-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.core-card {
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.core-card:hover { transform: translateY(-2px); border-color: var(--ink); }
+
+.core-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+}
+
+.card-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-subtle);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.card-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.card-headline {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+}
+
+.card-body {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+/* ─── Tables ─── */
+.table-block { margin-bottom: 36px; }
+
+.block-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.block-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.block-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+table.tracks {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+table.tracks thead { background: var(--surface); }
+
+table.tracks th {
+  text-align: left;
+  padding: 13px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border-bottom: 1px solid var(--line);
+}
+
+table.tracks td {
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+table.tracks tr:last-child td { border-bottom: none; }
+table.tracks tr:hover td { background: var(--surface); }
+
+table.tracks .track-name { font-weight: 700; }
+
+.new-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--warning);
+  background: var(--warning-soft);
+  padding: 2px 6px;
+  margin-left: 6px;
+  letter-spacing: 0.08em;
+  vertical-align: 1px;
+}
+
+/* ─── Highlight Boxes ─── */
+.highlight-box {
+  padding: 22px 26px;
+  border-left: 3px solid;
+  margin-bottom: 14px;
+}
+
+.highlight-box.warning { background: var(--warning-soft); border-left-color: var(--warning); }
+.highlight-box.urgent { background: var(--urgent-soft); border-left-color: var(--urgent); }
+.highlight-box.success { background: var(--success-soft); border-left-color: var(--success); }
+.highlight-box.info { background: var(--info-soft); border-left-color: var(--brand); }
+
+.highlight-title {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.highlight-box.warning .highlight-title { color: var(--warning); }
+.highlight-box.urgent .highlight-title { color: var(--urgent); }
+.highlight-box.success .highlight-title { color: var(--success); }
+.highlight-box.info .highlight-title { color: var(--brand); }
+
+.highlight-en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+.highlight-box.warning .highlight-en { color: var(--warning); }
+.highlight-box.urgent .highlight-en { color: var(--urgent); }
+.highlight-box.success .highlight-en { color: var(--success); }
+
+.highlight-list {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.highlight-list li {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  padding-left: 22px;
+  position: relative;
+}
+
+.highlight-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 1px;
+}
+
+.highlight-box.warning .highlight-list li::before { background: var(--warning); }
+.highlight-box.urgent .highlight-list li::before { background: var(--urgent); }
+.highlight-box.success .highlight-list li::before { background: var(--success); }
+.highlight-box.info .highlight-list li::before { background: var(--brand); }
+
+.highlight-list li strong { font-weight: 700; }
+
+/* ─── C. Checklist ─── */
+.checklist-group {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 22px 26px;
+  margin-bottom: 14px;
+}
+
+.group-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-muted);
+  margin-bottom: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.checklist {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.check {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--line-strong);
+  flex-shrink: 0;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: all 0.15s;
+  background: var(--bg);
+}
+
+.check:hover { border-color: var(--ink); }
+
+.check.checked {
+  background: var(--ink);
+  border-color: var(--ink);
+  position: relative;
+}
+
+.check.checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checklist li.bonus { color: var(--brand); font-weight: 500; }
+
+.new-inline {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--warning);
+  background: var(--warning-soft);
+  padding: 2px 6px;
+  margin-left: 6px;
+  letter-spacing: 0.08em;
+  vertical-align: 1px;
+}
+
+/* ─── PDF Link ─── */
+.pdf-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--brand);
+  text-decoration: none;
+  margin: 18px 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--brand-soft);
+  font-weight: 500;
+  transition: border-color 0.2s;
+}
+
+.pdf-link:hover { border-bottom-color: var(--brand); }
+
+/* ─── Details ─── */
+details.more {
+  background: var(--surface);
+  margin-top: 18px;
+  border: 1px solid var(--line);
+}
+
+details.more summary {
+  padding: 16px 22px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+  letter-spacing: -0.005em;
+}
+
+details.more summary::-webkit-details-marker { display: none; }
+
+details.more summary::before {
+  content: '+';
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--ink-subtle);
+  transition: all 0.2s;
+  display: inline-block;
+  width: 16px;
+  line-height: 1;
+}
+
+details.more[open] summary::before { content: '−'; color: var(--ink); }
+
+details.more .more-content {
+  padding: 8px 22px 22px;
+  border-top: 1px solid var(--line);
+}
+
+details.more h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 18px 0 10px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+details.more h4:first-child { margin-top: 8px; }
+
+details.more h4 .en {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
+details.more ul { list-style: none; padding-left: 0; }
+
+details.more ul li {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  padding-left: 14px;
+  position: relative;
+}
+
+details.more ul li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--ink-subtle);
+}
+
+details.more p {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.65;
+  margin: 6px 0;
+}
+
+/* ─── Footer ─── */
+.doc-footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 2px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-brand {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.footer-brand .apostrophe { color: var(--urgent); }
+
+.footer-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ink-subtle);
+  letter-spacing: 0.06em;
+  text-align: right;
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 720px) {
+  .doc { padding: 32px 20px 60px; }
+  .doc-title { font-size: 28px; }
+  .meta-grid { grid-template-columns: 1fr; }
+  .meta-cell { border-right: none; }
+  .meta-cell:not(:last-child) { border-bottom: 1px solid var(--line); }
+  .core-cards { grid-template-columns: 1fr; }
+  table.tracks { font-size: 12px; }
+  table.tracks th, table.tracks td { padding: 10px 12px; }
+  .brand-header { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .doc-meta { text-align: left; }
+}
+
+/* ─── Print ─── */
+@media print {
+  body { background: white; }
+  .doc { padding: 0; max-width: 100%; }
+  .core-card:hover { transform: none; }
+  .dday-badge::before { animation: none; }
+  details.more[open] summary { display: none; }
+  details.more .more-content { padding: 0; border: none; }
+}
+
+/* ===== PDF 모달 뷰어 ===== */
+.pdf-modal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(10,24,40,.72);backdrop-filter:blur(3px);}
+.pdf-modal.open{display:flex;flex-direction:column;}
+.pdf-modal-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px;background:var(--brand);color:#fff;flex:none;}
+.pdf-modal-title{font-size:14px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.pdf-modal-actions{display:flex;align-items:center;gap:8px;flex:none;}
+.pdf-modal-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s ease;}
+.pdf-modal-btn:hover{background:rgba(255,255,255,.2);}
+.pdf-modal-close{width:38px;height:38px;justify-content:center;padding:0;font-size:18px;}
+.pdf-modal-body{flex:1;background:#525659;}
+.pdf-modal-body iframe{width:100%;height:100%;border:0;}
+@media (max-width:480px){.pdf-modal-title{font-size:12px;}.pdf-modal-btn{padding:7px 10px;font-size:12px;}}
+
+/* ===== GROWTH'HIGH 플로팅 버튼 ===== */
+.gh-fab{position:fixed;right:24px;bottom:24px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.gh-fab-menu{display:flex;flex-direction:column;align-items:flex-end;gap:10px;opacity:0;transform:translateY(12px) scale(.96);pointer-events:none;transition:opacity .22s ease,transform .22s ease;}
+.gh-fab.open .gh-fab-menu{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+.gh-fab-item{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;background:#fff;border:1px solid var(--line-strong);border-radius:999px;box-shadow:0 4px 16px rgba(10,24,40,.13);text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.01em;color:var(--brand);white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;}
+.gh-fab-item:hover{transform:translateX(-3px);box-shadow:0 6px 20px rgba(10,24,40,.2);}
+.gh-fab-ico{font-size:16px;line-height:1;}
+.gh-fab-cta{background:var(--urgent);color:#fff;border-color:var(--urgent);}
+.gh-fab-cta:hover{background:#B33523;}
+.gh-fab-toggle{position:relative;width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;background:var(--brand);color:#fff;box-shadow:0 6px 22px rgba(10,24,40,.32);font-family:inherit;display:flex;align-items:center;justify-content:center;transition:transform .18s ease,background .18s ease;}
+.gh-fab-toggle:hover{transform:scale(1.06);}
+.gh-fab.open .gh-fab-toggle{background:var(--ink);}
+.gh-fab-toggle-open{display:inline-flex;}
+.gh-fab-toggle-close{display:none;font-size:22px;line-height:1;}
+.gh-fab.open .gh-fab-toggle-open{display:none;}
+.gh-fab.open .gh-fab-toggle-close{display:inline-flex;}
+@media print{.gh-fab{display:none !important;}.pdf-modal{display:none !important;}}
+@media (max-width:480px){.gh-fab{right:16px;bottom:16px;}.gh-fab-toggle{width:54px;height:54px;}.gh-fab-item{padding:10px 14px;font-size:13px;}}
+
+</style>
 </head>
 <body>
 <div class="doc">
-
   <header class="brand-header">
     <div class="logo"><img class="logo-symbol" src="logo.png" alt="GROWTH'HIGH"><span class="logo-text">GROWTH<span class="apostrophe">'</span>HIGH<span class="tagline">Scale-up Studio</span></span></div>
-    <div class="doc-meta"><strong>지원사업 검토 서식</strong>v1.0 STANDARD · 2026.06.16</div>
+    <div class="doc-meta"><strong>지원사업 검토 서식</strong>v1.0 STANDARD · 2026.10.29</div>
   </header>
-
   <div class="title-block">
-    <div class="label-row">
-      <span class="label-tag">제조·판로/기술</span>
-      <span class="label-tag alt">바우처</span>
-      <span class="label-tag alt">중기부·중진공</span>
-    </div>
-    <h1 class="doc-title">2026년 중소기업<br>혁신바우처 사업 1차</h1>
-    <div class="doc-subtitle">중소벤처기업부 공고 제2025-585호 · 관리기관 중소벤처기업진흥공단</div>
-  </div>
-
-  <div class="dday-strip closed">
-    <div class="dday-badge">마감</div>
-    <div class="dday-text"><strong>1차 접수 종료</strong> · 2025.11.12(수) ~ <strong>12.2(화) 18:00 마감</strong> · 2차 모집 26.2월 예정 (지역성장바우처)</div>
-  </div>
-
-  <section>
-    <div class="section-header">
-      <div class="section-en"><span class="num">A</span>Project Overview</div>
-      <h2 class="section-title">사업 개요</h2>
-    </div>
-    <div class="meta-grid">
-      <div class="meta-cell"><div class="meta-label">대상 업종 / Industry</div><div class="meta-value">제조업 주업종 (표준산업분류 C)</div></div>
-      <div class="meta-cell"><div class="meta-label">신청 형태 / Type</div><div class="meta-value">바우처 (온라인 포인트)</div></div>
-      <div class="meta-cell"><div class="meta-label">지원 형태 / Benefit</div><div class="meta-value">정부지원금 기업별 최대 50백만원</div></div>
-      <div class="meta-cell"><div class="meta-label">보조율 / Ratio</div><div class="meta-value">매출규모별 40~85% (지방 +5~15%p)</div></div>
-      <div class="meta-cell"><div class="meta-label">예산 규모 / Budget</div><div class="meta-value">652억원 (정부안)</div></div>
-      <div class="meta-cell"><div class="meta-label">바우처 유형 / Track</div><div class="meta-value">일반/중대재해/탄소중립/재기</div></div>
-    </div>
-    <div class="source-link">
-      <a href="http://www.mssmiv.com" target="_blank">→ 혁신바우처플랫폼 (mssmiv.com)</a>
-      &nbsp; · &nbsp; 사업자 명의 + 대표자 개인 공동인증서 필요 · 동일 연도 1회 참여
-    </div>
-  </section>
-
-  <section>
-    <div class="section-header">
-      <div class="section-en"><span class="num">B</span>Program Essentials</div>
-      <h2 class="section-title">사업 핵심</h2>
-    </div>
-    <div class="core-cards">
-      <div class="core-card">
-        <div class="card-num">B.01</div>
-        <div class="card-label">지원 내용 / Benefit</div>
-        <div class="card-headline">컨설팅·기술·마케팅<br>바우처</div>
-        <div class="card-body">공급기업의 분야별 서비스를 바우처(정부지원금+기업분담금 온라인 포인트)로 이용. 기업별 정부지원금 최대 50백만원, 메뉴판에서 프로그램 선택.</div>
-      </div>
-      <div class="core-card">
-        <div class="card-num">B.02</div>
-        <div class="card-label">바우처 유형 / Track</div>
-        <div class="card-headline">4개 유형<br>목적별 선택</div>
-        <div class="card-body">일반(8개 프로그램) / 중대재해예방(컨설팅 필수+기술선택) / 탄소중립(고탄소 10개 업종) / 재기컨설팅(진로제시·회생).</div>
-      </div>
-      <div class="core-card">
-        <div class="card-num">B.03</div>
-        <div class="card-label">보조율 / Ratio</div>
-        <div class="card-headline">매출·지역<br>차등 보조율</div>
-        <div class="card-body">매출 3억 이하 85% ~ 140억 이하 45%. 비수도권 +5%p, 농어촌 인구감소지역 우대 +10%p · 특별 +15%p (최대 95% cap).</div>
-      </div>
-    </div>
-
-    <div class="table-block">
-      <div class="block-header">
-        <div class="block-title">일반 바우처 분야별 프로그램</div>
-        <div class="block-en">Service Programs</div>
-      </div>
-      <table class="tracks">
-        <thead><tr><th>분야</th><th>프로그램</th><th>한도</th></tr></thead>
-        <tbody>
-          <tr><td class="track-name">컨설팅</td><td>경영기술전략 / AX·DX 컨설팅</td><td>15~50백만</td></tr>
-          <tr><td class="track-name">기술지원</td><td>시제품 제작 / 시스템·시설구축 / IP기반 기술사업화 / 인증·연구장비</td><td>15~30백만</td></tr>
-          <tr><td class="track-name">마케팅</td><td>디자인·브랜드 지원 / 홍보·광고 지원</td><td>각 20백만</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="highlight-box warning">
-      <div class="highlight-title">신청 핵심 요건 — 일반 바우처<span class="highlight-en">Key</span></div>
-      <ul class="highlight-list">
-        <li>중소기업기본법상 제조업(표준산업분류 "C") 주업종, <strong>3년 평균('22~'24) 매출액 140억원 이하</strong> 소기업</li>
-        <li>분야별 각 1개씩 신청, 선정 프로그램 내 서비스 계약 동시 최대 2건</li>
-        <li>사용기간 <strong>'26.7월말까지</strong> 최종결과물 제출 (융복합 신청 시 9월말)</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <div class="section-header">
-      <div class="section-en"><span class="num">C</span>Eligibility Checklist</div>
-      <h2 class="section-title">자격 체크리스트</h2>
-    </div>
-
-    <div class="checklist-group">
-      <div class="group-title">공통 자격 / Common (일반 바우처)</div>
-      <ul class="checklist">
-        <li><span class="check"></span><span><strong>제조업 주업종</strong> 중소기업 (표준산업분류 "C")</span></li>
-        <li><span class="check"></span><span><strong>3년 평균 매출액 140억원 이하</strong> 소기업 ('22~'24 표준재무제표 기준)</span></li>
-        <li><span class="check"></span><span>융복합 컨설팅 신청 시 <strong>2개사 이상 협업체</strong> 구성, 주관기업이 신청</span></li>
-        <li><span class="check"></span><span>필수서류 — 신청서·정보제공동의서·사업계획서·국세지방세 완납증명·최근 3개년 재무제표·사업자등록증명</span></li>
-      </ul>
-    </div>
-
-    <div class="checklist-group">
-      <div class="group-title">신청 제외 / Exclusion</div>
-      <ul class="checklist">
-        <li><span class="check"></span><span>금융기관 <strong>불량거래처 규제중</strong> 기업 (재기지원 인정기업은 가능)</span></li>
-        <li><span class="check"></span><span>국세·지방세 체납 또는 <strong>휴·폐업</strong> 기업</span></li>
-        <li><span class="check"></span><span><strong>불건전 영상게임기·도박게임장비</strong> 등 불건전 오락용품 제조업</span></li>
-        <li><span class="check"></span><span>'25년 동사업 수행중(바우처 잔액 보유), 또는 <strong>총 5회 이상</strong> 지원받은 기업</span></li>
-        <li><span class="check"></span><span>타부처 정부지원사업과 <strong>과업내용 중복</strong> (수출바우처·해외지사화 등)</span></li>
-      </ul>
-    </div>
-
-    <div class="checklist-group">
-      <div class="group-title">가점 사항 / Bonus Points (각 1점, 최대 5점)</div>
-      <ul class="checklist">
-        <li class="bonus"><span class="check"></span><span>원자재 수입 영향 높은 기업 / 소공인 직접지구 / 중소기업 밀집지역 '위기'단계 입주기업</span></li>
-        <li class="bonus"><span class="check"></span><span>지역혁신공모사업 선정지역 소재 / 중소기업 챌린지진단 수진 / 진로제시 컨설팅 처방 / 특별·우대지역 소재</span></li>
-      </ul>
-    </div>
-
-    <a href="pdfs/02-innovation-voucher.pdf" class="pdf-link">→ 공고문 PDF 원본 보기</a>
-
-    <details class="more">
-      <summary>더보기 — 유형별 상세 / 보조율 / 평가절차 / 문의</summary>
-      <div class="more-content">
-        <h4>바우처 유형별 지원대상<span class="en">Tracks</span></h4>
-        <ul>
-          <li><strong>중대재해예방</strong> — 제조 중소기업. 컨설팅 최소 10백만 필수 + 기술지원 1개 선택. 사용기간 '26.9월말</li>
-          <li><strong>탄소중립 경영혁신</strong> — 고탄소 배출 10개 업종(1차 금속·자동차·비금속·섬유·고무플라스틱·음료·펄프종이·석유정제·화학·금속가공) 중점. 컨설팅 최소 10백만 필수. 사용기간 '26.9월말</li>
-          <li><strong>재기컨설팅</strong> — 진로제시(90%)·회생컨설팅(자산규모별 차등). 예산 소진 시까지 수시 모집. 사용기간 진로제시 '26.11월말 / 회생 '27.10월말</li>
-        </ul>
-        <h4>보조율 (일반 기준)<span class="en">Subsidy</span></h4>
-        <ul>
-          <li>3억 이하 85% · 3~10억 75% · 10~50억 65% · 50~140억 45%</li>
-          <li>지역 우대: 비수도권 +5%p · 농어촌 우대 +10%p · 특별 +15%p (최대 95% cap)</li>
-        </ul>
-        <h4>평가절차<span class="en">Evaluation</span></h4>
-        <p>서면심사 → AI진단·현장평가 → 지역별위원회 → 최종 선정 (서면 상위기업은 현장평가 생략 가능)</p>
-        <ul>
-          <li>선정 후 30일 내 협약·자부담 납부, 50일 내 서비스 계약 완료</li>
-          <li><strong>⚠ 협약 포기 시 차년도 신청 불가</strong></li>
-        </ul>
-        <h4>문의<span class="en">Contact</span></h4>
-        <ul>
-          <li>일반·중대재해·탄소중립: ☎ 1357 / 1811-3655 (055-751-9783, 9588)</li>
-          <li>재기컨설팅(회생): ☎ 02-3211-5611(수도권·강원) / 055-751-9624, 9627(그 외)</li>
-          <li>민원증명서류: ☎ 02-3771-1100</li>
-        </ul>
-      </div>
-    </details>
-  </section>
-
-  <footer class="doc-footer">
-    <div class="footer-brand">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</div>
-  </footer>
-
+<div class="label-row"><span class="label-tag">제조 · 바우처</span><span class="label-tag alt">컨설팅·기술·마케팅</span><span class="label-tag alt">중기부·중진공</span></div>
+<h1 class="doc-title">2026년 중소기업 혁신바우처 사업 1차</h1>
+<div class="doc-subtitle">제조 소기업 · 기업별 정부지원금 최대 5천만원</div>
 </div>
-<!-- ===== GROWTH'HIGH 플로팅 버튼 ===== -->
-<div class="gh-fab" id="ghFab">
-  <div class="gh-fab-menu" id="ghFabMenu">
-    <a class="gh-fab-item" href="https://growthhigh.co.kr/" target="_blank" rel="noopener">
-      <span class="gh-fab-ico">🏠</span><span class="gh-fab-label">홈페이지</span>
-    </a>
-    <a class="gh-fab-item" href="https://blog.naver.com/growthhigh" target="_blank" rel="noopener">
-      <span class="gh-fab-ico">✍️</span><span class="gh-fab-label">블로그</span>
-    </a>
-    <a class="gh-fab-item gh-fab-cta" href="https://yuncommon.notion.site/351815d712b980abaaace37e5eb0354c" target="_blank" rel="noopener">
-      <span class="gh-fab-ico">💬</span><span class="gh-fab-label">무료 상담 신청</span>
-    </a>
-  </div>
-  <button class="gh-fab-toggle" id="ghFabToggle" aria-label="그로스하이 메뉴 열기" aria-expanded="false">
-    <svg class="gh-fab-toggle-open" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-    <svg class="gh-fab-toggle-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
+<div class="dday-strip closed" data-deadline="2025-12-02T18:00:00+09:00">
+<div class="dday-badge">CLOSED</div>
+<div class="dday-text"><strong>마감 완료</strong> · 2025.12.02 종료 · 재기컨설팅은 예산 소진 시까지 수시 · 참고용</div>
 </div>
+<section>
+<div class="section-header"><div class="section-en"><span class="num">A</span>Project Overview</div><h2 class="section-title">사업 개요</h2></div>
+<div class="meta-grid"><div class="meta-cell"><div class="meta-label">지원대상 / Eligibility</div><div class="meta-value">제조업 주업종(표준산업분류 C) 중소기업 중 3년 평균('22~'24) 매출액 140억원 이하 소기업</div></div><div class="meta-cell"><div class="meta-label">지원규모 / Scale</div><div class="meta-value">기업별 정부지원금 최대 5천만원 · 사업 예산 652억원(정부안)</div></div><div class="meta-cell"><div class="meta-label">보조율 / Ratio</div><div class="meta-value">매출규모별 40~85% · 비수도권 +5%p, 농어촌 우대 +10%p, 특별 +15%p (최대 95%)</div></div><div class="meta-cell"><div class="meta-label">바우처 유형 / Track</div><div class="meta-value">일반 · 중대재해예방 · 탄소중립 경영혁신 · 재기컨설팅</div></div><div class="meta-cell"><div class="meta-label">신청기간 / Period</div><div class="meta-value">2025.11.12(수) ~ 12.2(화) 18:00</div></div><div class="meta-cell"><div class="meta-label">주관 / Host</div><div class="meta-value">중소벤처기업부 / 중소벤처기업진흥공단</div></div><div class="meta-cell"><div class="meta-label">신청 / Apply</div><div class="meta-value">혁신바우처플랫폼 온라인 · 사업자 명의 + 대표자 개인 공동인증서 필요 · 동일 연도 1회 참여</div></div></div>
+<div class="source-link"><a href="javascript:void(0)" onclick="openPdfModal()">→ 공고문 원본 보기 (PDF)</a> &nbsp; · &nbsp; 신청처: 혁신바우처플랫폼(mssmiv.com) · 문의 1357 / 1811-3655</div>
+</section>
+<section>
+<div class="section-header"><div class="section-en"><span class="num">B</span>Program Essentials</div><h2 class="section-title">사업 핵심</h2></div>
+<div class="core-cards"><div class="core-card"><div class="card-num">B.01</div><div class="card-label">핵심 1 / Point</div><div class="card-headline">컨설팅·기술·마케팅<br>바우처</div><div class="card-body">공급기업 서비스를 바우처(정부지원금+기업분담금 온라인 포인트)로 이용한다. 기업별 정부지원금 최대 5천만원이며, 혁신바우처플랫폼 메뉴판에서 분야별 프로그램을 골라 공급기업과 직접 계약한다.</div></div><div class="core-card"><div class="card-num">B.02</div><div class="card-label">핵심 2 / Point</div><div class="card-headline">목적별<br>4개 유형</div><div class="card-body">일반(8개 프로그램), 중대재해예방(컨설팅 필수+기술지원 선택), 탄소중립(고탄소 10개 업종 중점), 재기컨설팅(진로제시·회생) 중 고른다. 중대재해·탄소중립은 컨설팅 최소 1천만원이 필수다.</div></div><div class="core-card"><div class="card-num">B.03</div><div class="card-label">핵심 3 / Point</div><div class="card-headline">매출·지역별<br>보조율 차등</div><div class="card-body">매출 3억 이하 85%부터 50~140억 45%까지 내려간다. 비수도권은 +5%p, 농어촌 인구감소지역 중 우대지역 +10%p, 특별지역 +15%p를 더해 최대 95%까지 받는다.</div></div></div>
+<div class="table-block"><div class="block-header"><div class="block-title">일반 바우처 분야별 프로그램</div><div class="block-en">Service Programs</div></div><table class="tracks"><thead><tr><th>분야</th><th>프로그램</th><th>한도</th></tr></thead><tbody><tr><td class="track-name">컨설팅</td><td>경영기술전략 / AX·DX 컨설팅</td><td>15~50백만원</td></tr><tr><td class="track-name">기술지원</td><td>시제품 제작 / 시스템·시설구축 / IP기반 기술사업화 / 인증·연구장비</td><td>15~30백만원</td></tr><tr><td class="track-name">마케팅</td><td>디자인·브랜드 지원 / 홍보·광고 지원</td><td>각 20백만원</td></tr></tbody></table></div><div class="table-block"><div class="block-header"><div class="block-title">보조율 (일반 기준)</div><div class="block-en">Subsidy</div></div><table class="tracks"><thead><tr><th>3년 평균 매출</th><th>보조율</th><th>비고</th></tr></thead><tbody><tr><td class="track-name">3억원 이하</td><td>85%</td><td>지역 우대 가산 적용</td></tr><tr><td class="track-name">3~10억원</td><td>75%</td><td>비수도권 +5%p</td></tr><tr><td class="track-name">10~50억원</td><td>65%</td><td>농어촌 우대 +10%p</td></tr><tr><td class="track-name">50~140억원</td><td>45%</td><td>특별지원지역 +15%p (최대 95%)</td></tr></tbody></table></div><div class="highlight-box warning"><div class="highlight-title">평가·협약 유의<span class="highlight-en">Key Conditions</span></div><ul class="highlight-list"><li>서면심사 → AI진단·현장평가 → 지역별 위원회 → 최종 선정 (서면 상위기업은 현장평가 생략 가능)</li><li>선정 후 <strong>30일 내 협약·자부담 납부, 50일 내 서비스 계약</strong> 완료</li><li><strong>협약 포기 시 차년도 신청 불가</strong></li><li>분야별 1개씩 신청, 선정 프로그램 내 서비스 계약은 동시 최대 2건 · 최종결과물 '26.7월말까지 제출 (융복합 9월말)</li></ul></div>
+</section>
+<section>
+<div class="section-header"><div class="section-en"><span class="num">C</span>Eligibility Checklist</div><h2 class="section-title">자격 체크리스트</h2></div>
+<div class="checklist-group"><div class="group-title">공통 자격 / Common (일반 바우처)</div><ul class="checklist"><li><span class="check"></span><span>제조업 주업종 중소기업 (표준산업분류 "C")</span></li><li><span class="check"></span><span>3년 평균 매출액 140억원 이하 소기업 ('22~'24 표준재무제표 기준)</span></li><li><span class="check"></span><span>융복합 컨설팅 신청 시 2개사 이상 협업체 구성, 주관기업이 신청</span></li><li><span class="check"></span><span>필수서류: 신청서·정보제공동의서·사업계획서, 국세·지방세 완납증명(법인·대표자), 최근 3개년 재무제표, 사업자등록증명</span></li></ul></div><div class="checklist-group"><div class="group-title">신청 제외 / Exclusion</div><ul class="checklist"><li><span class="check"></span><span>금융기관 불량거래처 규제 중 기업 (재기지원 인정기업은 가능)</span></li><li><span class="check"></span><span>국세·지방세 체납 또는 휴·폐업 기업</span></li><li><span class="check"></span><span>불건전 영상게임기·도박게임장비 등 불건전 오락용품 제조업</span></li><li><span class="check"></span><span>'25년 동 사업 수행 중(바우처 잔액 보유)이거나 총 5회 이상 지원받은 기업</span></li><li><span class="check"></span><span>타 부처 정부지원사업과 과업 내용 중복 (수출바우처·해외지사화 등)</span></li></ul></div><div class="checklist-group"><div class="group-title">가점 / Bonus (각 1점, 최대 5점)</div><ul class="checklist"><li><span class="check"></span><span>원자재 수입 영향이 높은 기업 · 소공인 집적지구 입주기업</span></li><li><span class="check"></span><span>중소기업 밀집지역 '위기' 단계 입주기업 · 지역혁신공모사업 선정지역 소재</span></li><li><span class="check"></span><span>중소기업 챌린지진단 수진 · 진로제시 컨설팅 처방 · 특별·우대지역 소재</span></li></ul></div>
+<a href="javascript:void(0)" class="pdf-link" onclick="openPdfModal()">→ 공고문 PDF 원본 보기</a>
+</section>
+<footer class="doc-footer">
+<div class="footer-brand">GROWTH<span class="apostrophe">'</span>HIGH — Scale-up Studio</div>
+<div class="footer-meta">Source: 중소벤처기업부 · 중소벤처기업진흥공단 (공고 제2025-585호)<br>Reviewed: 2026.10.29 · v1.0 Standard</div>
+</footer>
+</div>
+  <div class="gh-fab" id="ghFab">
+    <div class="gh-fab-menu">
+      <a class="gh-fab-item" href="https://growthhigh.co.kr" target="_blank" rel="noopener"><span class="gh-fab-ico">&#127968;</span>홈페이지</a>
+      <a class="gh-fab-item" href="https://blog.naver.com/growthhigh" target="_blank" rel="noopener"><span class="gh-fab-ico">&#9997;&#65039;</span>블로그</a>
+      <a class="gh-fab-item gh-fab-cta" href="https://yuncommon.notion.site/351815d712b980abaaace37e5eb0354c" target="_blank" rel="noopener"><span class="gh-fab-ico">&#128172;</span>무료 진단 상담</a>
+    </div>
+    <button class="gh-fab-toggle" id="ghFabToggle" aria-label="상담 메뉴 열기" aria-expanded="false">
+      <span class="gh-fab-toggle-open"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C6.477 3 2 6.79 2 11.5c0 2.27 1.05 4.32 2.76 5.84-.12 1.06-.5 2.5-1.36 3.66 1.74-.2 3.3-.86 4.45-1.66 1.1.36 2.32.56 3.62.56 5.523 0 10-3.79 10-8.5S17.523 3 12 3z" fill="#fff"/></svg></span>
+      <span class="gh-fab-toggle-close">&#10005;</span>
+    </button>
+  </div>
+
+  <div class="pdf-modal" id="pdfModal" role="dialog" aria-modal="true" aria-label="공고문 PDF 뷰어">
+    <div class="pdf-modal-bar">
+      <div class="pdf-modal-title" id="pdfModalTitle">공고문 원본</div>
+      <div class="pdf-modal-actions">
+        <a class="pdf-modal-btn" id="pdfDownloadBtn" download>&#11015; 다운로드</a>
+        <button class="pdf-modal-btn pdf-modal-close" id="pdfModalClose" aria-label="닫기">&#10005;</button>
+      </div>
+    </div>
+    <div class="pdf-modal-body"><iframe id="pdfModalFrame" title="공고문 PDF"></iframe></div>
+  </div>
+
 <script>
-(function(){
-  var fab=document.getElementById('ghFab'),btn=document.getElementById('ghFabToggle');
-  if(!fab||!btn)return;
-  btn.addEventListener('click',function(e){
-    e.stopPropagation();
-    var open=fab.classList.toggle('open');
-    btn.setAttribute('aria-expanded',open?'true':'false');
-  });
-  document.addEventListener('click',function(e){
-    if(fab.classList.contains('open')&&!fab.contains(e.target)){
-      fab.classList.remove('open');btn.setAttribute('aria-expanded','false');
-    }
-  });
-})();
+var PDF_DATA="pdfs/02-innovation-voucher.pdf";
+var PDF_NAME="2026년 중소기업 혁신바우처 사업 1차 지원계획 공고.pdf";
 </script>
-<script src="script.js"></script>
+<script>
+
+(function(){
+  // 체크박스 토글
+  document.querySelectorAll('.check').forEach(check => {
+  check.addEventListener('click', () => check.classList.toggle('checked'));
+});
+
+  // 플로팅 버튼
+  var fab=document.getElementById('ghFab'),tg=document.getElementById('ghFabToggle');
+  if(tg){tg.addEventListener('click',function(e){e.stopPropagation();var o=fab.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false');});
+  document.addEventListener('click',function(e){if(fab.classList.contains('open')&&!fab.contains(e.target)){fab.classList.remove('open');tg.setAttribute('aria-expanded','false');}});}
+  // PDF 모달
+  var modal=document.getElementById('pdfModal'),frame=document.getElementById('pdfModalFrame'),dl=document.getElementById('pdfDownloadBtn');
+  window.openPdfModal=function(){if(!modal)return;frame.src=PDF_DATA;dl.href=PDF_DATA;dl.setAttribute('download',PDF_NAME);document.getElementById('pdfModalTitle').textContent=PDF_NAME;modal.classList.add('open');document.body.style.overflow='hidden';};
+  function closePdf(){if(!modal)return;modal.classList.remove('open');frame.src='';document.body.style.overflow='';}
+  var cb=document.getElementById('pdfModalClose');if(cb)cb.addEventListener('click',closePdf);
+  if(modal)modal.addEventListener('click',function(e){if(e.target===modal)closePdf();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closePdf();});
+})();
+
+</script>
+<script src="dday.js" defer></script>
 </body>
 </html>
