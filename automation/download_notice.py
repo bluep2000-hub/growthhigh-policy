@@ -102,11 +102,13 @@ def extract_file_refs(html, source=None):
 def _refs_bizinfo(html):
     """기업마당: fileDown.do?atchFileId=FILE_n&fileSn=n (파일명은 Content-Disposition에서 복원)."""
     seen, out = set(), []
-    for m in re.finditer(r'fileDown\.do\?atchFileId=(FILE_[0-9]+)&(?:amp;)?fileSn=(\d+)', html):
+    # 2026-10 말부터 downloadToken 없으면 403 — 토큰까지 그대로 쓴다
+    for m in re.finditer(r'fileDown\.do\?atchFileId=(FILE_[0-9]+)&(?:amp;)?fileSn=(\d+)((?:&(?:amp;)?downloadToken=[^"&\s<>]+)?)', html):
         key = (m.group(1), m.group(2))
         if key not in seen:
             seen.add(key)
-            out.append({"url": f"{DOWN}?atchFileId={key[0]}&fileSn={key[1]}",
+            tok = m.group(3).replace("&amp;", "&")
+            out.append({"url": f"{DOWN}?atchFileId={key[0]}&fileSn={key[1]}{tok}",
                         "name": None, "atchFileId": key[0], "fileSn": key[1]})
     return out
 
