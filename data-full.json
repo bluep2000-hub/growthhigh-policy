@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-11-01T18:00:00+09:00",
+ "updated_at": "2026-11-08T18:00:00+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -15675,6 +15675,349 @@
    "brief_one": "10월과 같은 조건 재공고, 기보 영업점에서만 접수",
    "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127557",
    "added_at": "2026-11-01"
+  },
+  {
+   "id": "550",
+   "file": "550-kotra-walmart-pb-sourcing.html",
+   "title": "2026년 미국 월마트(Walmart) PB(자체 브랜드) 소싱 상담회 참가기업 모집",
+   "summary": "헤어·바디·로션 등 퍼스널케어 제조기업 5개사 내외에 11.18 KOTRA 본사에서 월마트 구매팀 PB 소싱 1:1 상담 주선.",
+   "tags": [
+    "수출",
+    "B2B 상담회",
+    "KOTRA 시카고무역관"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-11T23:59:00+09:00",
+   "deadline_display": "2026.11.11",
+   "meta": {
+    "지원": "월마트 PB 상담",
+    "규모": "5개사 내외",
+    "마감": "11.11(수)"
+   },
+   "brief_one": "FDA 등록 제품과 영문 소개자료가 없으면 신청 불가",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127741",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "551",
+   "file": "551-seongnam-mfg-ax-solution.html",
+   "title": "2026 성남 제조AX 솔루션 매칭·확산 사업 모집",
+   "summary": "성남 소재 식품·푸드테크 중소 제조기업 5개사 내외에 제조현장 AI 솔루션(SaaS) 도입·구축비 80%, 기업당 최대 2천만원 지원.",
+   "tags": [
+    "제조AX",
+    "AI 솔루션 도입",
+    "성남 한정"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-11-12T16:00:00+09:00",
+   "deadline_display": "2026.11.12",
+   "meta": {
+    "지원": "구축비 80%",
+    "규모": "기업당 최대 2천만원",
+    "마감": "11.12(목)16시"
+   },
+   "brief_one": "식품·푸드테크 제조 분야만 지원 대상",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127610",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "552",
+   "file": "552-dapa-export-item-2nd-ext2.html",
+   "title": "2026년 2차 유망수출품목발굴 지원사업 참여기업 모집 추가 연장 공고 (방산 수출)",
+   "summary": "방산 중소·중견기업의 해외인증·수출컨설팅·해외 성능시현 비용 70~75%를 기업당 최대 5천만원 지원. 11.12 정오까지 추가 연장 접수.",
+   "tags": [
+    "방산 수출",
+    "해외인증·컨설팅",
+    "방위사업청"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-12T12:00:00+09:00",
+   "deadline_display": "2026.11.12",
+   "meta": {
+    "지원": "비용 70~75%",
+    "규모": "최대 5천만원",
+    "마감": "11.12(목)12시"
+   },
+   "brief_one": "두 번째 연장, 협약 전 진행한 서비스는 지원 불가",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127757",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "553",
+   "file": "553-defense-sme-consulting-5th.html",
+   "title": "2026년 5차 방산 중소기업 컨설팅 지원사업 지원대상기업 모집",
+   "summary": "방산 중소기업·진출 희망 중소기업에 전문가 컨설팅 비용 75%를 기업당 3천만원(기술 5천만원) 한도 지원. 잔여 예산 0.9억원 범위 선정.",
+   "tags": [
+    "방산",
+    "전문가 컨설팅",
+    "방위사업청"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-11-13T17:00:00+09:00",
+   "deadline_display": "2026.11.13",
+   "meta": {
+    "지원": "컨설팅비 75%",
+    "규모": "최대 3천만원",
+    "마감": "11.13(금)17시"
+   },
+   "brief_one": "잔여 예산 0.9억원, 컨설턴트 매칭 후 신청",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127629",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "554",
+   "file": "554-seoul-hub-mplus-tenant-2h.html",
+   "title": "2026년 서울창업허브 M+ 하반기 신규 입주기업 모집",
+   "summary": "창업 7년 미만 마곡산업단지 입주업종 기업·예비창업자 21개사에 서울창업허브M+ 사무공간 입주(1년차 연 이용료 약 40만~189만원) 지원.",
+   "tags": [
+    "창업",
+    "입주공간",
+    "서울 마곡"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-13T23:59:00+09:00",
+   "deadline_display": "2026.11.13",
+   "meta": {
+    "지원": "사무공간 입주",
+    "규모": "21개사",
+    "마감": "11.13(금)"
+   },
+   "brief_one": "7대 창업거점 입주 이력 있으면 신청 불가",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179703",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "555",
+   "file": "555-sahmyook-bi-tenant.html",
+   "title": "2026년 삼육대학교 창업보육센터 입주기업 모집",
+   "summary": "예비창업자·창업 7년 이내 기업 1개사에 삼육대학교 창업보육센터 30㎡ 보육실 입주 지원. 보육료 연 475만원 선납.",
+   "tags": [
+    "창업",
+    "보육공간",
+    "삼육대학교"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-15T23:59:00+09:00",
+   "deadline_display": "2026.11.15",
+   "meta": {
+    "지원": "보육실 30㎡",
+    "규모": "1개실",
+    "마감": "11.15(일)"
+   },
+   "brief_one": "1개실만 뽑고 적격기업 없으면 미선정",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=178799",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "556",
+   "file": "556-sba-kibo-startup-guarantee.html",
+   "title": "2026년 하반기 서울경제진흥원-기술보증기금 혁신스타트업 특례보증 지원계획",
+   "summary": "SBA 추천 창업기업 10개사 내외에 기보 운전자금 특례보증(최대 30억 한도, 보증비율 100%, 보증료 0.7% 고정) 지원.",
+   "tags": [
+    "정책자금",
+    "기술보증·혁신스타트업",
+    "서울경제진흥원·기보"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "정책자금"
+   ],
+   "deadline_iso": "2026-11-20T15:00:00+09:00",
+   "deadline_display": "2026.11.20",
+   "meta": {
+    "지원": "보증비율 100%",
+    "규모": "최대 30억 한도",
+    "마감": "11.20(금)15시"
+   },
+   "brief_one": "기존 보증 이용 중이면 전액상환해야 신청 가능",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127655",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "557",
+   "file": "557-overseas-platform-integrated.html",
+   "title": "2026년 해외 온라인 플랫폼 판로지원 사업 참여 소상공인 통합 모집 (입점·활용·물류)",
+   "summary": "해외 온라인 플랫폼 입점·활용·물류 3개 사업 통합 모집. 소상공인 1,500개사 내외에 사업별 국비 80%, 최대 350만~600만원 지원.",
+   "tags": [
+    "판로수출",
+    "해외 온라인 플랫폼",
+    "소상공인시장진흥공단"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-20T18:00:00+09:00",
+   "deadline_display": "2026.11.20",
+   "meta": {
+    "지원": "국비 80%",
+    "규모": "1,500개사",
+    "마감": "11.20(금)18시"
+   },
+   "brief_one": "입점·활용·물류 요건 맞으면 복수 신청 가능",
+   "source_url": "https://www.sbiz24.kr/#/pbanc/861",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "558",
+   "file": "558-hufs-bi-tenant-nov.html",
+   "title": "2026년 한국외국어대학교 창업보육센터 입주기업 모집 (11월 공고)",
+   "summary": "예비창업자·창업 3년 미만 기업 대상 한국외대 창업보육센터 207호(15평) 입주 모집. 1년 단위 계약, 최대 5년.",
+   "tags": [
+    "시설·공간",
+    "창업보육센터",
+    "한국외대"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-22T23:59:00+09:00",
+   "deadline_display": "2026.11.22",
+   "meta": {
+    "지원": "15평 보육실",
+    "규모": "207호",
+    "마감": "11.22(일)"
+   },
+   "brief_one": "창업 3년 미만만 — 1·2년차 월 부담금 33% 할인",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179709",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "559",
+   "file": "559-aica-ai-startup-tenant.html",
+   "title": "2026년 인공지능산업융합사업단「AI 창업동」입주기업 모집",
+   "summary": "AI 분야 중소기업 대상 광주 AI 집적단지「AI 창업동」21개 호실 입주 모집. 연 임대료 217만~620만원, 최대 10년.",
+   "tags": [
+    "AI",
+    "입주공간",
+    "광주 첨단3지구"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-23T17:00:00+09:00",
+   "deadline_display": "2026.11.23",
+   "meta": {
+    "지원": "입주공간 임대",
+    "규모": "21개 호실",
+    "마감": "11.23(월)17시"
+   },
+   "brief_one": "입주대상 업종 밖이면 발표평가 전 탈락",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179710",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "560",
+   "file": "560-seoul-fashion-week-27fw.html",
+   "title": "2027 F/W 서울패션위크(’27 춘계) 참가 패션브랜드 모집",
+   "summary": "의류 독립브랜드 1년 이상 운영한 제조 중소기업 대상 2027 F/W 서울패션위크 DDP·이색 장소 패션쇼, 프레젠테이션 참가 지원.",
+   "tags": [
+    "패션",
+    "패션쇼·프레젠테이션",
+    "서울시"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-26T23:59:00+09:00",
+   "deadline_display": "2026.11.26",
+   "meta": {
+    "지원": "패션쇼·PT 참가",
+    "규모": "공고문 참조",
+    "마감": "11.26(목)"
+   },
+   "brief_one": "접수는 11.18부터 — 포트폴리오가 40점",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127745",
+   "added_at": "2026-11-08"
+  },
+  {
+   "id": "561",
+   "file": "561-univ-tech-sharing-2026.html",
+   "title": "2026년도 산업통상부 공공연구기관·대학 기술나눔 공고",
+   "summary": "중소·중견기업 대상 11개 공공연구기관·대학 보유 특허 106건(전기·전자, 기계·소재, 바이오·의료) 무상 이전.",
+   "tags": [
+    "기술이전",
+    "무상이전",
+    "산업통상부"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "R&D"
+   ],
+   "deadline_iso": "2026-12-09T23:59:00+09:00",
+   "deadline_display": "2026.12.09",
+   "meta": {
+    "지원": "특허 무상이전(양도·실시권)",
+    "규모": "106건",
+    "마감": "12.09(수)23:59"
+   },
+   "brief_one": "대학 특허 106건 무상 — 등록료·연차료는 기업 부담",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127755",
+   "added_at": "2026-11-08"
   }
  ],
  "clients": [
