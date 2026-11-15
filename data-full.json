@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-11-08T18:00:00+09:00",
+ "updated_at": "2026-11-15T18:00:00+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -16018,6 +16018,383 @@
    "brief_one": "대학 특허 106건 무상 — 등록료·연차료는 기업 부담",
    "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127755",
    "added_at": "2026-11-08"
+  },
+  {
+   "id": "562",
+   "file": "562-ax-valley-sdv-control.html",
+   "title": "2026년 AX실증밸리조성(R&D) 사업 신규지원 대상과제 재공고 (내역2-2 자율주행 모빌리티 AX)",
+   "summary": "기업부설연구소 보유 중소·중견기업 주관 컨소시엄에 AI 기반 SDV 차량 통합제어 기술개발비 33개월 총 128억원 지원.",
+   "tags": [
+    "R&D",
+    "자율주행 SDV",
+    "전남광주 실증"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "R&D"
+   ],
+   "deadline_iso": "2026-11-16T15:00:00+09:00",
+   "deadline_display": "2026.11.16",
+   "meta": {
+    "지원": "총 128억원",
+    "규모": "1개 과제",
+    "마감": "11.16(월)15시"
+   },
+   "brief_one": "전남광주 기관 50% 참여와 현지 실증이 필수",
+   "source_url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1281947",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "563",
+   "file": "563-happy-dept-kids-3f.html",
+   "title": "2026년 행복한백화점 3층 매장입점(아동) 모집",
+   "summary": "중견·중소·소상공인 아동 브랜드에 행복한백화점 3층 약 15평 매장 입점 기회와 사은행사 비용 50%를 3개월간 지원.",
+   "tags": [
+    "판로수출",
+    "백화점 입점",
+    "행복한백화점"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-17T23:59:00+09:00",
+   "deadline_display": "2026.11.17",
+   "meta": {
+    "지원": "사은행사 50%",
+    "규모": "약 15평",
+    "마감": "11.17(화)23:59"
+   },
+   "brief_one": "인테리어 업체 부담에 입점 기간은 3개월",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127852",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "564",
+   "file": "564-kicet-tech-transfer-4th.html",
+   "title": "2026년 4차 KICET 기술이전조건부사업화지원사업 수혜기업 모집 공고",
+   "summary": "KICET 기술을 2025년 이전받은 세라믹 소부장 기업에 납부 기술료의 50%, 최대 5천만원을 시제품·인증·마케팅 등에 지원.",
+   "tags": [
+    "기술사업화",
+    "세라믹 소부장",
+    "한국세라믹기술원"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-11-18T23:59:00+09:00",
+   "deadline_display": "2026.11.18",
+   "meta": {
+    "지원": "기술료의 50%",
+    "규모": "최대 5천만원",
+    "마감": "11.18(수)24시"
+   },
+   "brief_one": "KICET 기술이전 기업만, 12.25까지 집행",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127911",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "565",
+   "file": "565-ict-sme-global-cert-add.html",
+   "title": "2026년 ICT 중소기업 글로벌 진출 지원사업 추가 공고",
+   "summary": "중소기업이 개발한 방송통신기자재의 해외인증 시험·인증비 70%, 기업당 최대 14백만원과 인증 컨설팅을 지원.",
+   "tags": [
+    "인증",
+    "해외규격인증",
+    "국립전파연구원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-11-20T18:00:00+09:00",
+   "deadline_display": "2026.11.20",
+   "meta": {
+    "지원": "인증비 70%",
+    "규모": "최대 14백만원",
+    "마감": "11.20(금)18시"
+   },
+   "brief_one": "12.18까지 인증서 발급 원칙, 일정 촉박",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127785",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "566",
+   "file": "566-hoseo-bi-seocho-dec.html",
+   "title": "2026년 호서대학교 서울창업보육센터 신규 입주기업 모집 (11월)",
+   "summary": "예비기술창업자·창업 5년 미만 기업 대상 서초구 남부터미널 인근 보육실 2개실(16평) 입주 모집. 보증금 ㎡당 20만원, 최대 5년 입주.",
+   "tags": [
+    "보육공간",
+    "창업보육센터",
+    "서울 서초"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-20T18:00:00+09:00",
+   "deadline_display": "2026.11.20",
+   "meta": {
+    "지원": "보육실 입주",
+    "규모": "2개실(16평)",
+    "마감": "11.20(금)18시"
+   },
+   "brief_one": "이번엔 16평 2개실뿐, 주사업장 이전 필수",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179776",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "567",
+   "file": "567-shopee-vietnam-kfestival-2027.html",
+   "title": "2027 쇼피 베트남 온라인 판촉전 참가기업 모집",
+   "summary": "베트남 쇼피 입점 소비재 기업 대상 2027.1.5~1.15 K-브랜드 기획전 참여 지원. 전용 배너·플래시 세일·바우처·플랫폼 내 홍보 제공.",
+   "tags": [
+    "수출",
+    "온라인 판촉전",
+    "KOTRA 호치민무역관"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-22T23:59:00+09:00",
+   "deadline_display": "2026.11.22",
+   "meta": {
+    "지원": "기획전·배너·바우처",
+    "규모": "기업 수 미기재",
+    "마감": "11.22(일)"
+   },
+   "brief_one": "쇼피 베트남 스토어 운영 중이어야 신청 가능",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127883",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "568",
+   "file": "568-seoul-game-private-ir.html",
+   "title": "2026 서울게임콘텐츠센터 IR 컨설팅 및 프라이빗 IR 참여기업 모집",
+   "summary": "서울 소재 게임개발사 4개사 이내에 1:1 IR 컨설팅 2회와 12.18 게임 전문 VC 5인 내외 대상 프라이빗 IR 피칭 무료 지원.",
+   "tags": [
+    "투자유치",
+    "게임 IR",
+    "서울 한정"
+   ],
+   "industries": [
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "투자유치"
+   ],
+   "deadline_iso": "2026-11-23T15:00:00+09:00",
+   "deadline_display": "2026.11.23",
+   "meta": {
+    "지원": "IR 컨설팅·프라이빗 IR",
+    "규모": "4개사 이내",
+    "마감": "11.23(월)15시"
+   },
+   "brief_one": "시연 가능한 게임이 없으면 신청 제한",
+   "source_url": "https://www.sba.seoul.kr/Pages/BusinessApply/PostingDetail.aspx?p=0&mid=d264d13f-86dd-f111-b404-d4f5ef4a1e33",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "569",
+   "file": "569-innopolis-sandbox-demo-fund.html",
+   "title": "2026년도 연구개발특구 실증특례 지정과제 실증사업비 지원사업(비R&D)",
+   "summary": "연구개발특구 실증특례 지정인 대상 실증제품 고도화·시험인증·마케팅 등 실증사업비 과제당 최대 1.45억원 지원, 총 4개 과제.",
+   "tags": [
+    "R&D",
+    "규제특례 실증",
+    "연구개발특구진흥재단"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "R&D"
+   ],
+   "deadline_iso": "2026-11-26T15:00:00+09:00",
+   "deadline_display": "2026.11.26",
+   "meta": {
+    "지원": "과제당 최대 1.45억",
+    "규모": "총 5.8억·4개 과제",
+    "마감": "11.26(목)15시"
+   },
+   "brief_one": "실증특례 지정인이 아니면 신청 자체가 불가",
+   "source_url": "https://www.ntis.go.kr/rndgate/eg/un/ra/view.do?roRndUid=1281498",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "570",
+   "file": "570-kac-kacoon-incubator.html",
+   "title": "2026년 한국공항공사 창업보육센터 KACoon 입주기업 모집",
+   "summary": "항공산업분야 예비창업자·창업 3년 미만 기업 5개사에 KACoon 사무공간을 무상 제공(최대 3년)하고 저리대출 최대 2억원 신청 길을 연다.",
+   "tags": [
+    "창업보육",
+    "입주공간",
+    "한국공항공사"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-26T23:59:00+09:00",
+   "deadline_display": "2026.11.26",
+   "meta": {
+    "지원": "사무실 무상 입주",
+    "규모": "5개사",
+    "마감": "11.26(목)"
+   },
+   "brief_one": "항공산업 분야·창업 3년 미만만, 5개사만 뽑는다",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179731",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "571",
+   "file": "571-animal-cell-vaccine-cdmo-4th.html",
+   "title": "2026년 4차 동물세포기반 백신 공공 CDMO 전략적 육성 및 바이오텍 생산지원 사업 수혜기업 모집",
+   "summary": "제조기반이 부족한 제약·바이오 기업에 공공 CDMO로 공정개발·세포주 은행·임상시료 생산 지원, 기업당 최대 3.5억원(현금 30% 매칭).",
+   "tags": [
+    "바이오",
+    "백신·CDMO",
+    "동물세포실증지원센터"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "R&D"
+   ],
+   "deadline_iso": "2026-11-27T18:00:00+09:00",
+   "deadline_display": "2026.11.27",
+   "meta": {
+    "지원": "CDMO 생산 간접지원",
+    "규모": "최대 3.5억원",
+    "마감": "11.27(금)18시"
+   },
+   "brief_one": "마감부터 협약종료일(12.31)까지 34일뿐이다",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127790",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "572",
+   "file": "572-gg-mwc-2027.html",
+   "title": "2027 스페인 바르셀로나 정보통신 전시회(MWC 2027) 경기도관 참가기업 모집",
+   "summary": "경기도 중소기업 15개사에 MWC 2027 경기도관 부스임차·장치비 50%와 운송비 일부·통역을 지원한다. 업체부담 약 680만원.",
+   "tags": [
+    "수출",
+    "해외 전시회",
+    "경기도 한정"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-11-27T23:59:00+09:00",
+   "deadline_display": "2026.11.27",
+   "meta": {
+    "지원": "부스비 50% 이내",
+    "규모": "15개사 내외",
+    "마감": "11.27(금)"
+   },
+   "brief_one": "참가비 약 680만원을 마감일까지 입금해야 신청 인정",
+   "source_url": "https://www.egbiz.or.kr/sp/supportPrjDtl.do?listUrl=supportPrjPlanList&bizCyclId=PD000000057682",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "573",
+   "file": "573-nep-2027-1st.html",
+   "title": "2027년 제1회 신제품(NEP) 지정 신규신청(200대 전략품목 포함) 및 유효기간 연장신청",
+   "summary": "국내 최초 신기술을 적용해 실용화한 제품의 신제품(NEP) 지정 신청. 첫 신청은 수수료가 없고 200대 전략품목은 가점 3점.",
+   "tags": [
+    "인증",
+    "신제품(NEP)",
+    "국가기술표준원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-12-18T16:00:00+09:00",
+   "deadline_display": "2026.12.18",
+   "meta": {
+    "지원": "NEP 지정",
+    "규모": "첫 신청 수수료 0원",
+    "마감": "12.18(금)16시"
+   },
+   "brief_one": "실용화 완료 제품만, 증빙 모델명까지 일치해야 한다",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127848",
+   "added_at": "2026-11-15"
+  },
+  {
+   "id": "574",
+   "file": "574-net-2027-1st.html",
+   "title": "2027년 제1회 신기술(NET) 지정 신규신청(200대 전략품목 포함) 및 유효기간 연장신청",
+   "summary": "상용화 전 개발완료기술의 신기술(NET) 지정 신청. 200대 전략품목은 1차 심사 가점 6점, 심사수수료는 1·2차 합계 70만원.",
+   "tags": [
+    "인증",
+    "신기술(NET)",
+    "국가기술표준원"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "인증"
+   ],
+   "deadline_iso": "2026-12-24T16:00:00+09:00",
+   "deadline_display": "2026.12.24",
+   "meta": {
+    "지원": "NET 지정",
+    "규모": "전략품목 가점 6점",
+    "마감": "12.24(목)16시"
+   },
+   "brief_one": "이미 상용화를 시작한 기술은 신청 대상에서 제외",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127849",
+   "added_at": "2026-11-15"
   }
  ],
  "clients": [
