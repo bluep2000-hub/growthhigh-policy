@@ -18,6 +18,11 @@ export const clientpageClients = {
   '영원희': 'youngwonhee',
   '모비먼트': 'mobiment',
   '엔에프비엠': 'nfbm',
-  '무월소프트': 'muwolsoft',
-  '삼부자푸드': 'sambujafood',
+  '클로네리': 'muwolsoft',
+  '수명어천기수영창': 'sumyeong',
+  '코르반': 'corban',
+  '비이케이컴퍼니': 'bekcompany',
+  '제로백': 'zeroback',
+  '데브갓': 'devgod',
+  '뉴본케어': 'newborncare',
 };
