@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "updated_at": "2026-11-15T18:00:00+09:00",
+ "updated_at": "2026-11-22T18:00:00+09:00",
  "filters": {
   "industries": [
    "제조업",
@@ -16395,6 +16395,326 @@
    "brief_one": "이미 상용화를 시작한 기술은 신청 대상에서 제외",
    "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127849",
    "added_at": "2026-11-15"
+  },
+  {
+   "id": "575",
+   "file": "575-dapa-field-test-2027-cand.html",
+   "title": "2027년 실증시험 지원사업 후보과제 모집 공모",
+   "summary": "국내 중소·벤처기업이 개발한 국방 활용 제품(기술)에 합참·각 군 실증시험 연구비 전액을 지원하는 2027년 사업의 후보과제 사전 모집.",
+   "tags": [
+    "R&D",
+    "국방 실증시험",
+    "방위사업청·국기연"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "R&D"
+   ],
+   "deadline_iso": "2026-11-30T15:00:00+09:00",
+   "deadline_display": "2026.11.30",
+   "meta": {
+    "지원": "실증 연구비 전액",
+    "규모": "한도 설명회 공지",
+    "마감": "11.30(월)15시"
+   },
+   "brief_one": "후보로 뽑혀도 2027년 본 공고에 다시 접수해야 한다",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127964",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "576",
+   "file": "576-seoul-hub-changdong-2h.html",
+   "title": "2026년 하반기 서울창업허브 창동 입주기업 모집",
+   "summary": "창업 7년 이내(신산업 10년) 기업 4개사 내외에 서울 도봉구 창동 독립 오피스(6·10인실)와 데모데이·교육 등 성장지원 제공.",
+   "tags": [
+    "창업",
+    "입주공간",
+    "서울 창동"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-11-30T17:00:00+09:00",
+   "deadline_display": "2026.11.30",
+   "meta": {
+    "지원": "독립 오피스 입주",
+    "규모": "4개사 내외",
+    "마감": "11.30(월)17시"
+   },
+   "brief_one": "XR·영상·웹툰·게임 창업기업은 서면 가점 3점",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179813",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "577",
+   "file": "577-gg-women-bi-2027-1h.html",
+   "title": "2027년 상반기 경기도여성창업보육센터 입주기업 모집",
+   "summary": "경기도 거주 여성 예비창업자·창업 3년 이내 여성기업 4개사에 안산 경기테크노파크 공용실(월 3.3만원)과 사업화지원금·교육 제공.",
+   "tags": [
+    "창업보육",
+    "여성창업",
+    "경기 안산"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-12-04T15:00:00+09:00",
+   "deadline_display": "2026.12.04",
+   "meta": {
+    "지원": "공용실 입주",
+    "규모": "4개사",
+    "마감": "12.04(금)15시"
+   },
+   "brief_one": "타 창업보육센터 입주 경력 있으면 신청 불가",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179839",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "578",
+   "file": "578-lh-pangyo2-growth-center.html",
+   "title": "2026년 LH 판교 제2테크노밸리 기업성장센터(F2블록) 산업시설(임대) 입점기업 모집",
+   "summary": "수도권 소재 사업개시 10년차 이하 기업에 판교2테크노밸리 LH 기업성장센터 산업시설 42개 호실을 5년 임대(월 147만~373만원).",
+   "tags": [
+    "입주공간",
+    "산업시설 임대",
+    "경기 판교"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-12-04T16:00:00+09:00",
+   "deadline_display": "2026.12.04",
+   "meta": {
+    "지원": "산업시설 5년 임대",
+    "규모": "42개 호실",
+    "마감": "12.04(금)16시"
+   },
+   "brief_one": "경쟁 시 신청 호실 수가 많은 기업 우선, 같으면 추첨",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179783",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "579",
+   "file": "579-aica-aidc-users-2027.html",
+   "title": "2027년 AI데이터센터 서비스 이용자 정기모집(1트랙)",
+   "summary": "기업·대학·연구기관에 AI데이터센터 H100 GPU와 스토리지 50TB를 최대 1년 제공. 약 30건, 가속기 1장당 월 30만원 부담.",
+   "tags": [
+    "AI 인프라",
+    "GPU 클라우드",
+    "AICA"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-12-04T14:00:00+09:00",
+   "deadline_display": "2026.12.04",
+   "meta": {
+    "지원": "H100·스토리지 50TB",
+    "규모": "약 30건 내외",
+    "마감": "12.04(금)14시"
+   },
+   "brief_one": "무상 아님 — H100 1장당 월 30만원 부담",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000128022",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "580",
+   "file": "580-kead-tech-escrow-fee.html",
+   "title": "2026년 중소기업 기술자료 임치계약 지원사업",
+   "summary": "중소기업이 기술자료임치센터에 기술·경영 기밀을 맡기는 양자간 임치계약 수수료를 최대 5년치 전액 지원한다. 신청은 이메일 접수.",
+   "tags": [
+    "기술보호",
+    "기술자료 임치",
+    "한국장애인고용공단"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "경영/기타"
+   ],
+   "deadline_iso": "2026-12-10T23:59:00+09:00",
+   "deadline_display": "2026.12.10",
+   "meta": {
+    "지원": "임치 수수료 전액",
+    "규모": "최대 5년 계약",
+    "마감": "12.10(목)"
+   },
+   "brief_one": "중소기업확인서 있으면 이메일 신청으로 끝",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000128033",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "581",
+   "file": "581-sfw-tradeshow-27fw-brand.html",
+   "title": "2027 춘계(27 F/W) 서울패션위크 트레이드쇼 참가 패션브랜드 모집 (개별 브랜드)",
+   "summary": "의류·액세서리 독립 브랜드를 1년 이상 운영한 제조 중소기업 대상 2027 F/W 서울패션위크 트레이드쇼 수주전시·쇼룸투어 참가 지원.",
+   "tags": [
+    "패션",
+    "트레이드쇼 개별 브랜드",
+    "서울시"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-12-14T23:59:00+09:00",
+   "deadline_display": "2026.12.14",
+   "meta": {
+    "지원": "수주전시·쇼룸투어",
+    "규모": "행사 100개사 내외",
+    "마감": "12.14(월)"
+   },
+   "brief_one": "패션쇼와 별도 신청, 접수는 11.25부터",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127942",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "582",
+   "file": "582-sfw-tradeshow-27fw-multishowroom.html",
+   "title": "2027 춘계(27 F/W) 서울패션위크 수주전시 단체관(멀티쇼룸) 모집",
+   "summary": "국내 의류·액세서리 브랜드 5개 이상을 취급하는 멀티쇼룸 5개사 내외에 2027 F/W 서울패션위크 DDP 수주전시 단체관 부스 지원.",
+   "tags": [
+    "패션",
+    "트레이드쇼 멀티쇼룸",
+    "서울시"
+   ],
+   "industries": [
+    "제조업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "판로수출"
+   ],
+   "deadline_iso": "2026-12-14T23:59:00+09:00",
+   "deadline_display": "2026.12.14",
+   "meta": {
+    "지원": "DDP 수주전시 부스",
+    "규모": "5개사 내외",
+    "마감": "12.14(월)"
+   },
+   "brief_one": "개별 브랜드와 달리 이메일 접수, 통역 없음",
+   "source_url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127944",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "583",
+   "file": "583-sovereign-ax-alliance.html",
+   "title": "2026 소버린 AX 얼라이언스 참여 스타트업 모집 (1회차)",
+   "summary": "업력 10년 미만 AI 스타트업 20개사 내외에 업스테이지·퓨리오사AI의 API 크레딧, NPU 추론 PoC, 공동 영업 협업 기회를 6개월간 제공한다.",
+   "tags": [
+    "AI",
+    "대기업 협업",
+    "서울창조경제혁신센터"
+   ],
+   "industries": [
+    "지식서비스업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-12-16T15:00:00+09:00",
+   "deadline_display": "2026.12.16",
+   "meta": {
+    "지원": "API 크레딧·PoC",
+    "규모": "20개사 내외",
+    "마감": "12.16(수)15시"
+   },
+   "brief_one": "AI 매출 10억 또는 투자 5억 실적 있어야 신청",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179825",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "584",
+   "file": "584-kdb-nextone-daegu-1st.html",
+   "title": "2027년 상반기 KDB NextONE 대구 1기 스타트업 모집",
+   "summary": "창업 7년 이내 법인 10개사 내외에 산업은행 직접투자·V:Launch IR 연계·밀착보육과 대구 동구 입주공간을 5개월간 지원한다.",
+   "tags": [
+    "스타트업 보육 · 투자",
+    "대구 1기 모집",
+    "KDB 산업은행"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-12-18T18:00:00+09:00",
+   "deadline_display": "2026.12.18",
+   "meta": {
+    "지원": "직접투자·보육·공간",
+    "규모": "10개사 내외",
+    "마감": "12.18(금)18시"
+   },
+   "brief_one": "대구·경북 소재는 우대일 뿐, 14기와 중복 불가",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179828",
+   "added_at": "2026-11-22"
+  },
+  {
+   "id": "585",
+   "file": "585-kdb-nextone-14th.html",
+   "title": "2027년 상반기 KDB NextONE 14기 스타트업 모집",
+   "summary": "창업 7년 이내 법인 15개사 내외에 산업은행 직접투자·NextRound IR 연계·밀착보육과 마포 Front1 무상 입주를 5개월간 지원한다.",
+   "tags": [
+    "스타트업 보육 · 투자",
+    "14기 모집",
+    "KDB 산업은행"
+   ],
+   "industries": [
+    "제조업",
+    "지식서비스업",
+    "게임개발업"
+   ],
+   "sub_industries": [],
+   "types": [
+    "창업"
+   ],
+   "deadline_iso": "2026-12-18T18:00:00+09:00",
+   "deadline_display": "2026.12.18",
+   "meta": {
+    "지원": "직접투자·보육·공간",
+    "규모": "15개사 내외",
+    "마감": "12.18(금)18시"
+   },
+   "brief_one": "IBK창공·신보 NEST와 동시 선정 시 택1",
+   "source_url": "https://www.k-startup.go.kr/web/contents/bizpbanc-ongoing.do?pbancClssCd=PBC010&schM=view&pbancSn=179818",
+   "added_at": "2026-11-22"
   }
  ],
  "clients": [
